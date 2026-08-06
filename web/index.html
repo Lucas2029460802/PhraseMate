@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1" />
+  <title>PhraseMate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Syne:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="app-shell">
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">Pm</span>
+      <div>
+        <h1>PhraseMate</h1>
+        <p class="tagline">本地英语生词本 · AI 双语释义</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button type="button" class="btn ghost" id="btnShowFloat" title="显示系统置顶速记窗">显示速记窗</button>
+      <div class="status-pill" id="statusPill" title="服务状态">检测中…</div>
+    </div>
+  </header>
+
+  <!-- Notebook home -->
+  <main class="page page-notebook" id="pageNotebook">
+    <section class="panel notebook">
+      <div class="panel-head">
+        <div class="head-left">
+          <h2>生词本</h2>
+          <span class="count" id="wordCount">0</span>
+        </div>
+        <button type="button" class="btn" id="btnGoQuiz">英语自测</button>
+      </div>
+      <div class="search-row">
+        <input type="search" id="filterInput" placeholder="筛选生词…" autocomplete="off" />
+      </div>
+      <div class="notebook-layout">
+        <div class="word-list" id="wordList">
+          <p class="empty">还没有生词。用右下角置顶速记条输入，回车即可立刻收录。</p>
+        </div>
+        <aside class="word-detail" id="wordDetail">
+          <p class="empty">点击左侧单词查看释义</p>
+        </aside>
+      </div>
+    </section>
+    <p class="dock-hint">右下角置顶速记条：回车立刻入库。关闭本窗口会隐藏到后台；退出请用托盘菜单。</p>
+  </main>
+
+  <!-- Quiz page -->
+  <main class="page page-quiz" id="pageQuiz" hidden>
+    <section class="panel quiz-panel">
+      <div class="panel-head">
+        <div class="head-left">
+          <button type="button" class="btn ghost" id="btnBackNotebook">← 返回生词本</button>
+          <h2>English Quiz</h2>
+        </div>
+        <button type="button" class="btn ghost" id="btnNewQuiz">Generate</button>
+      </div>
+      <p class="quiz-lead">All questions and choices are in English.</p>
+      <div id="quizArea">
+        <p class="empty">Click Generate to start a short quiz from your notebook.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

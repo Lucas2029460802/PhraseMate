@@ -1,0 +1,22 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+phrasemate
+PhraseMate.exe
+
+# Data & secrets
+.env
+data/*.db
+data/*.db-*
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Go
+vendor/

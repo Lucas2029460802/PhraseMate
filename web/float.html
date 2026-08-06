@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>速记</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/float.css" />
+</head>
+<body>
+  <div class="shell" id="dragArea">
+    <div class="badge" title="拖动">Pm</div>
+    <input
+      id="term"
+      type="text"
+      placeholder="生词 / 短语，回车收录"
+      autocomplete="off"
+      spellcheck="false"
+    />
+      <button type="button" class="icon" id="btnNotebook" title="显示 / 隐藏生词本">本</button>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+  <script src="/static/js/float.js"></script>
+</body>
+</html>
