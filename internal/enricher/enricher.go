@@ -64,14 +64,13 @@ func (w *Worker) Run(ctx context.Context) {
 }
 
 func (w *Worker) canEnrich() bool {
-	if w.dictFirst && w.dict != nil {
-		return true
-	}
-	return w.ai.Enabled()
+	// Basic mode is always available even without API key.
+	return true
 }
 
 func (w *Worker) explain(ctx context.Context, term string) (*models.AIExplanation, string, error) {
-	if w.dictFirst && w.dict != nil && dict.IsSingleWord(term) {
+	singleWord := dict.IsSingleWord(term)
+	if w.dictFirst && w.dict != nil && singleWord {
 		exp, err := w.dict.Lookup(ctx, term)
 		if err == nil {
 			return exp, "dict", nil
@@ -80,7 +79,7 @@ func (w *Worker) explain(ctx context.Context, term string) (*models.AIExplanatio
 	}
 
 	if !w.ai.Enabled() {
-		return nil, "", errNoEnricher
+		return basicExplanation(term, singleWord), "basic", nil
 	}
 	exp, err := w.ai.Explain(ctx, term)
 	if err != nil {
@@ -89,14 +88,20 @@ func (w *Worker) explain(ctx context.Context, term string) (*models.AIExplanatio
 	return exp, "ai", nil
 }
 
-var errNoEnricher = &enrichError{msg: "未配置 API Key，且词典未能提供释义"}
-
-type enrichError struct {
-	msg string
-}
-
-func (e *enrichError) Error() string {
-	return e.msg
+func basicExplanation(term string, singleWord bool) *models.AIExplanation {
+	pos := "phrase"
+	if singleWord {
+		pos = "word"
+	}
+	return &models.AIExplanation{
+		Term:         term,
+		Phonetic:     "",
+		PartOfSpeech: pos,
+		MeaningEN:    "Basic mode: saved successfully. Add an API key for richer explanations and examples.",
+		MeaningZH:    "基础版：已成功收录。配置 API Key 后可生成更完整的释义与例句。",
+		ExampleEN:    "",
+		ExampleZH:    "",
+	}
 }
 
 func (w *Worker) drain(ctx context.Context) {
@@ -124,6 +129,9 @@ func (w *Worker) drain(ctx context.Context) {
 		}
 		if source == "dict" {
 			log.Printf("词典释义 [%s]", item.Term)
+		}
+		if source == "basic" {
+			log.Printf("基础版释义 [%s]", item.Term)
 		}
 		if _, err := w.store.ApplyExplanation(item.ID, exp); err != nil {
 			log.Printf("写入释义失败 [%s]: %v", item.Term, err)
