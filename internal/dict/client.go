@@ -16,6 +16,10 @@ import (
 )
 
 const defaultBaseURL = "https://api.dictionaryapi.dev/api/v2/entries/en"
+const (
+	dictTimeout      = 3 * time.Second
+	translateTimeout = 2 * time.Second
+)
 
 var singleWordRE = regexp.MustCompile(`^[a-zA-Z]+(?:[-'][a-zA-Z]+)*$`)
 
@@ -34,7 +38,7 @@ func New(baseURL string) *Client {
 	return &Client{
 		baseURL: baseURL,
 		http: &http.Client{
-			Timeout: 12 * time.Second,
+			Timeout: dictTimeout,
 		},
 	}
 }
@@ -74,8 +78,11 @@ func (c *Client) Lookup(ctx context.Context, term string) (*models.AIExplanation
 		return nil, fmt.Errorf("not a single word")
 	}
 
+	dictCtx, cancel := context.WithTimeout(ctx, dictTimeout)
+	defer cancel()
+
 	reqURL := c.baseURL + "/" + url.PathEscape(term)
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	req, err := http.NewRequestWithContext(dictCtx, http.MethodGet, reqURL, nil)
 	if err != nil {
 		return nil, err
 	}
@@ -112,9 +119,11 @@ func (c *Client) Lookup(ctx context.Context, term string) (*models.AIExplanation
 
 	zh, err := translateZH(ctx, c.http, exp.MeaningEN)
 	if err != nil {
-		return nil, fmt.Errorf("dictionary: translate meaning: %w", err)
+		// Translation is best-effort; keep fast path instead of blocking fallback.
+		exp.MeaningZH = exp.MeaningEN
+	} else {
+		exp.MeaningZH = zh
 	}
-	exp.MeaningZH = zh
 
 	if strings.TrimSpace(exp.ExampleEN) != "" {
 		if exZh, err := translateZH(ctx, c.http, exp.ExampleEN); err == nil {
@@ -225,12 +234,15 @@ func translateZH(ctx context.Context, httpClient *http.Client, text string) (str
 	if text == "" {
 		return "", fmt.Errorf("empty text")
 	}
+	translateCtx, cancel := context.WithTimeout(ctx, translateTimeout)
+	defer cancel()
+
 	q := url.Values{}
 	q.Set("q", text)
 	q.Set("langpair", "en|zh-CN")
 	reqURL := "https://api.mymemory.translated.net/get?" + q.Encode()
 
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
+	req, err := http.NewRequestWithContext(translateCtx, http.MethodGet, reqURL, nil)
 	if err != nil {
 		return "", err
 	}
