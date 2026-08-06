@@ -9,6 +9,7 @@ import (
 
 	"phrasemate/internal/ai"
 	"phrasemate/internal/config"
+	"phrasemate/internal/dict"
 	"phrasemate/internal/enricher"
 	"phrasemate/internal/handler"
 	"phrasemate/internal/store"
@@ -35,7 +36,8 @@ func Start(cfg config.Config, listenAddr string) (*Runtime, error) {
 	}
 
 	client := ai.New(cfg.APIKey, cfg.BaseURL, cfg.Model)
-	en := enricher.New(st, client, nil)
+	dictClient := dict.New(cfg.DictURL)
+	en := enricher.New(st, client, dictClient, cfg.DictFirst, nil)
 	api := handler.New(cfg, st, client, en)
 
 	mux := http.NewServeMux()

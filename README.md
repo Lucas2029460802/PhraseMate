@@ -1,6 +1,5 @@
 # PhraseMate
-
-本地英语学习**桌面应用**：悬浮窗速记生词 / 短语 → AI 中英双语解释 → 写入生词本 → 生成自测题。
+感觉市面上当前已经有的单词本很难用，很多短语都无法记录，于是用cursor生成一个简单的单词本小程序，可以接入api，在边看B站网课的时候边听边记录
 
 技术栈：**Go** + **WebView2** 原生窗口 + **SQLite** + **OpenAI 兼容** API。
 
@@ -9,6 +8,7 @@
 - **桌面窗口启动**：双击 / 命令行启动即打开应用窗口（不再依赖浏览器）
 - **系统置顶速记窗**：独立于主界面，可叠在 B 站等全屏画面角落录入
 - **AI 双语释义**：英文释义、中文释义、音标、词性、例句
+- **词典优先**：常见单词先查免费词典，未命中再调用 AI（省额度、更快）
 - **生词本**：自动去重更新，支持筛选与删除
 - **自测**：根据生词本生成四选一选择题并即时判分
 
@@ -32,7 +32,7 @@ DeepSeek 示例：
 
 ```env
 PHRASEMATE_API_KEY=sk-xxx
-PHRASEMATE_BASE_URL=https://api.deepseek.com/v1
+PHRASEMATE_BASE_URL=https://api.deepseek.com
 PHRASEMATE_MODEL=deepseek-chat
 ```
 
@@ -73,20 +73,5 @@ $env:PHRASEMATE_WEB="1"; go run .
 2. 同一词再次查询会更新释义
 3. 生词本至少 2 条后可生成自测题
 
-## 目录结构
 
-```
-PhraseMate/
-├── main.go                 # 入口
-├── desktop_windows.go      # WebView2 桌面窗口
-├── internal/
-│   ├── app/                # 本地服务与系统对话框
-│   ├── ai/                 # OpenAI 兼容客户端
-│   ├── config/
-│   ├── handler/
-│   ├── models/
-│   └── store/              # SQLite 生词本
-├── web/                    # 界面（嵌入二进制）
-├── data/
-└── .env.example
 ```

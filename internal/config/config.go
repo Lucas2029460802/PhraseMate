@@ -8,21 +8,25 @@ import (
 
 // Config holds runtime settings loaded from environment variables.
 type Config struct {
-	Addr    string
-	APIKey  string
-	BaseURL string
-	Model   string
-	DBPath  string
+	Addr      string
+	APIKey    string
+	BaseURL   string
+	Model     string
+	DBPath    string
+	DictFirst bool
+	DictURL   string
 }
 
 // Load reads configuration from the environment with sensible defaults.
 func Load() Config {
 	cfg := Config{
-		Addr:    getEnv("PHRASEMATE_ADDR", ":8080"),
-		APIKey:  firstNonEmpty(os.Getenv("PHRASEMATE_API_KEY"), os.Getenv("OPENAI_API_KEY")),
-		BaseURL: normalizeBaseURL(firstNonEmpty(os.Getenv("PHRASEMATE_BASE_URL"), os.Getenv("OPENAI_BASE_URL"), "https://api.openai.com/v1")),
-		Model:   firstNonEmpty(os.Getenv("PHRASEMATE_MODEL"), os.Getenv("OPENAI_MODEL"), "gpt-4o-mini"),
-		DBPath:  getEnv("PHRASEMATE_DB", "data/phrasemate.db"),
+		Addr:      getEnv("PHRASEMATE_ADDR", ":8080"),
+		APIKey:    firstNonEmpty(os.Getenv("PHRASEMATE_API_KEY"), os.Getenv("OPENAI_API_KEY")),
+		BaseURL:   normalizeBaseURL(firstNonEmpty(os.Getenv("PHRASEMATE_BASE_URL"), os.Getenv("OPENAI_BASE_URL"), "https://api.openai.com/v1")),
+		Model:     firstNonEmpty(os.Getenv("PHRASEMATE_MODEL"), os.Getenv("OPENAI_MODEL"), "gpt-4o-mini"),
+		DBPath:    getEnv("PHRASEMATE_DB", "data/phrasemate.db"),
+		DictFirst: getEnvBool("PHRASEMATE_DICT_FIRST", true),
+		DictURL:   getEnv("PHRASEMATE_DICT_URL", ""),
 	}
 	return cfg
 }
@@ -57,6 +61,22 @@ func firstNonEmpty(values ...string) string {
 		}
 	}
 	return ""
+}
+
+func getEnvBool(key string, fallback bool) bool {
+	v := strings.TrimSpace(os.Getenv(key))
+	if v == "" {
+		return fallback
+	}
+	lower := strings.ToLower(v)
+	switch lower {
+	case "0", "false", "no", "off":
+		return false
+	case "1", "true", "yes", "on":
+		return true
+	default:
+		return fallback
+	}
 }
 
 // Port returns the numeric port if Addr is like ":8080".
