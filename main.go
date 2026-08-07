@@ -9,6 +9,7 @@ import (
 	"phrasemate/internal/app"
 	"phrasemate/internal/config"
 	"phrasemate/internal/dpi"
+	"phrasemate/internal/shortcut"
 )
 
 func main() {
@@ -16,6 +17,11 @@ func main() {
 
 	// Prefer .env next to the executable when running as a packaged app.
 	loadDotEnv(findEnvFile())
+
+	if len(os.Args) > 1 && (os.Args[1] == "--install-shortcut" || os.Args[1] == "-install-shortcut") {
+		installDesktopShortcut()
+		return
+	}
 
 	cfg := config.Load()
 	webOnly := envTruthy("PHRASEMATE_WEB")
@@ -103,3 +109,13 @@ func fatalPopup(title, msg string) {
 	app.MessageBox(title, msg)
 	os.Exit(1)
 }
+
+func installDesktopShortcut() {
+	path, err := shortcut.CreateDesktop()
+	if err != nil {
+		fatalPopup("创建桌面快捷方式失败", err.Error())
+	}
+	log.Printf("已创建桌面快捷方式: %s", path)
+	app.InfoBox("PhraseMate", "已创建桌面快捷方式：\n"+path)
+}
+

@@ -10,8 +10,10 @@ import (
 	"sync/atomic"
 	"time"
 
+	"phrasemate/internal/app"
 	"phrasemate/internal/dpi"
 	"phrasemate/internal/floatwin"
+	"phrasemate/internal/shortcut"
 	"phrasemate/internal/tray"
 	"phrasemate/internal/winutil"
 
@@ -22,7 +24,7 @@ func runDesktop(url string) {
 	dpi.Enable()
 
 	var (
-		mainView atomic.Pointer[webviewHolder]
+		mainView  atomic.Pointer[webviewHolder]
 		floatHost *floatwin.Host
 		trayHost  *tray.Host
 		mu        sync.Mutex
@@ -65,6 +67,15 @@ func runDesktop(url string) {
 		}
 	}
 
+	createShortcut := func() {
+		path, err := shortcut.CreateDesktop()
+		if err != nil {
+			app.MessageBox("PhraseMate", err.Error())
+			return
+		}
+		app.InfoBox("PhraseMate", "已创建桌面快捷方式：\n"+path)
+	}
+
 	exitApp := func() {
 		mu.Lock()
 		defer mu.Unlock()
@@ -100,7 +111,13 @@ func runDesktop(url string) {
 		log.Println("系统置顶速记窗已启动")
 	}
 
-	trayHost = tray.Start(showNotebook, showFloat, exitApp)
+	trayHost = tray.Start(showNotebook, showFloat, createShortcut, exitApp)
+
+	if path, err := shortcut.EnsureDesktop(); err != nil {
+		log.Printf("自动创建桌面快捷方式失败: %v", err)
+	} else if path != "" {
+		log.Printf("已自动创建桌面快捷方式: %s", path)
+	}
 
 	w := webview2.NewWithOptions(webview2.WebViewOptions{
 		Debug:     envTruthy("PHRASEMATE_DEBUG"),

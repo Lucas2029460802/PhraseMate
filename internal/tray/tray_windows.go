@@ -41,9 +41,10 @@ const (
 	wmTray     = wmApp + 40
 	wmLButtonUp = 0x0202
 	wmRButtonUp = 0x0205
-	idOpen     = 1001
+	idOpen      = 1001
 	idShowFloat = 1002
-	idExit     = 1003
+	idShortcut  = 1003
+	idExit      = 1004
 	mfString   = 0x0000
 	mfSeparator = 0x0800
 	tpmRightButton = 0x0002
@@ -87,23 +88,25 @@ type wndClassEx struct {
 
 // Host owns a system tray icon.
 type Host struct {
-	hwnd      uintptr
-	nid       notifyIconData
-	onOpen    func()
-	onFloat   func()
-	onExit    func()
-	quit      chan struct{}
+	hwnd       uintptr
+	nid        notifyIconData
+	onOpen     func()
+	onFloat    func()
+	onShortcut func()
+	onExit     func()
+	quit       chan struct{}
 }
 
 var active *Host
 
 // Start creates a tray icon on a dedicated UI thread.
-func Start(onOpen, onFloat, onExit func()) *Host {
+func Start(onOpen, onFloat, onShortcut, onExit func()) *Host {
 	h := &Host{
-		onOpen:  onOpen,
-		onFloat: onFloat,
-		onExit:  onExit,
-		quit:    make(chan struct{}),
+		onOpen:     onOpen,
+		onFloat:    onFloat,
+		onShortcut: onShortcut,
+		onExit:     onExit,
+		quit:       make(chan struct{}),
 	}
 	ready := make(chan struct{})
 	go func() {
@@ -195,6 +198,10 @@ func trayWndProc(hwnd uintptr, msg uint32, wParam, lParam uintptr) uintptr {
 			if h.onFloat != nil {
 				h.onFloat()
 			}
+		case idShortcut:
+			if h.onShortcut != nil {
+				h.onShortcut()
+			}
 		case idExit:
 			if h.onExit != nil {
 				h.onExit()
@@ -213,6 +220,7 @@ func (h *Host) showMenu() {
 	menu, _, _ := procCreatePopupMenu.Call()
 	appendMenu(menu, idOpen, "打开生词本")
 	appendMenu(menu, idShowFloat, "显示速记窗")
+	appendMenu(menu, idShortcut, "创建桌面快捷方式")
 	_, _, _ = procAppendMenuW.Call(menu, mfSeparator, 0, 0)
 	appendMenu(menu, idExit, "退出 PhraseMate")
 	var pt point
