@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"strings"
+	"sync"
 	"time"
 
 	"phrasemate/internal/models"
@@ -15,6 +16,7 @@ import (
 
 // Client talks to an OpenAI-compatible Chat Completions API.
 type Client struct {
+	mu      sync.RWMutex
 	apiKey  string
 	baseURL string
 	model   string
@@ -24,9 +26,9 @@ type Client struct {
 // New creates an AI client.
 func New(apiKey, baseURL, model string) *Client {
 	return &Client{
-		apiKey:  apiKey,
-		baseURL: strings.TrimRight(baseURL, "/"),
-		model:   model,
+		apiKey:  strings.TrimSpace(apiKey),
+		baseURL: strings.TrimRight(strings.TrimSpace(baseURL), "/"),
+		model:   strings.TrimSpace(model),
 		http: &http.Client{
 			Timeout: 60 * time.Second,
 		},
@@ -35,7 +37,58 @@ func New(apiKey, baseURL, model string) *Client {
 
 // Enabled reports whether an API key is configured.
 func (c *Client) Enabled() bool {
-	return c != nil && strings.TrimSpace(c.apiKey) != ""
+	if c == nil {
+		return false
+	}
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+	return strings.TrimSpace(c.apiKey) != ""
+}
+
+// UpdateCredentials hot-swaps API key / base URL / model.
+func (c *Client) UpdateCredentials(apiKey, baseURL, model string) {
+	if c == nil {
+		return
+	}
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.apiKey = strings.TrimSpace(apiKey)
+	if u := strings.TrimRight(strings.TrimSpace(baseURL), "/"); u != "" {
+		c.baseURL = u
+	}
+	if m := strings.TrimSpace(model); m != "" {
+		c.model = m
+	}
+}
+
+// APIKey returns the current API key.
+func (c *Client) APIKey() string {
+	if c == nil {
+		return ""
+	}
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+	return c.apiKey
+}
+
+// BaseURL returns the current base URL.
+func (c *Client) BaseURL() string {
+	if c == nil {
+		return ""
+	}
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+	return c.baseURL
+}
+
+// Model returns the current model name.
+func (c *Client) Model() string {
+	if c == nil {
+		return ""
+	}
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+	return c.model
 }
 
 type chatMessage struct {
@@ -68,7 +121,7 @@ type chatResponse struct {
 // Explain asks the model to explain a word or phrase in EN + ZH.
 func (c *Client) Explain(ctx context.Context, term string) (*models.AIExplanation, error) {
 	if !c.Enabled() {
-		return nil, fmt.Errorf("未配置 API Key，请设置环境变量 PHRASEMATE_API_KEY 或 OPENAI_API_KEY")
+		return nil, fmt.Errorf("未配置 API Key，请在应用设置中填写")
 	}
 
 	system := `你是英语学习助手。用户会给出一个英语单词或短语。
@@ -174,8 +227,14 @@ Hard rules:
 }
 
 func (c *Client) chat(ctx context.Context, system, user string, jsonMode bool) (string, error) {
+	c.mu.RLock()
+	model := c.model
+	baseURL := c.baseURL
+	apiKey := c.apiKey
+	c.mu.RUnlock()
+
 	reqBody := chatRequest{
-		Model: c.model,
+		Model: model,
 		Messages: []chatMessage{
 			{Role: "system", Content: system},
 			{Role: "user", Content: user},
@@ -191,13 +250,13 @@ func (c *Client) chat(ctx context.Context, system, user string, jsonMode bool) (
 		return "", err
 	}
 
-	url := c.baseURL + "/chat/completions"
+	url := baseURL + "/chat/completions"
 	req, err := http.NewRequestWithContext(ctx, http.MethodPost, url, bytes.NewReader(raw))
 	if err != nil {
 		return "", err
 	}
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("Authorization", "Bearer "+c.apiKey)
+	req.Header.Set("Authorization", "Bearer "+apiKey)
 
 	resp, err := c.http.Do(req)
 	if err != nil {

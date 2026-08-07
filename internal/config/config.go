@@ -31,7 +31,8 @@ func Load() Config {
 	return cfg
 }
 
-func normalizeBaseURL(u string) string {
+// NormalizeBaseURL cleans and completes OpenAI-compatible base URLs.
+func NormalizeBaseURL(u string) string {
 	u = strings.TrimRight(strings.TrimSpace(u), "/")
 	if u == "" {
 		return "https://api.openai.com/v1"
@@ -45,6 +46,24 @@ func normalizeBaseURL(u string) string {
 		return u + "/v1"
 	}
 	return u
+}
+
+func normalizeBaseURL(u string) string {
+	return NormalizeBaseURL(u)
+}
+
+// MergePersisted overlays DB-persisted credentials onto cfg.
+// Non-empty persisted values win so UI settings take effect after restart.
+func (c *Config) MergePersisted(apiKey, baseURL, model string) {
+	if strings.TrimSpace(apiKey) != "" {
+		c.APIKey = strings.TrimSpace(apiKey)
+	}
+	if strings.TrimSpace(baseURL) != "" {
+		c.BaseURL = NormalizeBaseURL(baseURL)
+	}
+	if strings.TrimSpace(model) != "" {
+		c.Model = strings.TrimSpace(model)
+	}
 }
 
 func getEnv(key, fallback string) string {

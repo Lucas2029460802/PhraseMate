@@ -35,6 +35,20 @@ func Start(cfg config.Config, listenAddr string) (*Runtime, error) {
 		return nil, fmt.Errorf("打开数据库失败: %w", err)
 	}
 
+	if apiKey, baseURL, model, err := st.LoadAppSettings(); err == nil {
+		cfg.MergePersisted(apiKey, baseURL, model)
+		// One-time: persist env credentials so UI settings survive without .env.
+		if strings.TrimSpace(apiKey) == "" && strings.TrimSpace(cfg.APIKey) != "" {
+			_ = st.SetSetting(store.SettingAPIKey, cfg.APIKey)
+		}
+		if strings.TrimSpace(baseURL) == "" && strings.TrimSpace(cfg.BaseURL) != "" {
+			_ = st.SetSetting(store.SettingBaseURL, cfg.BaseURL)
+		}
+		if strings.TrimSpace(model) == "" && strings.TrimSpace(cfg.Model) != "" {
+			_ = st.SetSetting(store.SettingModel, cfg.Model)
+		}
+	}
+
 	client := ai.New(cfg.APIKey, cfg.BaseURL, cfg.Model)
 	dictClient := dict.New(cfg.DictURL)
 	en := enricher.New(st, client, dictClient, cfg.DictFirst, nil)
@@ -116,7 +130,7 @@ func staticHandler() http.Handler {
 func withCORS(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
-		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
 		if r.Method == http.MethodOptions {
 			w.WriteHeader(http.StatusNoContent)

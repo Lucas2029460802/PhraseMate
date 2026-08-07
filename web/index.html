@@ -22,7 +22,8 @@
     </div>
     <div class="topbar-actions">
       <button type="button" class="btn ghost" id="btnShowFloat" title="显示系统置顶速记窗">显示速记窗</button>
-      <div class="status-pill" id="statusPill" title="服务状态">检测中…</div>
+      <button type="button" class="btn ghost" id="btnSettings" title="API 与模型设置">设置</button>
+      <button type="button" class="status-pill" id="statusPill" title="点击打开设置">检测中…</button>
     </div>
   </header>
 
@@ -69,6 +70,41 @@
   </main>
 
   <div class="toast" id="toast" hidden></div>
+
+  <div class="modal-backdrop" id="settingsModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <div class="modal-head">
+        <h2 id="settingsTitle">API 设置</h2>
+        <button type="button" class="icon-btn modal-close" id="btnCloseSettings" aria-label="关闭">×</button>
+      </div>
+      <p class="modal-lead">在界面填写即可，无需编辑 .env。配置保存在本地数据库，立即生效。</p>
+      <form id="settingsForm" class="settings-form">
+        <label class="field">
+          <span>API Key</span>
+          <input type="password" id="settingsApiKey" name="api_key" autocomplete="off" placeholder="sk-…" />
+          <span class="field-hint" id="settingsKeyHint">留空则保持已保存的 Key 不变</span>
+        </label>
+        <label class="field">
+          <span>Base URL</span>
+          <input type="url" id="settingsBaseURL" name="base_url" autocomplete="off" placeholder="https://api.openai.com/v1" />
+        </label>
+        <label class="field">
+          <span>模型</span>
+          <input type="text" id="settingsModel" name="model" autocomplete="off" placeholder="gpt-4o-mini" />
+        </label>
+        <p class="settings-presets">
+          快捷填充：
+          <button type="button" class="linkish" data-preset="openai">OpenAI</button>
+          ·
+          <button type="button" class="linkish" data-preset="deepseek">DeepSeek</button>
+        </p>
+        <div class="modal-actions">
+          <button type="button" class="btn ghost" id="btnClearKey">清除 Key</button>
+          <button type="submit" class="btn" id="btnSaveSettings">保存</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="/static/js/app.js"></script>
 </body>

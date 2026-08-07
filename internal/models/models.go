@@ -64,6 +64,22 @@ type StatusResponse struct {
 	Pending   int    `json:"pending"`
 }
 
+// SettingsResponse is returned by GET /api/settings (never echoes full API key).
+type SettingsResponse struct {
+	HasKey       bool   `json:"has_key"`
+	APIKeyMasked string `json:"api_key_masked"`
+	BaseURL      string `json:"base_url"`
+	Model        string `json:"model"`
+}
+
+// SettingsUpdateRequest is the payload for PUT /api/settings.
+type SettingsUpdateRequest struct {
+	APIKey   string `json:"api_key"`
+	BaseURL  string `json:"base_url"`
+	Model    string `json:"model"`
+	ClearKey bool   `json:"clear_key"`
+}
+
 // AIExplanation is the structured reply from the LLM.
 type AIExplanation struct {
 	Term         string `json:"term"`

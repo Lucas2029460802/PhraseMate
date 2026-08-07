@@ -98,7 +98,7 @@ func basicExplanation(term string, singleWord bool) *models.AIExplanation {
 		Phonetic:     "",
 		PartOfSpeech: pos,
 		MeaningEN:    "Basic mode: saved successfully. Add an API key for richer explanations and examples.",
-		MeaningZH:    "基础版：已成功收录。配置 API Key 后可生成更完整的释义与例句。",
+		MeaningZH:    "基础版：已成功收录。请在应用「设置」中填写 API Key，以生成更完整的释义与例句。",
 		ExampleEN:    "",
 		ExampleZH:    "",
 	}

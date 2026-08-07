@@ -11,6 +11,16 @@
     btnGoQuiz: $("#btnGoQuiz"),
     btnBackNotebook: $("#btnBackNotebook"),
     btnShowFloat: $("#btnShowFloat"),
+    btnSettings: $("#btnSettings"),
+    settingsModal: $("#settingsModal"),
+    btnCloseSettings: $("#btnCloseSettings"),
+    settingsForm: $("#settingsForm"),
+    settingsApiKey: $("#settingsApiKey"),
+    settingsBaseURL: $("#settingsBaseURL"),
+    settingsModel: $("#settingsModel"),
+    settingsKeyHint: $("#settingsKeyHint"),
+    btnClearKey: $("#btnClearKey"),
+    btnSaveSettings: $("#btnSaveSettings"),
     quizArea: $("#quizArea"),
     pageNotebook: $("#pageNotebook"),
     pageQuiz: $("#pageQuiz"),
@@ -252,15 +262,75 @@
         const pending = s.pending > 0 ? ` · ${s.pending} 生成中` : "";
         els.statusPill.textContent = `就绪 · ${s.model}${pending}`;
         els.statusPill.className = "status-pill ok";
+        els.statusPill.title = "点击打开设置";
       } else {
-        els.statusPill.textContent = "未配置 API Key";
+        els.statusPill.textContent = "未配置 API Key · 点击设置";
         els.statusPill.className = "status-pill warn";
+        els.statusPill.title = "点击填写 API Key";
       }
     } catch {
       if (!silent) {
         els.statusPill.textContent = "服务未连接";
         els.statusPill.className = "status-pill warn";
       }
+    }
+  }
+
+  const presets = {
+    openai: {
+      base_url: "https://api.openai.com/v1",
+      model: "gpt-4o-mini",
+    },
+    deepseek: {
+      base_url: "https://api.deepseek.com/v1",
+      model: "deepseek-chat",
+    },
+  };
+
+  async function openSettings() {
+    els.settingsModal.hidden = false;
+    els.settingsApiKey.value = "";
+    try {
+      const s = await api("/api/settings");
+      els.settingsBaseURL.value = s.base_url || "";
+      els.settingsModel.value = s.model || "";
+      if (s.has_key) {
+        els.settingsApiKey.placeholder = s.api_key_masked || "已保存，留空则不变";
+        els.settingsKeyHint.textContent = `当前已保存：${s.api_key_masked || "••••"}（留空则保持不变）`;
+      } else {
+        els.settingsApiKey.placeholder = "sk-…";
+        els.settingsKeyHint.textContent = "必填：OpenAI 兼容接口的 API Key";
+      }
+    } catch (err) {
+      toast(err.message);
+    }
+    els.settingsApiKey.focus();
+  }
+
+  function closeSettings() {
+    els.settingsModal.hidden = true;
+  }
+
+  async function saveSettings(clearKey = false) {
+    const body = {
+      api_key: (els.settingsApiKey.value || "").trim(),
+      base_url: (els.settingsBaseURL.value || "").trim(),
+      model: (els.settingsModel.value || "").trim(),
+      clear_key: !!clearKey,
+    };
+    els.btnSaveSettings.disabled = true;
+    try {
+      await api("/api/settings", {
+        method: "PUT",
+        body: JSON.stringify(body),
+      });
+      toast(clearKey ? "已清除 API Key" : "设置已保存");
+      closeSettings();
+      await loadStatus();
+    } catch (err) {
+      toast(err.message);
+    } finally {
+      els.btnSaveSettings.disabled = false;
     }
   }
 
@@ -406,6 +476,45 @@
     } else {
       toast("请在桌面模式使用系统速记窗");
     }
+  });
+
+  els.btnSettings?.addEventListener("click", () => {
+    openSettings().catch((err) => toast(err.message));
+  });
+
+  els.statusPill?.addEventListener("click", () => {
+    openSettings().catch((err) => toast(err.message));
+  });
+
+  els.btnCloseSettings?.addEventListener("click", closeSettings);
+
+  els.settingsModal?.addEventListener("click", (e) => {
+    if (e.target === els.settingsModal) closeSettings();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && els.settingsModal && !els.settingsModal.hidden) {
+      closeSettings();
+    }
+  });
+
+  els.settingsForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    saveSettings(false);
+  });
+
+  els.btnClearKey?.addEventListener("click", () => {
+    if (!confirm("确定清除已保存的 API Key？")) return;
+    saveSettings(true);
+  });
+
+  els.settingsForm?.querySelectorAll("[data-preset]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const p = presets[btn.dataset.preset];
+      if (!p) return;
+      els.settingsBaseURL.value = p.base_url;
+      els.settingsModel.value = p.model;
+    });
   });
 
   els.quizArea.addEventListener("click", (e) => {

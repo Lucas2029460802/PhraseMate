@@ -52,6 +52,10 @@ CREATE TABLE IF NOT EXISTS words (
   created_at TEXT NOT NULL
 );
 CREATE UNIQUE INDEX IF NOT EXISTS idx_words_term ON words(term);
+CREATE TABLE IF NOT EXISTS settings (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL DEFAULT ''
+);
 `)
 	if err != nil {
 		return err
@@ -62,6 +66,53 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_words_term ON words(term);
 	_, _ = s.db.Exec(`UPDATE words SET status='ready' WHERE IFNULL(status,'')=''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)=''`)
 	return nil
+}
+
+const (
+	SettingAPIKey  = "api_key"
+	SettingBaseURL = "base_url"
+	SettingModel   = "model"
+)
+
+// GetSetting returns a settings value (empty if missing).
+func (s *Store) GetSetting(key string) (string, error) {
+	var val string
+	err := s.db.QueryRow(`SELECT value FROM settings WHERE key=?`, key).Scan(&val)
+	if err == sql.ErrNoRows {
+		return "", nil
+	}
+	return val, err
+}
+
+// SetSetting upserts a settings value.
+func (s *Store) SetSetting(key, value string) error {
+	_, err := s.db.Exec(`
+INSERT INTO settings (key, value) VALUES (?, ?)
+ON CONFLICT(key) DO UPDATE SET value=excluded.value`, key, value)
+	return err
+}
+
+// DeleteSetting removes a settings key.
+func (s *Store) DeleteSetting(key string) error {
+	_, err := s.db.Exec(`DELETE FROM settings WHERE key=?`, key)
+	return err
+}
+
+// LoadAppSettings reads API credentials from the settings table.
+func (s *Store) LoadAppSettings() (apiKey, baseURL, model string, err error) {
+	apiKey, err = s.GetSetting(SettingAPIKey)
+	if err != nil {
+		return "", "", "", err
+	}
+	baseURL, err = s.GetSetting(SettingBaseURL)
+	if err != nil {
+		return "", "", "", err
+	}
+	model, err = s.GetSetting(SettingModel)
+	if err != nil {
+		return "", "", "", err
+	}
+	return apiKey, baseURL, model, nil
 }
 
 // Close closes the database.

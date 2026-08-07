@@ -41,9 +41,9 @@ func main() {
 	defer rt.Close()
 
 	if !rt.AI.Enabled() {
-		log.Println("提示: 未检测到 API Key，请在 .env 中设置 PHRASEMATE_API_KEY")
+		log.Println("提示: 未检测到 API Key，请在应用内打开「设置」填写")
 	} else {
-		log.Printf("模型: %s  |  BaseURL: %s", cfg.Model, cfg.BaseURL)
+		log.Printf("模型: %s  |  BaseURL: %s", rt.AI.Model(), rt.AI.BaseURL())
 	}
 	log.Printf("本地服务: %s", rt.URL)
 
