@@ -16,11 +16,10 @@
 
 ## 普通用户（推荐）
 
-拿到打包好的 `PhraseMate.exe` 后：
-
-1. 双击运行（首次会尝试创建桌面快捷方式）
-2. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
-3. 保存后即可用速记窗收录单词
+1. 打开 [Releases](https://github.com/Lucas2029460802/PhraseMate/releases) ，下载最新的 **PhraseMate.exe**
+2. 双击运行（首次会尝试创建桌面快捷方式）
+3. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
+4. 保存后即可用速记窗收录单词
 
 > 不需要安装 Go，也不需要创建或编辑 `.env`。配置保存在本地 `data/phrasemate.db`。
 
