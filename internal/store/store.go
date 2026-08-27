@@ -8,6 +8,7 @@ import (
 	"strings"
 	"time"
 
+	"phrasemate/internal/format"
 	"phrasemate/internal/models"
 
 	_ "modernc.org/sqlite"
@@ -65,7 +66,35 @@ CREATE TABLE IF NOT EXISTS settings (
 	_, _ = s.db.Exec(`ALTER TABLE words ADD COLUMN error_msg TEXT NOT NULL DEFAULT ''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='ready' WHERE IFNULL(status,'')=''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)=''`)
+	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)<>''`)
+	if err := s.normalizeStoredPhonetics(); err != nil {
+		return err
+	}
 	return nil
+}
+
+func (s *Store) normalizeStoredPhonetics() error {
+	rows, err := s.db.Query(`SELECT id, phonetic FROM words WHERE TRIM(phonetic) <> ''`)
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		var id int64
+		var phonetic string
+		if err := rows.Scan(&id, &phonetic); err != nil {
+			return err
+		}
+		norm := format.NormalizePhonetic(phonetic)
+		if norm == phonetic {
+			continue
+		}
+		if _, err := s.db.Exec(`UPDATE words SET phonetic=? WHERE id=?`, norm, id); err != nil {
+			return err
+		}
+	}
+	return rows.Err()
 }
 
 const (
@@ -135,8 +164,8 @@ func (s *Store) Capture(term string) (*models.Word, bool, error) {
 		return nil, false, err
 	}
 	if existing != nil {
-		// Already explained — just bump to top.
-		if existing.Status == models.StatusReady && (existing.MeaningZH != "" || existing.MeaningEN != "") {
+		if existing.Status == models.StatusReady && strings.TrimSpace(existing.MeaningZH) != "" {
+			// Already explained — just bump to top.
 			_, err = s.db.Exec(`UPDATE words SET created_at=?, error_msg='' WHERE id=?`, now.Format(time.RFC3339), existing.ID)
 			if err != nil {
 				return nil, false, err
@@ -178,6 +207,7 @@ VALUES (?, '', '', '', '', '', '', ?, '', ?)`,
 
 // ApplyExplanation fills AI fields and marks ready.
 func (s *Store) ApplyExplanation(id int64, exp *models.AIExplanation) (*models.Word, error) {
+	exp.Phonetic = format.NormalizePhonetic(exp.Phonetic)
 	_, err := s.db.Exec(`
 UPDATE words SET
   term=?, phonetic=?, meaning_en=?, meaning_zh=?, example_en=?, example_zh=?,

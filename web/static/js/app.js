@@ -130,22 +130,34 @@
     return "";
   }
 
+  function renderMeta(w) {
+    const pos = (w.part_of_speech || "").trim();
+    const phonetic = (w.phonetic || "").trim();
+    if (pos && phonetic) {
+      return `${escapeHtml(pos)} <span class="phonetic">${escapeHtml(phonetic)}</span>`;
+    }
+    if (phonetic) {
+      return `<span class="phonetic">${escapeHtml(phonetic)}</span>`;
+    }
+    return escapeHtml(pos);
+  }
+
   function renderListRow(w) {
-    const meta = [w.part_of_speech, w.phonetic].filter(Boolean).join(" · ");
+    const meta = renderMeta(w);
     const status = statusLabel(w);
     const active = selectedWordId === w.id ? " active" : "";
     return `
       <button type="button" class="word-row${active}" data-id="${w.id}">
         <span class="word-row-main">
           <span class="term">${escapeHtml(w.term)}</span>
-          ${meta ? `<span class="meta">${escapeHtml(meta)}</span>` : ""}
+          ${meta ? `<span class="meta">${meta}</span>` : ""}
         </span>
         ${status ? `<span class="word-status ${w.status}">${status}</span>` : ""}
       </button>`;
   }
 
   function renderDetailHTML(w) {
-    const meta = [w.part_of_speech, w.phonetic].filter(Boolean).join(" · ");
+    const meta = renderMeta(w);
     let body = "";
     if (w.status === "pending") {
       body = `<p class="meaning-zh pending">释义生成中…</p>`;
@@ -161,8 +173,9 @@
               w.example_en
             )}" title="朗读例句">朗读例句</button></p>`
           : "";
+      const meaningZh = (w.meaning_zh || "").trim();
       body = `
-        <p class="meaning-zh">${escapeHtml(w.meaning_zh)}</p>
+        ${meaningZh ? `<p class="meaning-zh">${escapeHtml(meaningZh)}</p>` : ""}
         <p class="meaning-en">${escapeHtml(w.meaning_en)}</p>
         ${example}`;
     }
@@ -175,7 +188,7 @@
               <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 5V5L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.1-3.8v7.6a4.48 4.48 0 0 0 2.1-3.8zM14 3.23v2.06a7 7 0 0 1 0 13.74v2.06a9 9 0 0 0 0-17.82z"/></svg>
             </button>
           </div>
-          <p class="meta">${escapeHtml(meta)}</p>
+          <p class="meta">${meta}</p>
         </div>
         <button type="button" class="btn danger sm" data-del="${w.id}">删除</button>
       </div>

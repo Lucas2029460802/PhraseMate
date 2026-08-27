@@ -461,6 +461,11 @@ body.app-shell {
   font-size: 0.85rem;
 }
 
+.phonetic {
+  font-family: "Segoe UI", "Lucida Sans Unicode", "Arial Unicode MS", sans-serif;
+  letter-spacing: 0.02em;
+}
+
 .detail-body .term {
   font-size: 1.2rem;
 }

@@ -11,6 +11,7 @@ import (
 	"sync"
 	"time"
 
+	"phrasemate/internal/format"
 	"phrasemate/internal/models"
 )
 
@@ -128,10 +129,10 @@ func (c *Client) Explain(ctx context.Context, term string) (*models.AIExplanatio
 请用 JSON 返回解释，字段如下（全部必填，字符串）：
 {
   "term": "原词或短语（规范写法）",
-  "phonetic": "音标，如 /həˈləʊ/，没有则空字符串",
+  "phonetic": "IPA 音标，格式必须为 /həˈləʊ/（斜杠包裹，不含词性或其它文字），没有则空字符串",
   "part_of_speech": "词性，如 n. / v. / adj. / phrase，短语用 phrase",
   "meaning_en": "简洁的英文释义（1-2 句）",
-  "meaning_zh": "准确的中文释义",
+  "meaning_zh": "准确的中文释义（使用中文标点，多条释义用；分隔）",
   "example_en": "一个自然的英文例句",
   "example_zh": "该例句的中文翻译"
 }
@@ -149,6 +150,10 @@ func (c *Client) Explain(ctx context.Context, term string) (*models.AIExplanatio
 	}
 	if strings.TrimSpace(out.Term) == "" {
 		out.Term = term
+	}
+	out.Phonetic = format.NormalizePhonetic(out.Phonetic)
+	if strings.TrimSpace(out.MeaningZH) == "" {
+		return nil, fmt.Errorf("AI 未返回中文释义")
 	}
 	return &out, nil
 }

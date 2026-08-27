@@ -3,6 +3,7 @@ package enricher
 import (
 	"context"
 	"log"
+	"strings"
 	"time"
 
 	"phrasemate/internal/ai"
@@ -73,6 +74,7 @@ func (w *Worker) explain(ctx context.Context, term string) (*models.AIExplanatio
 	if w.dictFirst && w.dict != nil && singleWord {
 		exp, err := w.dict.Lookup(ctx, term)
 		if err == nil {
+			w.fillMissingFromAI(ctx, term, exp)
 			return exp, "dict", nil
 		}
 		log.Printf("词典未命中 [%s]: %v，改用 AI", term, err)
@@ -86,6 +88,33 @@ func (w *Worker) explain(ctx context.Context, term string) (*models.AIExplanatio
 		return nil, "", err
 	}
 	return exp, "ai", nil
+}
+
+func (w *Worker) fillMissingFromAI(ctx context.Context, term string, exp *models.AIExplanation) {
+	if strings.TrimSpace(exp.MeaningZH) != "" {
+		return
+	}
+	if !w.ai.Enabled() {
+		return
+	}
+	aiExp, err := w.ai.Explain(ctx, term)
+	if err != nil {
+		log.Printf("AI 补全中文释义失败 [%s]: %v", term, err)
+		return
+	}
+	exp.MeaningZH = aiExp.MeaningZH
+	if strings.TrimSpace(exp.ExampleZH) == "" {
+		exp.ExampleZH = aiExp.ExampleZH
+	}
+	if strings.TrimSpace(exp.ExampleEN) == "" {
+		exp.ExampleEN = aiExp.ExampleEN
+	}
+	if strings.TrimSpace(exp.Phonetic) == "" {
+		exp.Phonetic = aiExp.Phonetic
+	}
+	if strings.TrimSpace(exp.PartOfSpeech) == "" {
+		exp.PartOfSpeech = aiExp.PartOfSpeech
+	}
 }
 
 func basicExplanation(term string, singleWord bool) *models.AIExplanation {

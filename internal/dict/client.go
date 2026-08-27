@@ -11,7 +11,9 @@ import (
 	"strings"
 	"time"
 	"unicode"
+	"unicode/utf8"
 
+	"phrasemate/internal/format"
 	"phrasemate/internal/models"
 )
 
@@ -112,41 +114,29 @@ func (c *Client) Lookup(ctx context.Context, term string) (*models.AIExplanation
 		return nil, fmt.Errorf("dictionary: empty response")
 	}
 
-	exp := buildExplanation(entries[0], term)
+	exp, defs := buildExplanation(entries[0], term)
 	if strings.TrimSpace(exp.MeaningEN) == "" {
 		return nil, fmt.Errorf("dictionary: no definition")
 	}
 
-	zh, err := translateZH(ctx, c.http, exp.MeaningEN)
-	if err != nil {
-		// Translation is best-effort; keep fast path instead of blocking fallback.
-		exp.MeaningZH = exp.MeaningEN
-	} else {
+	if zh, err := translateDefinitionsZH(ctx, c.http, defs); err == nil {
 		exp.MeaningZH = zh
 	}
 
 	if strings.TrimSpace(exp.ExampleEN) != "" {
 		if exZh, err := translateZH(ctx, c.http, exp.ExampleEN); err == nil {
-			exp.ExampleZH = exZh
+			exp.ExampleZH = normalizeZH(exZh)
 		}
 	}
 
 	return exp, nil
 }
 
-func buildExplanation(entry apiEntry, fallbackTerm string) *models.AIExplanation {
-	phonetic := strings.TrimSpace(entry.Phonetic)
-	if phonetic == "" {
-		for _, p := range entry.Phonetics {
-			if t := strings.TrimSpace(p.Text); t != "" {
-				phonetic = t
-				break
-			}
-		}
-	}
+func buildExplanation(entry apiEntry, fallbackTerm string) (*models.AIExplanation, []string) {
+	phonetic := pickPhonetic(entry)
 
 	var pos string
-	var meaningEN string
+	var defs []string
 	var exampleEN string
 
 	for _, m := range entry.Meanings {
@@ -154,24 +144,25 @@ func buildExplanation(entry apiEntry, fallbackTerm string) *models.AIExplanation
 			pos = abbrevPOS(m.PartOfSpeech)
 		}
 		for _, d := range m.Definitions {
-			def := strings.TrimSpace(d.Definition)
+			def := trimTrailingPunct(strings.TrimSpace(d.Definition))
 			if def == "" {
 				continue
 			}
-			if meaningEN == "" {
-				meaningEN = def
+			if len(defs) == 0 {
+				defs = append(defs, def)
 				exampleEN = strings.TrimSpace(d.Example)
 				continue
 			}
-			if len(meaningEN) < 120 && len(meaningEN)+len(def)+2 < 200 {
-				meaningEN += "; " + def
+			joined := strings.Join(defs, "; ")
+			if len(joined) < 120 && len(joined)+len(def)+2 < 200 {
+				defs = append(defs, def)
 			}
 			if exampleEN == "" {
 				exampleEN = strings.TrimSpace(d.Example)
 			}
 			break
 		}
-		if meaningEN != "" {
+		if len(defs) > 0 {
 			break
 		}
 	}
@@ -180,17 +171,101 @@ func buildExplanation(entry apiEntry, fallbackTerm string) *models.AIExplanation
 	if term == "" {
 		term = fallbackTerm
 	}
-	if !strings.HasPrefix(phonetic, "/") && phonetic != "" && !strings.Contains(phonetic, "/") {
-		phonetic = "/" + phonetic + "/"
-	}
 
 	return &models.AIExplanation{
 		Term:         term,
 		Phonetic:     phonetic,
 		PartOfSpeech: pos,
-		MeaningEN:    meaningEN,
+		MeaningEN:    strings.Join(defs, "; "),
 		ExampleEN:    exampleEN,
+	}, defs
+}
+
+func pickPhonetic(entry apiEntry) string {
+	candidates := make([]string, 0, len(entry.Phonetics)+1)
+	if p := strings.TrimSpace(entry.Phonetic); p != "" {
+		candidates = append(candidates, p)
 	}
+	for _, ph := range entry.Phonetics {
+		if t := strings.TrimSpace(ph.Text); t != "" {
+			candidates = append(candidates, t)
+		}
+	}
+
+	best := ""
+	bestScore := -1
+	for _, c := range candidates {
+		norm := format.NormalizePhonetic(c)
+		if norm == "" {
+			continue
+		}
+		if s := scorePhoneticCandidate(c); s > bestScore {
+			bestScore = s
+			best = norm
+		}
+	}
+	return best
+}
+
+func scorePhoneticCandidate(p string) int {
+	score := 0
+	if strings.HasPrefix(p, "/") || strings.HasPrefix(p, "[") {
+		score += 2
+	}
+	ipaMarkers := "əɪʊæɔθðŋʃʒˈˌː"
+	for _, r := range p {
+		if strings.ContainsRune(ipaMarkers, r) {
+			score += 3
+		}
+	}
+	return score
+}
+
+func trimTrailingPunct(s string) string {
+	s = strings.TrimSpace(s)
+	for len(s) > 0 {
+		r, size := utf8.DecodeLastRuneInString(s)
+		if r == '.' || r == ';' || r == ',' {
+			s = strings.TrimSpace(s[:len(s)-size])
+			continue
+		}
+		break
+	}
+	return s
+}
+
+func translateDefinitionsZH(ctx context.Context, httpClient *http.Client, defs []string) (string, error) {
+	if len(defs) == 0 {
+		return "", fmt.Errorf("no definitions")
+	}
+	if len(defs) == 1 {
+		zh, err := translateZH(ctx, httpClient, defs[0])
+		if err != nil {
+			return "", err
+		}
+		return normalizeZH(zh), nil
+	}
+
+	parts := make([]string, 0, len(defs))
+	for _, def := range defs {
+		zh, err := translateZH(ctx, httpClient, def)
+		if err != nil {
+			return "", err
+		}
+		parts = append(parts, normalizeZH(zh))
+	}
+	return strings.Join(parts, "；"), nil
+}
+
+func normalizeZH(s string) string {
+	s = strings.TrimSpace(s)
+	s = trimTrailingPunct(s)
+	s = strings.ReplaceAll(s, "；。", "；")
+	s = strings.ReplaceAll(s, "。；", "；")
+	for strings.Contains(s, "。。") {
+		s = strings.ReplaceAll(s, "。。", "。")
+	}
+	return s
 }
 
 func abbrevPOS(pos string) string {
@@ -271,5 +346,25 @@ func translateZH(ctx context.Context, httpClient *http.Client, text string) (str
 	if out == "" {
 		return "", fmt.Errorf("empty translation")
 	}
+	if translationLooksFailed(text, out) {
+		return "", fmt.Errorf("translation returned source text")
+	}
 	return out, nil
+}
+
+func translationLooksFailed(original, translated string) bool {
+	if strings.EqualFold(strings.TrimSpace(original), strings.TrimSpace(translated)) {
+		return true
+	}
+	runes := []rune(translated)
+	if len(runes) == 0 {
+		return true
+	}
+	asciiLetters := 0
+	for _, r := range runes {
+		if r < 128 && unicode.IsLetter(r) {
+			asciiLetters++
+		}
+	}
+	return asciiLetters*100/len(runes) > 85
 }
