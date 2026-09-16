@@ -8,6 +8,7 @@ phrasemate
 PhraseMate
 PhraseMate.exe
 *.app
+dist/
 
 # Data & secrets
 .env

@@ -98,6 +98,11 @@ func EnsureDesktop() (string, error) {
 	return CreateDesktop()
 }
 
+// PackApp is macOS-only.
+func PackApp(dest string) (string, error) {
+	return "", fmt.Errorf("打包 .app 仅支持 macOS")
+}
+
 func desktopDir() (string, error) {
 	cmd := exec.Command(
 		"powershell", "-NoProfile", "-NonInteractive", "-Command",

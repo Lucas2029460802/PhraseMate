@@ -3,6 +3,7 @@
 package app
 
 import (
+	"os"
 	"os/exec"
 	"strings"
 )
@@ -18,6 +19,9 @@ func InfoBox(title, text string) {
 }
 
 func showDialog(title, text, icon string) {
+	if strings.TrimSpace(os.Getenv("CI")) != "" {
+		return
+	}
 	script := "display dialog " + appleString(text) +
 		" with title " + appleString(title) +
 		` buttons {"OK"} default button 1 with icon ` + icon

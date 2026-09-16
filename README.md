@@ -29,14 +29,14 @@ Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com
 
 ### macOS
 
-目前请从源码构建（见下方「开发者」）。首次运行会：
+1. 打开 [Releases](https://github.com/Lucas2029460802/PhraseMate/releases) ，下载最新的 **PhraseMate-macos-*.zip**
+2. 解压得到 `PhraseMate.app`，拖到「应用程序」
+3. 首次打开：在 Finder 里 **右键 → 打开**（未公证签名时系统会拦截，选一次即可）
+4. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
 
-- 使用系统自带的 **WKWebView** 打开窗口（无需 WebView2）
-- 在菜单栏显示 PhraseMate 图标（关闭主窗口即隐藏到菜单栏）
-- 尝试把应用安装到 `~/Applications/PhraseMate.app`，并在桌面创建别名
-- 把数据库写到 `~/Library/Application Support/PhraseMate/phrasemate.db`
-
-需要已安装 [Xcode Command Line Tools](https://developer.apple.com/xcode/)（`xcode-select --install`）。
+> 配置和生词本保存在 `~/Library/Application Support/PhraseMate/phrasemate.db`。
+>
+> macOS 安装包由 GitHub Actions 的 macOS runner 自动构建（Apple Silicon + Intel 通用二进制）。推送 `v*` 标签会发布到 Releases。
 
 ### 设置示例
 
@@ -110,10 +110,12 @@ go build -ldflags="-H windowsgui -s -w" -o PhraseMate.exe .
 
 ```bash
 CGO_ENABLED=1 go build -ldflags="-s -w" -o PhraseMate .
-./PhraseMate --install-shortcut
+./PhraseMate --pack-app dist/PhraseMate.app
 ```
 
-会生成 `~/Applications/PhraseMate.app`，并在桌面创建别名。把 `.app` 发给其他 Mac 用户即可。
+日常开发仍可用 `go run .`。发布请用 GitHub Actions：推送 `v1.0.0` 这类标签后，macOS runner 会构建 **arm64 + amd64 通用** `.app`，打成 zip 并挂到该 Release。
+
+也可在仓库的 **Actions → macOS → Run workflow** 手动跑一次，产物在 Artifacts 里。
 
 > 从 Windows 交叉编译 `GOOS=darwin` **不能** 得到可用的桌面程序（CGO + 系统 WebKit）。
 

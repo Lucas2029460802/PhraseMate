@@ -11,3 +11,7 @@ func CreateDesktop() (string, error) {
 func Exists() bool { return false }
 
 func EnsureDesktop() (string, error) { return "", nil }
+
+func PackApp(dest string) (string, error) {
+	return "", fmt.Errorf("打包 .app 仅支持 macOS")
+}

@@ -28,6 +28,10 @@ func main() {
 		installDesktopShortcut()
 		return
 	}
+	if len(os.Args) > 1 && (os.Args[1] == "--pack-app" || os.Args[1] == "-pack-app") {
+		packMacApp()
+		return
+	}
 
 	cfg := config.Load()
 	webOnly := envTruthy("PHRASEMATE_WEB")
@@ -123,4 +127,17 @@ func installDesktopShortcut() {
 	}
 	log.Printf("已创建桌面快捷方式: %s", path)
 	app.InfoBox("PhraseMate", "已创建桌面快捷方式：\n"+path)
+}
+
+func packMacApp() {
+	dest := "PhraseMate.app"
+	if len(os.Args) > 2 && strings.TrimSpace(os.Args[2]) != "" {
+		dest = os.Args[2]
+	}
+	path, err := shortcut.PackApp(dest)
+	if err != nil {
+		log.Println("打包失败:", err)
+		os.Exit(1)
+	}
+	log.Printf("已打包应用: %s", path)
 }

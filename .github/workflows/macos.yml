@@ -1,0 +1,103 @@
+name: macOS
+
+on:
+  push:
+    branches: [main, master]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: macos-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build universal .app
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Resolve version
+        run: |
+          if [[ "${{ github.ref_type }}" == "tag" ]]; then
+            echo "PHRASEMATE_VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
+            echo "ZIP_NAME=PhraseMate-macos-${GITHUB_REF_NAME#v}.zip" >> "$GITHUB_ENV"
+          else
+            echo "PHRASEMATE_VERSION=0.0.0" >> "$GITHUB_ENV"
+            echo "ZIP_NAME=PhraseMate-macos.zip" >> "$GITHUB_ENV"
+          fi
+          echo "PHRASEMATE_BUILD=${{ github.run_number }}" >> "$GITHUB_ENV"
+
+      - name: Show toolchain
+        run: |
+          go version
+          clang --version
+          echo "SDKROOT=$(xcrun --sdk macosx --show-sdk-path)"
+          uname -m
+
+      - name: Build arm64
+        env:
+          CGO_ENABLED: "1"
+          GOOS: darwin
+          GOARCH: arm64
+        run: |
+          mkdir -p dist
+          go build -trimpath -ldflags="-s -w" -o dist/PhraseMate-arm64 .
+
+      - name: Build amd64
+        env:
+          CGO_ENABLED: "1"
+          GOOS: darwin
+          GOARCH: amd64
+        run: |
+          SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
+          export SDKROOT
+          export CGO_CFLAGS="-isysroot $SDKROOT -arch x86_64"
+          export CGO_LDFLAGS="-isysroot $SDKROOT -arch x86_64"
+          go build -trimpath -ldflags="-s -w" -o dist/PhraseMate-amd64 .
+
+      - name: Create universal binary
+        run: |
+          lipo -create -output dist/PhraseMate dist/PhraseMate-arm64 dist/PhraseMate-amd64
+          chmod +x dist/PhraseMate
+          lipo -info dist/PhraseMate
+          file dist/PhraseMate
+
+      - name: Pack PhraseMate.app
+        run: |
+          ./dist/PhraseMate --pack-app dist/PhraseMate.app
+          codesign --force --deep --sign - dist/PhraseMate.app
+          codesign -dv --verbose=2 dist/PhraseMate.app
+          file dist/PhraseMate.app/Contents/MacOS/PhraseMate
+          lipo -info dist/PhraseMate.app/Contents/MacOS/PhraseMate
+
+      - name: Zip app bundle
+        run: |
+          ditto -c -k --keepParent dist/PhraseMate.app "dist/${ZIP_NAME}"
+          ls -lh "dist/${ZIP_NAME}"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PhraseMate-macos
+          path: dist/${{ env.ZIP_NAME }}
+          if-no-files-found: error
+
+      - name: Attach to GitHub Release
+        if: github.ref_type == 'tag'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/${{ env.ZIP_NAME }}
+          generate_release_notes: true
+          fail_on_unmatched_files: true

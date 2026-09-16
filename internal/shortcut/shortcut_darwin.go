@@ -111,29 +111,106 @@ func ensureAppBundle(exe string) (string, error) {
 		return "", err
 	}
 	app := filepath.Join(apps, "PhraseMate.app")
+	if err := writeAppBundle(exe, app); err != nil {
+		return "", err
+	}
+	return app, nil
+}
+
+// PackApp writes a distributable PhraseMate.app to dest (for CI; no desktop alias).
+func PackApp(dest string) (string, error) {
+	exe, err := os.Executable()
+	if err != nil {
+		return "", fmt.Errorf("定位程序失败: %w", err)
+	}
+	if resolved, err := filepath.EvalSymlinks(exe); err == nil {
+		exe = resolved
+	}
+	exe, err = filepath.Abs(exe)
+	if err != nil {
+		return "", err
+	}
+	if IsEphemeral(exe) {
+		return "", fmt.Errorf("当前是 go run 临时程序，请先用 go build 再打包")
+	}
+	if strings.TrimSpace(dest) == "" {
+		dest = "PhraseMate.app"
+	}
+	if !strings.HasSuffix(strings.ToLower(dest), ".app") {
+		dest += ".app"
+	}
+	dest, err = filepath.Abs(dest)
+	if err != nil {
+		return "", err
+	}
+	if err := writeAppBundle(exe, dest); err != nil {
+		return "", err
+	}
+	return dest, nil
+}
+
+func writeAppBundle(exe, app string) error {
 	macosDir := filepath.Join(app, "Contents", "MacOS")
 	resDir := filepath.Join(app, "Contents", "Resources")
 	if err := os.MkdirAll(macosDir, 0o755); err != nil {
-		return "", err
+		return err
 	}
 	if err := os.MkdirAll(resDir, 0o755); err != nil {
-		return "", err
+		return err
 	}
 	destExe := filepath.Join(macosDir, "PhraseMate")
-	if err := copyFile(exe, destExe); err != nil {
-		return "", fmt.Errorf("复制程序到应用包失败: %w", err)
+	if sameFile(exe, destExe) {
+		if err := os.Chmod(destExe, 0o755); err != nil {
+			return err
+		}
+	} else {
+		if err := copyFile(exe, destExe); err != nil {
+			return fmt.Errorf("复制程序到应用包失败: %w", err)
+		}
+		if err := os.Chmod(destExe, 0o755); err != nil {
+			return err
+		}
 	}
-	if err := os.Chmod(destExe, 0o755); err != nil {
-		return "", err
-	}
-	plist := filepath.Join(app, "Contents", "Info.plist")
-	if err := os.WriteFile(plist, []byte(macInfoPlist), 0o644); err != nil {
-		return "", err
+	version, build := bundleVersion()
+	plist := strings.NewReplacer(
+		"{{VERSION}}", xmlEscape(version),
+		"{{BUILD}}", xmlEscape(build),
+	).Replace(macInfoPlist)
+	if err := os.WriteFile(filepath.Join(app, "Contents", "Info.plist"), []byte(plist), 0o644); err != nil {
+		return err
 	}
 	if _, err := brandicon.EnsureICNS(resDir); err != nil {
-		return "", fmt.Errorf("写入应用图标失败: %w", err)
+		return fmt.Errorf("写入应用图标失败: %w", err)
 	}
-	return app, nil
+	return nil
+}
+
+func sameFile(a, b string) bool {
+	absA, err1 := filepath.Abs(a)
+	absB, err2 := filepath.Abs(b)
+	if err1 != nil || err2 != nil {
+		return false
+	}
+	return absA == absB
+}
+
+func bundleVersion() (version, build string) {
+	version = strings.TrimPrefix(strings.TrimSpace(os.Getenv("PHRASEMATE_VERSION")), "v")
+	if version == "" {
+		version = "1.0"
+	}
+	build = strings.TrimSpace(os.Getenv("PHRASEMATE_BUILD"))
+	if build == "" {
+		build = version
+	}
+	return version, build
+}
+
+func xmlEscape(s string) string {
+	s = strings.ReplaceAll(s, "&", "&amp;")
+	s = strings.ReplaceAll(s, "<", "&lt;")
+	s = strings.ReplaceAll(s, ">", "&gt;")
+	return s
 }
 
 func appBundleRoot(exe string) string {
@@ -198,9 +275,9 @@ const macInfoPlist = `<?xml version="1.0" encoding="UTF-8"?>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>{{VERSION}}</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>{{BUILD}}</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>11.0</string>
 	<key>NSHighResolutionCapable</key>
