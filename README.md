@@ -18,12 +18,14 @@
 
 ### Windows
 
-1. 打开 [Releases](https://github.com/Lucas2029460802/PhraseMate/releases) ，下载最新的 **PhraseMate.exe**
+1. 打开 [Releases](https://github.com/Lucas2029460802/PhraseMate/releases) ，下载最新的 **PhraseMate.exe**（或 `PhraseMate-windows-*.exe`）
 2. 双击运行（首次会尝试创建桌面快捷方式）
 3. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
 4. 保存后即可用速记窗收录单词
 
 > 不需要安装 Go，也不需要创建或编辑 `.env`。配置保存在本地 `data/phrasemate.db`。
+>
+> Windows / macOS 安装包都由 GitHub Actions 自动构建。推送 `v*` 标签会同时发布两个平台的产物。
 
 Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。若窗口创建失败，请安装该运行时。
 
@@ -36,7 +38,7 @@ Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com
 
 > 配置和生词本保存在 `~/Library/Application Support/PhraseMate/phrasemate.db`。
 >
-> macOS 安装包由 GitHub Actions 的 macOS runner 自动构建（Apple Silicon + Intel 通用二进制）。推送 `v*` 标签会发布到 Releases。
+> macOS 安装包是 Apple Silicon + Intel 通用二进制。
 
 ### 设置示例
 
@@ -104,6 +106,8 @@ go build -ldflags="-H windowsgui -s -w" -o PhraseMate.exe .
 
 把 `PhraseMate.exe` 发给用户即可；用户在界面填写 API Key，无需附带 `.env`。
 
+GitHub Actions 的 Windows runner 会自动打出同样的无控制台 exe。
+
 ### macOS
 
 必须在 Mac 本机构建（依赖 Cocoa / WebKit，不能从 Windows 交叉编译）：
@@ -113,9 +117,12 @@ CGO_ENABLED=1 go build -ldflags="-s -w" -o PhraseMate .
 ./PhraseMate --pack-app dist/PhraseMate.app
 ```
 
-日常开发仍可用 `go run .`。发布请用 GitHub Actions：推送 `v1.0.0` 这类标签后，macOS runner 会构建 **arm64 + amd64 通用** `.app`，打成 zip 并挂到该 Release。
+日常开发仍可用 `go run .`。发布请用 GitHub Actions：推送 `v1.0.0` 这类标签后，会同时构建：
 
-也可在仓库的 **Actions → macOS → Run workflow** 手动跑一次，产物在 Artifacts 里。
+- **Windows**：`PhraseMate-windows-*.exe`（amd64，无控制台）
+- **macOS**：`PhraseMate-macos-*.zip`（arm64 + amd64 通用 `.app`）
+
+也可在仓库的 **Actions → Build → Run workflow** 手动跑一次，产物在 Artifacts 里。
 
 > 从 Windows 交叉编译 `GOOS=darwin` **不能** 得到可用的桌面程序（CGO + 系统 WebKit）。
 

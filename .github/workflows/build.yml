@@ -1,4 +1,4 @@
-name: macOS
+name: Build
 
 on:
   push:
@@ -8,15 +8,15 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: macos-${{ github.workflow }}-${{ github.ref }}
+  group: build-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: write
 
 jobs:
-  build:
-    name: Build universal .app
+  macos:
+    name: macOS
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -94,10 +94,69 @@ jobs:
           path: dist/${{ env.ZIP_NAME }}
           if-no-files-found: error
 
+  windows:
+    name: Windows
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Resolve version
+        shell: bash
+        run: |
+          if [[ "${{ github.ref_type }}" == "tag" ]]; then
+            echo "EXE_NAME=PhraseMate-windows-${GITHUB_REF_NAME#v}.exe" >> "$GITHUB_ENV"
+          else
+            echo "EXE_NAME=PhraseMate.exe" >> "$GITHUB_ENV"
+          fi
+
+      - name: Show toolchain
+        run: |
+          go version
+          go env GOOS GOARCH CGO_ENABLED
+
+      - name: Build exe
+        env:
+          CGO_ENABLED: "0"
+          GOOS: windows
+          GOARCH: amd64
+        run: |
+          New-Item -ItemType Directory -Force dist | Out-Null
+          go build -trimpath -ldflags="-H windowsgui -s -w" -o "dist/${{ env.EXE_NAME }}" .
+          Get-Item "dist/${{ env.EXE_NAME }}" | Format-List Name, Length, LastWriteTime
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PhraseMate-windows
+          path: dist/${{ env.EXE_NAME }}
+          if-no-files-found: error
+
+  release:
+    name: GitHub Release
+    needs: [macos, windows]
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: PhraseMate-*
+          path: dist
+          merge-multiple: true
+
+      - name: List files
+        run: ls -lh dist
+
       - name: Attach to GitHub Release
-        if: github.ref_type == 'tag'
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/${{ env.ZIP_NAME }}
+          files: dist/*
           generate_release_notes: true
           fail_on_unmatched_files: true
