@@ -15,17 +15,6 @@ import (
 	"github.com/jchv/go-webview2"
 )
 
-const (
-	floatW = 420
-	floatH = 96
-)
-
-// Hooks connects float UI actions to the desktop shell.
-type Hooks struct {
-	OnCaptured       func(term string)
-	OnToggleNotebook func()
-}
-
 // Host is a frameless topmost WebView2 capture bar.
 type Host struct {
 	view   webview2.WebView

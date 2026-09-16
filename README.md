@@ -1,7 +1,7 @@
 # PhraseMate
 感觉市面上当前已经有的单词本很难用，很多短语都无法记录，于是用cursor生成一个简单的单词本小程序，可以接入api，在边看B站网课的时候边听边记录
 
-技术栈：**Go** + **WebView2** 原生窗口 + **SQLite** + **OpenAI 兼容** API。
+技术栈：**Go** + **原生窗口**（Windows: WebView2 / macOS: WKWebView）+ **SQLite** + **OpenAI 兼容** API。
 
 ## 功能
 
@@ -16,6 +16,8 @@
 
 ## 普通用户（推荐）
 
+### Windows
+
 1. 打开 [Releases](https://github.com/Lucas2029460802/PhraseMate/releases) ，下载最新的 **PhraseMate.exe**
 2. 双击运行（首次会尝试创建桌面快捷方式）
 3. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
@@ -24,6 +26,17 @@
 > 不需要安装 Go，也不需要创建或编辑 `.env`。配置保存在本地 `data/phrasemate.db`。
 
 Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。若窗口创建失败，请安装该运行时。
+
+### macOS
+
+目前请从源码构建（见下方「开发者」）。首次运行会：
+
+- 使用系统自带的 **WKWebView** 打开窗口（无需 WebView2）
+- 在菜单栏显示 PhraseMate 图标（关闭主窗口即隐藏到菜单栏）
+- 尝试把应用安装到 `~/Applications/PhraseMate.app`，并在桌面创建别名
+- 把数据库写到 `~/Library/Application Support/PhraseMate/phrasemate.db`
+
+需要已安装 [Xcode Command Line Tools](https://developer.apple.com/xcode/)（`xcode-select --install`）。
 
 ### 设置示例
 
@@ -38,6 +51,8 @@ Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com
 
 需要本机已安装 [Go](https://go.dev/dl/)（仅开发/打包时需要）。
 
+### Windows
+
 ```powershell
 go mod tidy
 go run .
@@ -45,19 +60,41 @@ go run .
 
 会弹出 **PhraseMate** 应用窗口。关闭窗口即隐藏到托盘；退出请用托盘菜单。
 
+### macOS
+
+```bash
+xcode-select --install   # 若尚未安装
+go mod tidy
+go run .
+```
+
+会弹出 **PhraseMate** 应用窗口。关闭窗口即隐藏到菜单栏；退出请用菜单栏图标。
+
+> `go run` 是临时二进制，不会创建桌面快捷方式。需要快捷方式请先 `go build`。
+>
 > 可选：仍可用 `.env` 预填 Key（适合开发）。界面里保存的配置会写入数据库，并优先于 `.env`。
 
 ### 可选：浏览器模式
 
 调试页面时：
 
+Windows:
+
 ```powershell
 $env:PHRASEMATE_WEB="1"; go run .
+```
+
+macOS / Linux:
+
+```bash
+PHRASEMATE_WEB=1 go run .
 ```
 
 然后手动打开终端里打印的本地地址。
 
 ## 打包成软件
+
+### Windows
 
 无黑框控制台的桌面程序：
 
@@ -67,16 +104,37 @@ go build -ldflags="-H windowsgui -s -w" -o PhraseMate.exe .
 
 把 `PhraseMate.exe` 发给用户即可；用户在界面填写 API Key，无需附带 `.env`。
 
+### macOS
+
+必须在 Mac 本机构建（依赖 Cocoa / WebKit，不能从 Windows 交叉编译）：
+
+```bash
+CGO_ENABLED=1 go build -ldflags="-s -w" -o PhraseMate .
+./PhraseMate --install-shortcut
+```
+
+会生成 `~/Applications/PhraseMate.app`，并在桌面创建别名。把 `.app` 发给其他 Mac 用户即可。
+
+> 从 Windows 交叉编译 `GOOS=darwin` **不能** 得到可用的桌面程序（CGO + 系统 WebKit）。
+
 ### 桌面快捷方式
 
 打包后任选其一：
 
-1. **双击运行一次**：若桌面还没有快捷方式，会自动创建 `PhraseMate.lnk`（带品牌图标）
-2. **托盘右键** →「创建桌面快捷方式」（可随时重建）
+1. **运行一次**：若桌面还没有快捷方式，会自动创建（Windows: `PhraseMate.lnk`；macOS: 桌面别名）
+2. **托盘 / 菜单栏右键** →「创建桌面快捷方式」（可随时重建）
 3. **命令行**：
+
+Windows:
 
 ```powershell
 .\PhraseMate.exe --install-shortcut
+```
+
+macOS:
+
+```bash
+./PhraseMate --install-shortcut
 ```
 
 > 用 `go run .` 调试时不会创建快捷方式（临时路径无效）；请先 `go build`。

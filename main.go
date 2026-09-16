@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
 
 	"phrasemate/internal/app"
@@ -11,6 +12,11 @@ import (
 	"phrasemate/internal/dpi"
 	"phrasemate/internal/shortcut"
 )
+
+func init() {
+	// AppKit / some Win32 UI must run on the thread that started the process.
+	runtime.LockOSThread()
+}
 
 func main() {
 	dpi.Enable()
@@ -118,4 +124,3 @@ func installDesktopShortcut() {
 	log.Printf("已创建桌面快捷方式: %s", path)
 	app.InfoBox("PhraseMate", "已创建桌面快捷方式：\n"+path)
 }
-

@@ -2,6 +2,8 @@ package config
 
 import (
 	"os"
+	"path/filepath"
+	"runtime"
 	"strconv"
 	"strings"
 )
@@ -24,7 +26,7 @@ func Load() Config {
 		APIKey:    firstNonEmpty(os.Getenv("PHRASEMATE_API_KEY"), os.Getenv("OPENAI_API_KEY")),
 		BaseURL:   normalizeBaseURL(firstNonEmpty(os.Getenv("PHRASEMATE_BASE_URL"), os.Getenv("OPENAI_BASE_URL"), "https://api.openai.com/v1")),
 		Model:     firstNonEmpty(os.Getenv("PHRASEMATE_MODEL"), os.Getenv("OPENAI_MODEL"), "gpt-4o-mini"),
-		DBPath:    getEnv("PHRASEMATE_DB", "data/phrasemate.db"),
+		DBPath:    getEnv("PHRASEMATE_DB", defaultDBPath()),
 		DictFirst: getEnvBool("PHRASEMATE_DICT_FIRST", true),
 		DictURL:   getEnv("PHRASEMATE_DICT_URL", ""),
 	}
@@ -64,6 +66,16 @@ func (c *Config) MergePersisted(apiKey, baseURL, model string) {
 	if strings.TrimSpace(model) != "" {
 		c.Model = strings.TrimSpace(model)
 	}
+}
+
+func defaultDBPath() string {
+	if runtime.GOOS == "darwin" {
+		home, err := os.UserHomeDir()
+		if err == nil && strings.TrimSpace(home) != "" {
+			return filepath.Join(home, "Library", "Application Support", "PhraseMate", "phrasemate.db")
+		}
+	}
+	return "data/phrasemate.db"
 }
 
 func getEnv(key, fallback string) string {

@@ -1,15 +1,13 @@
-//go:build !windows
+//go:build !windows && !darwin
 
 package shortcut
 
 import "fmt"
 
 func CreateDesktop() (string, error) {
-	return "", fmt.Errorf("桌面快捷方式仅支持 Windows")
+	return "", fmt.Errorf("桌面快捷方式仅支持 Windows / macOS")
 }
 
 func Exists() bool { return false }
 
 func EnsureDesktop() (string, error) { return "", nil }
-
-func IsEphemeral(exe string) bool { return false }

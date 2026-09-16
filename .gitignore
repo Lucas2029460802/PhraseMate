@@ -5,7 +5,9 @@
 *.so
 *.dylib
 phrasemate
+PhraseMate
 PhraseMate.exe
+*.app
 
 # Data & secrets
 .env

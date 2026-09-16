@@ -46,6 +46,7 @@ body {
     radial-gradient(120% 140% at 0% 0%, rgba(42, 143, 153, 0.3), transparent 55%),
     linear-gradient(135deg, var(--bg), var(--bg-2));
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+  -webkit-app-region: drag;
 }
 
 .badge {
@@ -78,6 +79,7 @@ body {
   outline: none;
   user-select: text;
   transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  -webkit-app-region: no-drag;
 }
 
 #term::placeholder {
@@ -100,6 +102,7 @@ body {
   font: 600 13px/1 var(--brand);
   cursor: pointer;
   transition: background 0.15s, transform 0.12s;
+  -webkit-app-region: no-drag;
 }
 
 .icon:hover {

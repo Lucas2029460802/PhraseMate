@@ -1,21 +1,15 @@
-//go:build !windows
+//go:build !windows && !darwin
 
 package floatwin
 
 import "fmt"
 
-// Hooks connects float UI actions to the desktop shell.
-type Hooks struct {
-	OnCaptured       func(term string)
-	OnToggleNotebook func()
-}
-
 // Host is a stub.
 type Host struct{}
 
-// Start is unavailable outside Windows.
+// Start is unavailable outside Windows and macOS.
 func Start(baseURL string, hooks Hooks) (*Host, error) {
-	return nil, fmt.Errorf("系统级悬浮窗仅支持 Windows")
+	return nil, fmt.Errorf("系统级悬浮窗仅支持 Windows / macOS")
 }
 
 // Show is a no-op.
