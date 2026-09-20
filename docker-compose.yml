@@ -1,7 +1,7 @@
 services:
   phrasemate:
     build: .
-    image: phrasemate:latest
+    image: ghcr.io/lucas2029460802/phrasemate:latest
     container_name: phrasemate
     ports:
       - "8080:8080"

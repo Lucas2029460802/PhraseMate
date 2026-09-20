@@ -13,6 +13,7 @@ concurrency:
 
 permissions:
   contents: write
+  packages: write
 
 jobs:
   macos:
@@ -145,8 +146,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Resolve image name
+        run: |
+          IMAGE="ghcr.io/$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')"
+          echo "IMAGE=$IMAGE" >> "$GITHUB_ENV"
+          if [[ "${{ github.ref_type }}" == "tag" ]]; then
+            echo "VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
+          fi
+
       - name: Build image
-        run: docker build -t phrasemate:latest .
+        run: docker build -t phrasemate:latest -t "$IMAGE:latest" .
 
       - name: Smoke test
         run: |
@@ -162,6 +171,23 @@ jobs:
           done
           docker logs phrasemate-test
           exit 1
+
+      - name: Log in to GHCR
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push image
+        if: github.event_name != 'pull_request'
+        run: |
+          docker push "$IMAGE:latest"
+          if [[ -n "${VERSION:-}" ]]; then
+            docker tag phrasemate:latest "$IMAGE:$VERSION"
+            docker push "$IMAGE:$VERSION"
+          fi
 
       - name: Save image
         run: |

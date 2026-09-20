@@ -28,6 +28,10 @@ RUN apk add --no-cache ca-certificates tzdata \
 
 COPY --from=builder /out/phrasemate /usr/local/bin/phrasemate
 
+LABEL org.opencontainers.image.source="https://github.com/Lucas2029460802/PhraseMate" \
+      org.opencontainers.image.title="PhraseMate" \
+      org.opencontainers.image.description="PhraseMate web instance"
+
 ENV PHRASEMATE_WEB=1 \
     PHRASEMATE_ADDR=:8080 \
     PHRASEMATE_DB=/data/phrasemate.db \

@@ -27,7 +27,7 @@
 >
 > Windows / macOS 安装包都由 GitHub Actions 自动构建。推送 `v*` 标签会同时发布两个平台的产物。
 
-Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。若窗口创建失败，请安装该运行时。
+Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。
 
 ### macOS
 
@@ -40,49 +40,50 @@ Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com
 >
 > macOS 安装包是 Apple Silicon + Intel 通用二进制。
 
-## Docker（Windows 网页实例）
+## Docker（网页实例）
 
-原生桌面窗口、托盘和置顶速记窗无法在容器里运行。Docker 镜像走 **浏览器模式**：容器只提供网页服务，在 Windows 浏览器里使用。
+原生桌面窗口、托盘和置顶速记窗无法在容器里运行。Docker 镜像走 **浏览器模式**：容器只提供网页服务，用浏览器打开即可。
 
-### 前置条件
+发布后的镜像在 GitHub Container Registry：
 
-1. 安装 [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/)
-2. 保持默认的 **Linux containers** 模式（托盘图标 → Switch to Linux containers）
+`ghcr.io/lucas2029460802/phrasemate:latest`
 
-### 构建并启动
+### 别人怎么用（推荐）
 
-在项目根目录 PowerShell：
+对方只需安装 [Docker Desktop](https://www.docker.com/products/docker-desktop/)（Windows 保持 Linux containers 模式），然后：
+
+```powershell
+docker pull ghcr.io/lucas2029460802/phrasemate:latest
+docker run --name phrasemate -d -p 8080:8080 -v phrasemate-data:/data ghcr.io/lucas2029460802/phrasemate:latest
+```
+
+浏览器打开 [http://localhost:8080](http://localhost:8080)，右上角 **设置** 填写 API Key。
+
+生词本在 Docker 数据卷 `phrasemate-data` 里，删容器不会丢；`docker rm -v phrasemate` 才会清数据。
+
+```powershell
+docker logs -f phrasemate     # 查看日志
+docker stop phrasemate        # 停止
+docker start phrasemate       # 再启动
+```
+
+> 第一次把镜像推到 GHCR 后，到仓库右侧 **Packages → phrasemate → Package settings → Change visibility → Public**，否则别人 `docker pull` 会 403。
+
+### 开发者：从源码构建
+
+在项目根目录：
 
 ```powershell
 docker compose up -d --build
 ```
 
-浏览器打开 [http://localhost:8080](http://localhost:8080) 。右上角 **设置** 填写 API Key 即可。
+### 离线导入（备用）
 
-生词本默认保存在 Docker 数据卷 `phrasemate-data` 中，停止或重建容器不会丢数据。
-
-### 常用命令
+没有 GHCR 时，可从 [Releases](https://github.com/Lucas2029460802/PhraseMate/releases) 或 Actions Artifacts 下载 `phrasemate-docker.tar.gz`：
 
 ```powershell
-docker compose logs -f          # 查看日志
-docker compose stop             # 停止
-docker compose start            # 再启动
-docker compose down             # 删除容器（保留数据卷）
-docker compose down -v          # 删除容器和生词本数据
-```
-
-### 只构建 / 运行镜像
-
-```powershell
-docker build -t phrasemate:latest .
+docker load -i phrasemate-docker.tar.gz
 docker run --name phrasemate -d -p 8080:8080 -v phrasemate-data:/data phrasemate:latest
-```
-
-若希望数据库文件出现在当前目录的 `data` 文件夹，把 `docker-compose.yml` 里的数据卷改成：
-
-```yaml
-volumes:
-  - ./data:/data
 ```
 
 容器内没有系统级置顶速记窗；可用主页面收录单词，或另开 `/float.html` 作为简易速记页。
@@ -168,16 +169,9 @@ CGO_ENABLED=1 go build -ldflags="-s -w" -o PhraseMate .
 
 - **Windows**：`PhraseMate-windows-*.exe`（amd64，无控制台）
 - **macOS**：`PhraseMate-macos-*.zip`（arm64 + amd64 通用 `.app`）
-- **Docker**：`phrasemate-docker.tar.gz`（Linux 网页实例镜像，可在 Windows Docker Desktop 导入）
+- **Docker**：推送到 `ghcr.io/lucas2029460802/phrasemate`，同时附带 `phrasemate-docker.tar.gz`
 
 也可在仓库的 **Actions → Build → Run workflow** 手动跑一次，产物在 Artifacts 里。
-
-导入已构建的 Docker 镜像（需已安装 Docker Desktop）：
-
-```powershell
-docker load -i phrasemate-docker.tar.gz
-docker run --name phrasemate -d -p 8080:8080 -v phrasemate-data:/data phrasemate:latest
-```
 
 > 从 Windows 交叉编译 `GOOS=darwin` **不能** 得到可用的桌面程序（CGO + 系统 WebKit）。
 
