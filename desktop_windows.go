@@ -167,7 +167,6 @@ type webviewHolder struct {
 func runWebOnly(url string) {
 	log.Printf("浏览器模式，请打开: %s", url)
 	log.Println("提示: 浏览器模式没有系统级置顶悬浮窗")
-	select {}
 }
 
 func filepathJoinTemp(name string) string {

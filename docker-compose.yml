@@ -1,0 +1,22 @@
+services:
+  phrasemate:
+    build: .
+    image: phrasemate:latest
+    container_name: phrasemate
+    ports:
+      - "8080:8080"
+    volumes:
+      - phrasemate-data:/data
+    environment:
+      PHRASEMATE_WEB: "1"
+      PHRASEMATE_ADDR: ":8080"
+      PHRASEMATE_DB: /data/phrasemate.db
+      TZ: Asia/Shanghai
+      # 可选：也可用浏览器打开后在「设置」里填写
+      # PHRASEMATE_API_KEY: sk-your-key-here
+      # PHRASEMATE_BASE_URL: https://api.deepseek.com/v1
+      # PHRASEMATE_MODEL: deepseek-chat
+    restart: unless-stopped
+
+volumes:
+  phrasemate-data:

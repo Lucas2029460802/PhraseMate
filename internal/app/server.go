@@ -68,7 +68,12 @@ func Start(cfg config.Config, listenAddr string) (*Runtime, error) {
 		return nil, fmt.Errorf("监听失败 (%s): %w", listenAddr, err)
 	}
 
-	url := "http://" + ln.Addr().String()
+	bound := ln.Addr().String()
+	host, port, splitErr := net.SplitHostPort(bound)
+	if splitErr == nil && (host == "" || host == "0.0.0.0" || host == "::") {
+		bound = "127.0.0.1:" + port
+	}
+	url := "http://" + bound
 	srv := &http.Server{Handler: withCORS(mux)}
 
 	ctx, cancel := context.WithCancel(context.Background())

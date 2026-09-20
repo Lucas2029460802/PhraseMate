@@ -3,9 +3,11 @@ package main
 import (
 	"log"
 	"os"
+	"os/signal"
 	"path/filepath"
 	"runtime"
 	"strings"
+	"syscall"
 
 	"phrasemate/internal/app"
 	"phrasemate/internal/config"
@@ -59,9 +61,17 @@ func main() {
 
 	if webOnly {
 		runWebOnly(rt.URL)
+		waitForShutdown()
 		return
 	}
 	runDesktop(rt.URL)
+}
+
+func waitForShutdown() {
+	ch := make(chan os.Signal, 1)
+	signal.Notify(ch, os.Interrupt, syscall.SIGTERM)
+	sig := <-ch
+	log.Printf("收到退出信号 (%s)，正在关闭", sig)
 }
 
 func findEnvFile() string {

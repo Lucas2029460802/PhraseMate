@@ -40,6 +40,53 @@ Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com
 >
 > macOS 安装包是 Apple Silicon + Intel 通用二进制。
 
+## Docker（Windows 网页实例）
+
+原生桌面窗口、托盘和置顶速记窗无法在容器里运行。Docker 镜像走 **浏览器模式**：容器只提供网页服务，在 Windows 浏览器里使用。
+
+### 前置条件
+
+1. 安装 [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/)
+2. 保持默认的 **Linux containers** 模式（托盘图标 → Switch to Linux containers）
+
+### 构建并启动
+
+在项目根目录 PowerShell：
+
+```powershell
+docker compose up -d --build
+```
+
+浏览器打开 [http://localhost:8080](http://localhost:8080) 。右上角 **设置** 填写 API Key 即可。
+
+生词本默认保存在 Docker 数据卷 `phrasemate-data` 中，停止或重建容器不会丢数据。
+
+### 常用命令
+
+```powershell
+docker compose logs -f          # 查看日志
+docker compose stop             # 停止
+docker compose start            # 再启动
+docker compose down             # 删除容器（保留数据卷）
+docker compose down -v          # 删除容器和生词本数据
+```
+
+### 只构建 / 运行镜像
+
+```powershell
+docker build -t phrasemate:latest .
+docker run --name phrasemate -d -p 8080:8080 -v phrasemate-data:/data phrasemate:latest
+```
+
+若希望数据库文件出现在当前目录的 `data` 文件夹，把 `docker-compose.yml` 里的数据卷改成：
+
+```yaml
+volumes:
+  - ./data:/data
+```
+
+容器内没有系统级置顶速记窗；可用主页面收录单词，或另开 `/float.html` 作为简易速记页。
+
 ### 设置示例
 
 | 服务 | Base URL | 模型示例 |
@@ -121,8 +168,16 @@ CGO_ENABLED=1 go build -ldflags="-s -w" -o PhraseMate .
 
 - **Windows**：`PhraseMate-windows-*.exe`（amd64，无控制台）
 - **macOS**：`PhraseMate-macos-*.zip`（arm64 + amd64 通用 `.app`）
+- **Docker**：`phrasemate-docker.tar.gz`（Linux 网页实例镜像，可在 Windows Docker Desktop 导入）
 
 也可在仓库的 **Actions → Build → Run workflow** 手动跑一次，产物在 Artifacts 里。
+
+导入已构建的 Docker 镜像（需已安装 Docker Desktop）：
+
+```powershell
+docker load -i phrasemate-docker.tar.gz
+docker run --name phrasemate -d -p 8080:8080 -v phrasemate-data:/data phrasemate:latest
+```
 
 > 从 Windows 交叉编译 `GOOS=darwin` **不能** 得到可用的桌面程序（CGO + 系统 WebKit）。
 

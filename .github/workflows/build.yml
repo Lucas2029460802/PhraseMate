@@ -138,9 +138,47 @@ jobs:
           path: dist/${{ env.EXE_NAME }}
           if-no-files-found: error
 
+  docker:
+    name: Docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t phrasemate:latest .
+
+      - name: Smoke test
+        run: |
+          docker run -d --name phrasemate-test -p 8080:8080 phrasemate:latest
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:8080/api/status; then
+              echo
+              docker logs phrasemate-test
+              docker stop phrasemate-test
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs phrasemate-test
+          exit 1
+
+      - name: Save image
+        run: |
+          mkdir -p dist
+          docker save phrasemate:latest | gzip > dist/phrasemate-docker.tar.gz
+          ls -lh dist/phrasemate-docker.tar.gz
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PhraseMate-docker
+          path: dist/phrasemate-docker.tar.gz
+          if-no-files-found: error
+
   release:
     name: GitHub Release
-    needs: [macos, windows]
+    needs: [macos, windows, docker]
     if: github.ref_type == 'tag'
     runs-on: ubuntu-latest
     steps:
