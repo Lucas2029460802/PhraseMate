@@ -3,6 +3,7 @@ package app
 import (
 	"context"
 	"fmt"
+	"log"
 	"net"
 	"net/http"
 	"strings"
@@ -11,6 +12,7 @@ import (
 	"phrasemate/internal/config"
 	"phrasemate/internal/dict"
 	"phrasemate/internal/enricher"
+	"phrasemate/internal/gitdata"
 	"phrasemate/internal/handler"
 	"phrasemate/internal/store"
 	"phrasemate/web"
@@ -22,6 +24,7 @@ type Runtime struct {
 	Store    *store.Store
 	AI       *ai.Client
 	Enricher *enricher.Worker
+	Git      *gitdata.Sync
 	Server   *http.Server
 	URL      string
 	cancel   context.CancelFunc
@@ -49,6 +52,27 @@ func Start(cfg config.Config, listenAddr string) (*Runtime, error) {
 		}
 	}
 
+	var gs *gitdata.Sync
+	if syncer, err := gitdata.Discover(); err != nil {
+		log.Printf("生词本保存在本地数据库: %v", err)
+	} else {
+		gs = syncer
+		log.Printf("生词本将同步到 Git 分支 %s", gs.Branch())
+		gs.SetStatusHandler(func(branch, errMsg string) {
+			st.SetSyncState(branch, errMsg)
+		})
+		if err := gs.Bootstrap(st); err != nil {
+			log.Printf("初始化 %s 分支失败，暂用本地生词本: %v", gs.Branch(), err)
+			st.SetSyncState(gs.Branch(), err.Error())
+		}
+		st.SetAfterWordChange(func() {
+			if err := gs.Save(st); err != nil {
+				log.Printf("写入 %s 分支失败: %v", gs.Branch(), err)
+				st.SetSyncState(gs.Branch(), err.Error())
+			}
+		})
+	}
+
 	client := ai.New(cfg.APIKey, cfg.BaseURL, cfg.Model)
 	dictClient := dict.New(cfg.DictURL)
 	en := enricher.New(st, client, dictClient, cfg.DictFirst, nil)
@@ -64,6 +88,9 @@ func Start(cfg config.Config, listenAddr string) (*Runtime, error) {
 
 	ln, err := net.Listen("tcp", listenAddr)
 	if err != nil {
+		if gs != nil {
+			gs.Close()
+		}
 		_ = st.Close()
 		return nil, fmt.Errorf("监听失败 (%s): %w", listenAddr, err)
 	}
@@ -89,6 +116,7 @@ func Start(cfg config.Config, listenAddr string) (*Runtime, error) {
 		Store:    st,
 		AI:       client,
 		Enricher: en,
+		Git:      gs,
 		Server:   srv,
 		URL:      url,
 		cancel:   cancel,
@@ -102,6 +130,9 @@ func (r *Runtime) Close() {
 	}
 	if r.cancel != nil {
 		r.cancel()
+	}
+	if r.Git != nil {
+		r.Git.Close()
 	}
 	if r.Server != nil {
 		_ = r.Server.Close()

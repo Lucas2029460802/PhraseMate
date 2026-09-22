@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"sync"
 	"time"
 
 	"phrasemate/internal/format"
@@ -15,8 +16,13 @@ import (
 )
 
 // Store wraps SQLite persistence for the vocabulary notebook.
+// Word rows are the working copy; gitdata publishes them to the data branch.
 type Store struct {
-	db *sql.DB
+	db       *sql.DB
+	mu       sync.RWMutex
+	onChange func()
+	syncRef  string
+	syncErr  string
 }
 
 // Open creates or opens the database at path.
@@ -78,23 +84,38 @@ func (s *Store) normalizeStoredPhonetics() error {
 	if err != nil {
 		return err
 	}
-	defer rows.Close()
-
+	type phoneticUpdate struct {
+		id       int64
+		phonetic string
+	}
+	var updates []phoneticUpdate
 	for rows.Next() {
 		var id int64
 		var phonetic string
 		if err := rows.Scan(&id, &phonetic); err != nil {
+			_ = rows.Close()
 			return err
 		}
 		norm := format.NormalizePhonetic(phonetic)
 		if norm == phonetic {
 			continue
 		}
-		if _, err := s.db.Exec(`UPDATE words SET phonetic=? WHERE id=?`, norm, id); err != nil {
+		updates = append(updates, phoneticUpdate{id: id, phonetic: norm})
+	}
+	if err := rows.Err(); err != nil {
+		_ = rows.Close()
+		return err
+	}
+	if err := rows.Close(); err != nil {
+		return err
+	}
+	// MaxOpenConns is 1, so updates must wait until the read cursor is closed.
+	for _, upd := range updates {
+		if _, err := s.db.Exec(`UPDATE words SET phonetic=? WHERE id=?`, upd.phonetic, upd.id); err != nil {
 			return err
 		}
 	}
-	return rows.Err()
+	return nil
 }
 
 const (
@@ -152,6 +173,105 @@ func (s *Store) Close() error {
 	return s.db.Close()
 }
 
+// SetAfterWordChange runs after a vocabulary row is inserted, updated, or deleted.
+func (s *Store) SetAfterWordChange(fn func()) {
+	if s == nil {
+		return
+	}
+	s.mu.Lock()
+	s.onChange = fn
+	s.mu.Unlock()
+}
+
+// SetSyncState records whether the data branch push succeeded.
+func (s *Store) SetSyncState(branch, errMsg string) {
+	if s == nil {
+		return
+	}
+	s.mu.Lock()
+	s.syncRef = branch
+	s.syncErr = errMsg
+	s.mu.Unlock()
+}
+
+// SyncState returns the data branch name and the latest push error.
+func (s *Store) SyncState() (string, string) {
+	if s == nil {
+		return "", ""
+	}
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	return s.syncRef, s.syncErr
+}
+
+func (s *Store) changed() {
+	if s == nil {
+		return
+	}
+	s.mu.RLock()
+	fn := s.onChange
+	s.mu.RUnlock()
+	if fn != nil {
+		fn()
+	}
+}
+
+// ReplaceAllWords replaces the vocabulary table with the given snapshot.
+// It does not fire the change hook.
+func (s *Store) ReplaceAllWords(words []models.Word) error {
+	tx, err := s.db.Begin()
+	if err != nil {
+		return err
+	}
+	defer tx.Rollback()
+	if _, err := tx.Exec(`DELETE FROM words`); err != nil {
+		return err
+	}
+	var maxID int64
+	for _, w := range words {
+		term := strings.TrimSpace(w.Term)
+		if term == "" {
+			continue
+		}
+		if w.ID > maxID {
+			maxID = w.ID
+		}
+		status := strings.TrimSpace(w.Status)
+		if status == "" {
+			status = models.StatusReady
+		}
+		created := w.CreatedAt.UTC().Truncate(time.Second)
+		if w.CreatedAt.IsZero() {
+			created = time.Unix(0, 0).UTC()
+		}
+		if _, err := tx.Exec(`
+INSERT INTO words (id, term, phonetic, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+			w.ID, term, format.NormalizePhonetic(w.Phonetic), w.MeaningEN, w.MeaningZH,
+			w.ExampleEN, w.ExampleZH, w.PartOfSpeech, status, w.ErrorMsg, created.Format(time.RFC3339),
+		); err != nil {
+			return err
+		}
+	}
+	if maxID > 0 {
+		var seqTable string
+		err := tx.QueryRow(`SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence'`).Scan(&seqTable)
+		if err == nil {
+			res, err := tx.Exec(`UPDATE sqlite_sequence SET seq=? WHERE name='words'`, maxID)
+			if err != nil {
+				return err
+			}
+			n, _ := res.RowsAffected()
+			if n == 0 {
+				if _, err := tx.Exec(`INSERT INTO sqlite_sequence(name, seq) VALUES ('words', ?)`, maxID); err != nil {
+					return err
+				}
+			}
+		}
+	}
+	return tx.Commit()
+}
+
 // Capture inserts a term immediately as pending, or bumps an existing one.
 func (s *Store) Capture(term string) (*models.Word, bool, error) {
 	term = strings.TrimSpace(term)
@@ -171,6 +291,7 @@ func (s *Store) Capture(term string) (*models.Word, bool, error) {
 				return nil, false, err
 			}
 			existing.CreatedAt = now
+			s.changed()
 			return existing, false, nil
 		}
 		// Still pending/error — requeue.
@@ -182,6 +303,7 @@ func (s *Store) Capture(term string) (*models.Word, bool, error) {
 		existing.Status = models.StatusPending
 		existing.ErrorMsg = ""
 		existing.CreatedAt = now
+		s.changed()
 		return existing, true, nil
 	}
 
@@ -197,6 +319,7 @@ VALUES (?, '', '', '', '', '', '', ?, '', ?)`,
 	if err != nil {
 		return nil, false, err
 	}
+	s.changed()
 	return &models.Word{
 		ID:        id,
 		Term:      term,
@@ -219,13 +342,18 @@ WHERE id=?`,
 	if err != nil {
 		return nil, err
 	}
+	s.changed()
 	return s.GetByID(id)
 }
 
 // MarkError marks a pending word as failed.
 func (s *Store) MarkError(id int64, msg string) error {
 	_, err := s.db.Exec(`UPDATE words SET status=?, error_msg=? WHERE id=?`, models.StatusError, msg, id)
-	return err
+	if err != nil {
+		return err
+	}
+	s.changed()
+	return nil
 }
 
 // NextPending returns the oldest pending word, if any.
@@ -320,6 +448,7 @@ func (s *Store) Delete(id int64) error {
 	if n == 0 {
 		return fmt.Errorf("未找到该生词")
 	}
+	s.changed()
 	return nil
 }
 
@@ -333,6 +462,7 @@ func (s *Store) Retry(id int64) error {
 	if n == 0 {
 		return fmt.Errorf("未找到该生词")
 	}
+	s.changed()
 	return nil
 }
 

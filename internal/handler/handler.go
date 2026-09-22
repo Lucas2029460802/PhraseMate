@@ -44,6 +44,7 @@ func (a *API) Register(mux *http.ServeMux) {
 func (a *API) handleStatus(w http.ResponseWriter, r *http.Request) {
 	count, _ := a.store.Count()
 	pending, _ := a.store.CountPending()
+	dataBranch, syncErr := a.store.SyncState()
 	a.mu.RLock()
 	model := a.cfg.Model
 	baseURL := a.cfg.BaseURL
@@ -57,12 +58,14 @@ func (a *API) handleStatus(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	writeJSON(w, http.StatusOK, models.StatusResponse{
-		OK:        true,
-		HasKey:    a.ai.Enabled(),
-		Model:     model,
-		BaseURL:   baseURL,
-		WordCount: count,
-		Pending:   pending,
+		OK:         true,
+		HasKey:     a.ai.Enabled(),
+		Model:      model,
+		BaseURL:    baseURL,
+		WordCount:  count,
+		Pending:    pending,
+		DataBranch: dataBranch,
+		SyncError:  syncErr,
 	})
 }
 

@@ -23,7 +23,7 @@
 3. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
 4. 保存后即可用速记窗收录单词
 
-> 不需要安装 Go，也不需要创建或编辑 `.env`。配置保存在本地 `data/phrasemate.db`。
+> 不需要安装 Go，也不需要创建或编辑 `.env`。API 配置保存在本地 `data/phrasemate.db`。在本仓库里运行时，生词会写入 Git 分支 `data` 的 `words.json`（没有该分支会自动创建并推送）。API Key 不会进入这个分支。直接运行发布包、且当前目录不是本仓库时，生词仍只存在本地数据库。
 >
 > Windows / macOS 安装包都由 GitHub Actions 自动构建。推送 `v*` 标签会同时发布两个平台的产物。
 
@@ -36,7 +36,7 @@ Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com
 3. 首次打开：在 Finder 里 **右键 → 打开**（未公证签名时系统会拦截，选一次即可）
 4. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
 
-> 配置和生词本保存在 `~/Library/Application Support/PhraseMate/phrasemate.db`。
+> API 配置保存在 `~/Library/Application Support/PhraseMate/phrasemate.db`。在本仓库里运行时，生词写入 Git 的 `data` 分支。
 >
 > macOS 安装包是 Apple Silicon + Intel 通用二进制。
 
@@ -59,7 +59,7 @@ docker run --name phrasemate -d -p 8080:8080 -v phrasemate-data:/data ghcr.io/lu
 
 浏览器打开 [http://localhost:8080](http://localhost:8080)，右上角 **设置** 填写 API Key。
 
-生词本在 Docker 数据卷 `phrasemate-data` 里，删容器不会丢；`docker rm -v phrasemate` 才会清数据。
+生词本在 Docker 数据卷 `phrasemate-data` 里，删容器不会丢；`docker rm -v phrasemate` 才会清数据。容器里没有 Git 仓库，不会写入 `data` 分支。
 
 ```powershell
 docker logs -f phrasemate     # 查看日志

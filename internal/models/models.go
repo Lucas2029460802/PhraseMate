@@ -56,12 +56,14 @@ type QuizResponse struct {
 
 // StatusResponse reports runtime configuration.
 type StatusResponse struct {
-	OK        bool   `json:"ok"`
-	HasKey    bool   `json:"has_key"`
-	Model     string `json:"model"`
-	BaseURL   string `json:"base_url"`
-	WordCount int    `json:"word_count"`
-	Pending   int    `json:"pending"`
+	OK         bool   `json:"ok"`
+	HasKey     bool   `json:"has_key"`
+	Model      string `json:"model"`
+	BaseURL    string `json:"base_url"`
+	WordCount  int    `json:"word_count"`
+	Pending    int    `json:"pending"`
+	DataBranch string `json:"data_branch,omitempty"`
+	SyncError  string `json:"sync_error,omitempty"`
 }
 
 // SettingsResponse is returned by GET /api/settings (never echoes full API key).

@@ -268,18 +268,19 @@
   async function loadStatus({ silent } = {}) {
     try {
       const s = await api("/api/status");
-      const next = `${s.has_key}|${s.model}|${s.word_count}|${s.pending}`;
+      const next = `${s.has_key}|${s.model}|${s.word_count}|${s.pending}|${s.data_branch || ""}|${s.sync_error || ""}`;
       if (silent && next === statusFingerprint) return;
       statusFingerprint = next;
+      const syncNote = s.sync_error ? " · 生词同步失败" : "";
       if (s.has_key) {
         const pending = s.pending > 0 ? ` · ${s.pending} 生成中` : "";
-        els.statusPill.textContent = `就绪 · ${s.model}${pending}`;
-        els.statusPill.className = "status-pill ok";
-        els.statusPill.title = "点击打开设置";
+        els.statusPill.textContent = `就绪 · ${s.model}${pending}${syncNote}`;
+        els.statusPill.className = s.sync_error ? "status-pill warn" : "status-pill ok";
+        els.statusPill.title = s.sync_error || (s.data_branch ? `生词本保存在 ${s.data_branch} 分支` : "点击打开设置");
       } else {
-        els.statusPill.textContent = "未配置 API Key · 点击设置";
+        els.statusPill.textContent = `未配置 API Key · 点击设置${syncNote}`;
         els.statusPill.className = "status-pill warn";
-        els.statusPill.title = "点击填写 API Key";
+        els.statusPill.title = s.sync_error || "点击填写 API Key";
       }
     } catch {
       if (!silent) {

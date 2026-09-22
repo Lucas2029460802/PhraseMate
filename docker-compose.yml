@@ -11,6 +11,7 @@ services:
       PHRASEMATE_WEB: "1"
       PHRASEMATE_ADDR: ":8080"
       PHRASEMATE_DB: /data/phrasemate.db
+      PHRASEMATE_GIT_SYNC: "0"
       TZ: Asia/Shanghai
       # 可选：也可用浏览器打开后在「设置」里填写
       # PHRASEMATE_API_KEY: sk-your-key-here

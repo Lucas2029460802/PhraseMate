@@ -35,6 +35,7 @@ LABEL org.opencontainers.image.source="https://github.com/Lucas2029460802/Phrase
 ENV PHRASEMATE_WEB=1 \
     PHRASEMATE_ADDR=:8080 \
     PHRASEMATE_DB=/data/phrasemate.db \
+    PHRASEMATE_GIT_SYNC=0 \
     TZ=Asia/Shanghai
 
 EXPOSE 8080
