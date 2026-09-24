@@ -692,9 +692,21 @@
     },
     {
       "id": 65,
-      "term": "quatations",
-      "status": "pending",
+      "term": "quotations",
+      "phonetic": "/kwəʊˈteɪʃnz/",
+      "meaning_en": "The plural of \"quotation\": words taken from a text or speech and repeated by someone other than the original author or speaker; also a formal statement of the estimated cost of a piece of work.",
+      "meaning_zh": "引语，引文，语录（quotation 的复数形式）；报价，估价单。",
+      "example_en": "She began her essay with several quotations from Shakespeare.",
+      "example_zh": "她在文章的开头引用了几句莎士比亚的话。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-09-24T16:43:12Z"
+    },
+    {
+      "id": 66,
+      "term": "assume to do",
+      "status": "pending",
+      "created_at": "2026-09-24T16:43:54Z"
     }
   ]
 }
