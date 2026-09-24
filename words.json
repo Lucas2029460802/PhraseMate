@@ -777,7 +777,13 @@
     {
       "id": 72,
       "term": "vulnerable",
-      "status": "pending",
+      "phonetic": "/ˈvʌlnərəbl/",
+      "meaning_en": "Easily harmed, attacked, or affected, either physically or emotionally; exposed to the risk of damage or loss.",
+      "meaning_zh": "易受伤害的；脆弱的；易受攻击的；（因缺乏保护而）易感染疾病的",
+      "example_en": "Young children and the elderly are especially vulnerable to the flu virus.",
+      "example_zh": "幼儿和老人尤其容易感染流感病毒。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-09-24T16:50:04Z"
     }
   ]
