@@ -789,7 +789,13 @@
     {
       "id": 73,
       "term": "pick holes",
-      "status": "pending",
+      "phonetic": "/pɪk həʊlz/",
+      "meaning_en": "To find faults or flaws in something, often in an overly critical or nitpicking way. Usually used as \"pick holes in something\".",
+      "meaning_zh": "挑毛病；找漏洞；对……吹毛求疵（通常用于 pick holes in sth）",
+      "example_en": "Instead of supporting the plan, he spent the whole meeting picking holes in it.",
+      "example_zh": "他没有支持这个计划，反而整场会议都在挑它的毛病。",
+      "part_of_speech": "phrase",
+      "status": "ready",
       "created_at": "2026-09-24T17:01:33Z"
     }
   ]
