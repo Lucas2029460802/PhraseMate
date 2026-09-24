@@ -728,8 +728,14 @@
     },
     {
       "id": 68,
-      "term": "interfer with",
-      "status": "pending",
+      "term": "interfere with",
+      "phonetic": "/ˌɪntərˈfɪr wɪð/",
+      "meaning_en": "To get in the way of something, hinder or disrupt it; also, to touch or handle something without permission, or to have a negative effect on something.",
+      "meaning_zh": "妨碍，干扰，阻碍；（未经允许）乱动，摆弄；对……产生不良影响",
+      "example_en": "Please don't interfere with the equipment while the experiment is running.",
+      "example_zh": "实验进行期间，请不要乱动这些设备。",
+      "part_of_speech": "phrase",
+      "status": "ready",
       "created_at": "2026-09-24T16:45:20Z"
     }
   ]
