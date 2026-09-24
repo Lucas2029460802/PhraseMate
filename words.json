@@ -752,8 +752,14 @@
     },
     {
       "id": 70,
-      "term": "interfer",
-      "status": "pending",
+      "term": "interfere",
+      "phonetic": "/ˌɪntəˈfɪə(r)/",
+      "meaning_en": "To get involved in something that is not your concern, or to get in the way of an activity and prevent it from happening as it should.",
+      "meaning_zh": "干涉，干预，插手（他人的事）；妨碍，干扰，阻碍（事情正常进行）；（物理）干扰",
+      "example_en": "Please don't interfere in my personal affairs — I can handle them myself.",
+      "example_zh": "请不要干涉我的私事——我自己能处理好。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-09-24T16:46:57Z"
     }
   ]
