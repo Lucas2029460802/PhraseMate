@@ -765,7 +765,13 @@
     {
       "id": 71,
       "term": "interpretation",
-      "status": "pending",
+      "phonetic": "/ɪnˌtɜːprɪˈteɪʃn/",
+      "meaning_en": "An explanation of the meaning of something, or a particular way of understanding or explaining it. It can also refer to a performer's way of expressing a piece of music, a role, etc.",
+      "meaning_zh": "解释，阐释；理解，解读；（对音乐、角色等的）演绎，诠释",
+      "example_en": "Her interpretation of the poem was completely different from mine.",
+      "example_zh": "她对这首诗的解读和我的完全不同。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-09-24T16:47:45Z"
     }
   ]
