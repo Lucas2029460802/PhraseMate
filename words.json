@@ -645,7 +645,13 @@
     {
       "id": 61,
       "term": "artificial",
-      "status": "pending",
+      "phonetic": "/ˌɑːtɪˈfɪʃl/",
+      "meaning_en": "Made or produced by human beings rather than occurring naturally, often imitating something natural.",
+      "meaning_zh": "人工的；人造的；假的；不自然的",
+      "example_en": "Artificial intelligence is changing the way we work.",
+      "example_zh": "人工智能正在改变我们的工作方式。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-09-24T14:42:24Z"
     }
   ]
