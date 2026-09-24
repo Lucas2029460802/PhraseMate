@@ -669,7 +669,13 @@
     {
       "id": 63,
       "term": "dispute",
-      "status": "pending",
+      "phonetic": "/dɪˈspjuːt/",
+      "meaning_en": "As a noun: a disagreement or argument, often formal or public. As a verb: to argue against something or question whether it is true or valid.",
+      "meaning_zh": "n. 争论；争端；纠纷；（法律）争议；v. 对……提出异议；质疑……的真实性；争夺；辩论",
+      "example_en": "The two companies are locked in a bitter dispute over the ownership of the patent.",
+      "example_zh": "两家公司就这项专利的所有权陷入了激烈的争端。",
+      "part_of_speech": "n. / v.",
+      "status": "ready",
       "created_at": "2026-09-24T14:55:14Z"
     }
   ]
