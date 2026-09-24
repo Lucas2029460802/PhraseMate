@@ -677,6 +677,12 @@
       "part_of_speech": "n. / v.",
       "status": "ready",
       "created_at": "2026-09-24T14:55:14Z"
+    },
+    {
+      "id": 64,
+      "term": "perception",
+      "status": "pending",
+      "created_at": "2026-09-24T15:02:03Z"
     }
   ]
 }
