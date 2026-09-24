@@ -713,6 +713,12 @@
       "part_of_speech": "phrase",
       "status": "ready",
       "created_at": "2026-09-24T16:43:54Z"
+    },
+    {
+      "id": 67,
+      "term": "account for",
+      "status": "pending",
+      "created_at": "2026-09-24T16:45:08Z"
     }
   ]
 }
