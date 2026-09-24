@@ -717,8 +717,20 @@
     {
       "id": 67,
       "term": "account for",
-      "status": "pending",
+      "phonetic": "/əˈkaʊnt fɔːr/",
+      "meaning_en": "To explain the reason for something; also to form or make up a particular part or amount of something, or to know where someone or something is.",
+      "meaning_zh": "解释，说明（原因）；占（某比例），构成；了解……的下落，查明……的去向。",
+      "example_en": "How do you account for the sudden drop in sales last month?",
+      "example_zh": "你如何解释上个月销售额的突然下降？",
+      "part_of_speech": "phrase",
+      "status": "ready",
       "created_at": "2026-09-24T16:45:08Z"
+    },
+    {
+      "id": 68,
+      "term": "interfer with",
+      "status": "pending",
+      "created_at": "2026-09-24T16:45:20Z"
     }
   ]
 }
