@@ -669,7 +669,8 @@
     {
       "id": 63,
       "term": "dispute",
-      "status": "pending",
+      "status": "error",
+      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": read tcp 192.168.31.224:55630-\u003e117.185.125.154:443: wsarecv: An existing connection was forcibly closed by the remote host.",
       "created_at": "2026-09-24T14:55:14Z"
     }
   ]
