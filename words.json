@@ -785,6 +785,12 @@
       "part_of_speech": "adj.",
       "status": "ready",
       "created_at": "2026-09-24T16:50:04Z"
+    },
+    {
+      "id": 73,
+      "term": "pick holes",
+      "status": "pending",
+      "created_at": "2026-09-24T17:01:33Z"
     }
   ]
 }
