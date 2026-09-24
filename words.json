@@ -741,7 +741,13 @@
     {
       "id": 69,
       "term": "engage in",
-      "status": "pending",
+      "phonetic": "/ɪnˈɡeɪdʒ ɪn/",
+      "meaning_en": "To take part in an activity or do something regularly; to become involved in something.",
+      "meaning_zh": "从事；参与；忙于（某项活动）",
+      "example_en": "She likes to engage in volunteer work on weekends.",
+      "example_zh": "她喜欢在周末参与志愿工作。",
+      "part_of_speech": "phrase",
+      "status": "ready",
       "created_at": "2026-09-24T16:46:17Z"
     }
   ]
