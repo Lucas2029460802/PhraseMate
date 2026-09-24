@@ -705,7 +705,13 @@
     {
       "id": 66,
       "term": "assume to do",
-      "status": "pending",
+      "phonetic": "/əˈsjuːm tuː duː/",
+      "meaning_en": "To suppose or take it for granted that someone does something. It is most often used in the passive form 'be assumed to do', meaning that someone is generally believed or expected to do something.",
+      "meaning_zh": "认为（某人）会做某事；假定（某人）做某事（多用于被动结构 be assumed to do，表示“据认为会做……、被期望做……”）",
+      "example_en": "The new employee is assumed to follow the company's safety rules from day one.",
+      "example_zh": "人们默认新员工从第一天起就会遵守公司的安全规定。",
+      "part_of_speech": "phrase",
+      "status": "ready",
       "created_at": "2026-09-24T16:43:54Z"
     }
   ]
