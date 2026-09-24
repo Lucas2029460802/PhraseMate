@@ -681,7 +681,13 @@
     {
       "id": 64,
       "term": "perception",
-      "status": "pending",
+      "phonetic": "/pəˈsepʃn/",
+      "meaning_en": "The ability to become aware of things through the senses, or the way someone understands or interprets something.",
+      "meaning_zh": "感知，知觉，感觉；看法，见解，认识",
+      "example_en": "Her perception of the situation changed completely after she read the report.",
+      "example_zh": "读完那份报告后，她对形势的看法彻底改变了。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-09-24T15:02:03Z"
     }
   ]
