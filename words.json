@@ -813,7 +813,13 @@
     {
       "id": 75,
       "term": "going to do",
-      "status": "pending",
+      "phonetic": "/ˈɡəʊɪŋ tə duː/",
+      "meaning_en": "A structure used to talk about a plan, intention, or something you have already decided to do in the future.",
+      "meaning_zh": "打算做某事；将要去做某事（表示计划、意图或已有安排的将来时结构）",
+      "example_en": "I'm going to do my homework right after dinner.",
+      "example_zh": "我打算晚饭后马上做作业。",
+      "part_of_speech": "phrase",
+      "status": "ready",
       "created_at": "2026-09-28T06:30:03Z"
     }
   ]
