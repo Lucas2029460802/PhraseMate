@@ -821,6 +821,12 @@
       "part_of_speech": "phrase",
       "status": "ready",
       "created_at": "2026-09-28T06:30:03Z"
+    },
+    {
+      "id": 76,
+      "term": "query",
+      "status": "pending",
+      "created_at": "2026-10-01T16:59:48Z"
     }
   ]
 }
