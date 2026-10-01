@@ -836,8 +836,14 @@
     },
     {
       "id": 77,
-      "term": "catastrophy",
-      "status": "pending",
+      "term": "catastrophe",
+      "phonetic": "/kəˈtæstrəfi/",
+      "meaning_en": "A sudden event that causes great damage, suffering, or destruction; a terrible disaster. It can also mean a final disastrous outcome or failure.",
+      "meaning_zh": "大灾难；灾祸；浩劫；（戏剧的）悲剧性结局；惨败。",
+      "example_en": "The tsunami was a catastrophe that destroyed the entire coastal city.",
+      "example_zh": "那场海啸是一场摧毁整座沿海城市的巨大灾难。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-01T17:22:28Z"
     }
   ]
