@@ -11,10 +11,11 @@ import (
 	"unicode/utf8"
 
 	"phrasemate/internal/dict"
+	"phrasemate/internal/tts"
 )
 
 const (
-	ttsTimeout   = 8 * time.Second
+	ttsTimeout   = 15 * time.Second
 	ttsMaxRunes  = 180
 	ttsUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 )
@@ -46,14 +47,29 @@ func (a *API) handleTTS(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Youdao voice works well in mainland China for words and short phrases.
-	if err := proxyYoudaoTTS(ctx, w, q); err == nil {
+	// Edge neural voice (replaces Google TTS).
+	if err := proxyEdgeTTS(ctx, w, q); err == nil {
 		return
 	}
 
-	if err := proxyGoogleTTS(ctx, w, q); err != nil {
+	// Youdao voice works well in mainland China as a fallback.
+	if err := proxyYoudaoTTS(ctx, w, q); err != nil {
 		http.Error(w, "tts unavailable", http.StatusBadGateway)
 	}
+}
+
+func proxyEdgeTTS(ctx context.Context, w http.ResponseWriter, text string) error {
+	audio, err := tts.SynthesizeEdge(ctx, text)
+	if err != nil {
+		return err
+	}
+	if len(audio) < 64 {
+		return fmt.Errorf("edge tts empty")
+	}
+	w.Header().Set("Content-Type", "audio/mpeg")
+	w.Header().Set("Cache-Control", "public, max-age=86400")
+	_, err = w.Write(audio)
+	return err
 }
 
 func proxyYoudaoTTS(ctx context.Context, w http.ResponseWriter, text string) error {
@@ -79,7 +95,6 @@ func proxyYoudaoTTS(ctx context.Context, w http.ResponseWriter, text string) err
 	if ct == "" || strings.HasPrefix(ct, "text/") {
 		ct = "audio/mpeg"
 	}
-	// Guard against HTML error pages.
 	body, err := io.ReadAll(io.LimitReader(resp.Body, 2<<20))
 	if err != nil {
 		return err
@@ -90,34 +105,6 @@ func proxyYoudaoTTS(ctx context.Context, w http.ResponseWriter, text string) err
 	w.Header().Set("Content-Type", ct)
 	w.Header().Set("Cache-Control", "public, max-age=86400")
 	_, err = w.Write(body)
-	return err
-}
-
-func proxyGoogleTTS(ctx context.Context, w http.ResponseWriter, text string) error {
-	u := "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=" + url.QueryEscape(text)
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u, nil)
-	if err != nil {
-		return err
-	}
-	req.Header.Set("User-Agent", ttsUserAgent)
-	req.Header.Set("Referer", "https://translate.google.com/")
-	req.Header.Set("Accept", "*/*")
-
-	resp, err := http.DefaultClient.Do(req)
-	if err != nil {
-		return err
-	}
-	defer resp.Body.Close()
-	if resp.StatusCode >= 300 {
-		return fmt.Errorf("google tts HTTP %d", resp.StatusCode)
-	}
-	ct := resp.Header.Get("Content-Type")
-	if ct == "" {
-		ct = "audio/mpeg"
-	}
-	w.Header().Set("Content-Type", ct)
-	w.Header().Set("Cache-Control", "public, max-age=86400")
-	_, err = io.Copy(w, resp.Body)
 	return err
 }
 
