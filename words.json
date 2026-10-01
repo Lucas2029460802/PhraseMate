@@ -833,6 +833,12 @@
       "part_of_speech": "n. / v.",
       "status": "ready",
       "created_at": "2026-10-01T16:59:48Z"
+    },
+    {
+      "id": 77,
+      "term": "catastrophy",
+      "status": "pending",
+      "created_at": "2026-10-01T17:22:28Z"
     }
   ]
 }
