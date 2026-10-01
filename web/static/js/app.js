@@ -84,6 +84,7 @@
   }
 
   let voicesCache = null;
+  let currentAudio = null;
 
   function loadVoices() {
     if (!window.speechSynthesis) return [];
@@ -107,14 +108,51 @@
     );
   }
 
-  function speakEnglish(text) {
-    const content = String(text || "").trim();
-    if (!content) return;
+  function normalizeAudioURL(u) {
+    const s = String(u || "").trim();
+    if (!s) return "";
+    if (s.startsWith("//")) return `https:${s}`;
+    return s;
+  }
+
+  function stopSpeech() {
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.src = "";
+      currentAudio = null;
+    }
+  }
+
+  function playAudioURL(url) {
+    return new Promise((resolve, reject) => {
+      stopSpeech();
+      const audio = new Audio(url);
+      currentAudio = audio;
+      const cleanup = () => {
+        if (currentAudio === audio) currentAudio = null;
+      };
+      audio.onended = () => {
+        cleanup();
+        resolve();
+      };
+      audio.onerror = () => {
+        cleanup();
+        reject(new Error("audio error"));
+      };
+      audio.play().catch((err) => {
+        cleanup();
+        reject(err);
+      });
+    });
+  }
+
+  function speakWithSystem(content) {
     if (!window.speechSynthesis) {
       toast("当前环境不支持语音朗读");
       return;
     }
-    window.speechSynthesis.cancel();
+    stopSpeech();
     const utter = new SpeechSynthesisUtterance(content);
     utter.lang = "en-US";
     const voice = pickEnglishVoice();
@@ -122,6 +160,37 @@
     utter.pitch = 1;
     utter.onerror = () => toast("朗读失败，请检查系统语音设置");
     window.speechSynthesis.speak(utter);
+  }
+
+  async function speakEnglish(text, audioUrl) {
+    const content = String(text || "").trim();
+    if (!content) return;
+
+    const direct = normalizeAudioURL(audioUrl);
+    if (direct) {
+      try {
+        await playAudioURL(direct);
+        return;
+      } catch (_) {
+        /* fall through */
+      }
+      try {
+        const qs = new URLSearchParams({ q: content, src: direct });
+        await playAudioURL(`/api/tts?${qs.toString()}`);
+        return;
+      } catch (_) {
+        /* fall through */
+      }
+    }
+
+    try {
+      await playAudioURL(`/api/tts?q=${encodeURIComponent(content)}`);
+      return;
+    } catch (_) {
+      /* fall through */
+    }
+
+    speakWithSystem(content);
   }
 
   function statusLabel(w) {
@@ -184,7 +253,9 @@
         <div>
           <div class="term-row">
             <h3 class="term">${escapeHtml(w.term)}</h3>
-            <button type="button" class="btn-speak" data-speak="${escapeHtml(w.term)}" title="朗读单词" aria-label="朗读单词">
+            <button type="button" class="btn-speak" data-speak="${escapeHtml(w.term)}" data-audio="${escapeHtml(
+              w.audio_url || ""
+            )}" title="朗读单词" aria-label="朗读单词">
               <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 5V5L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.1-3.8v7.6a4.48 4.48 0 0 0 2.1-3.8zM14 3.23v2.06a7 7 0 0 1 0 13.74v2.06a9 9 0 0 0 0-17.82z"/></svg>
             </button>
           </div>
@@ -297,7 +368,7 @@
     },
     deepseek: {
       base_url: "https://api.deepseek.com/v1",
-      model: "deepseek-chat",
+      model: "deepseek-flash",
     },
   };
 
@@ -460,7 +531,7 @@
   els.wordDetail.addEventListener("click", (e) => {
     const speak = e.target.closest("[data-speak]");
     if (speak) {
-      speakEnglish(speak.dataset.speak);
+      speakEnglish(speak.dataset.speak, speak.dataset.audio || "");
       return;
     }
     const del = e.target.closest("[data-del]");

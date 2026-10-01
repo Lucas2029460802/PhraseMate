@@ -14,6 +14,7 @@ type Word struct {
 	ID           int64     `json:"id"`
 	Term         string    `json:"term"`
 	Phonetic     string    `json:"phonetic,omitempty"`
+	AudioURL     string    `json:"audio_url,omitempty"`
 	MeaningEN    string    `json:"meaning_en"`
 	MeaningZH    string    `json:"meaning_zh"`
 	ExampleEN    string    `json:"example_en,omitempty"`
@@ -86,6 +87,7 @@ type SettingsUpdateRequest struct {
 type AIExplanation struct {
 	Term         string `json:"term"`
 	Phonetic     string `json:"phonetic"`
+	AudioURL     string `json:"audio_url,omitempty"`
 	PartOfSpeech string `json:"part_of_speech"`
 	MeaningEN    string `json:"meaning_en"`
 	MeaningZH    string `json:"meaning_zh"`

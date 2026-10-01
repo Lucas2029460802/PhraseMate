@@ -32,6 +32,7 @@ type wordRec struct {
 	ID           int64  `json:"id"`
 	Term         string `json:"term"`
 	Phonetic     string `json:"phonetic,omitempty"`
+	AudioURL     string `json:"audio_url,omitempty"`
 	MeaningEN    string `json:"meaning_en,omitempty"`
 	MeaningZH    string `json:"meaning_zh,omitempty"`
 	ExampleEN    string `json:"example_en,omitempty"`
@@ -214,6 +215,7 @@ func marshalWords(words []models.Word) ([]byte, error) {
 			ID:           w.ID,
 			Term:         w.Term,
 			Phonetic:     w.Phonetic,
+			AudioURL:     w.AudioURL,
 			MeaningEN:    w.MeaningEN,
 			MeaningZH:    w.MeaningZH,
 			ExampleEN:    w.ExampleEN,
@@ -251,6 +253,7 @@ func unmarshalWords(raw []byte) ([]models.Word, error) {
 			ID:           rec.ID,
 			Term:         rec.Term,
 			Phonetic:     rec.Phonetic,
+			AudioURL:     rec.AudioURL,
 			MeaningEN:    rec.MeaningEN,
 			MeaningZH:    rec.MeaningZH,
 			ExampleEN:    rec.ExampleEN,

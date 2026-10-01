@@ -93,7 +93,7 @@ docker run --name phrasemate -d -p 8080:8080 -v phrasemate-data:/data phrasemate
 | 服务 | Base URL | 模型示例 |
 |------|----------|----------|
 | OpenAI | `https://api.openai.com/v1` | `gpt-4o-mini` |
-| DeepSeek | `https://api.deepseek.com/v1` | `deepseek-chat` |
+| DeepSeek | `https://api.deepseek.com/v1` | `deepseek-flash` |
 
 设置面板里也有「OpenAI / DeepSeek」快捷填充。
 

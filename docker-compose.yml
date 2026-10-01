@@ -16,7 +16,7 @@ services:
       # 可选：也可用浏览器打开后在「设置」里填写
       # PHRASEMATE_API_KEY: sk-your-key-here
       # PHRASEMATE_BASE_URL: https://api.deepseek.com/v1
-      # PHRASEMATE_MODEL: deepseek-chat
+      # PHRASEMATE_MODEL: deepseek-flash
     restart: unless-stopped
 
 volumes:

@@ -58,7 +58,8 @@ type apiEntry struct {
 	Word      string `json:"word"`
 	Phonetic  string `json:"phonetic"`
 	Phonetics []struct {
-		Text string `json:"text"`
+		Text  string `json:"text"`
+		Audio string `json:"audio"`
 	} `json:"phonetics"`
 	Meanings []struct {
 		PartOfSpeech string `json:"partOfSpeech"`
@@ -175,10 +176,100 @@ func buildExplanation(entry apiEntry, fallbackTerm string) (*models.AIExplanatio
 	return &models.AIExplanation{
 		Term:         term,
 		Phonetic:     phonetic,
+		AudioURL:     pickAudio(entry),
 		PartOfSpeech: pos,
 		MeaningEN:    strings.Join(defs, "; "),
 		ExampleEN:    exampleEN,
 	}, defs
+}
+
+// LookupAudio returns a dictionary pronunciation URL for a single English word.
+func (c *Client) LookupAudio(ctx context.Context, term string) (string, error) {
+	if c == nil {
+		return "", fmt.Errorf("dictionary client is nil")
+	}
+	term = strings.TrimSpace(term)
+	if !IsSingleWord(term) {
+		return "", fmt.Errorf("not a single word")
+	}
+
+	dictCtx, cancel := context.WithTimeout(ctx, dictTimeout)
+	defer cancel()
+
+	reqURL := c.baseURL + "/" + url.PathEscape(term)
+	req, err := http.NewRequestWithContext(dictCtx, http.MethodGet, reqURL, nil)
+	if err != nil {
+		return "", err
+	}
+	resp, err := c.http.Do(req)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return "", err
+	}
+	if resp.StatusCode >= 300 {
+		return "", fmt.Errorf("dictionary: HTTP %d", resp.StatusCode)
+	}
+	var entries []apiEntry
+	if err := json.Unmarshal(body, &entries); err != nil || len(entries) == 0 {
+		return "", fmt.Errorf("dictionary: no audio")
+	}
+	audio := pickAudio(entries[0])
+	if audio == "" {
+		return "", fmt.Errorf("dictionary: no audio")
+	}
+	return audio, nil
+}
+
+// NormalizeAudioURL turns protocol-relative dictionary URLs into https.
+func NormalizeAudioURL(u string) string {
+	u = strings.TrimSpace(u)
+	if u == "" {
+		return ""
+	}
+	if strings.HasPrefix(u, "//") {
+		return "https:" + u
+	}
+	return u
+}
+
+func pickAudio(entry apiEntry) string {
+	best := ""
+	bestScore := -1
+	for _, ph := range entry.Phonetics {
+		u := NormalizeAudioURL(ph.Audio)
+		if u == "" {
+			continue
+		}
+		score := scoreAudioCandidate(u)
+		if score > bestScore {
+			bestScore = score
+			best = u
+		}
+	}
+	return best
+}
+
+func scoreAudioCandidate(u string) int {
+	lower := strings.ToLower(u)
+	score := 1
+	switch {
+	case strings.Contains(lower, "_us_") || strings.Contains(lower, "-us_") ||
+		strings.Contains(lower, "-us.") || strings.Contains(lower, "/us/"):
+		score += 4
+	case strings.Contains(lower, "_gb_") || strings.Contains(lower, "-gb_") ||
+		strings.Contains(lower, "-uk.") || strings.Contains(lower, "/uk/"):
+		score += 3
+	case strings.Contains(lower, "-au.") || strings.Contains(lower, "/au/"):
+		score += 1
+	}
+	if strings.HasSuffix(lower, ".mp3") {
+		score++
+	}
+	return score
 }
 
 func pickPhonetic(entry apiEntry) string {

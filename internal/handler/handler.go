@@ -9,6 +9,7 @@ import (
 
 	"phrasemate/internal/ai"
 	"phrasemate/internal/config"
+	"phrasemate/internal/dict"
 	"phrasemate/internal/enricher"
 	"phrasemate/internal/models"
 	"phrasemate/internal/store"
@@ -20,12 +21,13 @@ type API struct {
 	cfg      config.Config
 	store    *store.Store
 	ai       *ai.Client
+	dict     *dict.Client
 	enricher *enricher.Worker
 }
 
 // New creates an API handler.
-func New(cfg config.Config, st *store.Store, client *ai.Client, en *enricher.Worker) *API {
-	return &API{cfg: cfg, store: st, ai: client, enricher: en}
+func New(cfg config.Config, st *store.Store, client *ai.Client, en *enricher.Worker, dictClient *dict.Client) *API {
+	return &API{cfg: cfg, store: st, ai: client, dict: dictClient, enricher: en}
 }
 
 // Register mounts routes on mux.
@@ -39,6 +41,7 @@ func (a *API) Register(mux *http.ServeMux) {
 	mux.HandleFunc("DELETE /api/words/{id}", a.handleDeleteWord)
 	mux.HandleFunc("POST /api/words/{id}/retry", a.handleRetry)
 	mux.HandleFunc("POST /api/quiz", a.handleQuiz)
+	mux.HandleFunc("GET /api/tts", a.handleTTS)
 }
 
 func (a *API) handleStatus(w http.ResponseWriter, r *http.Request) {

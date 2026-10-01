@@ -81,13 +81,25 @@ func (w *Worker) explain(ctx context.Context, term string) (*models.AIExplanatio
 	}
 
 	if !w.ai.Enabled() {
-		return basicExplanation(term, singleWord), "basic", nil
+		exp := basicExplanation(term, singleWord)
+		w.attachAudio(ctx, term, exp)
+		return exp, "basic", nil
 	}
 	exp, err := w.ai.Explain(ctx, term)
 	if err != nil {
 		return nil, "", err
 	}
+	w.attachAudio(ctx, term, exp)
 	return exp, "ai", nil
+}
+
+func (w *Worker) attachAudio(ctx context.Context, term string, exp *models.AIExplanation) {
+	if exp == nil || strings.TrimSpace(exp.AudioURL) != "" || w.dict == nil || !dict.IsSingleWord(term) {
+		return
+	}
+	if u, err := w.dict.LookupAudio(ctx, term); err == nil {
+		exp.AudioURL = u
+	}
 }
 
 func (w *Worker) fillMissingFromAI(ctx context.Context, term string, exp *models.AIExplanation) {

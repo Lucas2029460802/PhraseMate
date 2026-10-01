@@ -76,7 +76,7 @@ func Start(cfg config.Config, listenAddr string) (*Runtime, error) {
 	client := ai.New(cfg.APIKey, cfg.BaseURL, cfg.Model)
 	dictClient := dict.New(cfg.DictURL)
 	en := enricher.New(st, client, dictClient, cfg.DictFirst, nil)
-	api := handler.New(cfg, st, client, en)
+	api := handler.New(cfg, st, client, en, dictClient)
 
 	mux := http.NewServeMux()
 	api.Register(mux)

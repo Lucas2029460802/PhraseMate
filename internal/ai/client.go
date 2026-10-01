@@ -256,39 +256,106 @@ func (c *Client) chat(ctx context.Context, system, user string, jsonMode bool) (
 	}
 
 	url := baseURL + "/chat/completions"
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost, url, bytes.NewReader(raw))
-	if err != nil {
-		return "", err
-	}
-	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("Authorization", "Bearer "+apiKey)
+	const maxAttempts = 3
+	var lastErr error
+	for attempt := 1; attempt <= maxAttempts; attempt++ {
+		req, err := http.NewRequestWithContext(ctx, http.MethodPost, url, bytes.NewReader(raw))
+		if err != nil {
+			return "", err
+		}
+		req.Header.Set("Content-Type", "application/json")
+		req.Header.Set("Authorization", "Bearer "+apiKey)
 
-	resp, err := c.http.Do(req)
-	if err != nil {
-		return "", fmt.Errorf("请求 AI 接口失败: %w", err)
-	}
-	defer resp.Body.Close()
+		resp, err := c.http.Do(req)
+		if err != nil {
+			lastErr = err
+			if attempt < maxAttempts && isTransientNetErr(err) && ctx.Err() == nil {
+				sleepBackoff(ctx, attempt)
+				continue
+			}
+			return "", fmt.Errorf("请求 AI 接口失败: %w", err)
+		}
 
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return "", err
-	}
-	if resp.StatusCode >= 300 {
-		return "", fmt.Errorf("AI 接口错误 (%d): %s", resp.StatusCode, string(body))
-	}
+		body, err := io.ReadAll(resp.Body)
+		resp.Body.Close()
+		if err != nil {
+			lastErr = err
+			if attempt < maxAttempts && isTransientNetErr(err) && ctx.Err() == nil {
+				sleepBackoff(ctx, attempt)
+				continue
+			}
+			return "", err
+		}
+		// Retry a few gateway / rate-limit responses that often clear quickly.
+		if (resp.StatusCode == http.StatusTooManyRequests || resp.StatusCode == http.StatusBadGateway ||
+			resp.StatusCode == http.StatusServiceUnavailable || resp.StatusCode == http.StatusGatewayTimeout) &&
+			attempt < maxAttempts && ctx.Err() == nil {
+			lastErr = fmt.Errorf("AI 接口错误 (%d): %s", resp.StatusCode, string(body))
+			sleepBackoff(ctx, attempt)
+			continue
+		}
+		if resp.StatusCode >= 300 {
+			return "", fmt.Errorf("AI 接口错误 (%d): %s", resp.StatusCode, string(body))
+		}
 
-	var parsed chatResponse
-	if err := json.Unmarshal(body, &parsed); err != nil {
-		return "", fmt.Errorf("解析 AI 响应失败: %w", err)
-	}
-	if parsed.Error != nil {
-		return "", fmt.Errorf("AI 错误: %s", parsed.Error.Message)
-	}
-	if len(parsed.Choices) == 0 {
-		return "", fmt.Errorf("AI 未返回内容")
-	}
+		var parsed chatResponse
+		if err := json.Unmarshal(body, &parsed); err != nil {
+			return "", fmt.Errorf("解析 AI 响应失败: %w", err)
+		}
+		if parsed.Error != nil {
+			return "", fmt.Errorf("AI 错误: %s", parsed.Error.Message)
+		}
+		if len(parsed.Choices) == 0 {
+			return "", fmt.Errorf("AI 未返回内容")
+		}
 
-	return strings.TrimSpace(parsed.Choices[0].Message.Content), nil
+		return strings.TrimSpace(parsed.Choices[0].Message.Content), nil
+	}
+	return "", fmt.Errorf("请求 AI 接口失败: %w", lastErr)
+}
+
+func sleepBackoff(ctx context.Context, attempt int) {
+	d := time.Duration(attempt) * 800 * time.Millisecond
+	t := time.NewTimer(d)
+	defer t.Stop()
+	select {
+	case <-ctx.Done():
+	case <-t.C:
+	}
+}
+
+func isTransientNetErr(err error) bool {
+	if err == nil {
+		return false
+	}
+	msg := strings.ToLower(err.Error())
+	for _, tip := range []string{
+		"forcibly closed",
+		"connection reset",
+		"connection refused",
+		"broken pipe",
+		"i/o timeout",
+		"tls handshake timeout",
+		"unexpected eof",
+		"wsarecv",
+		"wsasend",
+		"use of closed network connection",
+		"temporary failure",
+		"server misbehaving",
+	} {
+		if strings.Contains(msg, tip) {
+			return true
+		}
+	}
+	type temporary interface{ Temporary() bool }
+	type timeout interface{ Timeout() bool }
+	if t, ok := err.(temporary); ok && t.Temporary() {
+		return true
+	}
+	if t, ok := err.(timeout); ok && t.Timeout() {
+		return true
+	}
+	return false
 }
 
 func stripCodeFence(s string) string {

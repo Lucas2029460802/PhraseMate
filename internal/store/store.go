@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS words (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   term TEXT NOT NULL COLLATE NOCASE,
   phonetic TEXT NOT NULL DEFAULT '',
+  audio_url TEXT NOT NULL DEFAULT '',
   meaning_en TEXT NOT NULL DEFAULT '',
   meaning_zh TEXT NOT NULL DEFAULT '',
   example_en TEXT NOT NULL DEFAULT '',
@@ -70,6 +71,7 @@ CREATE TABLE IF NOT EXISTS settings (
 	// Soft migrations for older DBs.
 	_, _ = s.db.Exec(`ALTER TABLE words ADD COLUMN status TEXT NOT NULL DEFAULT 'ready'`)
 	_, _ = s.db.Exec(`ALTER TABLE words ADD COLUMN error_msg TEXT NOT NULL DEFAULT ''`)
+	_, _ = s.db.Exec(`ALTER TABLE words ADD COLUMN audio_url TEXT NOT NULL DEFAULT ''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='ready' WHERE IFNULL(status,'')=''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)=''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)<>''`)
@@ -245,9 +247,9 @@ func (s *Store) ReplaceAllWords(words []models.Word) error {
 			created = time.Unix(0, 0).UTC()
 		}
 		if _, err := tx.Exec(`
-INSERT INTO words (id, term, phonetic, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-			w.ID, term, format.NormalizePhonetic(w.Phonetic), w.MeaningEN, w.MeaningZH,
+INSERT INTO words (id, term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+			w.ID, term, format.NormalizePhonetic(w.Phonetic), strings.TrimSpace(w.AudioURL), w.MeaningEN, w.MeaningZH,
 			w.ExampleEN, w.ExampleZH, w.PartOfSpeech, status, w.ErrorMsg, created.Format(time.RFC3339),
 		); err != nil {
 			return err
@@ -308,8 +310,8 @@ func (s *Store) Capture(term string) (*models.Word, bool, error) {
 	}
 
 	res, err := s.db.Exec(`
-INSERT INTO words (term, phonetic, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at)
-VALUES (?, '', '', '', '', '', '', ?, '', ?)`,
+INSERT INTO words (term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at)
+VALUES (?, '', '', '', '', '', '', '', ?, '', ?)`,
 		term, models.StatusPending, now.Format(time.RFC3339),
 	)
 	if err != nil {
@@ -333,10 +335,10 @@ func (s *Store) ApplyExplanation(id int64, exp *models.AIExplanation) (*models.W
 	exp.Phonetic = format.NormalizePhonetic(exp.Phonetic)
 	_, err := s.db.Exec(`
 UPDATE words SET
-  term=?, phonetic=?, meaning_en=?, meaning_zh=?, example_en=?, example_zh=?,
+  term=?, phonetic=?, audio_url=?, meaning_en=?, meaning_zh=?, example_en=?, example_zh=?,
   part_of_speech=?, status=?, error_msg=''
 WHERE id=?`,
-		exp.Term, exp.Phonetic, exp.MeaningEN, exp.MeaningZH, exp.ExampleEN, exp.ExampleZH,
+		exp.Term, exp.Phonetic, strings.TrimSpace(exp.AudioURL), exp.MeaningEN, exp.MeaningZH, exp.ExampleEN, exp.ExampleZH,
 		exp.PartOfSpeech, models.StatusReady, id,
 	)
 	if err != nil {
@@ -356,10 +358,12 @@ func (s *Store) MarkError(id int64, msg string) error {
 	return nil
 }
 
+const wordSelectCols = `id, term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at`
+
 // NextPending returns the oldest pending word, if any.
 func (s *Store) NextPending() (*models.Word, error) {
 	row := s.db.QueryRow(`
-SELECT id, term, phonetic, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at
+SELECT `+wordSelectCols+`
 FROM words WHERE status=? ORDER BY datetime(created_at) ASC, id ASC LIMIT 1`, models.StatusPending)
 	return scanWord(row)
 }
@@ -374,7 +378,7 @@ func (s *Store) CountPending() (int, error) {
 // GetByID returns one word.
 func (s *Store) GetByID(id int64) (*models.Word, error) {
 	row := s.db.QueryRow(`
-SELECT id, term, phonetic, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at
+SELECT `+wordSelectCols+`
 FROM words WHERE id=?`, id)
 	return scanWord(row)
 }
@@ -382,7 +386,7 @@ FROM words WHERE id=?`, id)
 // FindByTerm returns a word if present.
 func (s *Store) FindByTerm(term string) (*models.Word, error) {
 	row := s.db.QueryRow(`
-SELECT id, term, phonetic, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at
+SELECT `+wordSelectCols+`
 FROM words WHERE term = ? COLLATE NOCASE`, strings.TrimSpace(term))
 	return scanWord(row)
 }
@@ -390,7 +394,7 @@ FROM words WHERE term = ? COLLATE NOCASE`, strings.TrimSpace(term))
 // List returns all words newest first.
 func (s *Store) List() ([]models.Word, error) {
 	rows, err := s.db.Query(`
-SELECT id, term, phonetic, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at
+SELECT ` + wordSelectCols + `
 FROM words ORDER BY datetime(created_at) DESC, id DESC`)
 	if err != nil {
 		return nil, err
@@ -411,7 +415,7 @@ FROM words ORDER BY datetime(created_at) DESC, id DESC`)
 // ListReady returns explained words for quizzes.
 func (s *Store) ListReady() ([]models.Word, error) {
 	rows, err := s.db.Query(`
-SELECT id, term, phonetic, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at
+SELECT `+wordSelectCols+`
 FROM words WHERE status=? AND TRIM(meaning_zh)<>'' ORDER BY datetime(created_at) DESC, id DESC`, models.StatusReady)
 	if err != nil {
 		return nil, err
@@ -474,7 +478,7 @@ func scanWord(row scanner) (*models.Word, error) {
 	var w models.Word
 	var created string
 	err := row.Scan(
-		&w.ID, &w.Term, &w.Phonetic, &w.MeaningEN, &w.MeaningZH, &w.ExampleEN, &w.ExampleZH,
+		&w.ID, &w.Term, &w.Phonetic, &w.AudioURL, &w.MeaningEN, &w.MeaningZH, &w.ExampleEN, &w.ExampleZH,
 		&w.PartOfSpeech, &w.Status, &w.ErrorMsg, &created,
 	)
 	if err == sql.ErrNoRows {
