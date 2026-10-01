@@ -825,7 +825,13 @@
     {
       "id": 76,
       "term": "query",
-      "status": "pending",
+      "phonetic": "/ˈkwɪəri/",
+      "meaning_en": "A question, especially one asking for information or expressing doubt. As a verb, to ask a question or express doubt about something; in computing, to search a database or system for information.",
+      "meaning_zh": "n. 问题；疑问；询问；（计算机）查询；v. 询问；质疑；对……表示疑问；（计算机）查询",
+      "example_en": "She queried whether the figures in the report were accurate.",
+      "example_zh": "她质疑报告中的数字是否准确。",
+      "part_of_speech": "n. / v.",
+      "status": "ready",
       "created_at": "2026-10-01T16:59:48Z"
     }
   ]
