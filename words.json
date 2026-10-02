@@ -845,6 +845,12 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-01T17:22:28Z"
+    },
+    {
+      "id": 78,
+      "term": "tunnel",
+      "status": "pending",
+      "created_at": "2026-10-02T12:17:12Z"
     }
   ]
 }
