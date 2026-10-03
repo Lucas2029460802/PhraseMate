@@ -861,7 +861,13 @@
     {
       "id": 79,
       "term": "spice",
-      "status": "pending",
+      "phonetic": "/spaɪs/",
+      "meaning_en": "A strong-smelling or strong-tasting substance, usually made from a plant, that is used to flavour food. It can also mean something that adds interest or excitement to something.",
+      "meaning_zh": "香料；调味品；（增添趣味的）情趣，刺激",
+      "example_en": "Cinnamon, nutmeg and cloves are common spices used in baking.",
+      "example_zh": "肉桂、肉豆蔻和丁香是烘焙中常用的香料。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-03T13:24:07Z"
     }
   ]
