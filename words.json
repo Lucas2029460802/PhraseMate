@@ -1249,6 +1249,12 @@
       "part_of_speech": "v.",
       "status": "ready",
       "created_at": "2026-10-08T15:26:14Z"
+    },
+    {
+      "id": 112,
+      "term": "alter",
+      "status": "pending",
+      "created_at": "2026-10-08T15:28:19Z"
     }
   ]
 }
