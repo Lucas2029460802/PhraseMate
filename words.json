@@ -2623,14 +2623,49 @@
     },
     {
       "created_at": "2026-09-24T16:43:54Z",
-      "example_en": "The new employee is assumed to follow the company's safety rules from day one.",
-      "example_zh": "人们默认新员工从第一天起就会遵守公司的安全规定。",
+      "example_en": "Some learners write 'assume to do', but native speakers usually say 'assume that someone does something' or 'assume someone to be something'.",
+      "example_zh": "有些学习者会写 assume to do，但母语者通常说 assume that someone does something 或 assume someone to be something。",
       "id": 66,
-      "meaning_en": "To suppose or take it for granted that someone does something. It is most often used in the passive form 'be assumed to do', meaning that someone is generally believed or expected to do something.",
-      "meaning_zh": "认为（某人）会做某事；假定（某人）做某事（多用于被动结构 be assumed to do，表示“据认为会做……、被期望做……”）",
+      "meaning_en": "A pattern sometimes used to mean 'suppose that someone does something'. It is not idiomatic English; native speakers normally use 'assume that + clause' or 'assume somebody to be'.",
+      "meaning_zh": "假定某人做某事（该搭配并非地道英语，英语中通常改用 assume that 从句或 assume sb. to be 结构）",
       "part_of_speech": "phrase",
-      "phonetic": "/əˈsjuːm tuː duː/",
-      "status": "pending",
+      "phonetic": "/əˈsjuːm tə duː/",
+      "phrases": [
+        {
+          "phrase": "assume that…",
+          "meaning_zh": "假定……；认为……"
+        },
+        {
+          "phrase": "assume responsibility",
+          "meaning_zh": "承担责任"
+        },
+        {
+          "phrase": "assume a role",
+          "meaning_zh": "担任角色；起作用"
+        },
+        {
+          "phrase": "let us assume",
+          "meaning_zh": "让我们假设"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "assumption",
+          "pos": "n.",
+          "meaning_zh": "假定；假设；承担"
+        },
+        {
+          "word": "assumable",
+          "pos": "adj.",
+          "meaning_zh": "可假定的；可承担的"
+        },
+        {
+          "word": "assumedly",
+          "pos": "adv.",
+          "meaning_zh": "据推测；大概"
+        }
+      ],
+      "status": "ready",
       "term": "assume to do"
     },
     {
