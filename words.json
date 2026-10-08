@@ -1397,7 +1397,13 @@
     {
       "id": 124,
       "term": "curated",
-      "status": "pending",
+      "phonetic": "/kjʊˈreɪtɪd/",
+      "meaning_en": "Carefully selected, organized, and presented, especially content, products, or information chosen for their quality or relevance. It is also the past tense and past participle of the verb \"curate\".",
+      "meaning_zh": "精心挑选的；经过整理编排的；（展览、内容等）由策展人策划的。",
+      "example_en": "The museum's curated collection features works by emerging artists from around the world.",
+      "example_zh": "这家博物馆精心策划的藏品汇集了来自世界各地新兴艺术家的作品。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-10-08T15:52:33Z"
     }
   ]
