@@ -933,7 +933,13 @@
     {
       "id": 85,
       "term": "religion",
-      "status": "pending",
+      "phonetic": "/rɪˈlɪdʒən/",
+      "meaning_en": "A system of beliefs, practices, and worship, usually centered on a god or gods and often involving moral rules and rituals.",
+      "meaning_zh": "宗教；宗教信仰；宗教活动",
+      "example_en": "Religion plays an important role in many cultures around the world.",
+      "example_zh": "宗教在世界许多文化中都发挥着重要作用。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T11:10:54Z"
     }
   ]
