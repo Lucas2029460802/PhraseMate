@@ -677,14 +677,33 @@
     },
     {
       "created_at": "2026-08-12T19:53:10Z",
-      "example_en": "I need to finish my chores before I can go out.",
-      "example_zh": "我必须在出门前完成家务。",
+      "example_en": "Washing dishes is a chore, but we cannot just stop eating.",
+      "example_zh": "我得先做完家务才能和朋友出去。",
       "id": 20,
-      "meaning_en": "Routine tasks or small duties, especially household ones.",
-      "meaning_zh": "家务杂事；日常琐事",
+      "meaning_en": "A task, especially a difficult, unpleasant, or routine one",
+      "meaning_zh": "家务活；杂务；令人厌烦的例行公事。",
       "part_of_speech": "n.",
-      "phonetic": "/tʃɔːrz/",
-      "status": "pending",
+      "phonetic": "/tʃɔːr/",
+      "phrases": [
+        {
+          "phrase": "household chores",
+          "meaning_zh": "家务活"
+        },
+        {
+          "phrase": "do the chores",
+          "meaning_zh": "做家务"
+        },
+        {
+          "phrase": "daily chores",
+          "meaning_zh": "日常杂务"
+        },
+        {
+          "phrase": "chore list",
+          "meaning_zh": "家务清单"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "chores"
     },
     {
