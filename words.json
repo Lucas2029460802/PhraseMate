@@ -1884,14 +1884,54 @@
     },
     {
       "created_at": "2026-08-13T19:12:39Z",
-      "example_en": "The Associated Press will not identify the suspect of the crime because he is a juvenile.",
-      "example_zh": "美联社将不会识别犯罪嫌疑人，因为他是一名少年。",
+      "example_en": "The witness was able to identify the thief from a photograph.",
+      "example_zh": "目击者能够从一张照片中辨认出那个小偷。",
       "id": 49,
-      "meaning_en": "To establish the identity of someone or something.; To disclose the identity of someone.",
-      "meaning_zh": "确定某人或某事的身份。;披露某人的身份。",
+      "meaning_en": "To recognize someone or something and say who or what they are; to establish or discover exactly what something is.",
+      "meaning_zh": "识别，辨认出；确认，鉴定；查明，发现；（identify with）认同，对…产生共鸣",
       "part_of_speech": "v.",
-      "phonetic": "/aɪˈdɛn.tɪ.faɪ/",
-      "status": "pending",
+      "phonetic": "/aɪˈdentɪfaɪ/",
+      "phrases": [
+        {
+          "phrase": "identify with",
+          "meaning_zh": "认同；对…有同感"
+        },
+        {
+          "phrase": "identify as",
+          "meaning_zh": "自认为是；被认定为"
+        },
+        {
+          "phrase": "positively identify",
+          "meaning_zh": "确切地辨认出，确认"
+        },
+        {
+          "phrase": "identify the cause",
+          "meaning_zh": "查明原因"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "identity",
+          "pos": "n.",
+          "meaning_zh": "身份；特性，个性"
+        },
+        {
+          "word": "identification",
+          "pos": "n.",
+          "meaning_zh": "鉴定，识别；身份证明"
+        },
+        {
+          "word": "identifiable",
+          "pos": "adj.",
+          "meaning_zh": "可辨认的，可识别的"
+        },
+        {
+          "word": "identical",
+          "pos": "adj.",
+          "meaning_zh": "完全相同的"
+        }
+      ],
+      "status": "ready",
       "term": "identify"
     },
     {
