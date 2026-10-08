@@ -603,13 +603,49 @@
     },
     {
       "created_at": "2026-08-12T19:45:29Z",
-      "example_en": "He went to the car wrecking yard to find a used door for his truck.",
-      "example_zh": "他去汽车报废场为他的卡车找一扇二手车门。",
+      "example_en": "He found a used door at the car wrecking yard.",
+      "example_zh": "他在汽车拆解场找到了一个二手车门。",
       "id": 18,
-      "meaning_en": "A place where old or damaged cars are stored and dismantled for parts or scrap.",
-      "meaning_zh": "汽车报废场，拆车场",
+      "meaning_en": "A place where old, damaged, or abandoned cars are taken apart and sold for parts.",
+      "meaning_zh": "汽车拆解场；报废汽车回收场（旧车、事故车被拆解并出售零件的地方）",
       "part_of_speech": "phrase",
-      "status": "pending",
+      "phonetic": "/kɑːr ˈrekɪŋ jɑːrd/",
+      "phrases": [
+        {
+          "phrase": "wrecking yard",
+          "meaning_zh": "废车场；汽车拆解场"
+        },
+        {
+          "phrase": "car wreck",
+          "meaning_zh": "汽车撞车事故；严重损毁的汽车"
+        },
+        {
+          "phrase": "wrecking ball",
+          "meaning_zh": "拆墙铁球；落锤"
+        },
+        {
+          "phrase": "wrecked car",
+          "meaning_zh": "报废车；严重撞毁的汽车"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "wreck",
+          "pos": "v.",
+          "meaning_zh": "破坏；使（车辆等）严重损毁"
+        },
+        {
+          "word": "wrecker",
+          "pos": "n.",
+          "meaning_zh": "拖车；救援车；拆车者"
+        },
+        {
+          "word": "wreckage",
+          "pos": "n.",
+          "meaning_zh": "残骸；废墟"
+        }
+      ],
+      "status": "ready",
       "term": "car wrecking yard"
     },
     {
