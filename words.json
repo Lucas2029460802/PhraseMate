@@ -1524,7 +1524,13 @@
     {
       "id": 135,
       "term": "rid",
-      "status": "pending",
+      "phonetic": "/rɪd/",
+      "meaning_en": "To make someone or something free from something unwanted or unpleasant; to relieve or remove.",
+      "meaning_zh": "使摆脱；使去掉；清除",
+      "example_en": "We need to rid the house of mice.",
+      "example_zh": "我们需要把房子里的老鼠清除掉。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T16:06:00Z"
     }
   ]
