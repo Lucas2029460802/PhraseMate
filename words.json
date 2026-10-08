@@ -1063,7 +1063,13 @@
     {
       "id": 96,
       "term": "suspicion",
-      "status": "pending",
+      "phonetic": "/səˈspɪʃn/",
+      "meaning_en": "A feeling or belief that something is wrong, or that someone has done something bad, usually without proof. It can also mean a very small amount of something.",
+      "meaning_zh": "怀疑；猜疑；嫌疑；（后接 of）一丝，一点，微量",
+      "example_en": "She had a suspicion that he was lying about where he had been.",
+      "example_zh": "她怀疑他在自己去了哪里这件事上撒了谎。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:12:16Z"
     }
   ]
