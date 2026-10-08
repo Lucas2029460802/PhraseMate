@@ -1309,6 +1309,18 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-08T15:38:20Z"
+    },
+    {
+      "id": 117,
+      "term": "gloomy",
+      "phonetic": "/ˈɡluːmi/",
+      "meaning_en": "Dark or poorly lit, especially because of clouds or lack of light. Also means feeling sad, hopeless, or without much hope for the future.",
+      "meaning_zh": "阴暗的，光线不足的；忧郁的，沮丧的；（前景）黯淡的，悲观的",
+      "example_en": "The gloomy weather matched his mood perfectly.",
+      "example_zh": "阴沉的天气与他的心情再相配不过了。",
+      "part_of_speech": "adj.",
+      "status": "ready",
+      "created_at": "2026-10-08T15:38:49Z"
     }
   ]
 }
