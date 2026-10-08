@@ -1213,6 +1213,12 @@
       "part_of_speech": "v. / n. / adj.",
       "status": "ready",
       "created_at": "2026-10-08T15:24:22Z"
+    },
+    {
+      "id": 109,
+      "term": "herder",
+      "status": "pending",
+      "created_at": "2026-10-08T15:24:30Z"
     }
   ]
 }
