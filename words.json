@@ -1936,14 +1936,49 @@
     },
     {
       "created_at": "2026-08-13T19:15:48Z",
-      "example_en": "Puberty can be a challenging time for many teenagers.",
-      "example_zh": "对许多青少年来说，青春期可能是一个充满挑战的时期。",
+      "example_en": "She reached puberty earlier than most of her classmates.",
+      "example_zh": "她比大多数同学更早进入青春期。",
       "id": 50,
-      "meaning_en": "The period during which adolescents reach sexual maturity and become capable of reproduction.",
-      "meaning_zh": "青春期；发育期",
+      "meaning_en": "The stage of life during which a child's body matures into an adult body and becomes capable of sexual reproduction.",
+      "meaning_zh": "青春期；发育期（儿童身体向成人转变、开始具备生育能力的阶段）",
       "part_of_speech": "n.",
-      "phonetic": "/ˈpjuːbərti/",
-      "status": "pending",
+      "phonetic": "/ˈpjuːbəti/",
+      "phrases": [
+        {
+          "phrase": "reach puberty",
+          "meaning_zh": "进入青春期"
+        },
+        {
+          "phrase": "early puberty",
+          "meaning_zh": "青春期提前；性早熟"
+        },
+        {
+          "phrase": "delayed puberty",
+          "meaning_zh": "青春期延迟"
+        },
+        {
+          "phrase": "the onset of puberty",
+          "meaning_zh": "青春期的开始"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "pubertal",
+          "pos": "adj.",
+          "meaning_zh": "青春期的"
+        },
+        {
+          "word": "pubescent",
+          "pos": "adj.",
+          "meaning_zh": "进入青春期的；有青春发育特征的"
+        },
+        {
+          "word": "prepubertal",
+          "pos": "adj.",
+          "meaning_zh": "青春期前的"
+        }
+      ],
+      "status": "ready",
       "term": "puberty"
     },
     {
