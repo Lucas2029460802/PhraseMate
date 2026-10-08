@@ -1409,7 +1409,13 @@
     {
       "id": 125,
       "term": "verbatim",
-      "status": "pending",
+      "phonetic": "/vɜːˈbeɪtɪm/",
+      "meaning_en": "Using exactly the same words as were originally used; word for word.",
+      "meaning_zh": "adv. 逐字地；一字不差地；adj. 逐字的；一字不差的",
+      "example_en": "She repeated his speech verbatim, without changing a single word.",
+      "example_zh": "她一字不差地复述了他的演讲，一个字都没改。",
+      "part_of_speech": "adv. / adj.",
+      "status": "ready",
       "created_at": "2026-10-08T15:53:21Z"
     }
   ]
