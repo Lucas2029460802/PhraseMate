@@ -30,13 +30,44 @@
     },
     {
       "created_at": "2026-08-07T14:37:42Z",
-      "example_en": "He doesn't mean to misbehave; he just doesn't know better.",
-      "example_zh": "他不是故意行为不端；他只是不知道得更好。",
+      "example_en": "The children were told off for misbehaving during the lesson.",
+      "example_zh": "孩子们因为在课上捣乱而被训斥了。",
       "id": 2,
-      "meaning_en": "To act or behave in an inappropriate, improper, incorrect, or unexpected manner.",
-      "meaning_zh": "以不恰当、不当、不正确或意想不到的方式行事或行为。",
+      "meaning_en": "To behave badly or improperly, especially by not following rules or accepted standards.",
+      "meaning_zh": "行为不端；举止失礼；不守规矩；做错事。",
       "part_of_speech": "v.",
-      "status": "pending",
+      "phonetic": "/ˌmɪsbɪˈheɪv/",
+      "phrases": [
+        {
+          "phrase": "misbehave in class",
+          "meaning_zh": "在课堂上捣乱"
+        },
+        {
+          "phrase": "misbehave at school",
+          "meaning_zh": "在学校表现不好"
+        },
+        {
+          "phrase": "misbehave towards someone",
+          "meaning_zh": "对某人举止失礼"
+        },
+        {
+          "phrase": "misbehave badly",
+          "meaning_zh": "表现很差；严重捣乱"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "misbehavior",
+          "pos": "n.",
+          "meaning_zh": "不良行为；行为不端"
+        },
+        {
+          "word": "misbehaved",
+          "pos": "adj.",
+          "meaning_zh": "行为不端的；表现不好的"
+        }
+      ],
+      "status": "ready",
       "term": "misbehave"
     },
     {
