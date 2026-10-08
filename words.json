@@ -1337,7 +1337,13 @@
     {
       "id": 119,
       "term": "drift away",
-      "status": "pending",
+      "phonetic": "/drɪft əˈweɪ/",
+      "meaning_en": "To gradually move away or disappear, either literally by floating slowly, or figuratively by losing interest, contact, or closeness with someone.",
+      "meaning_zh": "漂走；飘散；渐渐疏远；（感情、关系）逐渐淡漠、消失",
+      "example_en": "After graduation, we promised to stay in touch, but we slowly drifted away from each other.",
+      "example_zh": "毕业后我们约好保持联系，但彼此还是渐渐疏远了。",
+      "part_of_speech": "phrase",
+      "status": "ready",
       "created_at": "2026-10-08T15:44:00Z"
     }
   ]
