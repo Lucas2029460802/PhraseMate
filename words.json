@@ -938,12 +938,33 @@
     },
     {
       "created_at": "2026-08-12T19:58:04Z",
+      "example_en": "They bought a colorful rug for the living room.",
+      "example_zh": "他们给客厅买了一块色彩鲜艳的地毯。",
       "id": 27,
-      "meaning_en": "A partial covering for a floor.; A (usually thick) piece of fabric used for warmth (especially on a bed); a blanket.",
-      "meaning_zh": "地板的部分覆盖物。；用于保暖的（通常是厚的）面料（特别是在床上） ；毯子。",
+      "meaning_en": "A piece of thick, heavy fabric used as a floor covering.",
+      "meaning_zh": "地毯；小地毯（常指铺在部分地面上的厚织物）",
       "part_of_speech": "n.",
-      "phonetic": "/ɹʌɡ/",
-      "status": "pending",
+      "phonetic": "/rʌɡ/",
+      "phrases": [
+        {
+          "phrase": "pull the rug out from under someone",
+          "meaning_zh": "突然使某人失去支持；拆某人的台"
+        },
+        {
+          "phrase": "area rug",
+          "meaning_zh": "区域地毯；小地毯"
+        },
+        {
+          "phrase": "throw rug",
+          "meaning_zh": "小地毯；铺垫"
+        },
+        {
+          "phrase": "rug rat",
+          "meaning_zh": "小屁孩（常指幼儿）"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "rug"
     },
     {
