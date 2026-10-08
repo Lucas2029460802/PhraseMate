@@ -3000,14 +3000,44 @@
     },
     {
       "created_at": "2026-09-26T10:21:08Z",
-      "example_en": "The government plans to invest billions in improving the country's ageing infrastructure.",
-      "example_zh": "政府计划投资数十亿元改善该国老化的基础设施。",
+      "example_en": "The government announced a major investment in transport infrastructure.",
+      "example_zh": "政府宣布对交通基础设施进行重大投资。",
       "id": 74,
-      "meaning_en": "The basic physical systems and facilities, such as roads, power supplies, and communication networks, that a country or organization needs in order to function. It can also refer to the underlying framework of an organization or system.",
-      "meaning_zh": "基础设施（如道路、电力、通信网络等）；基础建设；（组织或系统的）基础架构、底层结构",
+      "meaning_en": "The basic physical and organizational structures and facilities needed for the operation of a society, business, or system.",
+      "meaning_zh": "基础设施；基础建设；基础结构",
       "part_of_speech": "n.",
-      "phonetic": "/ˈɪnfrəstrʌktʃə(r)/",
-      "status": "pending",
+      "phonetic": "/ˈɪnfrəstrʌktʃər/",
+      "phrases": [
+        {
+          "phrase": "critical infrastructure",
+          "meaning_zh": "关键基础设施"
+        },
+        {
+          "phrase": "transport infrastructure",
+          "meaning_zh": "交通基础设施"
+        },
+        {
+          "phrase": "infrastructure investment",
+          "meaning_zh": "基础设施投资"
+        },
+        {
+          "phrase": "IT infrastructure",
+          "meaning_zh": "信息技术基础设施"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "infrastructural",
+          "pos": "adj.",
+          "meaning_zh": "基础设施的"
+        },
+        {
+          "word": "infrastructurally",
+          "pos": "adv.",
+          "meaning_zh": "在基础设施方面"
+        }
+      ],
+      "status": "ready",
       "term": "infrastructure"
     },
     {
