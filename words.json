@@ -707,15 +707,44 @@
       "term": "chores"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/laundry-us.mp3",
       "created_at": "2026-08-12T19:53:46Z",
-      "example_en": "I need to do my laundry today.",
-      "example_zh": "我今天需要洗衣服。",
       "id": 21,
-      "meaning_en": "Clothes that need to be washed, or the process of washing them.",
-      "meaning_zh": "洗衣；待洗的衣物",
+      "meaning_en": "A laundering; a washing; A place or room where laundering is done - including, by extension, other forms of laundering than clothes washing",
+      "meaning_zh": "洗衣；洗涤；进行洗衣的地方或房间-包括洗衣以外的其他形式的洗衣",
       "part_of_speech": "n.",
-      "phonetic": "/ˈlɔːndri/",
-      "status": "pending",
+      "phonetic": "/ˈlɔːn.dɹi/",
+      "phrases": [
+        {
+          "phrase": "do the laundry",
+          "meaning_zh": "洗衣服"
+        },
+        {
+          "phrase": "laundry detergent",
+          "meaning_zh": "洗衣液；洗衣粉"
+        },
+        {
+          "phrase": "laundry basket",
+          "meaning_zh": "洗衣篮"
+        },
+        {
+          "phrase": "laundry room",
+          "meaning_zh": "洗衣房"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "launder",
+          "pos": "v.",
+          "meaning_zh": "洗熨；洗钱"
+        },
+        {
+          "word": "launderable",
+          "pos": "adj.",
+          "meaning_zh": "可洗熨的"
+        }
+      ],
+      "status": "ready",
       "term": "laundry"
     },
     {
