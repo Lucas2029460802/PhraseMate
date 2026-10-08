@@ -1349,7 +1349,13 @@
     {
       "id": 120,
       "term": "drain",
-      "status": "pending",
+      "phonetic": "/dreɪn/",
+      "meaning_en": "As a verb: to make liquid flow away from something, or to use up someone's energy or resources. As a noun: a pipe or channel that carries away waste water, or the act of using up resources.",
+      "meaning_zh": "v. 排水；使（液体）流走；耗尽（精力、资源）；喝干。n. 排水管；下水道；排水沟；消耗；耗尽。",
+      "example_en": "Please drain the pasta and then add the sauce.",
+      "example_zh": "请把意大利面沥干水分，然后加入酱汁。",
+      "part_of_speech": "v. / n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:45:00Z"
     }
   ]
