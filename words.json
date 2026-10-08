@@ -1181,7 +1181,13 @@
     {
       "id": 106,
       "term": "testimony",
-      "status": "pending",
+      "phonetic": "/ˈtestɪməni/",
+      "meaning_en": "A formal statement a witness makes under oath, especially in a court of law. It can also mean clear evidence or proof that something exists or is true.",
+      "meaning_zh": "证词；证言；（法庭上的）宣誓陈述；证据；证明",
+      "example_en": "Her testimony was crucial in convicting the defendant.",
+      "example_zh": "她的证词对判定被告有罪起了关键作用。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:20:29Z"
     }
   ]
