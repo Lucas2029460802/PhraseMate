@@ -1571,13 +1571,29 @@
     },
     {
       "created_at": "2026-08-13T18:25:47Z",
-      "example_en": "Step on it, or we'll miss the train.",
-      "example_zh": "快点，不然我们赶不上火车了。",
+      "example_en": "Step on it! The movie starts in ten minutes.",
+      "example_zh": "快点！电影十分钟后就要开始了。",
       "id": 41,
-      "meaning_en": "Hurry up or go faster.",
-      "meaning_zh": "赶快，加速",
+      "meaning_en": "An informal imperative meaning 'hurry up' or 'go faster'.",
+      "meaning_zh": "快点；赶紧；加速（常用于命令或催促）",
       "part_of_speech": "phrase",
-      "status": "pending",
+      "phonetic": "/stɛp ɒn ɪt/",
+      "phrases": [
+        {
+          "phrase": "step on the gas",
+          "meaning_zh": "踩油门；加快速度"
+        },
+        {
+          "phrase": "step on someone's toes",
+          "meaning_zh": "冒犯或得罪某人"
+        },
+        {
+          "phrase": "step on the brakes",
+          "meaning_zh": "踩刹车"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "step on it"
     },
     {
