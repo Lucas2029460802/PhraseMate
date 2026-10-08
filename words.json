@@ -779,13 +779,33 @@
       "term": "chop wood"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/axe-1-us.mp3",
       "created_at": "2026-08-12T19:54:14Z",
       "id": 23,
-      "meaning_en": "A tool for felling trees or chopping wood etc. consisting of a heavy head flattened to a blade on one side, and a handle attached to it.",
-      "meaning_zh": "一种用于砍伐树木或砍伐木材等的工具，包括一个在一侧扁平化到刀片上的重头和一个附着在刀片上的手柄。",
+      "meaning_en": "A tool for felling trees or chopping wood etc. consisting of a heavy head flattened to a blade on one side, and a handle attached to it",
+      "meaning_zh": "一种用于砍伐树木或砍伐木材等的工具，包括一个在一侧扁平到刀片上的重头和一个附着在刀片上的手柄",
       "part_of_speech": "n.",
       "phonetic": "/æks/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "battle axe",
+          "meaning_zh": "战斧"
+        },
+        {
+          "phrase": "ice axe",
+          "meaning_zh": "冰镐"
+        },
+        {
+          "phrase": "get the axe",
+          "meaning_zh": "被解雇；被取消"
+        },
+        {
+          "phrase": "have an axe to grind",
+          "meaning_zh": "别有用心；有私怨"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "axe"
     },
     {
