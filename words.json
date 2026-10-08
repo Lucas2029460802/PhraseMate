@@ -957,7 +957,13 @@
     {
       "id": 87,
       "term": "buzz",
-      "status": "pending",
+      "phonetic": "/bʌz/",
+      "meaning_en": "A low, continuous humming sound like that of a bee. As a verb, to make such a sound, or (of a place or group) to be full of excitement or activity.",
+      "meaning_zh": "n. 嗡嗡声，蜂鸣声；（人群的）嘈杂声、低声议论；兴奋热闹的气氛；（门铃等的）蜂鸣器响声。v. 发出嗡嗡声；用蜂鸣器呼叫；充满兴奋或忙碌（buzz with）；(口) 匆匆走动。",
+      "example_en": "The room was buzzing with excitement as everyone waited for the results.",
+      "example_zh": "大家都在等待结果，房间里洋溢着一片兴奋的嗡嗡声。",
+      "part_of_speech": "n. / v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:03:23Z"
     }
   ]
