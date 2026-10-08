@@ -1165,6 +1165,12 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-08T15:19:50Z"
+    },
+    {
+      "id": 105,
+      "term": "tame",
+      "status": "pending",
+      "created_at": "2026-10-08T15:20:04Z"
     }
   ]
 }
