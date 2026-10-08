@@ -1548,8 +1548,20 @@
     {
       "id": 137,
       "term": "shortfall",
-      "status": "pending",
+      "phonetic": "/ˈʃɔːtfɔːl/",
+      "meaning_en": "The amount by which something falls short of what is needed, expected, or required; a deficit.",
+      "meaning_zh": "缺口；差额；不足额；赤字",
+      "example_en": "The company is facing a shortfall of two million dollars in its annual budget.",
+      "example_zh": "该公司年度预算面临两百万美元的缺口。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T16:07:02Z"
+    },
+    {
+      "id": 138,
+      "term": "suppression",
+      "status": "pending",
+      "created_at": "2026-10-08T16:07:31Z"
     }
   ]
 }
