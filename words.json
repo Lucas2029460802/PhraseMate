@@ -1606,8 +1606,20 @@
     {
       "id": 142,
       "term": "prescribe",
-      "status": "pending",
+      "phonetic": "/prɪˈskraɪb/",
+      "meaning_en": "To order or give a medicine or treatment as a doctor; also to state officially what should be done or followed as a rule.",
+      "meaning_zh": "开处方，开药；规定，指定，指示",
+      "example_en": "The doctor prescribed some antibiotics for my infection.",
+      "example_zh": "医生给我开了一些抗生素来治疗感染。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T16:15:54Z"
+    },
+    {
+      "id": 143,
+      "term": "oversee",
+      "status": "pending",
+      "created_at": "2026-10-08T16:16:00Z"
     }
   ]
 }
