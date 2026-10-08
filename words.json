@@ -749,14 +749,33 @@
     },
     {
       "created_at": "2026-08-12T19:54:07Z",
-      "example_en": "He spent the morning chopping wood for the fireplace.",
-      "example_zh": "他花了一上午为壁炉劈柴。",
+      "example_en": "He went outside to chop wood for the fireplace.",
+      "example_zh": "他到外面去劈柴，供壁炉使用。",
       "id": 22,
-      "meaning_en": "To cut wood into pieces, typically with an axe or hatchet.",
+      "meaning_en": "To cut wood into smaller pieces, especially with an axe, usually for firewood.",
       "meaning_zh": "劈柴；砍木头",
       "part_of_speech": "phrase",
       "phonetic": "/tʃɒp wʊd/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "chop wood and carry water",
+          "meaning_zh": "砍柴挑水（禅宗谚语，指日常修行）"
+        },
+        {
+          "phrase": "chop wood for the winter",
+          "meaning_zh": "为过冬劈柴"
+        },
+        {
+          "phrase": "chop wood into kindling",
+          "meaning_zh": "把木头劈成引火柴"
+        },
+        {
+          "phrase": "chop wood with an axe",
+          "meaning_zh": "用斧头劈柴"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "chop wood"
     },
     {
