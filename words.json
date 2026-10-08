@@ -1043,14 +1043,54 @@
     },
     {
       "created_at": "2026-08-13T08:21:02Z",
-      "example_en": "He is heavily in debt after buying a new house.",
-      "example_zh": "他买新房后负债累累。",
+      "example_en": "After the business failed, he was heavily in debt.",
+      "example_zh": "生意失败后，他负债累累。",
       "id": 30,
-      "meaning_en": "Owing money to a person, bank, or other organization.",
-      "meaning_zh": "负债；欠债",
+      "meaning_en": "Owing money to someone; having borrowed money that has not yet been paid back.",
+      "meaning_zh": "负债的；欠债的；欠（某人）钱的",
       "part_of_speech": "phrase",
-      "phonetic": "/ɪn dɛt/",
-      "status": "pending",
+      "phonetic": "/ɪn det/",
+      "phrases": [
+        {
+          "phrase": "be in debt to someone",
+          "meaning_zh": "欠某人钱；对某人感激"
+        },
+        {
+          "phrase": "get into debt",
+          "meaning_zh": "开始负债；欠下债"
+        },
+        {
+          "phrase": "get out of debt",
+          "meaning_zh": "还清债务；摆脱债务"
+        },
+        {
+          "phrase": "deeply / heavily in debt",
+          "meaning_zh": "负债累累"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "debt",
+          "pos": "n.",
+          "meaning_zh": "债务；欠款"
+        },
+        {
+          "word": "debtor",
+          "pos": "n.",
+          "meaning_zh": "债务人；欠债人"
+        },
+        {
+          "word": "indebted",
+          "pos": "adj.",
+          "meaning_zh": "感激的；负债的"
+        },
+        {
+          "word": "indebtedness",
+          "pos": "n.",
+          "meaning_zh": "负债状态；感恩"
+        }
+      ],
+      "status": "ready",
       "term": "in debt"
     },
     {
