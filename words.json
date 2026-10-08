@@ -1029,7 +1029,13 @@
     {
       "id": 93,
       "term": "cosmetic",
-      "status": "pending",
+      "phonetic": "/kɒzˈmetɪk/",
+      "meaning_en": "As a noun: a substance or preparation applied to the body, especially the face, to improve its appearance. As an adjective: relating to beauty treatment, or affecting only the appearance of something rather than its substance.",
+      "meaning_zh": "n. 化妆品；美容品。adj. 化妆用的，美容的；（改变）表面的，装门面的（指只改善外观而不解决实质问题）。",
+      "example_en": "The company made only cosmetic changes to the report, so the real problems remain unsolved.",
+      "example_zh": "公司对报告只做了些表面上的修改，所以真正的问题依然没有解决。",
+      "part_of_speech": "n. / adj.",
+      "status": "ready",
       "created_at": "2026-10-08T15:08:36Z"
     }
   ]
