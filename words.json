@@ -1699,7 +1699,13 @@
     {
       "id": 150,
       "term": "selfie-vanity",
-      "status": "pending",
+      "phonetic": "/ˈsɛlfi ˈvænəti/",
+      "meaning_en": "Excessive pride or self-absorption shown by taking and sharing selfies, especially on social media. It describes vanity expressed through constant self-portraits.",
+      "meaning_zh": "自拍虚荣；指通过不停地自拍并在社交媒体上晒自拍所表现出的虚荣心和自我陶醉。",
+      "example_en": "Her colleagues dismissed her endless filtered posts as pure selfie-vanity.",
+      "example_zh": "同事们把她没完没了发滤镜自拍的行为斥为纯粹的自拍虚荣。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T16:27:58Z"
     }
   ]
