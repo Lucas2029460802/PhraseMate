@@ -1051,7 +1051,13 @@
     {
       "id": 95,
       "term": "cater to",
-      "status": "pending",
+      "phonetic": "/ˈkeɪtər tuː/",
+      "meaning_en": "To provide what someone wants or needs, often by pleasing or indulging them; to be aimed at a particular group or taste.",
+      "meaning_zh": "迎合；满足……的需要；投合（某类人的口味或需求）；迁就",
+      "example_en": "The new restaurant caters to families with young children.",
+      "example_zh": "这家新餐厅迎合了有幼儿的家庭的需求。",
+      "part_of_speech": "phrase",
+      "status": "ready",
       "created_at": "2026-10-08T15:11:41Z"
     }
   ]
