@@ -965,6 +965,12 @@
       "part_of_speech": "n. / v.",
       "status": "ready",
       "created_at": "2026-10-08T15:03:23Z"
+    },
+    {
+      "id": 88,
+      "term": "artistic",
+      "status": "pending",
+      "created_at": "2026-10-08T15:05:40Z"
     }
   ]
 }
