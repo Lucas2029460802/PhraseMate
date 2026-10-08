@@ -1120,8 +1120,14 @@
     },
     {
       "id": 101,
-      "term": "propell",
-      "status": "pending",
+      "term": "propel",
+      "phonetic": "/prəˈpel/",
+      "meaning_en": "To drive, push, or cause something or someone to move forward; to impel or urge onward.",
+      "meaning_zh": "推动；推进；（在某一方向上）驱动；驱使；促使",
+      "example_en": "The powerful engine propels the boat smoothly across the lake.",
+      "example_zh": "强劲的发动机推动小船平稳地驶过湖面。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:15:35Z"
     }
   ]
