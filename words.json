@@ -1417,6 +1417,18 @@
       "part_of_speech": "adv. / adj.",
       "status": "ready",
       "created_at": "2026-10-08T15:53:21Z"
+    },
+    {
+      "id": 126,
+      "term": "sheer",
+      "phonetic": "/ʃɪr/",
+      "meaning_en": "Used to emphasize that something is complete or pure, with nothing else involved; also describes a very steep surface or a very thin, transparent fabric.",
+      "meaning_zh": "完全的，纯粹的（用于强调）；陡峭的，几乎垂直的；（织物）极薄的，透明的",
+      "example_en": "It was sheer luck that we caught the last train home.",
+      "example_zh": "我们能赶上回家的末班车，纯属运气。",
+      "part_of_speech": "adj.",
+      "status": "ready",
+      "created_at": "2026-10-08T15:54:08Z"
     }
   ]
 }
