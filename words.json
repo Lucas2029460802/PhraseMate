@@ -1642,7 +1642,13 @@
     {
       "id": 145,
       "term": "narrate",
-      "status": "pending",
+      "phonetic": "/nəˈreɪt/",
+      "meaning_en": "To tell a story or describe a series of events in speech or writing; also to provide the spoken commentary for a film, programme, etc.",
+      "meaning_zh": "讲述，叙述（故事、事件）；为（影片、节目等）作解说、旁白",
+      "example_en": "She narrated the story of her journey across Asia.",
+      "example_zh": "她讲述了自己横跨亚洲的旅程。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T16:21:51Z"
     }
   ]
