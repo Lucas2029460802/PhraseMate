@@ -1277,7 +1277,13 @@
     {
       "id": 114,
       "term": "suspend",
-      "status": "pending",
+      "phonetic": "/səˈspend/",
+      "meaning_en": "To stop something temporarily, or to officially prevent someone from taking part in their job or an activity for a period of time. It can also mean to hang something from above.",
+      "meaning_zh": "暂停，中止（某事一段时间）；使停职，使停学（作为处分）；悬挂，吊起",
+      "example_en": "The company decided to suspend all flights to the region because of the storm.",
+      "example_zh": "由于暴风雨，该公司决定暂停所有飞往该地区的航班。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:31:44Z"
     }
   ]
