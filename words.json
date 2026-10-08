@@ -421,14 +421,33 @@
     },
     {
       "created_at": "2026-08-07T15:40:02Z",
-      "example_en": "You can go to heck as far as I'm concerned.",
-      "example_zh": "就我而言，你可以去地狱。",
+      "example_en": "What the heck are you doing?",
+      "example_zh": "你到底在干什么？",
       "id": 13,
-      "meaning_en": "Hell.",
-      "meaning_zh": "Hell.",
-      "part_of_speech": "n.",
+      "meaning_en": "Used as a mild exclamation of annoyance, surprise, or emphasis; a euphemistic substitute for 'hell'.",
+      "meaning_zh": "（表示恼怒、惊讶或加强语气）哎呀，见鬼；用作 hell 的委婉说法；到底，究竟（用于疑问句加强语气）",
+      "part_of_speech": "interj. / n.",
       "phonetic": "/hɛk/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "what the heck",
+          "meaning_zh": "管它呢；怎么回事（表示惊讶、恼怒或不在乎）"
+        },
+        {
+          "phrase": "a heck of a",
+          "meaning_zh": "非常……；了不起的/糟糕的（加强语气）"
+        },
+        {
+          "phrase": "the heck",
+          "meaning_zh": "到底，究竟（用于疑问句加强语气）"
+        },
+        {
+          "phrase": "for the heck of it",
+          "meaning_zh": "为了好玩；随便试试"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "heck"
     },
     {
