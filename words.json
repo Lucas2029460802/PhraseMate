@@ -390,14 +390,33 @@
     },
     {
       "created_at": "2026-08-07T15:20:11Z",
-      "example_en": "She couldn't resist a quick peek at the gift inside the box.",
-      "example_zh": "她忍不住快速偷看了一眼盒子里的礼物。",
+      "example_en": "She peeked through the curtains to see who was at the door.",
+      "example_zh": "她透过窗帘偷看是谁在门口。",
       "id": 11,
-      "meaning_en": "To look quickly or furtively, especially through a small opening or from a hidden place.",
-      "meaning_zh": "偷看，窥视；快速或秘密地看一眼",
+      "meaning_en": "To look slyly, or with the eyes half closed, or through a crevice; to peep; To be only slightly, partially visible, as if peering out from a hiding place",
+      "meaning_zh": "偷看；窥视；（从缝隙或物体后面）匆匆看一眼",
       "part_of_speech": "v.",
       "phonetic": "/piːk/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "take a peek",
+          "meaning_zh": "偷看一眼；瞄一眼"
+        },
+        {
+          "phrase": "peek at",
+          "meaning_zh": "偷看；瞥一眼"
+        },
+        {
+          "phrase": "sneak peek",
+          "meaning_zh": "抢先看；独家预告"
+        },
+        {
+          "phrase": "peek out",
+          "meaning_zh": "探出头来；露出来"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "peek"
     },
     {
