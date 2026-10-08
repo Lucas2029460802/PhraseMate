@@ -2060,13 +2060,56 @@
       "term": "spurt"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/conceive-us.mp3",
       "created_at": "2026-08-13T19:17:25Z",
+      "example_en": "It's hard to conceive of a world without the internet.",
+      "example_zh": "很难想象一个没有互联网的世界。",
       "id": 53,
-      "meaning_en": "To develop an idea; to form in the mind; to plan; to devise; to originate.; To understand (someone).",
-      "meaning_zh": "发展一个想法；在头脑中形成；计划；设计；起源。;了解（某人）。",
+      "meaning_en": "To develop an idea; to form in the mind; to plan; to devise; to originate; To understand (someone)",
+      "meaning_zh": "构想，设想，想出（主意、计划等）；怀孕，受孕",
       "part_of_speech": "v.",
       "phonetic": "/kənˈsiːv/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "conceive of",
+          "meaning_zh": "想象，设想"
+        },
+        {
+          "phrase": "conceive a plan",
+          "meaning_zh": "构想一个计划"
+        },
+        {
+          "phrase": "be conceived as",
+          "meaning_zh": "被视为，被理解为"
+        },
+        {
+          "phrase": "conceive a child",
+          "meaning_zh": "怀孕，怀上孩子"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "concept",
+          "pos": "n.",
+          "meaning_zh": "概念，观念"
+        },
+        {
+          "word": "conception",
+          "pos": "n.",
+          "meaning_zh": "构想，设想；受孕"
+        },
+        {
+          "word": "conceivable",
+          "pos": "adj.",
+          "meaning_zh": "可想象的，可想到的"
+        },
+        {
+          "word": "conceivably",
+          "pos": "adv.",
+          "meaning_zh": "可以想象地，可能地"
+        }
+      ],
+      "status": "ready",
       "term": "conceive"
     },
     {
