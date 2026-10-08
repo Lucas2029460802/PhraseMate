@@ -535,6 +535,53 @@ body.app-shell {
   color: var(--ink-soft);
 }
 
+.extra-block {
+  margin-top: 0.95rem;
+}
+
+.extra-block h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--sea);
+}
+
+.extra-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.extra-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.pos-tag {
+  flex-shrink: 0;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(31, 111, 120, 0.12);
+  color: var(--sea);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.extra-term {
+  font-weight: 600;
+}
+
+.extra-zh {
+  color: var(--ink-soft);
+}
+
 .word-actions {
   margin-top: 0.55rem;
 }

@@ -11,18 +11,20 @@ const (
 
 // Word is a vocabulary entry saved in the notebook.
 type Word struct {
-	ID           int64     `json:"id"`
-	Term         string    `json:"term"`
-	Phonetic     string    `json:"phonetic,omitempty"`
-	AudioURL     string    `json:"audio_url,omitempty"`
-	MeaningEN    string    `json:"meaning_en"`
-	MeaningZH    string    `json:"meaning_zh"`
-	ExampleEN    string    `json:"example_en,omitempty"`
-	ExampleZH    string    `json:"example_zh,omitempty"`
-	PartOfSpeech string    `json:"part_of_speech,omitempty"`
-	Status       string    `json:"status"`
-	ErrorMsg     string    `json:"error_msg,omitempty"`
-	CreatedAt    time.Time `json:"created_at"`
+	ID           int64         `json:"id"`
+	Term         string        `json:"term"`
+	Phonetic     string        `json:"phonetic,omitempty"`
+	AudioURL     string        `json:"audio_url,omitempty"`
+	MeaningEN    string        `json:"meaning_en"`
+	MeaningZH    string        `json:"meaning_zh"`
+	ExampleEN    string        `json:"example_en,omitempty"`
+	ExampleZH    string        `json:"example_zh,omitempty"`
+	PartOfSpeech string        `json:"part_of_speech,omitempty"`
+	RelatedForms []RelatedForm `json:"related_forms,omitempty"`
+	Phrases      []Phrase      `json:"phrases,omitempty"`
+	Status       string        `json:"status"`
+	ErrorMsg     string        `json:"error_msg,omitempty"`
+	CreatedAt    time.Time     `json:"created_at"`
 }
 
 // CaptureRequest quickly saves a term without waiting for AI.
@@ -85,12 +87,35 @@ type SettingsUpdateRequest struct {
 
 // AIExplanation is the structured reply from the LLM.
 type AIExplanation struct {
-	Term         string `json:"term"`
-	Phonetic     string `json:"phonetic"`
-	AudioURL     string `json:"audio_url,omitempty"`
-	PartOfSpeech string `json:"part_of_speech"`
-	MeaningEN    string `json:"meaning_en"`
+	Term         string        `json:"term"`
+	Phonetic     string        `json:"phonetic"`
+	AudioURL     string        `json:"audio_url,omitempty"`
+	PartOfSpeech string        `json:"part_of_speech"`
+	MeaningEN    string        `json:"meaning_en"`
+	MeaningZH    string        `json:"meaning_zh"`
+	ExampleEN    string        `json:"example_en"`
+	ExampleZH    string        `json:"example_zh"`
+	Forms        []RelatedForm `json:"forms,omitempty"`
+	Phrases      []Phrase      `json:"phrases,omitempty"`
+	// FamilyReady is true once related forms and phrases were requested.
+	// Empty slices then mean "none", not "not yet generated".
+	FamilyReady bool `json:"-"`
+}
+
+// RelatedForm is another part of speech built from the same root.
+type RelatedForm struct {
+	Word         string `json:"word"`
+	Term         string `json:"term,omitempty"`
+	POS          string `json:"pos"`
+	PartOfSpeech string `json:"part_of_speech,omitempty"`
 	MeaningZH    string `json:"meaning_zh"`
-	ExampleEN    string `json:"example_en"`
-	ExampleZH    string `json:"example_zh"`
+	Meaning      string `json:"meaning,omitempty"`
+}
+
+// Phrase is a short collocation that uses the headword.
+type Phrase struct {
+	Text      string `json:"phrase"`
+	Alt       string `json:"text,omitempty"`
+	MeaningZH string `json:"meaning_zh"`
+	Meaning   string `json:"meaning,omitempty"`
 }

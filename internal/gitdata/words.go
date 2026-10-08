@@ -29,18 +29,52 @@ type document struct {
 }
 
 type wordRec struct {
-	ID           int64  `json:"id"`
-	Term         string `json:"term"`
-	Phonetic     string `json:"phonetic,omitempty"`
-	AudioURL     string `json:"audio_url,omitempty"`
-	MeaningEN    string `json:"meaning_en,omitempty"`
-	MeaningZH    string `json:"meaning_zh,omitempty"`
-	ExampleEN    string `json:"example_en,omitempty"`
-	ExampleZH    string `json:"example_zh,omitempty"`
-	PartOfSpeech string `json:"part_of_speech,omitempty"`
-	Status       string `json:"status"`
-	ErrorMsg     string `json:"error_msg,omitempty"`
-	CreatedAt    string `json:"created_at"`
+	ID           int64                `json:"id"`
+	Term         string               `json:"term"`
+	Phonetic     string               `json:"phonetic,omitempty"`
+	AudioURL     string               `json:"audio_url,omitempty"`
+	MeaningEN    string               `json:"meaning_en,omitempty"`
+	MeaningZH    string               `json:"meaning_zh,omitempty"`
+	ExampleEN    string               `json:"example_en,omitempty"`
+	ExampleZH    string               `json:"example_zh,omitempty"`
+	PartOfSpeech string               `json:"part_of_speech,omitempty"`
+	RelatedForms []models.RelatedForm `json:"related_forms"`
+	Phrases      []models.Phrase      `json:"phrases"`
+	Status       string               `json:"status"`
+	ErrorMsg     string               `json:"error_msg,omitempty"`
+	CreatedAt    string               `json:"created_at"`
+}
+
+// MarshalJSON omits word-family fields until they exist, and keeps an empty
+// list once generation has run. A nil slice must not become [] or the next
+// launch would treat every old word as already checked.
+func (w wordRec) MarshalJSON() ([]byte, error) {
+	payload := map[string]any{
+		"id":         w.ID,
+		"term":       w.Term,
+		"status":     w.Status,
+		"created_at": w.CreatedAt,
+	}
+	put := func(key, val string) {
+		if strings.TrimSpace(val) != "" {
+			payload[key] = val
+		}
+	}
+	put("phonetic", w.Phonetic)
+	put("audio_url", w.AudioURL)
+	put("meaning_en", w.MeaningEN)
+	put("meaning_zh", w.MeaningZH)
+	put("example_en", w.ExampleEN)
+	put("example_zh", w.ExampleZH)
+	put("part_of_speech", w.PartOfSpeech)
+	put("error_msg", w.ErrorMsg)
+	if w.RelatedForms != nil {
+		payload["related_forms"] = w.RelatedForms
+	}
+	if w.Phrases != nil {
+		payload["phrases"] = w.Phrases
+	}
+	return json.Marshal(payload)
 }
 
 func prepareWords(in []models.Word) []models.Word {
@@ -137,8 +171,8 @@ func betterWord(a, b models.Word) bool {
 	if ra, rb := statusRank(a.Status), statusRank(b.Status); ra != rb {
 		return ra > rb
 	}
-	aLen := len(strings.TrimSpace(a.MeaningZH)) + len(strings.TrimSpace(a.MeaningEN))
-	bLen := len(strings.TrimSpace(b.MeaningZH)) + len(strings.TrimSpace(b.MeaningEN))
+	aLen := len(strings.TrimSpace(a.MeaningZH)) + len(strings.TrimSpace(a.MeaningEN)) + len(a.RelatedForms) + len(a.Phrases)
+	bLen := len(strings.TrimSpace(b.MeaningZH)) + len(strings.TrimSpace(b.MeaningEN)) + len(b.RelatedForms) + len(b.Phrases)
 	return aLen > bLen
 }
 
@@ -221,6 +255,8 @@ func marshalWords(words []models.Word) ([]byte, error) {
 			ExampleEN:    w.ExampleEN,
 			ExampleZH:    w.ExampleZH,
 			PartOfSpeech: w.PartOfSpeech,
+			RelatedForms: w.RelatedForms,
+			Phrases:      w.Phrases,
 			Status:       w.Status,
 			ErrorMsg:     w.ErrorMsg,
 			CreatedAt:    w.CreatedAt.UTC().Format(time.RFC3339),
@@ -259,6 +295,8 @@ func unmarshalWords(raw []byte) ([]models.Word, error) {
 			ExampleEN:    rec.ExampleEN,
 			ExampleZH:    rec.ExampleZH,
 			PartOfSpeech: rec.PartOfSpeech,
+			RelatedForms: rec.RelatedForms,
+			Phrases:      rec.Phrases,
 			Status:       rec.Status,
 			ErrorMsg:     rec.ErrorMsg,
 			CreatedAt:    created,

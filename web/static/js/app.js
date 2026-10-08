@@ -71,7 +71,7 @@
     return list
       .map(
         (w) =>
-          `${w.id}|${w.status}|${w.meaning_zh}|${w.meaning_en}|${w.error_msg || ""}|${w.created_at}`
+          `${w.id}|${w.status}|${w.meaning_zh}|${w.meaning_en}|${w.error_msg || ""}|${w.created_at}|${extraFP(w)}`
       )
       .join(";");
   }
@@ -225,28 +225,87 @@
       </button>`;
   }
 
+  function extraFP(w) {
+    const forms = (w.related_forms || []).map((f) => `${f.pos || ""}:${f.word || ""}:${f.meaning_zh || ""}`).join(",");
+    const phrases = (w.phrases || []).map((p) => `${p.phrase || ""}:${p.meaning_zh || ""}`).join(",");
+    return `${forms}|${phrases}`;
+  }
+
+  function renderExtraList(title, items) {
+    if (!items) return "";
+    return `<section class="extra-block">
+      <h4>${title}</h4>
+      <ul class="extra-list">${items}</ul>
+    </section>`;
+  }
+
+  function renderForms(forms) {
+    const list = (forms || []).filter((f) => (f.word || "").trim());
+    if (!list.length) return "";
+    const items = list
+      .map((f) => {
+        const pos = (f.pos || "").trim();
+        const zh = (f.meaning_zh || "").trim();
+        return `<li>
+          ${pos ? `<span class="pos-tag">${escapeHtml(pos)}</span>` : ""}
+          <span class="extra-term">${escapeHtml(f.word)}</span>
+          ${zh ? `<span class="extra-zh">${escapeHtml(zh)}</span>` : ""}
+        </li>`;
+      })
+      .join("");
+    return renderExtraList("词形变化", items);
+  }
+
+  function renderPhrases(phrases) {
+    const list = (phrases || []).filter((p) => (p.phrase || "").trim());
+    if (!list.length) return "";
+    const items = list
+      .map((p) => {
+        const zh = (p.meaning_zh || "").trim();
+        return `<li>
+          <span class="extra-term">${escapeHtml(p.phrase)}</span>
+          ${zh ? `<span class="extra-zh">${escapeHtml(zh)}</span>` : ""}
+        </li>`;
+      })
+      .join("");
+    return renderExtraList("常用短语", items);
+  }
+
+  function renderMeaningBody(w) {
+    const example = w.example_en
+      ? `<p class="example">${escapeHtml(w.example_en)}${
+          w.example_zh ? `<br />${escapeHtml(w.example_zh)}` : ""
+        }<button type="button" class="btn ghost sm speak-inline" data-speak="${escapeHtml(
+          w.example_en
+        )}" title="朗读例句">朗读例句</button></p>`
+      : "";
+    const meaningZh = (w.meaning_zh || "").trim();
+    return `
+      ${meaningZh ? `<p class="meaning-zh">${escapeHtml(meaningZh)}</p>` : ""}
+      <p class="meaning-en">${escapeHtml(w.meaning_en || "")}</p>
+      ${example}
+      ${renderForms(w.related_forms)}
+      ${renderPhrases(w.phrases)}`;
+  }
+
   function renderDetailHTML(w) {
     const meta = renderMeta(w);
+    const hasMeaning = (w.meaning_zh || "").trim() || (w.meaning_en || "").trim();
     let body = "";
-    if (w.status === "pending") {
+    if (w.status === "pending" && !hasMeaning) {
       body = `<p class="meaning-zh pending">释义生成中…</p>`;
-    } else if (w.status === "error") {
+    } else if (w.status === "error" && !hasMeaning) {
       body = `<p class="meaning-zh error">释义失败：${escapeHtml(w.error_msg || "未知错误")}</p>
         <div class="word-actions"><button type="button" class="btn ghost sm" data-retry="${w.id}">重试</button></div>`;
     } else {
-      const example =
-        w.example_en
-          ? `<p class="example">${escapeHtml(w.example_en)}${
-              w.example_zh ? `<br />${escapeHtml(w.example_zh)}` : ""
-            }<button type="button" class="btn ghost sm speak-inline" data-speak="${escapeHtml(
-              w.example_en
-            )}" title="朗读例句">朗读例句</button></p>`
-          : "";
-      const meaningZh = (w.meaning_zh || "").trim();
-      body = `
-        ${meaningZh ? `<p class="meaning-zh">${escapeHtml(meaningZh)}</p>` : ""}
-        <p class="meaning-en">${escapeHtml(w.meaning_en)}</p>
-        ${example}`;
+      const note =
+        w.status === "pending"
+          ? `<p class="meaning-zh pending">正在补全词形与短语…</p>`
+          : w.status === "error"
+            ? `<p class="meaning-zh error">释义失败：${escapeHtml(w.error_msg || "未知错误")}</p>
+        <div class="word-actions"><button type="button" class="btn ghost sm" data-retry="${w.id}">重试</button></div>`
+            : "";
+      body = `${note}${renderMeaningBody(w)}`;
     }
     return `
       <div class="detail-head">
@@ -273,7 +332,8 @@
       (w) =>
         w.term.toLowerCase().includes(q) ||
         (w.meaning_zh || "").toLowerCase().includes(q) ||
-        (w.meaning_en || "").toLowerCase().includes(q)
+        (w.meaning_en || "").toLowerCase().includes(q) ||
+        extraFP(w).toLowerCase().includes(q)
     );
   }
 
@@ -411,7 +471,7 @@
       });
       toast(clearKey ? "已清除 API Key" : "设置已保存");
       closeSettings();
-      await loadStatus();
+      await refreshAll();
     } catch (err) {
       toast(err.message);
     } finally {

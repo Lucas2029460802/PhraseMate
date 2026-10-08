@@ -55,6 +55,8 @@ CREATE TABLE IF NOT EXISTS words (
   example_en TEXT NOT NULL DEFAULT '',
   example_zh TEXT NOT NULL DEFAULT '',
   part_of_speech TEXT NOT NULL DEFAULT '',
+  related_forms TEXT NOT NULL DEFAULT '',
+  phrases TEXT NOT NULL DEFAULT '',
   status TEXT NOT NULL DEFAULT 'ready',
   error_msg TEXT NOT NULL DEFAULT '',
   created_at TEXT NOT NULL
@@ -72,6 +74,12 @@ CREATE TABLE IF NOT EXISTS settings (
 	_, _ = s.db.Exec(`ALTER TABLE words ADD COLUMN status TEXT NOT NULL DEFAULT 'ready'`)
 	_, _ = s.db.Exec(`ALTER TABLE words ADD COLUMN error_msg TEXT NOT NULL DEFAULT ''`)
 	_, _ = s.db.Exec(`ALTER TABLE words ADD COLUMN audio_url TEXT NOT NULL DEFAULT ''`)
+	if err := s.addColumn(`ALTER TABLE words ADD COLUMN related_forms TEXT NOT NULL DEFAULT ''`); err != nil {
+		return err
+	}
+	if err := s.addColumn(`ALTER TABLE words ADD COLUMN phrases TEXT NOT NULL DEFAULT ''`); err != nil {
+		return err
+	}
 	_, _ = s.db.Exec(`UPDATE words SET status='ready' WHERE IFNULL(status,'')=''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)=''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)<>''`)
@@ -79,6 +87,14 @@ CREATE TABLE IF NOT EXISTS settings (
 		return err
 	}
 	return nil
+}
+
+func (s *Store) addColumn(ddl string) error {
+	_, err := s.db.Exec(ddl)
+	if err == nil || strings.Contains(strings.ToLower(err.Error()), "duplicate column") {
+		return nil
+	}
+	return err
 }
 
 func (s *Store) normalizeStoredPhonetics() error {
@@ -247,10 +263,11 @@ func (s *Store) ReplaceAllWords(words []models.Word) error {
 			created = time.Unix(0, 0).UTC()
 		}
 		if _, err := tx.Exec(`
-INSERT INTO words (id, term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+INSERT INTO words (id, term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, related_forms, phrases, status, error_msg, created_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
 			w.ID, term, format.NormalizePhonetic(w.Phonetic), strings.TrimSpace(w.AudioURL), w.MeaningEN, w.MeaningZH,
-			w.ExampleEN, w.ExampleZH, w.PartOfSpeech, status, w.ErrorMsg, created.Format(time.RFC3339),
+			w.ExampleEN, w.ExampleZH, w.PartOfSpeech, models.EncodeSlice(w.RelatedForms), models.EncodeSlice(w.Phrases),
+			status, w.ErrorMsg, created.Format(time.RFC3339),
 		); err != nil {
 			return err
 		}
@@ -333,13 +350,24 @@ VALUES (?, '', '', '', '', '', '', '', ?, '', ?)`,
 // ApplyExplanation fills AI fields and marks ready.
 func (s *Store) ApplyExplanation(id int64, exp *models.AIExplanation) (*models.Word, error) {
 	exp.Phonetic = format.NormalizePhonetic(exp.Phonetic)
+	familyFlag := 0
+	formsJSON := ""
+	phrasesJSON := ""
+	if exp.FamilyReady {
+		familyFlag = 1
+		formsJSON = models.EncodeSlice(models.NormalizeForms(exp.Term, exp.Forms))
+		phrasesJSON = models.EncodeSlice(models.NormalizePhrases(exp.Term, exp.Phrases))
+	}
 	_, err := s.db.Exec(`
 UPDATE words SET
   term=?, phonetic=?, audio_url=?, meaning_en=?, meaning_zh=?, example_en=?, example_zh=?,
-  part_of_speech=?, status=?, error_msg=''
+  part_of_speech=?,
+  related_forms=CASE WHEN ?=1 THEN ? ELSE related_forms END,
+  phrases=CASE WHEN ?=1 THEN ? ELSE phrases END,
+  status=?, error_msg=''
 WHERE id=?`,
 		exp.Term, exp.Phonetic, strings.TrimSpace(exp.AudioURL), exp.MeaningEN, exp.MeaningZH, exp.ExampleEN, exp.ExampleZH,
-		exp.PartOfSpeech, models.StatusReady, id,
+		exp.PartOfSpeech, familyFlag, formsJSON, familyFlag, phrasesJSON, models.StatusReady, id,
 	)
 	if err != nil {
 		return nil, err
@@ -358,7 +386,24 @@ func (s *Store) MarkError(id int64, msg string) error {
 	return nil
 }
 
-const wordSelectCols = `id, term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, status, error_msg, created_at`
+const wordSelectCols = `id, term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, related_forms, phrases, status, error_msg, created_at`
+
+// RequeueMissingFamily marks explained words that never received word-family
+// data so the enricher can fill forms and phrases.
+func (s *Store) RequeueMissingFamily() (int, error) {
+	res, err := s.db.Exec(`
+UPDATE words SET status=?, error_msg=''
+WHERE status=? AND TRIM(IFNULL(related_forms,''))='' AND TRIM(IFNULL(phrases,''))=''`,
+		models.StatusPending, models.StatusReady)
+	if err != nil {
+		return 0, err
+	}
+	n, _ := res.RowsAffected()
+	if n > 0 {
+		s.changed()
+	}
+	return int(n), nil
+}
 
 // NextPending returns the oldest pending word, if any.
 func (s *Store) NextPending() (*models.Word, error) {
@@ -458,7 +503,7 @@ func (s *Store) Delete(id int64) error {
 
 // Retry sets a word back to pending.
 func (s *Store) Retry(id int64) error {
-	res, err := s.db.Exec(`UPDATE words SET status=?, error_msg='' WHERE id=?`, models.StatusPending, id)
+	res, err := s.db.Exec(`UPDATE words SET status=?, error_msg='', related_forms='', phrases='' WHERE id=?`, models.StatusPending, id)
 	if err != nil {
 		return err
 	}
@@ -476,10 +521,10 @@ type scanner interface {
 
 func scanWord(row scanner) (*models.Word, error) {
 	var w models.Word
-	var created string
+	var created, formsJSON, phrasesJSON string
 	err := row.Scan(
 		&w.ID, &w.Term, &w.Phonetic, &w.AudioURL, &w.MeaningEN, &w.MeaningZH, &w.ExampleEN, &w.ExampleZH,
-		&w.PartOfSpeech, &w.Status, &w.ErrorMsg, &created,
+		&w.PartOfSpeech, &formsJSON, &phrasesJSON, &w.Status, &w.ErrorMsg, &created,
 	)
 	if err == sql.ErrNoRows {
 		return nil, nil
@@ -490,6 +535,8 @@ func scanWord(row scanner) (*models.Word, error) {
 	if w.Status == "" {
 		w.Status = models.StatusReady
 	}
+	w.RelatedForms = models.ParseSlice[models.RelatedForm](formsJSON)
+	w.Phrases = models.ParseSlice[models.Phrase](phrasesJSON)
 	w.CreatedAt, _ = time.Parse(time.RFC3339, created)
 	return &w, nil
 }

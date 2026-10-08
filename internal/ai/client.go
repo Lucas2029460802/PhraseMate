@@ -98,9 +98,9 @@ type chatMessage struct {
 }
 
 type chatRequest struct {
-	Model          string         `json:"model"`
-	Messages       []chatMessage  `json:"messages"`
-	Temperature    float64        `json:"temperature"`
+	Model          string          `json:"model"`
+	Messages       []chatMessage   `json:"messages"`
+	Temperature    float64         `json:"temperature"`
 	ResponseFormat *responseFormat `json:"response_format,omitempty"`
 }
 
@@ -126,7 +126,7 @@ func (c *Client) Explain(ctx context.Context, term string) (*models.AIExplanatio
 	}
 
 	system := `你是英语学习助手。用户会给出一个英语单词或短语。
-请用 JSON 返回解释，字段如下（全部必填，字符串）：
+请用 JSON 返回解释，字段如下：
 {
   "term": "原词或短语（规范写法）",
   "phonetic": "IPA 音标，格式必须为 /həˈləʊ/（斜杠包裹，不含词性或其它文字），没有则空字符串",
@@ -134,8 +134,17 @@ func (c *Client) Explain(ctx context.Context, term string) (*models.AIExplanatio
   "meaning_en": "简洁的英文释义（1-2 句）",
   "meaning_zh": "准确的中文释义（使用中文标点，多条释义用；分隔）",
   "example_en": "一个自然的英文例句",
-  "example_zh": "该例句的中文翻译"
+  "example_zh": "该例句的中文翻译",
+  "forms": [
+    {"word": "同一词根的其他词性", "pos": "n. / v. / adj. / adv.", "meaning_zh": "简短中文"}
+  ],
+  "phrases": [
+    {"phrase": "含该词的常用短语或固定搭配", "meaning_zh": "简短中文"}
+  ]
 }
+规则：
+- forms 给 2 到 4 个派生词，词性必须和原词不同。例如 beautiful 可给 beauty（n.）、beautify（v.）、beautifully（adv.）。不要比较级、过去式、现在分词、复数这类屈折变化，也不要重复原词。没有可靠派生词时返回空数组。
+- phrases 给 2 到 4 个常见短语或搭配，每条附简短中文。不要整句例句，不要重复原词本身。
 只输出 JSON，不要 markdown 代码块或其它文字。`
 
 	content, err := c.chat(ctx, system, term, true)
@@ -144,18 +153,123 @@ func (c *Client) Explain(ctx context.Context, term string) (*models.AIExplanatio
 	}
 
 	content = stripCodeFence(content)
-	var out models.AIExplanation
-	if err := json.Unmarshal([]byte(content), &out); err != nil {
+	out, err := decodeExplanation(content)
+	if err != nil {
 		return nil, fmt.Errorf("解析 AI 返回失败: %w\n原始内容: %s", err, content)
 	}
 	if strings.TrimSpace(out.Term) == "" {
 		out.Term = term
 	}
 	out.Phonetic = format.NormalizePhonetic(out.Phonetic)
+	out.Forms = models.NormalizeForms(out.Term, out.Forms)
+	out.Phrases = models.NormalizePhrases(out.Term, out.Phrases)
+	out.FamilyReady = true
 	if strings.TrimSpace(out.MeaningZH) == "" {
 		return nil, fmt.Errorf("AI 未返回中文释义")
 	}
-	return &out, nil
+	return out, nil
+}
+
+// Family asks only for derivations and collocations of a term we already explained.
+func (c *Client) Family(ctx context.Context, term, pos, meaningZH string) ([]models.RelatedForm, []models.Phrase, error) {
+	if !c.Enabled() {
+		return nil, nil, fmt.Errorf("未配置 API Key，请在应用设置中填写")
+	}
+	system := `你是英语学习助手。根据给定单词或短语，只返回 JSON：
+{
+  "forms": [
+    {"word": "同一词根的其他词性", "pos": "n. / v. / adj. / adv.", "meaning_zh": "简短中文"}
+  ],
+  "phrases": [
+    {"phrase": "含该词的常用短语或固定搭配", "meaning_zh": "简短中文"}
+  ]
+}
+规则：
+- forms 给 2 到 4 个派生词，词性必须和原词不同。例如形容词 beautiful 对应名词 beauty、动词 beautify、副词 beautifully。不要比较级、过去式、现在分词、复数，也不要重复原词。没有可靠派生词时返回空数组。
+- phrases 给 2 到 4 个常见短语或搭配，附简短中文。不要整句例句，不要重复原词本身。
+只输出 JSON，不要 markdown。`
+	user := fmt.Sprintf("单词或短语：%s\n词性：%s\n已知中文释义：%s", strings.TrimSpace(term), strings.TrimSpace(pos), strings.TrimSpace(meaningZH))
+	content, err := c.chat(ctx, system, user, true)
+	if err != nil {
+		return nil, nil, err
+	}
+	content = stripCodeFence(content)
+	forms, phrases, err := decodeFamily(content)
+	if err != nil {
+		return nil, nil, fmt.Errorf("解析词族失败: %w\n原始内容: %s", err, content)
+	}
+	return models.NormalizeForms(term, forms), models.NormalizePhrases(term, phrases), nil
+}
+
+func decodeExplanation(content string) (*models.AIExplanation, error) {
+	var raw struct {
+		Term         string          `json:"term"`
+		Phonetic     string          `json:"phonetic"`
+		PartOfSpeech string          `json:"part_of_speech"`
+		MeaningEN    string          `json:"meaning_en"`
+		MeaningZH    string          `json:"meaning_zh"`
+		ExampleEN    string          `json:"example_en"`
+		ExampleZH    string          `json:"example_zh"`
+		Forms        json.RawMessage `json:"forms"`
+		RelatedForms json.RawMessage `json:"related_forms"`
+		Phrases      json.RawMessage `json:"phrases"`
+	}
+	if err := json.Unmarshal([]byte(content), &raw); err != nil {
+		return nil, err
+	}
+	forms := decodeForms(raw.Forms)
+	if len(forms) == 0 {
+		forms = decodeForms(raw.RelatedForms)
+	}
+	return &models.AIExplanation{
+		Term:         raw.Term,
+		Phonetic:     raw.Phonetic,
+		PartOfSpeech: raw.PartOfSpeech,
+		MeaningEN:    raw.MeaningEN,
+		MeaningZH:    raw.MeaningZH,
+		ExampleEN:    raw.ExampleEN,
+		ExampleZH:    raw.ExampleZH,
+		Forms:        forms,
+		Phrases:      decodePhrases(raw.Phrases),
+	}, nil
+}
+
+func decodeFamily(content string) ([]models.RelatedForm, []models.Phrase, error) {
+	var raw struct {
+		Forms        json.RawMessage `json:"forms"`
+		RelatedForms json.RawMessage `json:"related_forms"`
+		Phrases      json.RawMessage `json:"phrases"`
+	}
+	if err := json.Unmarshal([]byte(content), &raw); err != nil {
+		return nil, nil, err
+	}
+	forms := decodeForms(raw.Forms)
+	if len(forms) == 0 {
+		forms = decodeForms(raw.RelatedForms)
+	}
+	return forms, decodePhrases(raw.Phrases), nil
+}
+
+func decodeForms(raw json.RawMessage) []models.RelatedForm {
+	if len(bytes.TrimSpace(raw)) == 0 || string(raw) == "null" {
+		return nil
+	}
+	var forms []models.RelatedForm
+	if err := json.Unmarshal(raw, &forms); err != nil {
+		return nil
+	}
+	return forms
+}
+
+func decodePhrases(raw json.RawMessage) []models.Phrase {
+	if len(bytes.TrimSpace(raw)) == 0 || string(raw) == "null" {
+		return nil
+	}
+	var phrases []models.Phrase
+	if err := json.Unmarshal(raw, &phrases); err != nil {
+		return nil
+	}
+	return phrases
 }
 
 // GenerateQuiz builds multiple-choice questions from notebook entries.

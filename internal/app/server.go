@@ -75,6 +75,13 @@ func Start(cfg config.Config, listenAddr string) (*Runtime, error) {
 
 	client := ai.New(cfg.APIKey, cfg.BaseURL, cfg.Model)
 	dictClient := dict.New(cfg.DictURL)
+	if client.Enabled() {
+		if n, err := st.RequeueMissingFamily(); err != nil {
+			log.Printf("补全词形排队失败: %v", err)
+		} else if n > 0 {
+			log.Printf("将为 %d 个生词补全词形与短语", n)
+		}
+	}
 	en := enricher.New(st, client, dictClient, cfg.DictFirst, nil)
 	api := handler.New(cfg, st, client, en, dictClient)
 

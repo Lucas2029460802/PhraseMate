@@ -103,30 +103,45 @@ func (w *Worker) attachAudio(ctx context.Context, term string, exp *models.AIExp
 }
 
 func (w *Worker) fillMissingFromAI(ctx context.Context, term string, exp *models.AIExplanation) {
-	if strings.TrimSpace(exp.MeaningZH) != "" {
+	if exp == nil || !w.ai.Enabled() {
 		return
 	}
-	if !w.ai.Enabled() {
+	needZH := strings.TrimSpace(exp.MeaningZH) == ""
+	if needZH {
+		aiExp, err := w.ai.Explain(ctx, term)
+		if err != nil {
+			log.Printf("AI 补全中文释义失败 [%s]: %v", term, err)
+			return
+		}
+		exp.MeaningZH = aiExp.MeaningZH
+		if strings.TrimSpace(exp.ExampleZH) == "" {
+			exp.ExampleZH = aiExp.ExampleZH
+		}
+		if strings.TrimSpace(exp.ExampleEN) == "" {
+			exp.ExampleEN = aiExp.ExampleEN
+		}
+		if strings.TrimSpace(exp.Phonetic) == "" {
+			exp.Phonetic = aiExp.Phonetic
+		}
+		if strings.TrimSpace(exp.PartOfSpeech) == "" {
+			exp.PartOfSpeech = aiExp.PartOfSpeech
+		}
+		exp.Forms = aiExp.Forms
+		exp.Phrases = aiExp.Phrases
+		exp.FamilyReady = true
 		return
 	}
-	aiExp, err := w.ai.Explain(ctx, term)
+	if exp.FamilyReady {
+		return
+	}
+	forms, phrases, err := w.ai.Family(ctx, term, exp.PartOfSpeech, exp.MeaningZH)
 	if err != nil {
-		log.Printf("AI 补全中文释义失败 [%s]: %v", term, err)
+		log.Printf("补全词形与短语失败 [%s]: %v", term, err)
 		return
 	}
-	exp.MeaningZH = aiExp.MeaningZH
-	if strings.TrimSpace(exp.ExampleZH) == "" {
-		exp.ExampleZH = aiExp.ExampleZH
-	}
-	if strings.TrimSpace(exp.ExampleEN) == "" {
-		exp.ExampleEN = aiExp.ExampleEN
-	}
-	if strings.TrimSpace(exp.Phonetic) == "" {
-		exp.Phonetic = aiExp.Phonetic
-	}
-	if strings.TrimSpace(exp.PartOfSpeech) == "" {
-		exp.PartOfSpeech = aiExp.PartOfSpeech
-	}
+	exp.Forms = forms
+	exp.Phrases = phrases
+	exp.FamilyReady = true
 }
 
 func basicExplanation(term string, singleWord bool) *models.AIExplanation {

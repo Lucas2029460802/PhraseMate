@@ -39,10 +39,17 @@ func TestPublishWordsToDataBranch(t *testing.T) {
 		t.Fatal(err)
 	}
 	if _, err := st.ApplyExplanation(word.ID, &models.AIExplanation{
-		Term:      "luminous",
-		MeaningZH: "发光的",
-		MeaningEN: "full of light",
-		Phonetic:  "ˈluːmɪnəs",
+		Term:        "luminous",
+		MeaningZH:   "发光的",
+		MeaningEN:   "full of light",
+		Phonetic:    "ˈluːmɪnəs",
+		FamilyReady: true,
+		Forms: []models.RelatedForm{
+			{Word: "luminosity", POS: "n.", MeaningZH: "发光"},
+		},
+		Phrases: []models.Phrase{
+			{Text: "luminous color", MeaningZH: "明亮的颜色"},
+		},
 	}); err != nil {
 		t.Fatal(err)
 	}
@@ -55,7 +62,7 @@ func TestPublishWordsToDataBranch(t *testing.T) {
 	}
 
 	body := gitRun(t, bare, "show", "data:words.json")
-	if !strings.Contains(body, "luminous") || !strings.Contains(body, "发光的") {
+	if !strings.Contains(body, "luminous") || !strings.Contains(body, "发光的") || !strings.Contains(body, "luminosity") || !strings.Contains(body, "luminous color") {
 		t.Fatalf("words.json = %s", body)
 	}
 	if strings.Contains(body, "sk-secret-test") {
@@ -83,6 +90,12 @@ func TestPublishWordsToDataBranch(t *testing.T) {
 	}
 	if len(list) != 1 || list[0].Term != "luminous" || list[0].MeaningZH != "发光的" {
 		t.Fatalf("restored = %+v", list)
+	}
+	if len(list[0].RelatedForms) != 1 || list[0].RelatedForms[0].Word != "luminosity" {
+		t.Fatalf("forms = %+v", list[0].RelatedForms)
+	}
+	if len(list[0].Phrases) != 1 || list[0].Phrases[0].Text != "luminous color" {
+		t.Fatalf("phrases = %+v", list[0].Phrases)
 	}
 }
 

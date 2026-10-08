@@ -2,6 +2,7 @@ package handler
 
 import (
 	"encoding/json"
+	"log"
 	"net/http"
 	"strconv"
 	"strings"
@@ -163,6 +164,9 @@ func (a *API) handlePutSettings(w http.ResponseWriter, r *http.Request) {
 		a.ai.UpdateCredentials(apiKey, baseURL, model)
 	}
 	if a.enricher != nil && strings.TrimSpace(apiKey) != "" {
+		if _, err := a.store.RequeueMissingFamily(); err != nil {
+			log.Printf("补全词形排队失败: %v", err)
+		}
 		a.enricher.Kick()
 	}
 
