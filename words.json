@@ -1205,7 +1205,13 @@
     {
       "id": 108,
       "term": "pinpoint",
-      "status": "pending",
+      "phonetic": "/ˈpɪnpɔɪnt/",
+      "meaning_en": "To find or identify something exactly, such as a location, cause, or problem. As a noun, it means a very small point or exact spot.",
+      "meaning_zh": "v. 精确指出；准确确定（位置、原因、问题等）；n. 针尖；极小的点；精确的位置；adj. 精确的，精准的",
+      "example_en": "The engineers were able to pinpoint the cause of the failure within hours.",
+      "example_zh": "工程师们在几个小时内就准确找出了故障的原因。",
+      "part_of_speech": "v. / n. / adj.",
+      "status": "ready",
       "created_at": "2026-10-08T15:24:22Z"
     }
   ]
