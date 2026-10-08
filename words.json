@@ -1265,8 +1265,20 @@
     {
       "id": 113,
       "term": "melodramatic",
-      "status": "pending",
+      "phonetic": "/ˌmelədrəˈmætɪk/",
+      "meaning_en": "Relating to or characteristic of melodrama; behaving in an exaggerated, overly emotional way that seems unrealistic.",
+      "meaning_zh": "情节剧的；夸张的，感情夸张的，大惊小怪的（多含贬义）",
+      "example_en": "She threw her hands up and let out a melodramatic sigh when she saw the tiny scratch on her car.",
+      "example_zh": "看到车上那道小小的划痕，她夸张地举起双手叹了口气。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-10-08T15:31:28Z"
+    },
+    {
+      "id": 114,
+      "term": "suspend",
+      "status": "pending",
+      "created_at": "2026-10-08T15:31:44Z"
     }
   ]
 }
