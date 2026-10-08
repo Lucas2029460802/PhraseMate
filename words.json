@@ -909,7 +909,13 @@
     {
       "id": 83,
       "term": "justify",
-      "status": "pending",
+      "phonetic": "/ˈdʒʌstɪfaɪ/",
+      "meaning_en": "To show or prove that something is reasonable, right, or acceptable; to be a good reason for something. In publishing, to arrange text so that the lines have equal width.",
+      "meaning_zh": "证明……正当（合理）；为……辩护；为……提供正当理由；（排版）使（文字）两端对齐",
+      "example_en": "Nothing can justify treating people so cruelly.",
+      "example_zh": "没有任何理由能为如此残忍地对待他人开脱。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T11:02:37Z"
     }
   ]
