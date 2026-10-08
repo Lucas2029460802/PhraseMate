@@ -2952,14 +2952,50 @@
     },
     {
       "created_at": "2026-09-24T17:01:33Z",
-      "example_en": "Instead of supporting the plan, he spent the whole meeting picking holes in it.",
-      "example_zh": "他没有支持这个计划，反而整场会议都在挑它的毛病。",
+      "example_en": "Critics were quick to pick holes in the government's new proposal.",
+      "example_zh": "批评者们很快就对政府的新提案挑起了毛病。",
       "id": 73,
-      "meaning_en": "To find faults or flaws in something, often in an overly critical or nitpicking way. Usually used as \"pick holes in something\".",
-      "meaning_zh": "挑毛病；找漏洞；对……吹毛求疵（通常用于 pick holes in sth）",
+      "meaning_en": "To find and point out small faults or weaknesses in something, especially an argument, plan, or piece of work. Usually used as \"pick holes in something\".",
+      "meaning_zh": "挑毛病；找漏洞；吹毛求疵（常作 pick holes in sth，指对某个论点、计划或作品横加挑剔）",
       "part_of_speech": "phrase",
-      "phonetic": "/pɪk həʊlz/",
-      "status": "pending",
+      "phonetic": "/ˌpɪk ˈhəʊlz/",
+      "phrases": [
+        {
+          "phrase": "pick holes in an argument",
+          "meaning_zh": "挑某个论点的漏洞"
+        },
+        {
+          "phrase": "pick holes in a plan",
+          "meaning_zh": "对某项计划横挑鼻子竖挑眼"
+        },
+        {
+          "phrase": "be quick to pick holes",
+          "meaning_zh": "动辄挑毛病"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "hole",
+          "pos": "n.",
+          "meaning_zh": "洞；孔；漏洞"
+        },
+        {
+          "word": "holey",
+          "pos": "adj.",
+          "meaning_zh": "多洞的；有孔的"
+        },
+        {
+          "word": "pick",
+          "pos": "v.",
+          "meaning_zh": "挑选；挑出"
+        },
+        {
+          "word": "picky",
+          "pos": "adj.",
+          "meaning_zh": "挑剔的；爱挑毛病的"
+        }
+      ],
+      "status": "ready",
       "term": "pick holes"
     },
     {
