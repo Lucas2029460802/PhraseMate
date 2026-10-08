@@ -2258,11 +2258,51 @@
       "example_en": "He emerged unscathed from the accident.",
       "example_zh": "他毫发无损地从事故中脱颖而出。",
       "id": 58,
-      "meaning_en": "To come into view.; To come out of a situation, object or a liquid.",
-      "meaning_zh": "进入视野。;走出场景、物体或液体。",
+      "meaning_en": "To come into view; To come out of a situation, object or a liquid",
+      "meaning_zh": "进入视野；走出场景、物体或液体",
       "part_of_speech": "v.",
       "phonetic": "/iˈmɜːd͡ʒ/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "emerge from",
+          "meaning_zh": "从…中出现；摆脱"
+        },
+        {
+          "phrase": "emerge as",
+          "meaning_zh": "成为；崭露头角"
+        },
+        {
+          "phrase": "emerge victorious",
+          "meaning_zh": "获胜"
+        },
+        {
+          "phrase": "emerge into view",
+          "meaning_zh": "进入视野"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "emergence",
+          "pos": "n.",
+          "meaning_zh": "出现；兴起"
+        },
+        {
+          "word": "emergent",
+          "pos": "adj.",
+          "meaning_zh": "新出现的；紧急的"
+        },
+        {
+          "word": "emergency",
+          "pos": "n.",
+          "meaning_zh": "紧急情况"
+        },
+        {
+          "word": "emergently",
+          "pos": "adv.",
+          "meaning_zh": "紧急地；突现地"
+        }
+      ],
+      "status": "ready",
       "term": "emerge"
     },
     {
