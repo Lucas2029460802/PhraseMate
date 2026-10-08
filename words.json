@@ -1169,7 +1169,13 @@
     {
       "id": 105,
       "term": "tame",
-      "status": "pending",
+      "phonetic": "/teɪm/",
+      "meaning_en": "To make (an animal) tame; to domesticate; To become tame or domesticated",
+      "meaning_zh": "驯养（动物） ；驯养；驯服或驯化",
+      "example_en": "He tamed the wild horse.",
+      "example_zh": "他驯服了野马。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:20:04Z"
     }
   ]
