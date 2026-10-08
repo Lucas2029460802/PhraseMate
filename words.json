@@ -1095,12 +1095,54 @@
     },
     {
       "created_at": "2026-08-13T08:21:34Z",
+      "example_en": "Many small businesses closed during the recession.",
+      "example_zh": "许多小企业在经济衰退期间倒闭了。",
       "id": 31,
-      "meaning_en": "The act or an instance of receding or withdrawing.; A period of reduced economic activity",
-      "meaning_zh": "后退或退缩的行为或实例。;经济活动减少的时期",
+      "meaning_en": "A period of temporary economic decline, during which trade and industrial activity are reduced; also the act of moving back or withdrawing.",
+      "meaning_zh": "（经济的）衰退，不景气；后退，撤退；凹处。",
       "part_of_speech": "n.",
-      "phonetic": "/ɹɪˈsɛʃn̩/",
-      "status": "pending",
+      "phonetic": "/rɪˈseʃn/",
+      "phrases": [
+        {
+          "phrase": "economic recession",
+          "meaning_zh": "经济衰退"
+        },
+        {
+          "phrase": "in recession",
+          "meaning_zh": "处于衰退之中"
+        },
+        {
+          "phrase": "double-dip recession",
+          "meaning_zh": "二次衰退"
+        },
+        {
+          "phrase": "recession-proof",
+          "meaning_zh": "不受经济衰退影响的"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "recede",
+          "pos": "v.",
+          "meaning_zh": "后退；减弱；消退"
+        },
+        {
+          "word": "recess",
+          "pos": "n.",
+          "meaning_zh": "休息；休会；凹处"
+        },
+        {
+          "word": "recessionary",
+          "pos": "adj.",
+          "meaning_zh": "经济衰退的"
+        },
+        {
+          "word": "recessive",
+          "pos": "adj.",
+          "meaning_zh": "隐性的；后退的"
+        }
+      ],
+      "status": "ready",
       "term": "recession"
     },
     {
