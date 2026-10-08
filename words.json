@@ -1145,7 +1145,13 @@
     {
       "id": 103,
       "term": "genome",
-      "status": "pending",
+      "phonetic": "/ˈdʒiːnəʊm/",
+      "meaning_en": "The complete set of genetic material, especially DNA, contained in a cell or organism, including all of its genes.",
+      "meaning_zh": "基因组；（生物体的）全部遗传物质",
+      "example_en": "Scientists finished sequencing the human genome in 2003.",
+      "example_zh": "科学家于2003年完成了人类基因组的测序。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:19:37Z"
     }
   ]
