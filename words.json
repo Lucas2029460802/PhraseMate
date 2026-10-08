@@ -873,7 +873,13 @@
     {
       "id": 80,
       "term": "perturbation",
-      "status": "pending",
+      "phonetic": "/ˌpɜːtəˈbeɪʃn/",
+      "meaning_en": "A disturbance or deviation from a normal or expected state; also the state of being worried or uneasy. In science, a small change in a system caused by an outside influence.",
+      "meaning_zh": "扰乱，扰动，干扰；不安，烦恼，忧虑；（物理学、天文学）微扰，摄动",
+      "example_en": "The slight perturbation in the planet's orbit was caused by the gravity of a nearby moon.",
+      "example_zh": "这颗行星轨道的轻微摄动是由附近一颗卫星的引力造成的。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T10:51:37Z"
     }
   ]
