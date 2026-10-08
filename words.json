@@ -1512,7 +1512,13 @@
     {
       "id": 134,
       "term": "blaze",
-      "status": "pending",
+      "phonetic": "/bleɪz/",
+      "meaning_en": "As a noun: a very large, bright fire, or a bright glow of light. As a verb: to burn or shine very brightly and strongly.",
+      "meaning_zh": "n. 熊熊大火；烈火；（光、色彩的）闪耀，强光；（感情的）爆发；v. 熊熊燃烧；闪耀，发光；猛烈地燃烧；（枪炮）连发。",
+      "example_en": "Firefighters worked through the night to put out the blaze.",
+      "example_zh": "消防员通宵奋战，扑灭了大火。",
+      "part_of_speech": "n. / v.",
+      "status": "ready",
       "created_at": "2026-10-08T16:04:09Z"
     }
   ]
