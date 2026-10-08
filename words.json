@@ -1671,6 +1671,12 @@
       "part_of_speech": "n. / adj.",
       "status": "ready",
       "created_at": "2026-10-08T16:26:54Z"
+    },
+    {
+      "id": 148,
+      "term": "techno-social",
+      "status": "pending",
+      "created_at": "2026-10-08T16:27:30Z"
     }
   ]
 }
