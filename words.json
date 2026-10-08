@@ -1284,12 +1284,44 @@
     },
     {
       "created_at": "2026-08-13T16:28:53Z",
+      "example_en": "He sharpened the blade of his knife before cutting the rope.",
+      "example_zh": "他先把刀刃磨锋利，然后才去割绳子。",
       "id": 35,
-      "meaning_en": "The sharp cutting edge of a knife, chisel, or other tool, a razor blade/sword.; The flat functional end of a propeller, oar, hockey stick, screwdriver, skate, etc.",
-      "meaning_zh": "刀具、凿子或其他工具、剃须刀片/剑的锋利切削刃。；螺旋桨、桨、曲棍球杆、螺丝刀、溜冰鞋等的扁平功能端。",
+      "meaning_en": "The flat, sharp-edged part of a tool or weapon, such as a knife or sword, used for cutting. It can also mean a long flat leaf of grass or a thin flat part of a machine.",
+      "meaning_zh": "刀刃，刀片；（草的）叶片；（螺旋桨等的）桨叶，叶片",
       "part_of_speech": "n.",
       "phonetic": "/bleɪd/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "razor blade",
+          "meaning_zh": "剃须刀片"
+        },
+        {
+          "phrase": "shoulder blade",
+          "meaning_zh": "肩胛骨"
+        },
+        {
+          "phrase": "a blade of grass",
+          "meaning_zh": "一片草叶"
+        },
+        {
+          "phrase": "double-edged blade",
+          "meaning_zh": "双刃刀片；双刃剑"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "bladed",
+          "pos": "adj.",
+          "meaning_zh": "有刀刃的；装有刀片的"
+        },
+        {
+          "word": "bladeless",
+          "pos": "adj.",
+          "meaning_zh": "无叶片的；无刀片的"
+        }
+      ],
+      "status": "ready",
       "term": "blade"
     },
     {
