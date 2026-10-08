@@ -1451,6 +1451,12 @@
       "part_of_speech": "adj.",
       "status": "ready",
       "created_at": "2026-10-08T15:55:49Z"
+    },
+    {
+      "id": 129,
+      "term": "converse",
+      "status": "pending",
+      "created_at": "2026-10-08T15:58:57Z"
     }
   ]
 }
