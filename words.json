@@ -1687,7 +1687,13 @@
     {
       "id": 149,
       "term": "shield",
-      "status": "pending",
+      "phonetic": "/ʃiːld/",
+      "meaning_en": "A broad piece of armor held on the arm to block blows; by extension, anything that protects or defends. As a verb, it means to protect someone or something from harm or danger.",
+      "meaning_zh": "n. 盾；盾牌；防护物，屏障；保护者；（盾形）徽章。v. 保护，掩护；遮挡，遮蔽。",
+      "example_en": "She raised her shield to block the arrow, shielding the child behind her.",
+      "example_zh": "她举起盾牌挡住箭矢，护住了身后的孩子。",
+      "part_of_speech": "n. / v.",
+      "status": "ready",
       "created_at": "2026-10-08T16:27:41Z"
     }
   ]
