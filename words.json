@@ -1443,7 +1443,13 @@
     {
       "id": 128,
       "term": "enlivening",
-      "status": "pending",
+      "phonetic": "/ɪnˈlaɪvnɪŋ/",
+      "meaning_en": "Making something more lively, cheerful, or interesting; giving energy or spirit to a place, event, or atmosphere.",
+      "meaning_zh": "使活跃的；令人振奋的；使有生气的；增添趣味的",
+      "example_en": "The enlivening music filled the hall and soon everyone was on their feet.",
+      "example_zh": "令人振奋的音乐充满了大厅，很快大家都站了起来。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-10-08T15:55:49Z"
     }
   ]
