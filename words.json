@@ -1325,7 +1325,13 @@
     {
       "id": 118,
       "term": "lure",
-      "status": "pending",
+      "phonetic": "/lʊə(r)/",
+      "meaning_en": "To persuade or attract someone to do something or go somewhere, often by offering something appealing; also a thing that tempts or attracts.",
+      "meaning_zh": "v. 引诱，诱惑；吸引（人或动物）。n. 诱惑物，吸引力；（钓鱼用的）诱饵。",
+      "example_en": "The store lured customers in with huge discounts.",
+      "example_zh": "这家商店用大幅折扣把顾客吸引进店。",
+      "part_of_speech": "v. \u0026 n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:40:14Z"
     }
   ]
