@@ -2307,11 +2307,44 @@
     },
     {
       "created_at": "2026-08-16T13:40:33Z",
+      "example_en": "She is very good at mental arithmetic.",
+      "example_zh": "她非常擅长心算。",
       "id": 59,
-      "meaning_en": "The mathematics of numbers (integers, rational numbers, real numbers, or complex numbers) under the operations of addition, subtraction, multiplication, and division.",
-      "meaning_zh": "加法、减法、乘法和除法运算下的数学（整数、有理数、实数或复数）。",
+      "meaning_en": "The branch of mathematics that deals with numbers and basic operations such as addition, subtraction, multiplication, and division.",
+      "meaning_zh": "算术；四则运算；算术学",
       "part_of_speech": "n.",
-      "status": "pending",
+      "phonetic": "/əˈrɪθmətɪk/",
+      "phrases": [
+        {
+          "phrase": "mental arithmetic",
+          "meaning_zh": "心算"
+        },
+        {
+          "phrase": "arithmetic mean",
+          "meaning_zh": "算术平均数"
+        },
+        {
+          "phrase": "modular arithmetic",
+          "meaning_zh": "模算术"
+        },
+        {
+          "phrase": "basic arithmetic",
+          "meaning_zh": "基础算术"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "arithmetical",
+          "pos": "adj.",
+          "meaning_zh": "算术的；算术上的"
+        },
+        {
+          "word": "arithmetically",
+          "pos": "adv.",
+          "meaning_zh": "用算术方法地；算术上"
+        }
+      ],
+      "status": "ready",
       "term": "arithmetic"
     },
     {
