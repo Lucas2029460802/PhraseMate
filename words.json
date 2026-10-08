@@ -1099,7 +1099,11 @@
     {
       "id": 99,
       "term": "preservation",
-      "status": "pending",
+      "phonetic": "/pɹɛ.zɝˈveɪ.ʃən/",
+      "meaning_en": "The act of preserving; care to preserve; act of keeping from destruction, decay or any ill",
+      "meaning_zh": "保存行为；注意保存；防止破坏、腐烂或任何疾病的行为",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:15:12Z"
     }
   ]
