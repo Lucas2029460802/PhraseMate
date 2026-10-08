@@ -2161,12 +2161,49 @@
     },
     {
       "created_at": "2026-08-13T19:19:24Z",
+      "example_en": "They reached a verbal agreement, but nothing was put in writing.",
+      "example_zh": "他们达成了口头协议，但没有写进书面文件。",
       "id": 55,
-      "meaning_en": "(grammar) A verb form which does not function as a predicate, or a word derived from a verb. In English, infinitives, participles and gerunds are verbals.",
-      "meaning_zh": "（语法）不作为谓词的动词形式，或从动词派生的单词。在英语中，不定式、分词和gerunds是动词。",
-      "part_of_speech": "n.",
-      "phonetic": "/ˈvɜː.bəl/",
-      "status": "pending",
+      "meaning_en": "Relating to words, especially spoken words rather than written ones; also relating to a verb.",
+      "meaning_zh": "口头的；言语的；动词的",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˈvɜːbəl/",
+      "phrases": [
+        {
+          "phrase": "verbal agreement",
+          "meaning_zh": "口头协议"
+        },
+        {
+          "phrase": "verbal abuse",
+          "meaning_zh": "言语辱骂；口头辱骂"
+        },
+        {
+          "phrase": "verbal communication",
+          "meaning_zh": "言语交流；口头沟通"
+        },
+        {
+          "phrase": "verbal warning",
+          "meaning_zh": "口头警告"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "verbally",
+          "pos": "adv.",
+          "meaning_zh": "口头地；用言语地"
+        },
+        {
+          "word": "verbalize",
+          "pos": "v.",
+          "meaning_zh": "用言语表达；描述"
+        },
+        {
+          "word": "verbalization",
+          "pos": "n.",
+          "meaning_zh": "言语表达；口头表述"
+        }
+      ],
+      "status": "ready",
       "term": "verbal"
     },
     {
