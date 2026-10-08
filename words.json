@@ -3,14 +3,29 @@
   "words": [
     {
       "created_at": "2026-08-07T14:37:36Z",
-      "example_en": "He was kicked out of the club for breaking the rules.",
-      "example_zh": "他因违反规定被逐出俱乐部。",
+      "example_en": "The bouncer kicked the troublemaker out of the club.",
+      "example_zh": "保安把那个捣乱的人赶出了俱乐部。",
       "id": 1,
-      "meaning_en": "To force someone to leave a place or organization.",
-      "meaning_zh": "驱逐；撵走；开除",
+      "meaning_en": "To force someone to leave a place, organization, or job; to expel someone.",
+      "meaning_zh": "把…赶出去；开除；撵走；解雇。",
       "part_of_speech": "phrase",
       "phonetic": "/ˌkɪk ˈaʊt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "kick somebody out",
+          "meaning_zh": "把某人赶走；开除某人"
+        },
+        {
+          "phrase": "get kicked out",
+          "meaning_zh": "被赶出去；被开除"
+        },
+        {
+          "phrase": "kick out of",
+          "meaning_zh": "从…赶出；开除出…"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "kick out"
     },
     {
