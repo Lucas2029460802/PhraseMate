@@ -1524,14 +1524,49 @@
     },
     {
       "created_at": "2026-08-13T18:11:46Z",
-      "example_en": "He is a real computer geek and spends all his free time coding.",
-      "example_zh": "他是一个真正的计算机极客，把所有的空闲时间都花在编程上。",
+      "example_en": "My brother is a total computer geek who spends every weekend building his own apps.",
+      "example_zh": "我弟弟是个十足的电脑极客，每个周末都在开发自己的应用程序。",
       "id": 40,
-      "meaning_en": "A person who is very interested in and knowledgeable about a particular subject, especially computers or technology.",
-      "meaning_zh": "极客；对计算机或技术非常着迷的人，也指对特定领域有浓厚兴趣的人。",
+      "meaning_en": "A person who is very enthusiastic and knowledgeable about a particular subject, especially computers, technology, or a hobby. It is often used in a positive or neutral way today, though it once meant an awkward or socially inept person.",
+      "meaning_zh": "（某方面的）痴迷者，极客；对电脑、科技或某项爱好特别热衷且精通的人；（旧）书呆子，怪人",
       "part_of_speech": "n.",
       "phonetic": "/ɡiːk/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "computer geek",
+          "meaning_zh": "电脑极客，电脑高手"
+        },
+        {
+          "phrase": "geek out",
+          "meaning_zh": "（对某事物）兴奋地大谈特谈，狂热起来"
+        },
+        {
+          "phrase": "geek chic",
+          "meaning_zh": "极客时尚（戴眼镜、穿复古T恤等书呆子风格）"
+        },
+        {
+          "phrase": "band geek",
+          "meaning_zh": "（俚）乐队书呆子，管乐队成员"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "geeky",
+          "pos": "adj.",
+          "meaning_zh": "极客式的；书呆子气的"
+        },
+        {
+          "word": "geekiness",
+          "pos": "n.",
+          "meaning_zh": "极客气质；痴迷钻研的劲头"
+        },
+        {
+          "word": "geekdom",
+          "pos": "n.",
+          "meaning_zh": "极客圈子；极客文化"
+        }
+      ],
+      "status": "ready",
       "term": "geek"
     },
     {
