@@ -1663,7 +1663,13 @@
     {
       "id": 147,
       "term": "adolescent",
-      "status": "pending",
+      "phonetic": "/ˌædəˈlesnt/",
+      "meaning_en": "A young person who is developing from a child into an adult, roughly between the ages of 13 and 19. As an adjective, it describes something relating to this stage of life.",
+      "meaning_zh": "n. 青少年，青春期的人（约13至19岁）；adj. 青春期的，青少年的；不成熟的",
+      "example_en": "Many adolescents struggle with peer pressure during their teenage years.",
+      "example_zh": "许多青少年在十几岁时都会因同伴压力而感到困扰。",
+      "part_of_speech": "n. / adj.",
+      "status": "ready",
       "created_at": "2026-10-08T16:26:54Z"
     }
   ]
