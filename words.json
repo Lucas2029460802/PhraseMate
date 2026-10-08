@@ -1476,8 +1476,20 @@
     {
       "id": 131,
       "term": "fret",
-      "status": "pending",
+      "phonetic": "/fret/",
+      "meaning_en": "To worry or be anxious about something, often unnecessarily. As a noun, it means a state of worry or agitation; it can also refer to a metal ridge on the fingerboard of a guitar.",
+      "meaning_zh": "v. 烦恼；焦急；发愁；n. 烦恼；焦虑；（吉他等弦乐器指板上的）品丝，音柱",
+      "example_en": "Don't fret about the exam — you've studied hard and you'll do fine.",
+      "example_zh": "别为考试发愁了——你学得很努力，一定会考好的。",
+      "part_of_speech": "v. / n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:59:36Z"
+    },
+    {
+      "id": 132,
+      "term": "broom",
+      "status": "pending",
+      "created_at": "2026-10-08T16:00:31Z"
     }
   ]
 }
