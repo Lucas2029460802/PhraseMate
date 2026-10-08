@@ -1560,7 +1560,13 @@
     {
       "id": 138,
       "term": "suppression",
-      "status": "pending",
+      "phonetic": "/səˈpreʃn/",
+      "meaning_en": "The act of stopping something by force, or of preventing something such as a feeling, fact, or activity from being expressed, known, or developing.",
+      "meaning_zh": "压制；镇压；抑制；压抑；（对信息、证据等的）隐瞒、封锁；（生理或心理上的）抑制",
+      "example_en": "The government's brutal suppression of the protests drew widespread international criticism.",
+      "example_zh": "政府对抗议活动的残酷镇压招致了国际社会的广泛批评。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T16:07:31Z"
     }
   ]
