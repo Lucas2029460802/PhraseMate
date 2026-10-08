@@ -1241,7 +1241,13 @@
     {
       "id": 111,
       "term": "coincide",
-      "status": "pending",
+      "phonetic": "/ˌkəʊɪnˈsaɪd/",
+      "meaning_en": "To happen at the same time as something else, or to be the same or in agreement with something.",
+      "meaning_zh": "同时发生；一致，相符；重合，位置相同",
+      "example_en": "Our holidays coincide this year, so we can travel together.",
+      "example_zh": "今年我们的假期正好在同一时间，所以可以一起去旅行。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:26:14Z"
     }
   ]
