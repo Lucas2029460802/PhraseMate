@@ -1326,14 +1326,54 @@
     },
     {
       "created_at": "2026-08-13T16:34:04Z",
-      "example_en": "The cat knocked over the glass of water on the table.",
-      "example_zh": "猫把桌上的玻璃杯打翻了。",
+      "example_en": "Be careful not to knock over the vase on the table.",
+      "example_zh": "小心别把桌上的花瓶碰倒了。",
       "id": 36,
-      "meaning_en": "To hit or push something so that it falls, or to cause someone to fall down.",
-      "meaning_zh": "撞倒；打翻；使倒下",
+      "meaning_en": "To hit or push someone or something so that they fall to the ground. It can also mean to shock someone greatly, or (informally) to rob a place.",
+      "meaning_zh": "撞倒；碰倒；使倾倒；（口）使震惊；（美俚）抢劫（银行等）",
       "part_of_speech": "phrase",
-      "phonetic": "/nɒk ˈəʊvər/",
-      "status": "pending",
+      "phonetic": "/nɒk ˈəʊvə(r)/",
+      "phrases": [
+        {
+          "phrase": "knock over a drink",
+          "meaning_zh": "迅速喝下一杯酒"
+        },
+        {
+          "phrase": "knock sth over",
+          "meaning_zh": "把某物撞倒、碰翻"
+        },
+        {
+          "phrase": "knock sb over",
+          "meaning_zh": "把某人撞倒；（喻）使某人震惊"
+        },
+        {
+          "phrase": "knock over a bank",
+          "meaning_zh": "抢劫银行（美式俚语）"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "knock",
+          "pos": "n.",
+          "meaning_zh": "敲击；敲门声；打击"
+        },
+        {
+          "word": "knocker",
+          "pos": "n.",
+          "meaning_zh": "门环；敲门者；吹毛求疵的人"
+        },
+        {
+          "word": "knockout",
+          "pos": "n.",
+          "meaning_zh": "击倒对手的一击；淘汰赛；极出众的人或物"
+        },
+        {
+          "word": "knockdown",
+          "pos": "adj.",
+          "meaning_zh": "可拆卸的；（价格）最低的"
+        }
+      ],
+      "status": "ready",
       "term": "knock over"
     },
     {
