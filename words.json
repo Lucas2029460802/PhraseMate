@@ -969,7 +969,13 @@
     {
       "id": 88,
       "term": "artistic",
-      "status": "pending",
+      "phonetic": "/ɑːˈtɪstɪk/",
+      "meaning_en": "Relating to art or artists; showing natural skill and good taste in creating things, especially beautiful ones.",
+      "meaning_zh": "艺术的；艺术家的；有艺术天赋的；富有艺术鉴赏力的",
+      "example_en": "She comes from a very artistic family and has been painting since she was a child.",
+      "example_zh": "她出身于一个很有艺术气息的家庭，从小就画画。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-10-08T15:05:40Z"
     }
   ]
