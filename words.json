@@ -10,7 +10,7 @@
       "meaning_zh": "驱逐；撵走；开除",
       "part_of_speech": "phrase",
       "phonetic": "/ˌkɪk ˈaʊt/",
-      "status": "ready",
+      "status": "pending",
       "term": "kick out"
     },
     {
@@ -21,7 +21,7 @@
       "meaning_en": "To act or behave in an inappropriate, improper, incorrect, or unexpected manner.",
       "meaning_zh": "以不恰当、不当、不正确或意想不到的方式行事或行为。",
       "part_of_speech": "v.",
-      "status": "ready",
+      "status": "pending",
       "term": "misbehave"
     },
     {
@@ -33,7 +33,7 @@
       "meaning_zh": "让我毛骨悚然，使我不安或恐惧。",
       "part_of_speech": "phrase",
       "phonetic": "/kriːp miː aʊt/",
-      "status": "ready",
+      "status": "pending",
       "term": "creep me out"
     },
     {
@@ -43,7 +43,7 @@
       "meaning_zh": "闹剧表演艺术家，通常与马戏团联系在一起，通常以明亮的超大号服装、红色鼻子、面漆和色彩鲜艳的假发为特色。",
       "part_of_speech": "n.",
       "phonetic": "/klaʊnz/",
-      "status": "ready",
+      "status": "pending",
       "term": "clowns"
     },
     {
@@ -55,7 +55,7 @@
       "meaning_zh": "向某人提供信息，告知某人最近发生的事；为某人补充最新消息。",
       "part_of_speech": "phrase",
       "phonetic": "/fɪl ˈsʌmbədi ɪn/",
-      "status": "ready",
+      "status": "pending",
       "term": "fill somebody in"
     },
     {
@@ -67,7 +67,7 @@
       "meaning_zh": "粗略地看一眼；稍微了解一下；初步了解",
       "part_of_speech": "phrase",
       "phonetic": "/sɔːrt əv piːk ˈɪn.tuː/",
-      "status": "ready",
+      "status": "pending",
       "term": "sort of peek into"
     },
     {
@@ -78,7 +78,7 @@
       "meaning_en": "To drive a vehicle into a place and stop there, or to arrive at a station.",
       "meaning_zh": "驶入（某处）并停下；到达（车站）",
       "part_of_speech": "phrase",
-      "status": "ready",
+      "status": "pending",
       "term": "pull into"
     },
     {
@@ -88,7 +88,7 @@
       "meaning_zh": "一个长方形的封闭盒子，将死者的尸体放入其中进行埋葬。;第八张Lenormand卡牌。",
       "part_of_speech": "n.",
       "phonetic": "/ˈkɑfɪn/",
-      "status": "ready",
+      "status": "pending",
       "term": "coffin"
     },
     {
@@ -99,7 +99,7 @@
       "meaning_en": "To frighten someone extremely badly; to scare someone very much.",
       "meaning_zh": "把……吓得要命；吓得……半死",
       "part_of_speech": "phrase",
-      "status": "ready",
+      "status": "pending",
       "term": "scared the heck out of"
     },
     {
@@ -111,7 +111,7 @@
       "meaning_zh": "喜欢谈论他人私人或私人事务的人。；闲聊某人的私人或私事，尤其是不在场的人。",
       "part_of_speech": "n.",
       "phonetic": "/ˈɡɒs.ɪp/",
-      "status": "ready",
+      "status": "pending",
       "term": "gossip"
     },
     {
@@ -123,7 +123,7 @@
       "meaning_zh": "偷看，窥视；快速或秘密地看一眼",
       "part_of_speech": "v.",
       "phonetic": "/piːk/",
-      "status": "ready",
+      "status": "pending",
       "term": "peek"
     },
     {
@@ -135,7 +135,7 @@
       "meaning_zh": "Hell.",
       "part_of_speech": "n.",
       "phonetic": "/hɛk/",
-      "status": "ready",
+      "status": "pending",
       "term": "heck"
     },
     {
@@ -147,7 +147,7 @@
       "meaning_zh": "中文播客，或关于中国的播客（非正式说法）",
       "part_of_speech": "phrase",
       "phonetic": "/ˌtʃaɪˈniːz ˈpɒd/",
-      "status": "ready",
+      "status": "pending",
       "term": "Chinese pod"
     },
     {
@@ -157,7 +157,7 @@
       "meaning_zh": "埋葬的行为；安葬",
       "part_of_speech": "n.",
       "phonetic": "/ˈbɛɹɪəl/",
-      "status": "ready",
+      "status": "pending",
       "term": "burial"
     },
     {
@@ -169,7 +169,7 @@
       "meaning_zh": "（赛车的）进站加油；长途旅行中的短暂停留",
       "part_of_speech": "phrase",
       "phonetic": "/ˈpɪt stɒp/",
-      "status": "ready",
+      "status": "pending",
       "term": "pit stop"
     },
     {
@@ -179,7 +179,7 @@
       "meaning_zh": "通过爬行移动。;产生一种不安的恐惧感，如爬过皮肤的东西。",
       "part_of_speech": "adj.",
       "phonetic": "/ˈkɹiːpi/",
-      "status": "ready",
+      "status": "pending",
       "term": "creepy"
     },
     {
@@ -190,7 +190,7 @@
       "meaning_en": "A place where old or damaged cars are stored and dismantled for parts or scrap.",
       "meaning_zh": "汽车报废场，拆车场",
       "part_of_speech": "phrase",
-      "status": "ready",
+      "status": "pending",
       "term": "car wrecking yard"
     },
     {
@@ -202,7 +202,7 @@
       "meaning_zh": "废品场；废料场",
       "part_of_speech": "phrase",
       "phonetic": "/skræp jɑːrd/",
-      "status": "ready",
+      "status": "pending",
       "term": "scrap yard"
     },
     {
@@ -214,7 +214,7 @@
       "meaning_zh": "家务杂事；日常琐事",
       "part_of_speech": "n.",
       "phonetic": "/tʃɔːrz/",
-      "status": "ready",
+      "status": "pending",
       "term": "chores"
     },
     {
@@ -226,7 +226,7 @@
       "meaning_zh": "洗衣；待洗的衣物",
       "part_of_speech": "n.",
       "phonetic": "/ˈlɔːndri/",
-      "status": "ready",
+      "status": "pending",
       "term": "laundry"
     },
     {
@@ -238,7 +238,7 @@
       "meaning_zh": "劈柴；砍木头",
       "part_of_speech": "phrase",
       "phonetic": "/tʃɒp wʊd/",
-      "status": "ready",
+      "status": "pending",
       "term": "chop wood"
     },
     {
@@ -248,7 +248,7 @@
       "meaning_zh": "一种用于砍伐树木或砍伐木材等的工具，包括一个在一侧扁平化到刀片上的重头和一个附着在刀片上的手柄。",
       "part_of_speech": "n.",
       "phonetic": "/æks/",
-      "status": "ready",
+      "status": "pending",
       "term": "axe"
     },
     {
@@ -257,7 +257,7 @@
       "meaning_en": "Exceptionally clean.; Impeccable and free from blemish.",
       "meaning_zh": "非常干净；无可挑剔，没有瑕疵。",
       "part_of_speech": "adj.",
-      "status": "ready",
+      "status": "pending",
       "term": "spotless"
     },
     {
@@ -267,7 +267,7 @@
       "meaning_zh": "细颗粒；通过粉尘清洁的行为。",
       "part_of_speech": "n.",
       "phonetic": "/dʌst/",
-      "status": "ready",
+      "status": "pending",
       "term": "dust"
     },
     {
@@ -277,7 +277,7 @@
       "meaning_zh": "包含无物质的空间区域； （仅限复数“吸尘器” ）吸尘器。",
       "part_of_speech": "n.",
       "phonetic": "/ˈvæ.kjuː.əm/",
-      "status": "ready",
+      "status": "pending",
       "term": "vacuum"
     },
     {
@@ -287,7 +287,7 @@
       "meaning_zh": "地板的部分覆盖物。；用于保暖的（通常是厚的）面料（特别是在床上） ；毯子。",
       "part_of_speech": "n.",
       "phonetic": "/ɹʌɡ/",
-      "status": "ready",
+      "status": "pending",
       "term": "rug"
     },
     {
@@ -297,7 +297,7 @@
       "meaning_zh": "A fabric used as a complete floor covering.; Any surface or cover resembling a carpet or fulfilling its function.",
       "part_of_speech": "n.",
       "phonetic": "/ˈkɑː(ɹ)pɪt/",
-      "status": "ready",
+      "status": "pending",
       "term": "carpet"
     },
     {
@@ -309,7 +309,7 @@
       "meaning_zh": "用吸尘器吸尘；用真空吸尘器打扫",
       "part_of_speech": "v.",
       "phonetic": "/ˈhuːvər/",
-      "status": "ready",
+      "status": "pending",
       "term": "hoover"
     },
     {
@@ -321,7 +321,7 @@
       "meaning_zh": "负债；欠债",
       "part_of_speech": "phrase",
       "phonetic": "/ɪn dɛt/",
-      "status": "ready",
+      "status": "pending",
       "term": "in debt"
     },
     {
@@ -331,7 +331,7 @@
       "meaning_zh": "后退或退缩的行为或实例。;经济活动减少的时期",
       "part_of_speech": "n.",
       "phonetic": "/ɹɪˈsɛʃn̩/",
-      "status": "ready",
+      "status": "pending",
       "term": "recession"
     },
     {
@@ -341,7 +341,7 @@
       "meaning_zh": "一大群或无序的人；特别是倾向于暴乱或破坏性行动的人。;一群动物，如马或牛。",
       "part_of_speech": "n.",
       "phonetic": "/mɒb/",
-      "status": "ready",
+      "status": "pending",
       "term": "mob"
     },
     {
@@ -353,7 +353,7 @@
       "meaning_zh": "借贷的行为或实例，授予某物以供临时使用的行为或实例。",
       "part_of_speech": "n.",
       "phonetic": "/ləʊn/",
-      "status": "ready",
+      "status": "pending",
       "term": "loan"
     },
     {
@@ -365,7 +365,7 @@
       "meaning_zh": "A special form of secured loan where the purpose of the loan must be specified to the lender, to purchase assets that must be fixed (not movable) property, such as a house or piece of farm land. The assets are registered as the legal property of the borrower but the lender can seize them and dispose of them if they are not satisfied with the manner in which the repayment of the loan is conducted by the borrower. Once the loan is fully repaid, the lender loses this right of seizure and the assets are then deemed to be unencumbered.",
       "part_of_speech": "n.",
       "phonetic": "/ˈmɔː.ɡɪdʒ/",
-      "status": "ready",
+      "status": "pending",
       "term": "mortgage"
     },
     {
@@ -375,7 +375,7 @@
       "meaning_zh": "刀具、凿子或其他工具、剃须刀片/剑的锋利切削刃。；螺旋桨、桨、曲棍球杆、螺丝刀、溜冰鞋等的扁平功能端。",
       "part_of_speech": "n.",
       "phonetic": "/bleɪd/",
-      "status": "ready",
+      "status": "pending",
       "term": "blade"
     },
     {
@@ -387,7 +387,7 @@
       "meaning_zh": "撞倒；打翻；使倒下",
       "part_of_speech": "phrase",
       "phonetic": "/nɒk ˈəʊvər/",
-      "status": "ready",
+      "status": "pending",
       "term": "knock over"
     },
     {
@@ -397,7 +397,7 @@
       "meaning_zh": "对象，重合的属性；在同一时间或地点发生。; of事件，在没有事件时出现有意义的连接。",
       "part_of_speech": "n.",
       "phonetic": "/kəʊˈɪnsɪdəns/",
-      "status": "ready",
+      "status": "pending",
       "term": "coincidence"
     },
     {
@@ -407,7 +407,7 @@
       "meaning_zh": "用于将重病患者或受伤人员运送到医院的紧急车辆。;流动野战医院。",
       "part_of_speech": "n.",
       "phonetic": "/ˈæm.bjə.ləns/",
-      "status": "ready",
+      "status": "pending",
       "term": "ambulance"
     },
     {
@@ -417,7 +417,7 @@
       "meaning_zh": "小学； （神秘主义）与元素相关的超自然存在。",
       "part_of_speech": "n.",
       "phonetic": "/(ˌ)ɛlɪ̈ˈmɛnt(ə)ɹɪ/",
-      "status": "ready",
+      "status": "pending",
       "term": "elementary"
     },
     {
@@ -429,7 +429,7 @@
       "meaning_zh": "极客；对计算机或技术非常着迷的人，也指对特定领域有浓厚兴趣的人。",
       "part_of_speech": "n.",
       "phonetic": "/ɡiːk/",
-      "status": "ready",
+      "status": "pending",
       "term": "geek"
     },
     {
@@ -440,7 +440,7 @@
       "meaning_en": "Hurry up or go faster.",
       "meaning_zh": "赶快，加速",
       "part_of_speech": "phrase",
-      "status": "ready",
+      "status": "pending",
       "term": "step on it"
     },
     {
@@ -451,7 +451,7 @@
       "meaning_en": "To be very angry or upset; to have a sudden emotional outburst.",
       "meaning_zh": "大发雷霆；非常生气或心烦意乱",
       "part_of_speech": "phrase",
-      "status": "ready",
+      "status": "pending",
       "term": "having a fit"
     },
     {
@@ -463,7 +463,7 @@
       "meaning_zh": "穿过；穿透；迅速直接地处理（绕过无关细节）",
       "part_of_speech": "phrase",
       "phonetic": "/kʌt θruː/",
-      "status": "ready",
+      "status": "pending",
       "term": "cut through"
     },
     {
@@ -473,7 +473,7 @@
       "meaning_zh": "两点之间的路径，比常用路径快。;一种用于完成省略一个或多个步骤的方法。",
       "part_of_speech": "n.",
       "phonetic": "/ˈʃɔːtkʌt/",
-      "status": "ready",
+      "status": "pending",
       "term": "shortcut"
     },
     {
@@ -485,7 +485,7 @@
       "meaning_zh": "你疯了么？你脑子正常吗？",
       "part_of_speech": "phrase",
       "phonetic": "/ɑːr juː nʌts/",
-      "status": "ready",
+      "status": "pending",
       "term": "are you nuts"
     },
     {
@@ -496,7 +496,7 @@
       "meaning_en": "This sentence means that the highway will be extremely crowded with vehicles, causing slow traffic.",
       "meaning_zh": "这句话表示高速公路将会非常拥堵，车辆很多，通行缓慢。",
       "part_of_speech": "phrase",
-      "status": "ready",
+      "status": "pending",
       "term": "the freeway will be packed"
     },
     {
@@ -507,7 +507,7 @@
       "meaning_en": "To choose a smaller, less busy street instead of a main road, often to avoid traffic or as a shortcut.",
       "meaning_zh": "走小路；走侧街（通常为了避开交通或抄近路）",
       "part_of_speech": "phrase",
-      "status": "ready",
+      "status": "pending",
       "term": "take a side street"
     },
     {
@@ -519,7 +519,7 @@
       "meaning_zh": "童年和成熟之间的身心发展的过渡时期。",
       "part_of_speech": "n.",
       "phonetic": "/ˌædəˈlɛsəns/",
-      "status": "ready",
+      "status": "pending",
       "term": "adolescence"
     },
     {
@@ -531,7 +531,7 @@
       "meaning_zh": "确定某人或某事的身份。;披露某人的身份。",
       "part_of_speech": "v.",
       "phonetic": "/aɪˈdɛn.tɪ.faɪ/",
-      "status": "ready",
+      "status": "pending",
       "term": "identify"
     },
     {
@@ -543,7 +543,7 @@
       "meaning_zh": "青春期；发育期",
       "part_of_speech": "n.",
       "phonetic": "/ˈpjuːbərti/",
-      "status": "ready",
+      "status": "pending",
       "term": "puberty"
     },
     {
@@ -555,7 +555,7 @@
       "meaning_zh": "强调；重读；加重",
       "part_of_speech": "n.",
       "phonetic": "/əkˌsentʃuˈeɪʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "accentuation"
     },
     {
@@ -567,7 +567,7 @@
       "meaning_zh": "短暂的涌出，如从孔口或切口/伤口喷出的液体。；精液射精。",
       "part_of_speech": "n.",
       "phonetic": "/spɜː(r)t/",
-      "status": "ready",
+      "status": "pending",
       "term": "spurt"
     },
     {
@@ -577,7 +577,7 @@
       "meaning_zh": "发展一个想法；在头脑中形成；计划；设计；起源。;了解（某人）。",
       "part_of_speech": "v.",
       "phonetic": "/kənˈsiːv/",
-      "status": "ready",
+      "status": "pending",
       "term": "conceive"
     },
     {
@@ -586,7 +586,7 @@
       "meaning_en": "The set of courses, coursework, and their content, offered at a school or university.; A racecourse; a place for running.",
       "meaning_zh": "学校或大学提供的一套课程、课程作业及其内容。;赛马场;跑步的地方。",
       "part_of_speech": "n.",
-      "status": "ready",
+      "status": "pending",
       "term": "curricula"
     },
     {
@@ -596,7 +596,7 @@
       "meaning_zh": "（语法）不作为谓词的动词形式，或从动词派生的单词。在英语中，不定式、分词和gerunds是动词。",
       "part_of_speech": "n.",
       "phonetic": "/ˈvɜː.bəl/",
-      "status": "ready",
+      "status": "pending",
       "term": "verbal"
     },
     {
@@ -606,7 +606,7 @@
       "meaning_zh": "事物的状态相似或相同。;相似点;相似性。",
       "part_of_speech": "n.",
       "phonetic": "/kənˈfɔːmɪti/",
-      "status": "ready",
+      "status": "pending",
       "term": "conformity"
     },
     {
@@ -618,7 +618,7 @@
       "meaning_zh": "进入视野。;走出场景、物体或液体。",
       "part_of_speech": "v.",
       "phonetic": "/iˈmɜːd͡ʒ/",
-      "status": "ready",
+      "status": "pending",
       "term": "emerge"
     },
     {
@@ -627,7 +627,7 @@
       "meaning_en": "The mathematics of numbers (integers, rational numbers, real numbers, or complex numbers) under the operations of addition, subtraction, multiplication, and division.",
       "meaning_zh": "加法、减法、乘法和除法运算下的数学（整数、有理数、实数或复数）。",
       "part_of_speech": "n.",
-      "status": "ready",
+      "status": "pending",
       "term": "arithmetic"
     },
     {
@@ -639,7 +639,7 @@
       "meaning_zh": "突然改变主意；某人或某事明显不寻常或不可预测。",
       "part_of_speech": "n.",
       "phonetic": "/fɹiːk/",
-      "status": "ready",
+      "status": "pending",
       "term": "freak"
     },
     {
@@ -651,7 +651,7 @@
       "meaning_zh": "人工的；人造的；假的；不自然的",
       "part_of_speech": "adj.",
       "phonetic": "/ˌɑːtɪˈfɪʃl/",
-      "status": "ready",
+      "status": "pending",
       "term": "artificial"
     },
     {
@@ -663,7 +663,7 @@
       "meaning_zh": "引文，引用；引证，出处；表彰，嘉奖（尤指军事嘉奖）；传票，传唤",
       "part_of_speech": "n.",
       "phonetic": "/saɪˈteɪʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "citation"
     },
     {
@@ -675,7 +675,7 @@
       "meaning_zh": "n. 争论；争端；纠纷；（法律）争议；v. 对……提出异议；质疑……的真实性；争夺；辩论",
       "part_of_speech": "n. / v.",
       "phonetic": "/dɪˈspjuːt/",
-      "status": "ready",
+      "status": "pending",
       "term": "dispute"
     },
     {
@@ -687,7 +687,7 @@
       "meaning_zh": "感知，知觉，感觉；看法，见解，认识",
       "part_of_speech": "n.",
       "phonetic": "/pəˈsepʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "perception"
     },
     {
@@ -699,7 +699,7 @@
       "meaning_zh": "引语，引文，语录（quotation 的复数形式）；报价，估价单。",
       "part_of_speech": "n.",
       "phonetic": "/kwəʊˈteɪʃnz/",
-      "status": "ready",
+      "status": "pending",
       "term": "quotations"
     },
     {
@@ -711,7 +711,7 @@
       "meaning_zh": "认为（某人）会做某事；假定（某人）做某事（多用于被动结构 be assumed to do，表示“据认为会做……、被期望做……”）",
       "part_of_speech": "phrase",
       "phonetic": "/əˈsjuːm tuː duː/",
-      "status": "ready",
+      "status": "pending",
       "term": "assume to do"
     },
     {
@@ -723,7 +723,7 @@
       "meaning_zh": "解释，说明（原因）；占（某比例），构成；了解……的下落，查明……的去向。",
       "part_of_speech": "phrase",
       "phonetic": "/əˈkaʊnt fɔːr/",
-      "status": "ready",
+      "status": "pending",
       "term": "account for"
     },
     {
@@ -735,7 +735,7 @@
       "meaning_zh": "妨碍，干扰，阻碍；（未经允许）乱动，摆弄；对……产生不良影响",
       "part_of_speech": "phrase",
       "phonetic": "/ˌɪntərˈfɪr wɪð/",
-      "status": "ready",
+      "status": "pending",
       "term": "interfere with"
     },
     {
@@ -747,7 +747,7 @@
       "meaning_zh": "从事；参与；忙于（某项活动）",
       "part_of_speech": "phrase",
       "phonetic": "/ɪnˈɡeɪdʒ ɪn/",
-      "status": "ready",
+      "status": "pending",
       "term": "engage in"
     },
     {
@@ -759,7 +759,7 @@
       "meaning_zh": "干涉，干预，插手（他人的事）；妨碍，干扰，阻碍（事情正常进行）；（物理）干扰",
       "part_of_speech": "v.",
       "phonetic": "/ˌɪntəˈfɪə(r)/",
-      "status": "ready",
+      "status": "pending",
       "term": "interfere"
     },
     {
@@ -771,7 +771,7 @@
       "meaning_zh": "解释，阐释；理解，解读；（对音乐、角色等的）演绎，诠释",
       "part_of_speech": "n.",
       "phonetic": "/ɪnˌtɜːprɪˈteɪʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "interpretation"
     },
     {
@@ -783,7 +783,7 @@
       "meaning_zh": "易受伤害的；脆弱的；易受攻击的；（因缺乏保护而）易感染疾病的",
       "part_of_speech": "adj.",
       "phonetic": "/ˈvʌlnərəbl/",
-      "status": "ready",
+      "status": "pending",
       "term": "vulnerable"
     },
     {
@@ -795,7 +795,7 @@
       "meaning_zh": "挑毛病；找漏洞；对……吹毛求疵（通常用于 pick holes in sth）",
       "part_of_speech": "phrase",
       "phonetic": "/pɪk həʊlz/",
-      "status": "ready",
+      "status": "pending",
       "term": "pick holes"
     },
     {
@@ -807,7 +807,7 @@
       "meaning_zh": "基础设施（如道路、电力、通信网络等）；基础建设；（组织或系统的）基础架构、底层结构",
       "part_of_speech": "n.",
       "phonetic": "/ˈɪnfrəstrʌktʃə(r)/",
-      "status": "ready",
+      "status": "pending",
       "term": "infrastructure"
     },
     {
@@ -819,7 +819,7 @@
       "meaning_zh": "打算做某事；将要去做某事（表示计划、意图或已有安排的将来时结构）",
       "part_of_speech": "phrase",
       "phonetic": "/ˈɡəʊɪŋ tə duː/",
-      "status": "ready",
+      "status": "pending",
       "term": "going to do"
     },
     {
@@ -831,7 +831,7 @@
       "meaning_zh": "n. 问题；疑问；询问；（计算机）查询；v. 询问；质疑；对……表示疑问；（计算机）查询",
       "part_of_speech": "n. / v.",
       "phonetic": "/ˈkwɪəri/",
-      "status": "ready",
+      "status": "pending",
       "term": "query"
     },
     {
@@ -843,7 +843,7 @@
       "meaning_zh": "大灾难；灾祸；浩劫；（戏剧的）悲剧性结局；惨败。",
       "part_of_speech": "n.",
       "phonetic": "/kəˈtæstrəfi/",
-      "status": "ready",
+      "status": "pending",
       "term": "catastrophe"
     },
     {
@@ -855,7 +855,7 @@
       "meaning_zh": "隧道；地道；（动物的）洞穴；v. 挖隧道；挖地道",
       "part_of_speech": "n. / v.",
       "phonetic": "/ˈtʌnl/",
-      "status": "ready",
+      "status": "pending",
       "term": "tunnel"
     },
     {
@@ -867,7 +867,7 @@
       "meaning_zh": "香料；调味品；（增添趣味的）情趣，刺激",
       "part_of_speech": "n.",
       "phonetic": "/spaɪs/",
-      "status": "ready",
+      "status": "pending",
       "term": "spice"
     },
     {
@@ -879,7 +879,7 @@
       "meaning_zh": "扰乱，扰动，干扰；不安，烦恼，忧虑；（物理学、天文学）微扰，摄动",
       "part_of_speech": "n.",
       "phonetic": "/ˌpɜːtəˈbeɪʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "perturbation"
     },
     {
@@ -891,7 +891,7 @@
       "meaning_zh": "陪审团；（竞赛的）评判委员会、评审团",
       "part_of_speech": "n.",
       "phonetic": "/ˈdʒʊəri/",
-      "status": "ready",
+      "status": "pending",
       "term": "jury"
     },
     {
@@ -903,7 +903,7 @@
       "meaning_zh": "内部的；体内的；国内的；内在的，内心的",
       "part_of_speech": "adj.",
       "phonetic": "/ɪnˈtɝnəl/",
-      "status": "ready",
+      "status": "pending",
       "term": "internal"
     },
     {
@@ -915,7 +915,7 @@
       "meaning_zh": "证明……正当（合理）；为……辩护；为……提供正当理由；（排版）使（文字）两端对齐",
       "part_of_speech": "v.",
       "phonetic": "/ˈdʒʌstɪfaɪ/",
-      "status": "ready",
+      "status": "pending",
       "term": "justify"
     },
     {
@@ -927,7 +927,7 @@
       "meaning_zh": "连续的；接连不断的；连贯的（指事件、数字等一个接一个不间断地发生）",
       "part_of_speech": "adj.",
       "phonetic": "/kənˈsekjətɪv/",
-      "status": "ready",
+      "status": "pending",
       "term": "consecutive"
     },
     {
@@ -939,7 +939,7 @@
       "meaning_zh": "宗教；宗教信仰；宗教活动",
       "part_of_speech": "n.",
       "phonetic": "/rɪˈlɪdʒən/",
-      "status": "ready",
+      "status": "pending",
       "term": "religion"
     },
     {
@@ -951,7 +951,7 @@
       "meaning_zh": "合法的；正当的；合理的；名副其实的",
       "part_of_speech": "adj.",
       "phonetic": "/lɪˈdʒɪtɪmət/",
-      "status": "ready",
+      "status": "pending",
       "term": "legitimate"
     },
     {
@@ -963,7 +963,7 @@
       "meaning_zh": "n. 嗡嗡声，蜂鸣声；（人群的）嘈杂声、低声议论；兴奋热闹的气氛；（门铃等的）蜂鸣器响声。v. 发出嗡嗡声；用蜂鸣器呼叫；充满兴奋或忙碌（buzz with）；(口) 匆匆走动。",
       "part_of_speech": "n. / v.",
       "phonetic": "/bʌz/",
-      "status": "ready",
+      "status": "pending",
       "term": "buzz"
     },
     {
@@ -975,7 +975,7 @@
       "meaning_zh": "艺术的；艺术家的；有艺术天赋的；富有艺术鉴赏力的",
       "part_of_speech": "adj.",
       "phonetic": "/ɑːˈtɪstɪk/",
-      "status": "ready",
+      "status": "pending",
       "term": "artistic"
     },
     {
@@ -987,7 +987,7 @@
       "meaning_zh": "v. 努力；尽力；力图；n. 努力；尝试；事业，活动（endeavors 为名词复数或动词第三人称单数形式）",
       "part_of_speech": "n. / v.",
       "phonetic": "/ɪnˈdevər/",
-      "status": "ready",
+      "status": "pending",
       "term": "endeavor"
     },
     {
@@ -999,7 +999,7 @@
       "meaning_zh": "（对某事的）看法，观点；情绪，情感；（公众的）普遍意见，舆情；感伤情绪。",
       "part_of_speech": "n.",
       "phonetic": "/ˈsentɪmənt/",
-      "status": "ready",
+      "status": "pending",
       "term": "sentiment"
     },
     {
@@ -1011,7 +1011,7 @@
       "meaning_zh": "区分，辨别，分辨；使有别于，使突出；辨认出。",
       "part_of_speech": "v.",
       "phonetic": "/dɪˈstɪŋɡwɪʃ/",
-      "status": "ready",
+      "status": "pending",
       "term": "distinguish"
     },
     {
@@ -1023,7 +1023,7 @@
       "meaning_zh": "挑衅的；煽动性的；引起争议的；挑逗的，性感的",
       "part_of_speech": "adj.",
       "phonetic": "/prəˈvɒkətɪv/",
-      "status": "ready",
+      "status": "pending",
       "term": "provocative"
     },
     {
@@ -1035,7 +1035,7 @@
       "meaning_zh": "n. 化妆品；美容品。adj. 化妆用的，美容的；（改变）表面的，装门面的（指只改善外观而不解决实质问题）。",
       "part_of_speech": "n. / adj.",
       "phonetic": "/kɒzˈmetɪk/",
-      "status": "ready",
+      "status": "pending",
       "term": "cosmetic"
     },
     {
@@ -1045,7 +1045,7 @@
       "meaning_zh": "（时间位置）稍后或后续时间",
       "part_of_speech": "adv.",
       "phonetic": "/ˈɑːftə.wəd/",
-      "status": "ready",
+      "status": "pending",
       "term": "afterward"
     },
     {
@@ -1057,7 +1057,7 @@
       "meaning_zh": "迎合；满足……的需要；投合（某类人的口味或需求）；迁就",
       "part_of_speech": "phrase",
       "phonetic": "/ˈkeɪtər tuː/",
-      "status": "ready",
+      "status": "pending",
       "term": "cater to"
     },
     {
@@ -1069,7 +1069,7 @@
       "meaning_zh": "怀疑；猜疑；嫌疑；（后接 of）一丝，一点，微量",
       "part_of_speech": "n.",
       "phonetic": "/səˈspɪʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "suspicion"
     },
     {
@@ -1081,7 +1081,7 @@
       "meaning_zh": "使（尤指不好的事物）持续存在；使永久化；使延续下去",
       "part_of_speech": "v.",
       "phonetic": "/pərˈpetʃueɪt/",
-      "status": "ready",
+      "status": "pending",
       "term": "perpetuate"
     },
     {
@@ -1093,7 +1093,7 @@
       "meaning_zh": "扭曲的；变形的；失真的；被歪曲的",
       "part_of_speech": "adj.",
       "phonetic": "/dɪˈstɔːtɪd/",
-      "status": "ready",
+      "status": "pending",
       "term": "distorted"
     },
     {
@@ -1103,7 +1103,7 @@
       "meaning_zh": "保存行为；注意保存；防止破坏、腐烂或任何疾病的行为",
       "part_of_speech": "n.",
       "phonetic": "/pɹɛ.zɝˈveɪ.ʃən/",
-      "status": "ready",
+      "status": "pending",
       "term": "preservation"
     },
     {
@@ -1115,7 +1115,7 @@
       "meaning_zh": "驴（复数形式为 donkeys）；笨蛋，蠢人（非正式用法）",
       "part_of_speech": "n.",
       "phonetic": "/ˈdɒŋki/",
-      "status": "ready",
+      "status": "pending",
       "term": "donkey"
     },
     {
@@ -1127,7 +1127,7 @@
       "meaning_zh": "推动；推进；（在某一方向上）驱动；驱使；促使",
       "part_of_speech": "v.",
       "phonetic": "/prəˈpel/",
-      "status": "ready",
+      "status": "pending",
       "term": "propel"
     },
     {
@@ -1139,7 +1139,7 @@
       "meaning_zh": "缠结；缠绕；交织；密切相关，紧密相连",
       "part_of_speech": "v.",
       "phonetic": "/ˌɪntəˈtwaɪn/",
-      "status": "ready",
+      "status": "pending",
       "term": "intertwine"
     },
     {
@@ -1151,7 +1151,7 @@
       "meaning_zh": "基因组；（生物体的）全部遗传物质",
       "part_of_speech": "n.",
       "phonetic": "/ˈdʒiːnəʊm/",
-      "status": "ready",
+      "status": "pending",
       "term": "genome"
     },
     {
@@ -1163,7 +1163,7 @@
       "meaning_zh": "驯化，培育（野生动植物）；使适应家庭生活，归化。",
       "part_of_speech": "n.",
       "phonetic": "/dəˌmestɪˈkeɪʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "domestication"
     },
     {
@@ -1175,7 +1175,7 @@
       "meaning_zh": "驯养（动物） ；驯养；驯服或驯化",
       "part_of_speech": "v.",
       "phonetic": "/teɪm/",
-      "status": "ready",
+      "status": "pending",
       "term": "tame"
     },
     {
@@ -1187,7 +1187,7 @@
       "meaning_zh": "证词；证言；（法庭上的）宣誓陈述；证据；证明",
       "part_of_speech": "n.",
       "phonetic": "/ˈtestɪməni/",
-      "status": "ready",
+      "status": "pending",
       "term": "testimony"
     },
     {
@@ -1199,7 +1199,7 @@
       "meaning_zh": "描绘，描写，刻画；扮演，饰演（某个角色）",
       "part_of_speech": "v.",
       "phonetic": "/pɔːˈtreɪ/",
-      "status": "ready",
+      "status": "pending",
       "term": "portray"
     },
     {
@@ -1211,7 +1211,7 @@
       "meaning_zh": "v. 精确指出；准确确定（位置、原因、问题等）；n. 针尖；极小的点；精确的位置；adj. 精确的，精准的",
       "part_of_speech": "v. / n. / adj.",
       "phonetic": "/ˈpɪnpɔɪnt/",
-      "status": "ready",
+      "status": "pending",
       "term": "pinpoint"
     },
     {
@@ -1223,7 +1223,7 @@
       "meaning_zh": "牧人；放牧者；牧民；（人群的）引领者",
       "part_of_speech": "n.",
       "phonetic": "/ˈhɜːrdər/",
-      "status": "ready",
+      "status": "pending",
       "term": "herder"
     },
     {
@@ -1235,7 +1235,7 @@
       "meaning_zh": "ass 的复数形式：驴（多匹驴）；(粗俗) 屁股；(口语) 蠢人、固执的人。",
       "part_of_speech": "n.",
       "phonetic": "/ˈæsɪz/",
-      "status": "ready",
+      "status": "pending",
       "term": "asses"
     },
     {
@@ -1247,7 +1247,7 @@
       "meaning_zh": "同时发生；一致，相符；重合，位置相同",
       "part_of_speech": "v.",
       "phonetic": "/ˌkəʊɪnˈsaɪd/",
-      "status": "ready",
+      "status": "pending",
       "term": "coincide"
     },
     {
@@ -1259,7 +1259,7 @@
       "meaning_zh": "改变；改动；修改；（使）变化",
       "part_of_speech": "v.",
       "phonetic": "/ˈɔːltər/",
-      "status": "ready",
+      "status": "pending",
       "term": "alter"
     },
     {
@@ -1271,7 +1271,7 @@
       "meaning_zh": "情节剧的；夸张的，感情夸张的，大惊小怪的（多含贬义）",
       "part_of_speech": "adj.",
       "phonetic": "/ˌmelədrəˈmætɪk/",
-      "status": "ready",
+      "status": "pending",
       "term": "melodramatic"
     },
     {
@@ -1283,7 +1283,7 @@
       "meaning_zh": "暂停，中止（某事一段时间）；使停职，使停学（作为处分）；悬挂，吊起",
       "part_of_speech": "v.",
       "phonetic": "/səˈspend/",
-      "status": "ready",
+      "status": "pending",
       "term": "suspend"
     },
     {
@@ -1295,7 +1295,7 @@
       "meaning_zh": "怀旧；怀旧之情；对往昔（或故乡）的眷恋与思念。",
       "part_of_speech": "n.",
       "phonetic": "/nɒˈstældʒə/",
-      "status": "ready",
+      "status": "pending",
       "term": "nostalgia"
     },
     {
@@ -1307,7 +1307,7 @@
       "meaning_zh": "激励；刺激；鼓励；动力；奖励措施",
       "part_of_speech": "n.",
       "phonetic": "/ɪnˈsentɪv/",
-      "status": "ready",
+      "status": "pending",
       "term": "incentive"
     },
     {
@@ -1319,7 +1319,7 @@
       "meaning_zh": "阴暗的，光线不足的；忧郁的，沮丧的；（前景）黯淡的，悲观的",
       "part_of_speech": "adj.",
       "phonetic": "/ˈɡluːmi/",
-      "status": "ready",
+      "status": "pending",
       "term": "gloomy"
     },
     {
@@ -1331,7 +1331,7 @@
       "meaning_zh": "v. 引诱，诱惑；吸引（人或动物）。n. 诱惑物，吸引力；（钓鱼用的）诱饵。",
       "part_of_speech": "v. \u0026 n.",
       "phonetic": "/lʊə(r)/",
-      "status": "ready",
+      "status": "pending",
       "term": "lure"
     },
     {
@@ -1343,7 +1343,7 @@
       "meaning_zh": "漂走；飘散；渐渐疏远；（感情、关系）逐渐淡漠、消失",
       "part_of_speech": "phrase",
       "phonetic": "/drɪft əˈweɪ/",
-      "status": "ready",
+      "status": "pending",
       "term": "drift away"
     },
     {
@@ -1355,7 +1355,7 @@
       "meaning_zh": "v. 排水；使（液体）流走；耗尽（精力、资源）；喝干。n. 排水管；下水道；排水沟；消耗；耗尽。",
       "part_of_speech": "v. / n.",
       "phonetic": "/dreɪn/",
-      "status": "ready",
+      "status": "pending",
       "term": "drain"
     },
     {
@@ -1367,7 +1367,7 @@
       "meaning_zh": "相对应的人（或物）；职位（或作用）相当的人；副本，对应版本",
       "part_of_speech": "n.",
       "phonetic": "/ˈkaʊntəpɑːt/",
-      "status": "ready",
+      "status": "pending",
       "term": "counterpart"
     },
     {
@@ -1379,7 +1379,7 @@
       "meaning_zh": "隔离；孤立；隔绝；孤独；单独",
       "part_of_speech": "n.",
       "phonetic": "/ˌaɪsəˈleɪʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "isolation"
     },
     {
@@ -1391,7 +1391,7 @@
       "meaning_zh": "高兴，欣喜，欢欣鼓舞；（使）感到喜悦",
       "part_of_speech": "v.",
       "phonetic": "/rɪˈdʒɔɪs/",
-      "status": "ready",
+      "status": "pending",
       "term": "rejoice"
     },
     {
@@ -1403,7 +1403,7 @@
       "meaning_zh": "精心挑选的；经过整理编排的；（展览、内容等）由策展人策划的。",
       "part_of_speech": "adj.",
       "phonetic": "/kjʊˈreɪtɪd/",
-      "status": "ready",
+      "status": "pending",
       "term": "curated"
     },
     {
@@ -1415,7 +1415,7 @@
       "meaning_zh": "adv. 逐字地；一字不差地；adj. 逐字的；一字不差的",
       "part_of_speech": "adv. / adj.",
       "phonetic": "/vɜːˈbeɪtɪm/",
-      "status": "ready",
+      "status": "pending",
       "term": "verbatim"
     },
     {
@@ -1427,7 +1427,7 @@
       "meaning_zh": "完全的，纯粹的（用于强调）；陡峭的，几乎垂直的；（织物）极薄的，透明的",
       "part_of_speech": "adj.",
       "phonetic": "/ʃɪr/",
-      "status": "ready",
+      "status": "pending",
       "term": "sheer"
     },
     {
@@ -1437,7 +1437,7 @@
       "meaning_zh": "偶然结合在一起的事件，产生了令人惊讶的好或美妙的结果",
       "part_of_speech": "n.",
       "phonetic": "/ˌsɛ.ɹən.ˈdɪ.pɪ.ti/",
-      "status": "ready",
+      "status": "pending",
       "term": "serendipity"
     },
     {
@@ -1449,7 +1449,7 @@
       "meaning_zh": "使活跃的；令人振奋的；使有生气的；增添趣味的",
       "part_of_speech": "adj.",
       "phonetic": "/ɪnˈlaɪvnɪŋ/",
-      "status": "ready",
+      "status": "pending",
       "term": "enlivening"
     },
     {
@@ -1461,7 +1461,7 @@
       "meaning_zh": "v. 交谈，谈话， converse with sb 与某人交谈（重音在后）；adj. 相反的，逆的；n. 相反的事物，反面（重音在前，读作 /ˈkɒnvɜːs/）",
       "part_of_speech": "v. / adj. / n.",
       "phonetic": "/kənˈvɜːs/",
-      "status": "ready",
+      "status": "pending",
       "term": "converse"
     },
     {
@@ -1470,7 +1470,7 @@
       "meaning_en": "A pair of speakers worn over or in the ears so only the wearer can hear the sound",
       "meaning_zh": "一对扬声器戴在耳朵上或耳朵里，所以只有佩戴者才能听到声音",
       "part_of_speech": "n.",
-      "status": "ready",
+      "status": "pending",
       "term": "headphones"
     },
     {
@@ -1482,7 +1482,7 @@
       "meaning_zh": "v. 烦恼；焦急；发愁；n. 烦恼；焦虑；（吉他等弦乐器指板上的）品丝，音柱",
       "part_of_speech": "v. / n.",
       "phonetic": "/fret/",
-      "status": "ready",
+      "status": "pending",
       "term": "fret"
     },
     {
@@ -1494,7 +1494,7 @@
       "meaning_zh": "扫帚；扫把；金雀花（一种开黄色花的灌木）",
       "part_of_speech": "n.",
       "phonetic": "/bɹuːm/",
-      "status": "ready",
+      "status": "pending",
       "term": "broom"
     },
     {
@@ -1506,7 +1506,7 @@
       "meaning_zh": "n. 授权；命令，指令；委托；委任统治；v. 授权；强制执行，下令，规定",
       "part_of_speech": "n. / v.",
       "phonetic": "/ˈmændeɪt/",
-      "status": "ready",
+      "status": "pending",
       "term": "mandate"
     },
     {
@@ -1518,7 +1518,7 @@
       "meaning_zh": "n. 熊熊大火；烈火；（光、色彩的）闪耀，强光；（感情的）爆发；v. 熊熊燃烧；闪耀，发光；猛烈地燃烧；（枪炮）连发。",
       "part_of_speech": "n. / v.",
       "phonetic": "/bleɪz/",
-      "status": "ready",
+      "status": "pending",
       "term": "blaze"
     },
     {
@@ -1530,7 +1530,7 @@
       "meaning_zh": "使摆脱；使去掉；清除",
       "part_of_speech": "v.",
       "phonetic": "/rɪd/",
-      "status": "ready",
+      "status": "pending",
       "term": "rid"
     },
     {
@@ -1542,7 +1542,7 @@
       "meaning_zh": "（说话、音乐或诗歌的）抑扬顿挫，节奏，韵律；（步伐等的）节拍，步调。",
       "part_of_speech": "n.",
       "phonetic": "/ˈkeɪdns/",
-      "status": "ready",
+      "status": "pending",
       "term": "cadence"
     },
     {
@@ -1554,7 +1554,7 @@
       "meaning_zh": "缺口；差额；不足额；赤字",
       "part_of_speech": "n.",
       "phonetic": "/ˈʃɔːtfɔːl/",
-      "status": "ready",
+      "status": "pending",
       "term": "shortfall"
     },
     {
@@ -1566,7 +1566,7 @@
       "meaning_zh": "压制；镇压；抑制；压抑；（对信息、证据等的）隐瞒、封锁；（生理或心理上的）抑制",
       "part_of_speech": "n.",
       "phonetic": "/səˈpreʃn/",
-      "status": "ready",
+      "status": "pending",
       "term": "suppression"
     },
     {
@@ -1576,7 +1576,7 @@
       "meaning_zh": "点燃（某物）、点燃（某物）；点燃（某物） ，触发",
       "part_of_speech": "v.",
       "phonetic": "/ɪɡˈnaɪt/",
-      "status": "ready",
+      "status": "pending",
       "term": "ignite"
     },
     {
@@ -1588,7 +1588,7 @@
       "meaning_zh": "赤字；亏损；不足额；欠缺，缺陷",
       "part_of_speech": "n.",
       "phonetic": "/ˈdefɪsɪt/",
-      "status": "ready",
+      "status": "pending",
       "term": "deficit"
     },
     {
@@ -1600,7 +1600,7 @@
       "meaning_zh": "开处方，开药；规定，指定，指示",
       "part_of_speech": "v.",
       "phonetic": "/prɪˈskraɪb/",
-      "status": "ready",
+      "status": "pending",
       "term": "prescribe"
     },
     {
@@ -1612,7 +1612,7 @@
       "meaning_zh": "监督；管理；监管；照管",
       "part_of_speech": "v.",
       "phonetic": "/ˌəʊvəˈsiː/",
-      "status": "ready",
+      "status": "pending",
       "term": "oversee"
     },
     {
@@ -1624,7 +1624,7 @@
       "meaning_zh": "危险；危害；隐患；风险；（动词）使遭受危险；冒险尝试；大胆猜测",
       "part_of_speech": "n. / v.",
       "phonetic": "/ˈhæzəd/",
-      "status": "ready",
+      "status": "pending",
       "term": "hazard"
     },
     {
@@ -1636,7 +1636,7 @@
       "meaning_zh": "讲述，叙述（故事、事件）；为（影片、节目等）作解说、旁白",
       "part_of_speech": "v.",
       "phonetic": "/nəˈreɪt/",
-      "status": "ready",
+      "status": "pending",
       "term": "narrate"
     },
     {
@@ -1645,7 +1645,7 @@
       "meaning_en": "A body of standing water, such as a lake or a pond. More specifically, it can refer to a lake that is broad in relation to its depth. Also included in place names such as Windermere",
       "meaning_zh": "积水，如湖泊或池塘。更具体地说，它可以指相对于其深度而言较宽的湖泊。也包括在温德米尔等地名中",
       "part_of_speech": "n.",
-      "status": "ready",
+      "status": "pending",
       "term": "mere"
     },
     {
@@ -1657,7 +1657,7 @@
       "meaning_zh": "n. 青少年，青春期的人（约13至19岁）；adj. 青春期的，青少年的；不成熟的",
       "part_of_speech": "n. / adj.",
       "phonetic": "/ˌædəˈlesnt/",
-      "status": "ready",
+      "status": "pending",
       "term": "adolescent"
     },
     {
@@ -1669,7 +1669,7 @@
       "meaning_zh": "技术-社会的；科技与社会互动的；兼有技术与社会双重属性的。常用于描述技术因素与社会因素相互作用、彼此塑造的系统或现象。",
       "part_of_speech": "adj.",
       "phonetic": "/ˌteknoʊˈsoʊʃəl/",
-      "status": "ready",
+      "status": "pending",
       "term": "techno-social"
     },
     {
@@ -1681,7 +1681,7 @@
       "meaning_zh": "n. 盾；盾牌；防护物，屏障；保护者；（盾形）徽章。v. 保护，掩护；遮挡，遮蔽。",
       "part_of_speech": "n. / v.",
       "phonetic": "/ʃiːld/",
-      "status": "ready",
+      "status": "pending",
       "term": "shield"
     },
     {
@@ -1693,7 +1693,7 @@
       "meaning_zh": "自拍虚荣；指通过不停地自拍并在社交媒体上晒自拍所表现出的虚荣心和自我陶醉。",
       "part_of_speech": "n.",
       "phonetic": "/ˈsɛlfi ˈvænəti/",
-      "status": "ready",
+      "status": "pending",
       "term": "selfie-vanity"
     },
     {
@@ -1705,7 +1705,7 @@
       "meaning_zh": "侵蚀；腐蚀；（逐渐地）削弱、损害（信心、权力、价值等）；使逐渐减少",
       "part_of_speech": "v.",
       "phonetic": "/ɪˈrəʊd/",
-      "status": "ready",
+      "status": "pending",
       "term": "erode"
     }
   ]
