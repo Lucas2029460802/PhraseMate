@@ -980,8 +980,14 @@
     },
     {
       "id": 89,
-      "term": "endeavors",
-      "status": "pending",
+      "term": "endeavor",
+      "phonetic": "/ɪnˈdevər/",
+      "meaning_en": "As a verb: to try hard to achieve something. As a noun: a serious and determined effort, or an enterprise/undertaking. \"Endeavors\" is the plural noun form or the third-person singular verb form.",
+      "meaning_zh": "v. 努力；尽力；力图；n. 努力；尝试；事业，活动（endeavors 为名词复数或动词第三人称单数形式）",
+      "example_en": "She endeavors to improve her English a little every day.",
+      "example_zh": "她每天都努力让自己的英语进步一点。",
+      "part_of_speech": "n. / v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:06:15Z"
     }
   ]
