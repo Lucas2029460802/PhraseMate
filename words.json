@@ -171,14 +171,33 @@
     },
     {
       "created_at": "2026-08-07T14:59:28Z",
-      "example_en": "Can you fill me in on what happened at the meeting?",
-      "example_zh": "你能告诉我会议上发生了什么吗？",
+      "example_en": "Can you fill me in on what happened while I was away?",
+      "example_zh": "你能告诉我我不在时发生了什么吗？",
       "id": 5,
-      "meaning_en": "To give someone information about something that has happened or that they missed.",
-      "meaning_zh": "向某人提供信息，告知某人最近发生的事；为某人补充最新消息。",
+      "meaning_en": "To give someone the information they need about a situation, especially when they have been away or are new. It can also mean, informally, to beat someone severely.",
+      "meaning_zh": "向某人提供必要信息；把情况或详情告诉某人；（非正式）痛打某人。",
       "part_of_speech": "phrase",
       "phonetic": "/fɪl ˈsʌmbədi ɪn/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "fill somebody in on something",
+          "meaning_zh": "向某人告知某事的具体情况"
+        },
+        {
+          "phrase": "fill me in",
+          "meaning_zh": "告诉我情况；把详情告诉我"
+        },
+        {
+          "phrase": "be filled in on something",
+          "meaning_zh": "被告知某事的情况"
+        },
+        {
+          "phrase": "keep somebody filled in",
+          "meaning_zh": "让某人随时了解最新情况"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "fill somebody in"
     },
     {
