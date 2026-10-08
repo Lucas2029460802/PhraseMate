@@ -969,12 +969,49 @@
     },
     {
       "created_at": "2026-08-13T08:19:43Z",
+      "example_en": "They laid a new carpet in the living room.",
+      "example_zh": "他们在客厅里铺了一块新地毯。",
       "id": 28,
-      "meaning_en": "A fabric used as a complete floor covering.; Any surface or cover resembling a carpet or fulfilling its function.",
-      "meaning_zh": "A fabric used as a complete floor covering.; Any surface or cover resembling a carpet or fulfilling its function.",
+      "meaning_en": "A floor covering made of thick woven material, usually wool or synthetic fibers.",
+      "meaning_zh": "地毯；地毯状覆盖物。",
       "part_of_speech": "n.",
-      "phonetic": "/ˈkɑː(ɹ)pɪt/",
-      "status": "pending",
+      "phonetic": "/ˈkɑːrpɪt/",
+      "phrases": [
+        {
+          "phrase": "red carpet",
+          "meaning_zh": "红地毯；隆重接待"
+        },
+        {
+          "phrase": "carpet bombing",
+          "meaning_zh": "地毯式轰炸"
+        },
+        {
+          "phrase": "magic carpet",
+          "meaning_zh": "魔毯"
+        },
+        {
+          "phrase": "sweep something under the carpet",
+          "meaning_zh": "掩盖某事"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "carpeted",
+          "pos": "adj.",
+          "meaning_zh": "铺有地毯的"
+        },
+        {
+          "word": "carpetless",
+          "pos": "adj.",
+          "meaning_zh": "没有铺地毯的"
+        },
+        {
+          "word": "carpetlike",
+          "pos": "adj.",
+          "meaning_zh": "像地毯一样的"
+        }
+      ],
+      "status": "ready",
       "term": "carpet"
     },
     {
