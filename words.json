@@ -3043,13 +3043,48 @@
     {
       "created_at": "2026-09-28T06:30:03Z",
       "example_en": "I'm going to do my homework right after dinner.",
-      "example_zh": "我打算晚饭后马上做作业。",
+      "example_zh": "我打算晚饭后马上就做作业。",
       "id": 75,
-      "meaning_en": "A structure used to talk about a plan, intention, or something you have already decided to do in the future.",
-      "meaning_zh": "打算做某事；将要去做某事（表示计划、意图或已有安排的将来时结构）",
+      "meaning_en": "A structure used to express an intention or plan to do something in the future, or a prediction based on present evidence.",
+      "meaning_zh": "打算做某事；将要去做某事（表示未来的意图、计划，或根据现有迹象做出的推测）",
       "part_of_speech": "phrase",
       "phonetic": "/ˈɡəʊɪŋ tə duː/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "be going to",
+          "meaning_zh": "将要；打算（表计划或推测）"
+        },
+        {
+          "phrase": "going to be",
+          "meaning_zh": "将会是；即将成为"
+        },
+        {
+          "phrase": "going to happen",
+          "meaning_zh": "即将发生"
+        },
+        {
+          "phrase": "what are you going to do",
+          "meaning_zh": "你打算怎么办"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "go",
+          "pos": "v.",
+          "meaning_zh": "去；进行；变得"
+        },
+        {
+          "word": "goer",
+          "pos": "n.",
+          "meaning_zh": "常去某处的人（如 moviegoer 常看电影的人）"
+        },
+        {
+          "word": "going",
+          "pos": "n.",
+          "meaning_zh": "离去；进展；（赛马场等的）地面状况"
+        }
+      ],
+      "status": "ready",
       "term": "going to do"
     },
     {
