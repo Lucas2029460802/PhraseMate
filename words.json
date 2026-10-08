@@ -1193,7 +1193,13 @@
     {
       "id": 107,
       "term": "portray",
-      "status": "pending",
+      "phonetic": "/pɔːˈtreɪ/",
+      "meaning_en": "To represent or describe someone or something in a particular way, especially in a work of art, film, or book; to play the role of a character.",
+      "meaning_zh": "描绘，描写，刻画；扮演，饰演（某个角色）",
+      "example_en": "She was chosen to portray a young queen in the new historical drama.",
+      "example_zh": "她被选中在这部新的历史剧中饰演一位年轻的王后。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:20:56Z"
     }
   ]
