@@ -1253,7 +1253,13 @@
     {
       "id": 112,
       "term": "alter",
-      "status": "pending",
+      "phonetic": "/ˈɔːltər/",
+      "meaning_en": "To change something, or to become different, often slightly.",
+      "meaning_zh": "改变；改动；修改；（使）变化",
+      "example_en": "We had to alter our plans because of the bad weather.",
+      "example_zh": "由于天气恶劣，我们不得不改变计划。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:28:19Z"
     }
   ]
