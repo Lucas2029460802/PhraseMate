@@ -1630,7 +1630,13 @@
     {
       "id": 144,
       "term": "hazard",
-      "status": "pending",
+      "phonetic": "/ˈhæzəd/",
+      "meaning_en": "A danger or risk, especially something that could cause harm or injury. As a verb, it means to risk losing something or to venture a guess.",
+      "meaning_zh": "危险；危害；隐患；风险；（动词）使遭受危险；冒险尝试；大胆猜测",
+      "example_en": "Smoking is a serious health hazard for both smokers and the people around them.",
+      "example_zh": "吸烟对吸烟者及其周围的人都是严重的健康危害。",
+      "part_of_speech": "n. / v.",
+      "status": "ready",
       "created_at": "2026-10-08T16:21:12Z"
     }
   ]
