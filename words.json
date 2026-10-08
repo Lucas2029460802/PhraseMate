@@ -1508,6 +1508,12 @@
       "part_of_speech": "n. / v.",
       "status": "ready",
       "created_at": "2026-10-08T16:03:35Z"
+    },
+    {
+      "id": 134,
+      "term": "blaze",
+      "status": "pending",
+      "created_at": "2026-10-08T16:04:09Z"
     }
   ]
 }
