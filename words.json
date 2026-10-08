@@ -2208,12 +2208,49 @@
     },
     {
       "created_at": "2026-08-13T19:27:13Z",
+      "example_en": "Teenagers often feel pressure to conform to their peers, but she resisted conformity.",
+      "example_zh": "青少年常常感到要顺从同龄人的压力，但她拒绝了从众。",
       "id": 56,
-      "meaning_en": "The state of things being similar or identical.; A point of resemblance; a similarity.",
-      "meaning_zh": "事物的状态相似或相同。;相似点;相似性。",
+      "meaning_en": "Behavior or thinking that matches what is expected by a group or society; compliance with rules or standards.",
+      "meaning_zh": "从众；遵从；符合；一致",
       "part_of_speech": "n.",
-      "phonetic": "/kənˈfɔːmɪti/",
-      "status": "pending",
+      "phonetic": "/kənˈfɔːrməti/",
+      "phrases": [
+        {
+          "phrase": "in conformity with",
+          "meaning_zh": "与……一致；遵照"
+        },
+        {
+          "phrase": "conformity to",
+          "meaning_zh": "对……的遵守；符合"
+        },
+        {
+          "phrase": "social conformity",
+          "meaning_zh": "社会从众"
+        },
+        {
+          "phrase": "conformity assessment",
+          "meaning_zh": "合格评定"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "conform",
+          "pos": "v.",
+          "meaning_zh": "遵守；符合；顺应"
+        },
+        {
+          "word": "conformist",
+          "pos": "adj.",
+          "meaning_zh": "墨守成规的；从众的"
+        },
+        {
+          "word": "nonconformist",
+          "pos": "adj.",
+          "meaning_zh": "不随大流的；不墨守成规的"
+        }
+      ],
+      "status": "ready",
       "term": "conformity"
     },
     {
