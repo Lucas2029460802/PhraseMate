@@ -297,14 +297,49 @@
     },
     {
       "created_at": "2026-08-07T15:01:30Z",
-      "example_en": "The sudden barking of the dog scared the heck out of the mailman.",
-      "example_zh": "狗突然叫起来，把邮递员吓得够呛。",
+      "example_en": "The sudden thunder scared the heck out of my little brother.",
+      "example_zh": "突如其来的雷声把我弟弟吓得要命。",
       "id": 9,
-      "meaning_en": "To frighten someone extremely badly; to scare someone very much.",
-      "meaning_zh": "把……吓得要命；吓得……半死",
+      "meaning_en": "To frighten someone very much; used to emphasize how scared someone was or is.",
+      "meaning_zh": "把某人吓得要命；把某人吓得不轻；使某人非常害怕。",
       "part_of_speech": "phrase",
-      "status": "pending",
-      "term": "scared the heck out of"
+      "phrases": [
+        {
+          "phrase": "scare someone to death",
+          "meaning_zh": "把某人吓得要死"
+        },
+        {
+          "phrase": "scare the living daylights out of someone",
+          "meaning_zh": "把某人吓得魂飞魄散"
+        },
+        {
+          "phrase": "be scared of",
+          "meaning_zh": "害怕……"
+        },
+        {
+          "phrase": "scared stiff",
+          "meaning_zh": "吓得僵住；非常害怕"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "scare",
+          "pos": "n.",
+          "meaning_zh": "惊吓；恐慌"
+        },
+        {
+          "word": "scary",
+          "pos": "adj.",
+          "meaning_zh": "可怕的；吓人的"
+        },
+        {
+          "word": "scarily",
+          "pos": "adv.",
+          "meaning_zh": "吓人地；令人惊恐地"
+        }
+      ],
+      "status": "ready",
+      "term": "scare the heck out of"
     },
     {
       "created_at": "2026-08-07T15:17:00Z",
