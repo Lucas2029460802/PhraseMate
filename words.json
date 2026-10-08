@@ -896,12 +896,44 @@
     },
     {
       "created_at": "2026-08-12T19:58:02Z",
+      "example_en": "Sound cannot travel through a vacuum.",
+      "example_zh": "声音无法在真空中传播。",
       "id": 26,
-      "meaning_en": "A region of space that contains no matter.; (plural only \"vacuums\") A vacuum cleaner.",
-      "meaning_zh": "包含无物质的空间区域； （仅限复数“吸尘器” ）吸尘器。",
+      "meaning_en": "A space completely empty of matter; also a vacuum cleaner, or a situation isolated from outside influences.",
+      "meaning_zh": "真空；空白；吸尘器；与外界隔绝的状态",
       "part_of_speech": "n.",
-      "phonetic": "/ˈvæ.kjuː.əm/",
-      "status": "pending",
+      "phonetic": "/ˈvækjuːm/",
+      "phrases": [
+        {
+          "phrase": "vacuum cleaner",
+          "meaning_zh": "吸尘器"
+        },
+        {
+          "phrase": "vacuum pump",
+          "meaning_zh": "真空泵"
+        },
+        {
+          "phrase": "in a vacuum",
+          "meaning_zh": "与外界隔绝；脱离实际"
+        },
+        {
+          "phrase": "vacuum tube",
+          "meaning_zh": "真空管"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "vacuous",
+          "pos": "adj.",
+          "meaning_zh": "空洞的；无思想的"
+        },
+        {
+          "word": "vacuously",
+          "pos": "adv.",
+          "meaning_zh": "空洞地；无意义地"
+        }
+      ],
+      "status": "ready",
       "term": "vacuum"
     },
     {
