@@ -1477,12 +1477,49 @@
     },
     {
       "created_at": "2026-08-13T18:09:53Z",
+      "example_en": "She teaches at an elementary school.",
+      "example_zh": "她在一所小学任教。",
       "id": 39,
-      "meaning_en": "An elementary school; (mysticism) A supernatural being which is associated with the elements.",
-      "meaning_zh": "小学； （神秘主义）与元素相关的超自然存在。",
-      "part_of_speech": "n.",
-      "phonetic": "/(ˌ)ɛlɪ̈ˈmɛnt(ə)ɹɪ/",
-      "status": "pending",
+      "meaning_en": "Relating to the basic elements or first principles; introductory or simple.",
+      "meaning_zh": "基本的；初级的；小学的",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˌeləˈmentəri/",
+      "phrases": [
+        {
+          "phrase": "elementary school",
+          "meaning_zh": "小学"
+        },
+        {
+          "phrase": "elementary education",
+          "meaning_zh": "初等教育"
+        },
+        {
+          "phrase": "elementary particle",
+          "meaning_zh": "基本粒子"
+        },
+        {
+          "phrase": "elementary algebra",
+          "meaning_zh": "初等代数"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "element",
+          "pos": "n.",
+          "meaning_zh": "元素；要素；基础"
+        },
+        {
+          "word": "elementarily",
+          "pos": "adv.",
+          "meaning_zh": "基本地；初级地"
+        },
+        {
+          "word": "elementariness",
+          "pos": "n.",
+          "meaning_zh": "基础性；初等性"
+        }
+      ],
+      "status": "ready",
       "term": "elementary"
     },
     {
