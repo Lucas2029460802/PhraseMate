@@ -452,15 +452,34 @@
     },
     {
       "created_at": "2026-08-07T16:02:37Z",
-      "example_en": "I listen to a Chinese pod every morning to practice my listening skills.",
-      "example_zh": "我每天早上听一个中文播客来练习听力。",
+      "example_en": "I use ChinesePod to study Mandarin during my commute.",
+      "example_zh": "我在通勤时用 ChinesePod 学习普通话。",
       "id": 14,
-      "meaning_en": "Informal term for a podcast in the Chinese language or about China.",
-      "meaning_zh": "中文播客，或关于中国的播客（非正式说法）",
+      "meaning_en": "A Chinese language-learning podcast and online platform, commonly known as ChinesePod, offering Mandarin lessons and audio content.",
+      "meaning_zh": "ChinesePod（中文学习播客/在线平台）；中文播客课程。",
       "part_of_speech": "phrase",
-      "phonetic": "/ˌtʃaɪˈniːz ˈpɒd/",
-      "status": "pending",
-      "term": "Chinese pod"
+      "phonetic": "/ˌtʃaɪˈniːz pɒd/",
+      "phrases": [
+        {
+          "phrase": "ChinesePod lesson",
+          "meaning_zh": "ChinesePod 课程"
+        },
+        {
+          "phrase": "ChinesePod app",
+          "meaning_zh": "ChinesePod 应用"
+        },
+        {
+          "phrase": "ChinesePod subscription",
+          "meaning_zh": "ChinesePod 订阅"
+        },
+        {
+          "phrase": "ChinesePod podcast",
+          "meaning_zh": "ChinesePod 播客"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
+      "term": "ChinesePod"
     },
     {
       "created_at": "2026-08-12T18:45:35Z",
