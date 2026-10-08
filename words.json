@@ -1650,6 +1650,12 @@
       "part_of_speech": "v.",
       "status": "ready",
       "created_at": "2026-10-08T16:21:51Z"
+    },
+    {
+      "id": 146,
+      "term": "mere",
+      "status": "pending",
+      "created_at": "2026-10-08T16:25:42Z"
     }
   ]
 }
