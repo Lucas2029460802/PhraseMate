@@ -1683,6 +1683,12 @@
       "part_of_speech": "adj.",
       "status": "ready",
       "created_at": "2026-10-08T16:27:30Z"
+    },
+    {
+      "id": 149,
+      "term": "shield",
+      "status": "pending",
+      "created_at": "2026-10-08T16:27:41Z"
     }
   ]
 }
