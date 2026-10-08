@@ -1373,8 +1373,20 @@
     {
       "id": 122,
       "term": "isolation",
-      "status": "pending",
+      "phonetic": "/ˌaɪsəˈleɪʃn/",
+      "meaning_en": "The state of being separated from other people, places, or things; the act of keeping someone or something apart.",
+      "meaning_zh": "隔离；孤立；隔绝；孤独；单独",
+      "example_en": "The patient was kept in isolation to prevent the virus from spreading.",
+      "example_zh": "为了防止病毒传播，这名病人被隔离了起来。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:50:44Z"
+    },
+    {
+      "id": 123,
+      "term": "rejoice",
+      "status": "pending",
+      "created_at": "2026-10-08T15:50:58Z"
     }
   ]
 }
