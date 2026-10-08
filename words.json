@@ -1153,6 +1153,12 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-08T15:19:37Z"
+    },
+    {
+      "id": 104,
+      "term": "domestication",
+      "status": "pending",
+      "created_at": "2026-10-08T15:19:50Z"
     }
   ]
 }
