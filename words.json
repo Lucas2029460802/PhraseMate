@@ -525,14 +525,33 @@
     },
     {
       "created_at": "2026-08-12T18:58:38Z",
-      "example_en": "We made a pit stop for coffee before continuing our road trip.",
-      "example_zh": "我们在继续公路旅行前停下来喝了杯咖啡。",
+      "example_en": "We made a quick pit stop for coffee before hitting the road again.",
+      "example_zh": "我们匆匆停了一下喝杯咖啡，然后又上路了。",
       "id": 16,
-      "meaning_en": "A short stop during a journey for refueling, rest, or refreshment, especially in motor racing.",
-      "meaning_zh": "（赛车的）进站加油；长途旅行中的短暂停留",
-      "part_of_speech": "phrase",
+      "meaning_en": "A short stop during a journey or a car race, made to refuel, rest, or make quick repairs.",
+      "meaning_zh": "（长途旅行中的）短暂停留，中途休息（加油、上厕所等）；（赛车比赛中的）进站维修加油",
+      "part_of_speech": "n.",
       "phonetic": "/ˈpɪt stɒp/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "make a pit stop",
+          "meaning_zh": "（中途）短暂停留一下"
+        },
+        {
+          "phrase": "a pit stop for fuel",
+          "meaning_zh": "为加油而短暂停车"
+        },
+        {
+          "phrase": "pit crew",
+          "meaning_zh": "赛车维修站工作人员"
+        },
+        {
+          "phrase": "pit lane",
+          "meaning_zh": "赛车维修通道"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "pit stop"
     },
     {
