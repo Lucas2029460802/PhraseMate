@@ -1001,6 +1001,12 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-08T15:07:11Z"
+    },
+    {
+      "id": 91,
+      "term": "distinguish",
+      "status": "pending",
+      "created_at": "2026-10-08T15:07:26Z"
     }
   ]
 }
