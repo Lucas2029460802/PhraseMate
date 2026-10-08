@@ -483,12 +483,44 @@
     },
     {
       "created_at": "2026-08-12T18:45:35Z",
+      "example_en": "The burial took place in a small churchyard at dawn.",
+      "example_zh": "葬礼在黎明时分于一座小教堂墓地里举行。",
       "id": 15,
-      "meaning_en": "The act of burying; interment",
-      "meaning_zh": "埋葬的行为；安葬",
+      "meaning_en": "The act or ceremony of putting a dead body into the ground or a tomb; also the place where someone is buried.",
+      "meaning_zh": "埋葬；葬礼；墓地，葬处",
       "part_of_speech": "n.",
-      "phonetic": "/ˈbɛɹɪəl/",
-      "status": "pending",
+      "phonetic": "/ˈberiəl/",
+      "phrases": [
+        {
+          "phrase": "burial ground",
+          "meaning_zh": "墓地，坟场"
+        },
+        {
+          "phrase": "burial service",
+          "meaning_zh": "葬礼仪式"
+        },
+        {
+          "phrase": "burial mound",
+          "meaning_zh": "坟冢，土墩墓"
+        },
+        {
+          "phrase": "burial at sea",
+          "meaning_zh": "海葬"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "bury",
+          "pos": "v.",
+          "meaning_zh": "埋葬；掩埋；隐藏"
+        },
+        {
+          "word": "buried",
+          "pos": "adj.",
+          "meaning_zh": "被埋葬的；埋藏的；深藏的"
+        }
+      ],
+      "status": "ready",
       "term": "burial"
     },
     {
