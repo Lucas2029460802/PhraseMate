@@ -1189,6 +1189,12 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-08T15:20:29Z"
+    },
+    {
+      "id": 107,
+      "term": "portray",
+      "status": "pending",
+      "created_at": "2026-10-08T15:20:56Z"
     }
   ]
 }
