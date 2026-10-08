@@ -810,11 +810,45 @@
     },
     {
       "created_at": "2026-08-12T19:55:39Z",
+      "example_en": "She wiped the table until it was spotless.",
+      "example_zh": "她把桌子擦得一尘不染。",
       "id": 24,
-      "meaning_en": "Exceptionally clean.; Impeccable and free from blemish.",
-      "meaning_zh": "非常干净；无可挑剔，没有瑕疵。",
+      "meaning_en": "Completely clean; free from spots, stains, or dirt.",
+      "meaning_zh": "一尘不染的；非常干净的；无污点的；清白的",
       "part_of_speech": "adj.",
-      "status": "pending",
+      "phonetic": "/ˈspɒtləs/",
+      "phrases": [
+        {
+          "phrase": "spotless record",
+          "meaning_zh": "无污点的记录；清白的履历"
+        },
+        {
+          "phrase": "spotless reputation",
+          "meaning_zh": "清白的名声"
+        },
+        {
+          "phrase": "keep something spotless",
+          "meaning_zh": "使某物保持一尘不染"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "spot",
+          "pos": "n.",
+          "meaning_zh": "斑点；污点；地点"
+        },
+        {
+          "word": "spotlessly",
+          "pos": "adv.",
+          "meaning_zh": "一尘不染地；无瑕地"
+        },
+        {
+          "word": "spotlessness",
+          "pos": "n.",
+          "meaning_zh": "一尘不染；无瑕"
+        }
+      ],
+      "status": "ready",
       "term": "spotless"
     },
     {
