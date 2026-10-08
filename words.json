@@ -1005,7 +1005,13 @@
     {
       "id": 91,
       "term": "distinguish",
-      "status": "pending",
+      "phonetic": "/dɪˈstɪŋɡwɪʃ/",
+      "meaning_en": "To recognize or show the difference between two or more things; to make something different or special.",
+      "meaning_zh": "区分，辨别，分辨；使有别于，使突出；辨认出。",
+      "example_en": "It is hard to distinguish between the twin sisters.",
+      "example_zh": "很难分辨这对双胞胎姐妹。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:07:26Z"
     }
   ]
