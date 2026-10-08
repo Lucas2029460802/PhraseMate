@@ -1237,14 +1237,49 @@
     },
     {
       "created_at": "2026-08-13T08:25:29Z",
-      "example_en": "We're renting a property in the city centre because we can't afford to get a mortgage yet.",
-      "example_zh": "我们正在市中心租房，因为我们还买不起抵押贷款。",
+      "example_en": "They took out a thirty-year mortgage to buy their first house.",
+      "example_zh": "他们申请了一笔三十年期的按揭贷款来买第一套房子。",
       "id": 34,
-      "meaning_en": "A special form of secured loan where the purpose of the loan must be specified to the lender, to purchase assets that must be fixed (not movable) property, such as a house or piece of farm land. The assets are registered as the legal property of the borrower but the lender can seize them and dispose of them if they are not satisfied with the manner in which the repayment of the loan is conducted by the borrower. Once the loan is fully repaid, the lender loses this right of seizure and the assets are then deemed to be unencumbered.",
-      "meaning_zh": "A special form of secured loan where the purpose of the loan must be specified to the lender, to purchase assets that must be fixed (not movable) property, such as a house or piece of farm land. The assets are registered as the legal property of the borrower but the lender can seize them and dispose of them if they are not satisfied with the manner in which the repayment of the loan is conducted by the borrower. Once the loan is fully repaid, the lender loses this right of seizure and the assets are then deemed to be unencumbered.",
-      "part_of_speech": "n.",
-      "phonetic": "/ˈmɔː.ɡɪdʒ/",
-      "status": "pending",
+      "meaning_en": "A loan of money used to buy property, in which the property itself is the security for the loan. As a verb, it means to use property as security for such a loan.",
+      "meaning_zh": "n. 抵押贷款；按揭（以房产等作担保的借款）；v. 抵押（房产等）以取得贷款",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈmɔːrɡɪdʒ/",
+      "phrases": [
+        {
+          "phrase": "take out a mortgage",
+          "meaning_zh": "申请抵押贷款"
+        },
+        {
+          "phrase": "pay off a mortgage",
+          "meaning_zh": "还清抵押贷款"
+        },
+        {
+          "phrase": "mortgage rate",
+          "meaning_zh": "抵押贷款利率"
+        },
+        {
+          "phrase": "subprime mortgage",
+          "meaning_zh": "次级抵押贷款"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "mortgagee",
+          "pos": "n.",
+          "meaning_zh": "抵押权人；受押人（放贷方）"
+        },
+        {
+          "word": "mortgagor",
+          "pos": "n.",
+          "meaning_zh": "抵押人；出押人（借款方）"
+        },
+        {
+          "word": "mortgageable",
+          "pos": "adj.",
+          "meaning_zh": "可抵押的"
+        }
+      ],
+      "status": "ready",
       "term": "mortgage"
     },
     {
