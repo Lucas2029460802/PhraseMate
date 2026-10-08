@@ -1618,7 +1618,13 @@
     {
       "id": 143,
       "term": "oversee",
-      "status": "pending",
+      "phonetic": "/ˌəʊvəˈsiː/",
+      "meaning_en": "To watch over and direct a person, activity, or process in order to make sure that it is done properly.",
+      "meaning_zh": "监督；管理；监管；照管",
+      "example_en": "She was hired to oversee the construction of the new bridge.",
+      "example_zh": "她被聘来监督这座新桥的建造工程。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T16:16:00Z"
     }
   ]
