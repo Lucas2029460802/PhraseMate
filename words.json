@@ -556,12 +556,49 @@
     },
     {
       "created_at": "2026-08-12T19:43:43Z",
+      "example_en": "The old house had a creepy atmosphere that made everyone uneasy.",
+      "example_zh": "那座老房子有一种令人毛骨悚然的气氛，让每个人都感到不安。",
       "id": 17,
-      "meaning_en": "Moving by creeping along.; Producing an uneasy fearful sensation, as of things crawling over one's skin.",
-      "meaning_zh": "通过爬行移动。;产生一种不安的恐惧感，如爬过皮肤的东西。",
+      "meaning_en": "Causing an unpleasant feeling of fear or unease; strange in a frightening way.",
+      "meaning_zh": "令人毛骨悚然的；诡异的；使人不安的",
       "part_of_speech": "adj.",
-      "phonetic": "/ˈkɹiːpi/",
-      "status": "pending",
+      "phonetic": "/ˈkriːpi/",
+      "phrases": [
+        {
+          "phrase": "creepy feeling",
+          "meaning_zh": "毛骨悚然的感觉"
+        },
+        {
+          "phrase": "creepy story",
+          "meaning_zh": "恐怖故事"
+        },
+        {
+          "phrase": "creepy guy",
+          "meaning_zh": "令人毛骨悚然的家伙"
+        },
+        {
+          "phrase": "creepy-crawly",
+          "meaning_zh": "爬虫；令人毛骨悚然的（东西）"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "creep",
+          "pos": "v.",
+          "meaning_zh": "爬行；蔓延；令人毛骨悚然"
+        },
+        {
+          "word": "creepiness",
+          "pos": "n.",
+          "meaning_zh": "毛骨悚然；诡异"
+        },
+        {
+          "word": "creepily",
+          "pos": "adv.",
+          "meaning_zh": "令人毛骨悚然地"
+        }
+      ],
+      "status": "ready",
       "term": "creepy"
     },
     {
