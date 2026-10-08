@@ -1707,18 +1707,6 @@
       "part_of_speech": "v.",
       "status": "ready",
       "created_at": "2026-10-08T17:43:27Z"
-    },
-    {
-      "id": 152,
-      "term": "interest",
-      "phonetic": "/ˈɪntəɹɪst/",
-      "meaning_en": "The price paid for obtaining, or price received for providing, money or goods in a credit transaction, calculated as a fraction of the amount or value of what was borrowed",
-      "meaning_zh": "兴趣，好奇心；利益，利害关系；利息；股份，权益。作动词时意为使感兴趣，引起……的关注。",
-      "example_en": "Our bank offers borrowers an annual interest of 5%.",
-      "example_zh": "她对古代历史有着浓厚的兴趣，每天都读相关的书。",
-      "part_of_speech": "n.",
-      "status": "ready",
-      "created_at": "2026-10-08T17:43:49Z"
     }
   ]
 }
