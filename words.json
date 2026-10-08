@@ -1570,18 +1570,6 @@
       "created_at": "2026-10-08T16:07:31Z"
     },
     {
-      "id": 139,
-      "term": "eroded",
-      "phonetic": "/ɪˈrəʊdɪd/",
-      "meaning_en": "Gradually worn away or destroyed by wind, water, or other natural forces; also, gradually weakened or reduced over time.",
-      "meaning_zh": "被侵蚀的；被腐蚀的；（力量、价值、信心等）被逐渐削弱的，受到损害的",
-      "example_en": "The cliffs have been eroded by the sea over many centuries.",
-      "example_zh": "几个世纪以来，这些悬崖不断受到海水的侵蚀。",
-      "part_of_speech": "adj.",
-      "status": "ready",
-      "created_at": "2026-10-08T16:12:13Z"
-    },
-    {
       "id": 140,
       "term": "ignite",
       "phonetic": "/ɪɡˈnaɪt/",
