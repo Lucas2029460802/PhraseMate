@@ -945,7 +945,13 @@
     {
       "id": 86,
       "term": "legitimate",
-      "status": "pending",
+      "phonetic": "/lɪˈdʒɪtɪmət/",
+      "meaning_en": "Allowed or required by law; reasonable and fair; genuine or valid.",
+      "meaning_zh": "合法的；正当的；合理的；名副其实的",
+      "example_en": "She has a legitimate claim to the property.",
+      "example_zh": "她对这处房产有合法的所有权主张。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-10-08T11:12:47Z"
     }
   ]
