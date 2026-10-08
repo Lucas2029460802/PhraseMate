@@ -1983,14 +1983,49 @@
     },
     {
       "created_at": "2026-08-13T19:16:37Z",
-      "example_en": "The accentuation of the first syllable is important in this word.",
-      "example_zh": "在这个词中，第一个音节的重读很重要。",
+      "example_en": "The accentuation of key words helps listeners follow the argument.",
+      "example_zh": "重读关键词有助于听众跟上论证。",
       "id": 51,
-      "meaning_en": "The act of emphasizing or making something more noticeable.",
-      "meaning_zh": "强调；重读；加重",
+      "meaning_en": "The act of emphasizing something or making it more noticeable; especially the stressing of a syllable, word, or musical note.",
+      "meaning_zh": "强调；突出；重读；重音；加强",
       "part_of_speech": "n.",
       "phonetic": "/əkˌsentʃuˈeɪʃn/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "accentuation of contrast",
+          "meaning_zh": "对比的强调"
+        },
+        {
+          "phrase": "syllable accentuation",
+          "meaning_zh": "音节重读"
+        },
+        {
+          "phrase": "accentuation pattern",
+          "meaning_zh": "重音模式"
+        },
+        {
+          "phrase": "accentuation mark",
+          "meaning_zh": "重音符号"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "accentuate",
+          "pos": "v.",
+          "meaning_zh": "强调；突出；使更明显"
+        },
+        {
+          "word": "accentual",
+          "pos": "adj.",
+          "meaning_zh": "重音的；抑扬的"
+        },
+        {
+          "word": "accented",
+          "pos": "adj.",
+          "meaning_zh": "带重音的；有口音的"
+        }
+      ],
+      "status": "ready",
       "term": "accentuation"
     },
     {
