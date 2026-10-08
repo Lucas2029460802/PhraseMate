@@ -1598,14 +1598,34 @@
     },
     {
       "created_at": "2026-08-13T18:26:17Z",
-      "example_en": "Mom will have a fit when she sees the mess in the kitchen.",
-      "example_zh": "妈妈看到厨房这么乱会大发雷霆的。",
+      "example_en": "My mother had a fit when she saw my messy room.",
+      "example_zh": "我妈妈看到我房间乱糟糟时大发雷霆。",
       "id": 42,
-      "meaning_en": "To be very angry or upset; to have a sudden emotional outburst.",
-      "meaning_zh": "大发雷霆；非常生气或心烦意乱",
+      "meaning_en": "To become extremely angry, upset, or shocked; also to experience a sudden attack or seizure.",
+      "meaning_zh": "大发雷霆；非常生气或震惊；突然发作（如癫痫等）",
       "part_of_speech": "phrase",
-      "status": "pending",
-      "term": "having a fit"
+      "phonetic": "/hæv ə fɪt/",
+      "phrases": [
+        {
+          "phrase": "throw a fit",
+          "meaning_zh": "大发雷霆；大发脾气"
+        },
+        {
+          "phrase": "have a fit over",
+          "meaning_zh": "为……大发雷霆"
+        },
+        {
+          "phrase": "a fit of anger",
+          "meaning_zh": "一阵怒火"
+        },
+        {
+          "phrase": "in fits and starts",
+          "meaning_zh": "断断续续地；一阵一阵地"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
+      "term": "have a fit"
     },
     {
       "created_at": "2026-08-13T18:28:04Z",
