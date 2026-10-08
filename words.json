@@ -1188,15 +1188,51 @@
       "term": "mob"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/loan-us.mp3",
       "created_at": "2026-08-13T08:25:03Z",
       "example_en": "Because of the loan that John made to me, I was able to pay my tuition for the upcoming semester.",
-      "example_zh": "由于John向我提供了贷款，我能够支付即将到来的学期的学费。",
+      "example_zh": "她申请了一笔贷款来支付学费。",
       "id": 33,
-      "meaning_en": "An act or instance of lending, an act or instance of granting something for temporary use.",
-      "meaning_zh": "借贷的行为或实例，授予某物以供临时使用的行为或实例。",
+      "meaning_en": "An act or instance of lending, an act or instance of granting something for temporary use",
+      "meaning_zh": "贷款；借款；借出；借贷",
       "part_of_speech": "n.",
       "phonetic": "/ləʊn/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "student loan",
+          "meaning_zh": "学生贷款"
+        },
+        {
+          "phrase": "bank loan",
+          "meaning_zh": "银行贷款"
+        },
+        {
+          "phrase": "loan shark",
+          "meaning_zh": "放高利贷者"
+        },
+        {
+          "phrase": "on loan",
+          "meaning_zh": "借用中；出借"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "loanable",
+          "pos": "adj.",
+          "meaning_zh": "可借贷的；可出借的"
+        },
+        {
+          "word": "loaner",
+          "pos": "n.",
+          "meaning_zh": "出借人；借用物"
+        },
+        {
+          "word": "loanee",
+          "pos": "n.",
+          "meaning_zh": "借款人；借入者"
+        }
+      ],
+      "status": "ready",
       "term": "loan"
     },
     {
