@@ -1719,14 +1719,45 @@
     },
     {
       "created_at": "2026-08-13T18:29:26Z",
-      "example_en": "Are you nuts? You can't jump off the roof!",
-      "example_zh": "你疯了么？你不能从屋顶跳下去！",
+      "example_en": "You spent your whole salary on sneakers? Are you nuts?",
+      "example_zh": "你把整个月的工资都拿去买运动鞋了？你疯了吗？",
       "id": 45,
-      "meaning_en": "Used to ask if someone is insane or acting foolishly.",
-      "meaning_zh": "你疯了么？你脑子正常吗？",
+      "meaning_en": "An informal and often rude way of asking whether someone is crazy or is behaving very foolishly.",
+      "meaning_zh": "（非正式，常含冒犯）你疯了吗？；你脑子有毛病吗？",
       "part_of_speech": "phrase",
       "phonetic": "/ɑːr juː nʌts/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "go nuts",
+          "meaning_zh": "发疯；暴怒；极度兴奋"
+        },
+        {
+          "phrase": "drive someone nuts",
+          "meaning_zh": "把某人逼疯；使某人心烦意乱"
+        },
+        {
+          "phrase": "be nuts about something",
+          "meaning_zh": "对某事痴迷；非常喜爱"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "nut",
+          "pos": "n.",
+          "meaning_zh": "坚果；疯子（俚语）"
+        },
+        {
+          "word": "nutty",
+          "pos": "adj.",
+          "meaning_zh": "古怪的；疯疯癫癫的；有坚果味的"
+        },
+        {
+          "word": "nutcase",
+          "pos": "n.",
+          "meaning_zh": "疯子；行为古怪的人"
+        }
+      ],
+      "status": "ready",
       "term": "are you nuts"
     },
     {
