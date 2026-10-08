@@ -2114,11 +2114,49 @@
     },
     {
       "created_at": "2026-08-13T19:18:45Z",
+      "example_en": "The university has revised its curricula to include more data science courses.",
+      "example_zh": "这所大学修订了课程设置，纳入了更多数据科学课程。",
       "id": 54,
-      "meaning_en": "The set of courses, coursework, and their content, offered at a school or university.; A racecourse; a place for running.",
-      "meaning_zh": "学校或大学提供的一套课程、课程作业及其内容。;赛马场;跑步的地方。",
+      "meaning_en": "The plural of curriculum: the subjects taught in a school, college, or university.",
+      "meaning_zh": "课程；全部课程（curriculum 的复数形式）",
       "part_of_speech": "n.",
-      "status": "pending",
+      "phonetic": "/kəˈrɪkjələ/",
+      "phrases": [
+        {
+          "phrase": "school curricula",
+          "meaning_zh": "学校课程"
+        },
+        {
+          "phrase": "national curricula",
+          "meaning_zh": "国家课程"
+        },
+        {
+          "phrase": "core curricula",
+          "meaning_zh": "核心课程"
+        },
+        {
+          "phrase": "curricula vitae",
+          "meaning_zh": "履历；简历（curriculum vitae 的复数）"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "curricular",
+          "pos": "adj.",
+          "meaning_zh": "课程的；与课程相关的"
+        },
+        {
+          "word": "extracurricular",
+          "pos": "adj.",
+          "meaning_zh": "课外的；业余的"
+        },
+        {
+          "word": "cocurricular",
+          "pos": "adj.",
+          "meaning_zh": "辅助课程的；与课程相辅的"
+        }
+      ],
+      "status": "ready",
       "term": "curricula"
     },
     {
