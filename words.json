@@ -1016,14 +1016,29 @@
     },
     {
       "created_at": "2026-08-13T08:19:45Z",
-      "example_en": "I need to hoover the living room before the guests arrive.",
-      "example_zh": "客人来之前我需要用吸尘器打扫一下客厅。",
+      "example_en": "She asked me to hoover the stairs while she cleaned the kitchen.",
+      "example_zh": "她让我用吸尘器吸楼梯，她则打扫厨房。",
       "id": 29,
-      "meaning_en": "To clean with a vacuum cleaner.",
-      "meaning_zh": "用吸尘器吸尘；用真空吸尘器打扫",
-      "part_of_speech": "v.",
-      "phonetic": "/ˈhuːvər/",
-      "status": "pending",
+      "meaning_en": "A vacuum cleaner, especially in British English; as a verb, to clean a floor, carpet, etc. with a vacuum cleaner.",
+      "meaning_zh": "（英式）吸尘器；用吸尘器打扫；胡佛（品牌名或人名，常大写）",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈhuːvə(r)/",
+      "phrases": [
+        {
+          "phrase": "hoover up",
+          "meaning_zh": "用吸尘器吸干净；迅速获取或搜刮"
+        },
+        {
+          "phrase": "hoover the carpet",
+          "meaning_zh": "用吸尘器打扫地毯"
+        },
+        {
+          "phrase": "do the hoovering",
+          "meaning_zh": "用吸尘器打扫（英式）"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "hoover"
     },
     {
