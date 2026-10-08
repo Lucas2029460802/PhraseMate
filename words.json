@@ -1229,7 +1229,13 @@
     {
       "id": 110,
       "term": "asses",
-      "status": "pending",
+      "phonetic": "/ˈæsɪz/",
+      "meaning_en": "The plural form of 'ass', meaning donkeys, or (informally and rudely) a person's buttocks. It can also mean foolish or stubborn people.",
+      "meaning_zh": "ass 的复数形式：驴（多匹驴）；(粗俗) 屁股；(口语) 蠢人、固执的人。",
+      "example_en": "The farmer led three asses along the dusty road.",
+      "example_zh": "农夫牵着三头驴沿着尘土飞扬的土路走去。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:24:52Z"
     }
   ]
