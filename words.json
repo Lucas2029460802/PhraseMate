@@ -2030,14 +2030,33 @@
     },
     {
       "created_at": "2026-08-13T19:17:08Z",
-      "example_en": "a spurt of water; a spurt of blood",
-      "example_zh": "一阵水流；一阵血流",
+      "example_en": "The water spurted out of the cracked pipe.",
+      "example_zh": "水从破裂的管道里喷了出来。",
       "id": 52,
-      "meaning_en": "A brief gush, as of liquid spurting from an orifice or a cut/wound.; Ejaculation of semen.",
-      "meaning_zh": "短暂的涌出，如从孔口或切口/伤口喷出的液体。；精液射精。",
-      "part_of_speech": "n.",
-      "phonetic": "/spɜː(r)t/",
-      "status": "pending",
+      "meaning_en": "A sudden, short burst of liquid, activity, energy, or growth; to gush or burst out suddenly.",
+      "meaning_zh": "（液体、火焰等的）喷出，涌出；迸发，冲刺；喷出，涌出；突然加速",
+      "part_of_speech": "n., v.",
+      "phonetic": "/spɜːrt/",
+      "phrases": [
+        {
+          "phrase": "growth spurt",
+          "meaning_zh": "生长突增；发育猛增期"
+        },
+        {
+          "phrase": "spurt of energy",
+          "meaning_zh": "一股精力；精力迸发"
+        },
+        {
+          "phrase": "spurt out",
+          "meaning_zh": "喷出；涌出"
+        },
+        {
+          "phrase": "spurt from",
+          "meaning_zh": "从……喷出"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "spurt"
     },
     {
