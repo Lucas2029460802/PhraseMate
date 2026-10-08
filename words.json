@@ -1842,14 +1842,44 @@
     },
     {
       "created_at": "2026-08-13T19:12:02Z",
-      "example_en": "During adolescence, the body and mind go through many complex changes, some of which are difficult to deal with.",
-      "example_zh": "在青春期，身心经历了许多复杂的变化，其中一些很难处理。",
+      "example_en": "During adolescence, many young people begin to form their own identities.",
+      "example_zh": "在青春期，许多年轻人开始形成自己的身份认同。",
       "id": 48,
-      "meaning_en": "The transitional period of physical and psychological development between childhood and maturity.",
-      "meaning_zh": "童年和成熟之间的身心发展的过渡时期。",
+      "meaning_en": "The period of life between childhood and adulthood, typically beginning with puberty.",
+      "meaning_zh": "青春期；青少年时期",
       "part_of_speech": "n.",
-      "phonetic": "/ˌædəˈlɛsəns/",
-      "status": "pending",
+      "phonetic": "/ˌædəˈlesəns/",
+      "phrases": [
+        {
+          "phrase": "during adolescence",
+          "meaning_zh": "在青春期"
+        },
+        {
+          "phrase": "early adolescence",
+          "meaning_zh": "青春期早期"
+        },
+        {
+          "phrase": "late adolescence",
+          "meaning_zh": "青春期后期"
+        },
+        {
+          "phrase": "the onset of adolescence",
+          "meaning_zh": "青春期的开始"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "adolescent",
+          "pos": "adj.",
+          "meaning_zh": "青春期的；青少年的"
+        },
+        {
+          "word": "adolesce",
+          "pos": "v.",
+          "meaning_zh": "进入青春期；发育成熟"
+        }
+      ],
+      "status": "ready",
       "term": "adolescence"
     },
     {
