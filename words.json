@@ -1025,6 +1025,12 @@
       "part_of_speech": "adj.",
       "status": "ready",
       "created_at": "2026-10-08T15:07:45Z"
+    },
+    {
+      "id": 93,
+      "term": "cosmetic",
+      "status": "pending",
+      "created_at": "2026-10-08T15:08:36Z"
     }
   ]
 }
