@@ -1675,7 +1675,13 @@
     {
       "id": 148,
       "term": "techno-social",
-      "status": "pending",
+      "phonetic": "/ˌteknoʊˈsoʊʃəl/",
+      "meaning_en": "Relating to the interaction or combination of technology and social structures, practices, or human relationships. Often used to describe systems in which technical and social elements shape each other.",
+      "meaning_zh": "技术-社会的；科技与社会互动的；兼有技术与社会双重属性的。常用于描述技术因素与社会因素相互作用、彼此塑造的系统或现象。",
+      "example_en": "The internet is a techno-social system in which technical protocols and human behaviour constantly shape each other.",
+      "example_zh": "互联网是一个技术—社会系统，其中技术协议与人类行为不断相互塑造。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-10-08T16:27:30Z"
     }
   ]
