@@ -1800,13 +1800,44 @@
     },
     {
       "created_at": "2026-08-13T19:00:17Z",
-      "example_en": "We took a side street to avoid the heavy traffic on the main road.",
-      "example_zh": "我们走了一条小路，以避开主干道上的繁忙交通。",
+      "example_en": "To avoid the traffic jam on the main road, we took a side street and still arrived on time.",
+      "example_zh": "为了避开主路上的堵车，我们拐进了一条小路，还是准时到了。",
       "id": 47,
-      "meaning_en": "To choose a smaller, less busy street instead of a main road, often to avoid traffic or as a shortcut.",
-      "meaning_zh": "走小路；走侧街（通常为了避开交通或抄近路）",
+      "meaning_en": "To turn onto a smaller, less busy road that branches off a main road, usually to avoid traffic or reach a place faster.",
+      "meaning_zh": "拐进小路（侧街）；走岔路；抄小路绕行",
       "part_of_speech": "phrase",
-      "status": "pending",
+      "phonetic": "/teɪk ə saɪd striːt/",
+      "phrases": [
+        {
+          "phrase": "side road",
+          "meaning_zh": "支路；岔路"
+        },
+        {
+          "phrase": "back street",
+          "meaning_zh": "后街；僻静的小街"
+        },
+        {
+          "phrase": "take a detour",
+          "meaning_zh": "绕道而行"
+        },
+        {
+          "phrase": "side by side",
+          "meaning_zh": "并排地；并肩地"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "side street",
+          "pos": "n.",
+          "meaning_zh": "侧街；小路；岔街"
+        },
+        {
+          "word": "side",
+          "pos": "adj.",
+          "meaning_zh": "侧面的；旁边的；次要的"
+        }
+      ],
+      "status": "ready",
       "term": "take a side street"
     },
     {
