@@ -869,6 +869,12 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-03T13:24:07Z"
+    },
+    {
+      "id": 80,
+      "term": "perturbation",
+      "status": "pending",
+      "created_at": "2026-10-08T10:51:37Z"
     }
   ]
 }
