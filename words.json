@@ -1261,6 +1261,12 @@
       "part_of_speech": "v.",
       "status": "ready",
       "created_at": "2026-10-08T15:28:19Z"
+    },
+    {
+      "id": 113,
+      "term": "melodramatic",
+      "status": "pending",
+      "created_at": "2026-10-08T15:31:28Z"
     }
   ]
 }
