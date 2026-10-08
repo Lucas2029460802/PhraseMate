@@ -1433,8 +1433,18 @@
     {
       "id": 127,
       "term": "serendipity",
-      "status": "pending",
+      "phonetic": "/ˌsɛ.ɹən.ˈdɪ.pɪ.ti/",
+      "meaning_en": "A combination of events which have come together by chance to make a surprisingly good or wonderful outcome",
+      "meaning_zh": "偶然结合在一起的事件，产生了令人惊讶的好或美妙的结果",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:55:38Z"
+    },
+    {
+      "id": 128,
+      "term": "enlivening",
+      "status": "pending",
+      "created_at": "2026-10-08T15:55:49Z"
     }
   ]
 }
