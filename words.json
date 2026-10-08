@@ -1289,7 +1289,13 @@
     {
       "id": 115,
       "term": "nostalgia",
-      "status": "pending",
+      "phonetic": "/nɒˈstældʒə/",
+      "meaning_en": "A sentimental longing or wistful affection for a past period, place, or experience that one remembers fondly.",
+      "meaning_zh": "怀旧；怀旧之情；对往昔（或故乡）的眷恋与思念。",
+      "example_en": "Listening to that old song filled her with nostalgia for the summers of her childhood.",
+      "example_zh": "听那首老歌让她对童年的夏天充满了怀念。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:36:33Z"
     }
   ]
