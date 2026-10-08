@@ -1781,18 +1781,6 @@
       "phonetic": "/ˈsɛlfi ˈvænəti/",
       "status": "pending",
       "term": "selfie-vanity"
-    },
-    {
-      "created_at": "2026-10-08T17:43:27Z",
-      "example_en": "Heavy rain has eroded the cliffs along the coast over the past century.",
-      "example_zh": "过去一个世纪里，大雨不断侵蚀着沿海的悬崖。",
-      "id": 151,
-      "meaning_en": "To wear away or destroy something gradually, especially by wind, water, or chemical action; also used figuratively for gradually reducing or weakening something such as confidence, power, or value.",
-      "meaning_zh": "侵蚀；腐蚀；（逐渐地）削弱、损害（信心、权力、价值等）；使逐渐减少",
-      "part_of_speech": "v.",
-      "phonetic": "/ɪˈrəʊd/",
-      "status": "pending",
-      "term": "erode"
     }
   ]
 }
