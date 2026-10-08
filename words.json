@@ -1430,12 +1430,49 @@
     },
     {
       "created_at": "2026-08-13T18:07:27Z",
+      "example_en": "The ambulance arrived within minutes.",
+      "example_zh": "救护车几分钟内就到了。",
       "id": 38,
-      "meaning_en": "An emergency vehicle designed for transporting seriously ill or injured people to a hospital.; A mobile field hospital.",
-      "meaning_zh": "用于将重病患者或受伤人员运送到医院的紧急车辆。;流动野战医院。",
+      "meaning_en": "A vehicle specially equipped for taking sick or injured people to and from hospital, especially in emergencies.",
+      "meaning_zh": "救护车",
       "part_of_speech": "n.",
-      "phonetic": "/ˈæm.bjə.ləns/",
-      "status": "pending",
+      "phonetic": "/ˈæmbjələns/",
+      "phrases": [
+        {
+          "phrase": "call an ambulance",
+          "meaning_zh": "叫救护车"
+        },
+        {
+          "phrase": "ambulance service",
+          "meaning_zh": "救护车服务"
+        },
+        {
+          "phrase": "ambulance crew",
+          "meaning_zh": "救护车急救人员"
+        },
+        {
+          "phrase": "air ambulance",
+          "meaning_zh": "空中救护车"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "ambulate",
+          "pos": "v.",
+          "meaning_zh": "行走；移动"
+        },
+        {
+          "word": "ambulatory",
+          "pos": "adj.",
+          "meaning_zh": "可走动的；流动的"
+        },
+        {
+          "word": "ambulant",
+          "pos": "adj.",
+          "meaning_zh": "能走动的；非卧床的"
+        }
+      ],
+      "status": "ready",
       "term": "ambulance"
     },
     {
