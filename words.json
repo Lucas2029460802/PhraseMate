@@ -650,14 +650,29 @@
     },
     {
       "created_at": "2026-08-12T19:45:57Z",
-      "example_en": "He took his old car to the scrap yard to sell it for parts.",
-      "example_zh": "他把旧车送到废品场卖零件。",
+      "example_en": "The old cars were towed to the scrap yard and crushed.",
+      "example_zh": "那些旧汽车被拖到废品场压碎了。",
       "id": 19,
-      "meaning_en": "A place where scrap metal or waste materials are collected, processed, and sold.",
-      "meaning_zh": "废品场；废料场",
+      "meaning_en": "A place where scrap metal or other waste materials are collected, processed, or sold.",
+      "meaning_zh": "废品场；废金属回收站",
       "part_of_speech": "phrase",
-      "phonetic": "/skræp jɑːrd/",
-      "status": "pending",
+      "phonetic": "/ˈskræp jɑːrd/",
+      "phrases": [
+        {
+          "phrase": "scrap yard owner",
+          "meaning_zh": "废品场老板"
+        },
+        {
+          "phrase": "scrap yard worker",
+          "meaning_zh": "废品场工人"
+        },
+        {
+          "phrase": "take sth to the scrap yard",
+          "meaning_zh": "把某物送到废品场"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "scrap yard"
     },
     {
