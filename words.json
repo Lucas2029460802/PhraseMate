@@ -1157,7 +1157,13 @@
     {
       "id": 104,
       "term": "domestication",
-      "status": "pending",
+      "phonetic": "/dəˌmestɪˈkeɪʃn/",
+      "meaning_en": "The process of taming wild animals or plants so that they can be kept and used by humans; also the act of making someone accustomed to home life.",
+      "meaning_zh": "驯化，培育（野生动植物）；使适应家庭生活，归化。",
+      "example_en": "The domestication of dogs is believed to have begun more than 15,000 years ago.",
+      "example_zh": "据信，狗的驯化始于一万五千多年前。",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T15:19:50Z"
     }
   ]
