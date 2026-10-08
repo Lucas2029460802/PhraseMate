@@ -1297,6 +1297,12 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-08T15:36:33Z"
+    },
+    {
+      "id": 116,
+      "term": "incentive",
+      "status": "pending",
+      "created_at": "2026-10-08T15:38:20Z"
     }
   ]
 }
