@@ -1385,7 +1385,13 @@
     {
       "id": 123,
       "term": "rejoice",
-      "status": "pending",
+      "phonetic": "/rɪˈdʒɔɪs/",
+      "meaning_en": "To feel or show great happiness and joy about something. It is often used in formal or literary contexts.",
+      "meaning_zh": "高兴，欣喜，欢欣鼓舞；（使）感到喜悦",
+      "example_en": "The whole village rejoiced when they heard the good news.",
+      "example_zh": "听到这个好消息，全村人都欢欣鼓舞。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:50:58Z"
     }
   ]
