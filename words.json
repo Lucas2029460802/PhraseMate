@@ -2482,15 +2482,49 @@
       "term": "citation"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/dispute-us-noun.mp3",
       "created_at": "2026-09-24T14:55:14Z",
-      "example_en": "The two companies are locked in a bitter dispute over the ownership of the patent.",
-      "example_zh": "两家公司就这项专利的所有权陷入了激烈的争端。",
       "id": 63,
-      "meaning_en": "As a noun: a disagreement or argument, often formal or public. As a verb: to argue against something or question whether it is true or valid.",
-      "meaning_zh": "n. 争论；争端；纠纷；（法律）争议；v. 对……提出异议；质疑……的真实性；争夺；辩论",
-      "part_of_speech": "n. / v.",
-      "phonetic": "/dɪˈspjuːt/",
-      "status": "pending",
+      "meaning_en": "An argument or disagreement, a failure to agree; Verbal controversy or disagreement; altercation; debate",
+      "meaning_zh": "争论或分歧，未能达成一致；口头争议或分歧；争吵；辩论",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈdɪs.pjuːt/",
+      "phrases": [
+        {
+          "phrase": "beyond dispute",
+          "meaning_zh": "无可争议"
+        },
+        {
+          "phrase": "in dispute",
+          "meaning_zh": "处于争议中"
+        },
+        {
+          "phrase": "dispute over/about",
+          "meaning_zh": "关于……的争论"
+        },
+        {
+          "phrase": "settle a dispute",
+          "meaning_zh": "解决争端"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "disputable",
+          "pos": "adj.",
+          "meaning_zh": "可争议的；有疑问的"
+        },
+        {
+          "word": "disputatious",
+          "pos": "adj.",
+          "meaning_zh": "好争论的"
+        },
+        {
+          "word": "disputably",
+          "pos": "adv.",
+          "meaning_zh": "可争议地"
+        }
+      ],
+      "status": "ready",
       "term": "dispute"
     },
     {
