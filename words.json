@@ -853,12 +853,45 @@
     },
     {
       "created_at": "2026-08-12T19:57:23Z",
+      "example_en": "The old books on the shelf were covered with dust.",
+      "example_zh": "书架上的旧书落满了灰尘。",
       "id": 25,
-      "meaning_en": "Fine particles; The act of cleaning by dusting.",
-      "meaning_zh": "细颗粒；通过粉尘清洁的行为。",
-      "part_of_speech": "n.",
+      "meaning_en": "Fine, dry particles of earth or other matter that settle on surfaces; also, to remove this powder from something, or to sprinkle a powder over something.",
+      "meaning_zh": "n. 灰尘；尘土；粉末；v. 掸去…的灰尘；撒（粉末）于",
+      "part_of_speech": "n. / v.",
       "phonetic": "/dʌst/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "dust off",
+          "meaning_zh": "掸去灰尘；重新拿出使用"
+        },
+        {
+          "phrase": "bite the dust",
+          "meaning_zh": "失败；完蛋；一败涂地"
+        },
+        {
+          "phrase": "let the dust settle",
+          "meaning_zh": "等事态平息；等尘埃落定"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "dusty",
+          "pos": "adj.",
+          "meaning_zh": "布满灰尘的；灰蒙蒙的"
+        },
+        {
+          "word": "dustless",
+          "pos": "adj.",
+          "meaning_zh": "无尘的；不起灰尘的"
+        },
+        {
+          "word": "dustily",
+          "pos": "adv.",
+          "meaning_zh": "布满灰尘地"
+        }
+      ],
+      "status": "ready",
       "term": "dust"
     },
     {
