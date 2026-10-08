@@ -1676,12 +1676,45 @@
     },
     {
       "created_at": "2026-08-13T18:28:24Z",
+      "example_en": "We took a shortcut through the park to get home before it got dark.",
+      "example_zh": "我们穿过公园抄近路，趁天黑前赶回了家。",
       "id": 44,
-      "meaning_en": "A path between two points that is faster than the commonly used paths.; A method to accomplish something that omits one or more steps.",
-      "meaning_zh": "两点之间的路径，比常用路径快。;一种用于完成省略一个或多个步骤的方法。",
+      "meaning_en": "A shorter or quicker way of reaching a place or achieving something; also a quick way to open a program or file on a computer.",
+      "meaning_zh": "捷径；近路；（办事的）快捷办法；（计算机）快捷方式，快捷键。",
       "part_of_speech": "n.",
       "phonetic": "/ˈʃɔːtkʌt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "take a shortcut",
+          "meaning_zh": "抄近路；走捷径"
+        },
+        {
+          "phrase": "keyboard shortcut",
+          "meaning_zh": "键盘快捷键"
+        },
+        {
+          "phrase": "a shortcut to success",
+          "meaning_zh": "通往成功的捷径"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "shorten",
+          "pos": "v.",
+          "meaning_zh": "缩短；变短"
+        },
+        {
+          "word": "shortage",
+          "pos": "n.",
+          "meaning_zh": "短缺；不足"
+        },
+        {
+          "word": "shortly",
+          "pos": "adv.",
+          "meaning_zh": "不久；简短地"
+        }
+      ],
+      "status": "ready",
       "term": "shortcut"
     },
     {
