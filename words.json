@@ -343,14 +343,49 @@
     },
     {
       "created_at": "2026-08-07T15:17:00Z",
-      "example_en": "Be careful what you say to him: he’s a bit of a gossip.",
-      "example_zh": "小心你对他说的话：他有点八卦。",
+      "example_en": "She loves to gossip about her colleagues during lunch breaks.",
+      "example_zh": "她喜欢在午休时八卦同事的事。",
       "id": 10,
-      "meaning_en": "Someone who likes to talk about other people's private or personal business.; Idle talk about someone’s private or personal matters, especially someone not present.",
-      "meaning_zh": "喜欢谈论他人私人或私人事务的人。；闲聊某人的私人或私事，尤其是不在场的人。",
-      "part_of_speech": "n.",
-      "phonetic": "/ˈɡɒs.ɪp/",
-      "status": "pending",
+      "meaning_en": "Casual talk or rumors about other people's private lives, often unkind or not confirmed. As a verb, it means to talk about others in this way.",
+      "meaning_zh": "n. 闲话，流言蜚语；爱说闲话的人；v. 说闲话，传播流言",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈɡɒsɪp/",
+      "phrases": [
+        {
+          "phrase": "gossip column",
+          "meaning_zh": "（报刊的）八卦专栏"
+        },
+        {
+          "phrase": "office gossip",
+          "meaning_zh": "办公室八卦"
+        },
+        {
+          "phrase": "idle gossip",
+          "meaning_zh": "无聊的闲言碎语"
+        },
+        {
+          "phrase": "hot gossip",
+          "meaning_zh": "最新八卦，劲爆消息"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "gossipy",
+          "pos": "adj.",
+          "meaning_zh": "爱说闲话的；流言蜚语式的"
+        },
+        {
+          "word": "gossiper",
+          "pos": "n.",
+          "meaning_zh": "爱说闲话的人"
+        },
+        {
+          "word": "gossiping",
+          "pos": "n.",
+          "meaning_zh": "说闲话，八卦"
+        }
+      ],
+      "status": "ready",
       "term": "gossip"
     },
     {
