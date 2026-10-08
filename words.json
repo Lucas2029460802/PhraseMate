@@ -1707,6 +1707,12 @@
       "part_of_speech": "v.",
       "status": "ready",
       "created_at": "2026-10-08T17:43:27Z"
+    },
+    {
+      "id": 152,
+      "term": "interest",
+      "status": "pending",
+      "created_at": "2026-10-08T17:43:49Z"
     }
   ]
 }
