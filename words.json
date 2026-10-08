@@ -1013,6 +1013,12 @@
       "part_of_speech": "v.",
       "status": "ready",
       "created_at": "2026-10-08T15:07:26Z"
+    },
+    {
+      "id": 92,
+      "term": "provocative",
+      "status": "pending",
+      "created_at": "2026-10-08T15:07:45Z"
     }
   ]
 }
