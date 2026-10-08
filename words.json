@@ -1654,7 +1654,10 @@
     {
       "id": 146,
       "term": "mere",
-      "status": "pending",
+      "meaning_en": "A body of standing water, such as a lake or a pond. More specifically, it can refer to a lake that is broad in relation to its depth. Also included in place names such as Windermere",
+      "meaning_zh": "积水，如湖泊或池塘。更具体地说，它可以指相对于其深度而言较宽的湖泊。也包括在温德米尔等地名中",
+      "part_of_speech": "n.",
+      "status": "ready",
       "created_at": "2026-10-08T16:25:42Z"
     }
   ]
