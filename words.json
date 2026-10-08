@@ -1237,6 +1237,12 @@
       "part_of_speech": "n.",
       "status": "ready",
       "created_at": "2026-10-08T15:24:52Z"
+    },
+    {
+      "id": 111,
+      "term": "coincide",
+      "status": "pending",
+      "created_at": "2026-10-08T15:26:14Z"
     }
   ]
 }
