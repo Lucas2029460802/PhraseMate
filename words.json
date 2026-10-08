@@ -1141,6 +1141,12 @@
       "part_of_speech": "v.",
       "status": "ready",
       "created_at": "2026-10-08T15:19:29Z"
+    },
+    {
+      "id": 103,
+      "term": "genome",
+      "status": "pending",
+      "created_at": "2026-10-08T15:19:37Z"
     }
   ]
 }
