@@ -2529,14 +2529,54 @@
     },
     {
       "created_at": "2026-09-24T15:02:03Z",
-      "example_en": "Her perception of the situation changed completely after she read the report.",
-      "example_zh": "读完那份报告后，她对形势的看法彻底改变了。",
+      "example_en": "Her perception of the situation changed after she read the report.",
+      "example_zh": "读完那份报告后，她对形势的看法改变了。",
       "id": 64,
-      "meaning_en": "The ability to become aware of things through the senses, or the way someone understands or interprets something.",
-      "meaning_zh": "感知，知觉，感觉；看法，见解，认识",
+      "meaning_en": "The way you notice, understand, or interpret something; also the ability to become aware of things through the senses.",
+      "meaning_zh": "知觉；感知；洞察力；看法，观念",
       "part_of_speech": "n.",
       "phonetic": "/pəˈsepʃn/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "public perception",
+          "meaning_zh": "公众的看法，公众认知"
+        },
+        {
+          "phrase": "visual perception",
+          "meaning_zh": "视觉感知"
+        },
+        {
+          "phrase": "alter someone's perception",
+          "meaning_zh": "改变某人的看法"
+        },
+        {
+          "phrase": "extrasensory perception",
+          "meaning_zh": "超感知觉，第六感（缩写 ESP）"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "perceive",
+          "pos": "v.",
+          "meaning_zh": "察觉；认为，理解"
+        },
+        {
+          "word": "perceptive",
+          "pos": "adj.",
+          "meaning_zh": "有洞察力的；感觉敏锐的"
+        },
+        {
+          "word": "perceptible",
+          "pos": "adj.",
+          "meaning_zh": "可察觉的，可感知的"
+        },
+        {
+          "word": "perceptually",
+          "pos": "adv.",
+          "meaning_zh": "在知觉上，从感知角度"
+        }
+      ],
+      "status": "ready",
       "term": "perception"
     },
     {
