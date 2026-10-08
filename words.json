@@ -1075,7 +1075,13 @@
     {
       "id": 97,
       "term": "perpetuate",
-      "status": "pending",
+      "phonetic": "/pərˈpetʃueɪt/",
+      "meaning_en": "To make something, especially something bad or unwanted, continue to exist or happen for a long time.",
+      "meaning_zh": "使（尤指不好的事物）持续存在；使永久化；使延续下去",
+      "example_en": "Such stereotypes only perpetuate the misunderstanding between the two cultures.",
+      "example_zh": "这类刻板印象只会使两种文化之间的误解延续下去。",
+      "part_of_speech": "v.",
+      "status": "ready",
       "created_at": "2026-10-08T15:12:31Z"
     }
   ]
