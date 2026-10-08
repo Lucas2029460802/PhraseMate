@@ -202,14 +202,39 @@
     },
     {
       "created_at": "2026-08-07T15:00:14Z",
-      "example_en": "The documentary lets you sort of peek into the daily life of a nomad.",
-      "example_zh": "这部纪录片让你粗略地了解游牧民族的日常生活。",
+      "example_en": "The documentary offers a sort of peek into the daily lives of deep-sea researchers.",
+      "example_zh": "这部纪录片让人得以一窥深海研究人员的日常生活。",
       "id": 6,
-      "meaning_en": "To briefly and informally look at or examine something; to get a rough idea or initial impression of something.",
-      "meaning_zh": "粗略地看一眼；稍微了解一下；初步了解",
+      "meaning_en": "A phrase meaning to take a quick, partial, or somewhat furtive look into something, often suggesting a small glimpse of a place, situation, or idea.",
+      "meaning_zh": "有点窥探；朝……粗略地看一眼；对……的初步/浅层了解",
       "part_of_speech": "phrase",
-      "phonetic": "/sɔːrt əv piːk ˈɪn.tuː/",
-      "status": "pending",
+      "phonetic": "/sɔːrt əv piːk ˈɪntuː/",
+      "phrases": [
+        {
+          "phrase": "peek into",
+          "meaning_zh": "窥视；往……里面偷看"
+        },
+        {
+          "phrase": "peek at",
+          "meaning_zh": "偷看；瞥一眼"
+        },
+        {
+          "phrase": "take a peek",
+          "meaning_zh": "看一眼；偷看一眼"
+        },
+        {
+          "phrase": "sneak peek",
+          "meaning_zh": "先睹为快；抢先看"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "peek",
+          "pos": "v.",
+          "meaning_zh": "偷看；窥视；瞥一眼"
+        }
+      ],
+      "status": "ready",
       "term": "sort of peek into"
     },
     {
