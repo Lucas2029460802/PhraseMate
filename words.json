@@ -2581,15 +2581,45 @@
     },
     {
       "created_at": "2026-09-24T16:43:12Z",
-      "example_en": "She began her essay with several quotations from Shakespeare.",
-      "example_zh": "她在文章的开头引用了几句莎士比亚的话。",
+      "example_en": "She began her speech with a quotation from Shakespeare.",
+      "example_zh": "她以一句莎士比亚的名言开始了演讲。",
       "id": 65,
-      "meaning_en": "The plural of \"quotation\": words taken from a text or speech and repeated by someone other than the original author or speaker; also a formal statement of the estimated cost of a piece of work.",
-      "meaning_zh": "引语，引文，语录（quotation 的复数形式）；报价，估价单。",
+      "meaning_en": "A group of words taken from a book, speech, or text and repeated by someone other than the original speaker or writer. It also refers to a formal statement of the price for a piece of work or goods.",
+      "meaning_zh": "引语；引文；引用；报价，估价；（复数）行情，行市。",
       "part_of_speech": "n.",
-      "phonetic": "/kwəʊˈteɪʃnz/",
-      "status": "pending",
-      "term": "quotations"
+      "phonetic": "/kwəʊˈteɪʃn/",
+      "phrases": [
+        {
+          "phrase": "quotation mark",
+          "meaning_zh": "引号"
+        },
+        {
+          "phrase": "direct quotation",
+          "meaning_zh": "直接引语"
+        },
+        {
+          "phrase": "price quotation",
+          "meaning_zh": "报价，报价单"
+        },
+        {
+          "phrase": "stock quotation",
+          "meaning_zh": "股票行情，股票报价"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "quote",
+          "pos": "v.",
+          "meaning_zh": "引用，引述；报价"
+        },
+        {
+          "word": "quotable",
+          "pos": "adj.",
+          "meaning_zh": "值得引用的，可引述的"
+        }
+      ],
+      "status": "ready",
+      "term": "quotation"
     },
     {
       "created_at": "2026-09-24T16:43:54Z",
