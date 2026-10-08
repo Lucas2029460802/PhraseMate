@@ -1629,14 +1629,49 @@
     },
     {
       "created_at": "2026-08-13T18:28:04Z",
-      "example_en": "The new report cuts through the confusion and gives a clear answer.",
-      "example_zh": "这份新报告扫清了混乱，给出了明确的答案。",
+      "example_en": "Her voice cut through the noise of the crowded hall, and everyone fell silent.",
+      "example_zh": "她的声音穿透了拥挤大厅里的嘈杂，所有人都安静了下来。",
       "id": 43,
-      "meaning_en": "To pass through something, or to deal with something quickly and directly by ignoring unnecessary details.",
-      "meaning_zh": "穿过；穿透；迅速直接地处理（绕过无关细节）",
+      "meaning_en": "To move quickly and directly through something, often making a path; also to be heard or understood clearly through noise or confusion, or to bypass obstacles and deal with something efficiently.",
+      "meaning_zh": "穿过；穿透；（声音）穿透（嘈杂声）清晰可闻；排除干扰、直击要害；绕过（繁文缛节等）迅速处理",
       "part_of_speech": "phrase",
-      "phonetic": "/kʌt θruː/",
-      "status": "pending",
+      "phonetic": "/ˌkʌt ˈθruː/",
+      "phrases": [
+        {
+          "phrase": "cut through the noise",
+          "meaning_zh": "排除干扰，直击要点"
+        },
+        {
+          "phrase": "cut through red tape",
+          "meaning_zh": "打破繁文缛节，迅速办成"
+        },
+        {
+          "phrase": "cut through the clutter",
+          "meaning_zh": "在纷杂信息中脱颖而出"
+        },
+        {
+          "phrase": "cut through traffic",
+          "meaning_zh": "在车流中穿行"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "cut",
+          "pos": "n.",
+          "meaning_zh": "切口；削减；份额"
+        },
+        {
+          "word": "cutting",
+          "pos": "adj.",
+          "meaning_zh": "尖刻的；刺骨的"
+        },
+        {
+          "word": "cutter",
+          "pos": "n.",
+          "meaning_zh": "切割工具；快艇"
+        }
+      ],
+      "status": "ready",
       "term": "cut through"
     },
     {
