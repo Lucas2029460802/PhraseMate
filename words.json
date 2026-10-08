@@ -917,6 +917,12 @@
       "part_of_speech": "v.",
       "status": "ready",
       "created_at": "2026-10-08T11:02:37Z"
+    },
+    {
+      "id": 84,
+      "term": "consecutive",
+      "status": "pending",
+      "created_at": "2026-10-08T11:09:38Z"
     }
   ]
 }
