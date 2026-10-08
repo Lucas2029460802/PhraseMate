@@ -977,6 +977,12 @@
       "part_of_speech": "adj.",
       "status": "ready",
       "created_at": "2026-10-08T15:05:40Z"
+    },
+    {
+      "id": 89,
+      "term": "endeavors",
+      "status": "pending",
+      "created_at": "2026-10-08T15:06:15Z"
     }
   ]
 }
