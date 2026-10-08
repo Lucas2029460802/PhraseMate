@@ -1017,7 +1017,13 @@
     {
       "id": 92,
       "term": "provocative",
-      "status": "pending",
+      "phonetic": "/prəˈvɒkətɪv/",
+      "meaning_en": "Intended or likely to cause a strong reaction, especially anger, disagreement, or sexual interest.",
+      "meaning_zh": "挑衅的；煽动性的；引起争议的；挑逗的，性感的",
+      "example_en": "Her provocative remarks sparked a heated debate among the audience.",
+      "example_zh": "她挑衅性的言论在观众中引发了一场激烈的辩论。",
+      "part_of_speech": "adj.",
+      "status": "ready",
       "created_at": "2026-10-08T15:07:45Z"
     }
   ]
