@@ -6144,14 +6144,44 @@
     },
     {
       "created_at": "2026-10-08T16:26:54Z",
-      "example_en": "Many adolescents struggle with peer pressure during their teenage years.",
-      "example_zh": "许多青少年在十几岁时都会因同伴压力而感到困扰。",
+      "example_en": "Many adolescents struggle with peer pressure.",
+      "example_zh": "许多青少年面临同伴压力。",
       "id": 147,
-      "meaning_en": "A young person who is developing from a child into an adult, roughly between the ages of 13 and 19. As an adjective, it describes something relating to this stage of life.",
-      "meaning_zh": "n. 青少年，青春期的人（约13至19岁）；adj. 青春期的，青少年的；不成熟的",
+      "meaning_en": "A young person who is developing from a child into an adult; relating to this stage of development.",
+      "meaning_zh": "青少年；青春期的；青少年的",
       "part_of_speech": "n. / adj.",
-      "phonetic": "/ˌædəˈlesnt/",
-      "status": "pending",
+      "phonetic": "/ˌædəˈlesənt/",
+      "phrases": [
+        {
+          "phrase": "adolescent behavior",
+          "meaning_zh": "青少年行为"
+        },
+        {
+          "phrase": "adolescent development",
+          "meaning_zh": "青春期发育；青少年发展"
+        },
+        {
+          "phrase": "adolescent years",
+          "meaning_zh": "青春期；青少年时期"
+        },
+        {
+          "phrase": "adolescent health",
+          "meaning_zh": "青少年健康"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "adolesce",
+          "pos": "v.",
+          "meaning_zh": "进入青春期；成长为青少年（罕用）"
+        },
+        {
+          "word": "adolescently",
+          "pos": "adv.",
+          "meaning_zh": "以青少年的方式；青春期地（罕用）"
+        }
+      ],
+      "status": "ready",
       "term": "adolescent"
     },
     {
