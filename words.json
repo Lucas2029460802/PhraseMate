@@ -5663,14 +5663,44 @@
     },
     {
       "created_at": "2026-10-08T16:06:00Z",
-      "example_en": "We need to rid the house of mice.",
-      "example_zh": "我们需要把房子里的老鼠清除掉。",
+      "example_en": "It took years to rid the garden of weeds.",
+      "example_zh": "花了好几年才清除花园里的杂草。",
       "id": 135,
-      "meaning_en": "To make someone or something free from something unwanted or unpleasant; to relieve or remove.",
+      "meaning_en": "To free someone or something from something unwanted; to remove or eliminate something unpleasant.",
       "meaning_zh": "使摆脱；使去掉；清除",
       "part_of_speech": "v.",
       "phonetic": "/rɪd/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "get rid of",
+          "meaning_zh": "摆脱；处理掉；去除"
+        },
+        {
+          "phrase": "be rid of",
+          "meaning_zh": "摆脱；清除掉"
+        },
+        {
+          "phrase": "rid oneself of",
+          "meaning_zh": "摆脱；戒除"
+        },
+        {
+          "phrase": "good riddance",
+          "meaning_zh": "终于摆脱了（表示庆幸）"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "riddance",
+          "pos": "n.",
+          "meaning_zh": "摆脱；清除（如 good riddance）"
+        },
+        {
+          "word": "ridder",
+          "pos": "n.",
+          "meaning_zh": "清除者；排除者（罕用）"
+        }
+      ],
+      "status": "ready",
       "term": "rid"
     },
     {
