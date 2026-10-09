@@ -4239,14 +4239,40 @@
     },
     {
       "created_at": "2026-10-08T15:19:29Z",
-      "example_en": "Their lives became intertwined after they worked on the same project.",
-      "example_zh": "在参与同一个项目之后，他们的生活变得紧密交织在一起。",
+      "example_en": "Their fates were intertwined from the very beginning.",
+      "example_zh": "他们的命运从一开始就紧密交织在一起。",
       "id": 102,
-      "meaning_en": "To twist or weave two or more things together; to be closely connected or linked with each other.",
-      "meaning_zh": "缠结；缠绕；交织；密切相关，紧密相连",
+      "meaning_en": "to twist or weave things together, or to be closely connected.",
+      "meaning_zh": "（使）缠绕；（使）交织；紧密相连。",
       "part_of_speech": "v.",
       "phonetic": "/ˌɪntəˈtwaɪn/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "intertwine with",
+          "meaning_zh": "与…交织；与…紧密相连"
+        },
+        {
+          "phrase": "closely intertwined",
+          "meaning_zh": "紧密交织的；密切相关的"
+        },
+        {
+          "phrase": "inextricably intertwined",
+          "meaning_zh": "密不可分地交织在一起"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "intertwinement",
+          "pos": "n.",
+          "meaning_zh": "交织；纠缠；紧密关联"
+        },
+        {
+          "word": "intertwined",
+          "pos": "adj.",
+          "meaning_zh": "交织的；紧密相连的"
+        }
+      ],
+      "status": "ready",
       "term": "intertwine"
     },
     {
