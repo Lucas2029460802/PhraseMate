@@ -6369,8 +6369,44 @@
     },
     {
       "created_at": "2026-10-08T17:57:05Z",
+      "example_en": "Papers and books cluttered the desk, making it hard to work.",
+      "example_zh": "文件和书籍杂乱地堆在书桌上，让人难以工作。",
       "id": 153,
-      "status": "pending",
+      "meaning_en": "A collection of things lying about in an untidy mass; to fill or cover a place with an untidy collection of things.",
+      "meaning_zh": "（名词）杂乱的东西；凌乱；混乱；（动词）使凌乱；胡乱堆放；塞满",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈklʌtər/",
+      "phrases": [
+        {
+          "phrase": "clutter up",
+          "meaning_zh": "堆满；塞满；使凌乱"
+        },
+        {
+          "phrase": "a clutter of",
+          "meaning_zh": "一堆杂乱的……"
+        },
+        {
+          "phrase": "mental clutter",
+          "meaning_zh": "精神杂念；思绪混乱"
+        },
+        {
+          "phrase": "household clutter",
+          "meaning_zh": "家里的杂物"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "cluttered",
+          "pos": "adj.",
+          "meaning_zh": "凌乱的；塞满的"
+        },
+        {
+          "word": "clutter-free",
+          "pos": "adj.",
+          "meaning_zh": "无杂物的；整洁的"
+        }
+      ],
+      "status": "ready",
       "term": "clutter"
     }
   ]
