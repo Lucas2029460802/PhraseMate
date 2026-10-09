@@ -6186,14 +6186,49 @@
     },
     {
       "created_at": "2026-10-08T16:27:30Z",
-      "example_en": "The internet is a techno-social system in which technical protocols and human behaviour constantly shape each other.",
-      "example_zh": "互联网是一个技术—社会系统，其中技术协议与人类行为不断相互塑造。",
+      "example_en": "Smartphones have created a techno-social environment in which online and offline relationships constantly overlap.",
+      "example_zh": "智能手机营造出一种技术-社会环境，线上与线下的人际关系在其中不断交织。",
       "id": 148,
-      "meaning_en": "Relating to the interaction or combination of technology and social structures, practices, or human relationships. Often used to describe systems in which technical and social elements shape each other.",
-      "meaning_zh": "技术-社会的；科技与社会互动的；兼有技术与社会双重属性的。常用于描述技术因素与社会因素相互作用、彼此塑造的系统或现象。",
+      "meaning_en": "Relating to the interaction or combination of technology and social structures, practices, or relationships.",
+      "meaning_zh": "技术-社会的；涉及技术与社会相互作用的；由技术因素与社会因素共同构成的",
       "part_of_speech": "adj.",
       "phonetic": "/ˌteknoʊˈsoʊʃəl/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "techno-social system",
+          "meaning_zh": "技术-社会系统"
+        },
+        {
+          "phrase": "techno-social change",
+          "meaning_zh": "技术与社会变迁"
+        },
+        {
+          "phrase": "techno-social interaction",
+          "meaning_zh": "技术与社会互动"
+        },
+        {
+          "phrase": "techno-social network",
+          "meaning_zh": "技术-社会网络"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "socially",
+          "pos": "adv.",
+          "meaning_zh": "在社会方面；社交上"
+        },
+        {
+          "word": "society",
+          "pos": "n.",
+          "meaning_zh": "社会；社团"
+        },
+        {
+          "word": "socialize",
+          "pos": "v.",
+          "meaning_zh": "社交；使社会化"
+        }
+      ],
+      "status": "ready",
       "term": "techno-social"
     },
     {
