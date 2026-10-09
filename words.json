@@ -4187,14 +4187,54 @@
     },
     {
       "created_at": "2026-10-08T15:15:35Z",
-      "example_en": "The powerful engine propels the boat smoothly across the lake.",
-      "example_zh": "强劲的发动机推动小船平稳地驶过湖面。",
+      "example_en": "The engineers developed a new engine to propel the spacecraft.",
+      "example_zh": "工程师们开发了一种新发动机来推进航天器。",
       "id": 101,
-      "meaning_en": "To drive, push, or cause something or someone to move forward; to impel or urge onward.",
-      "meaning_zh": "推动；推进；（在某一方向上）驱动；驱使；促使",
+      "meaning_en": "To drive, push, or cause something to move in a particular direction, especially forward.",
+      "meaning_zh": "推进；推动；驱使",
       "part_of_speech": "v.",
       "phonetic": "/prəˈpel/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "propel forward",
+          "meaning_zh": "推进；向前推动"
+        },
+        {
+          "phrase": "propel sb/sth into sth",
+          "meaning_zh": "把…推入；促使进入"
+        },
+        {
+          "phrase": "propel the economy",
+          "meaning_zh": "推动经济"
+        },
+        {
+          "phrase": "propel growth",
+          "meaning_zh": "推动增长"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "propulsion",
+          "pos": "n.",
+          "meaning_zh": "推进；推进力"
+        },
+        {
+          "word": "propeller",
+          "pos": "n.",
+          "meaning_zh": "螺旋桨；推进器"
+        },
+        {
+          "word": "propulsive",
+          "pos": "adj.",
+          "meaning_zh": "推进的；有推进力的"
+        },
+        {
+          "word": "propellant",
+          "pos": "n.",
+          "meaning_zh": "推进剂；发射药"
+        }
+      ],
+      "status": "ready",
       "term": "propel"
     },
     {
