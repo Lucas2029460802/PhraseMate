@@ -4371,14 +4371,49 @@
     },
     {
       "created_at": "2026-10-08T15:20:04Z",
-      "example_en": "He tamed the wild horse.",
-      "example_zh": "他驯服了野马。",
+      "example_en": "The once wild horse is now tame and gentle.",
+      "example_zh": "那匹曾经野性十足的马现在很温顺。",
       "id": 105,
-      "meaning_en": "To make (an animal) tame; to domesticate; To become tame or domesticated",
-      "meaning_zh": "驯养（动物） ；驯养；驯服或驯化",
-      "part_of_speech": "v.",
+      "meaning_en": "Not wild or dangerous; domesticated or gentle. As a verb, to make an animal or person less wild, fearful, or uncontrollable.",
+      "meaning_zh": "adj. 驯服的；温顺的；平淡的；v. 驯服；使顺从；开垦（土地）",
+      "part_of_speech": "adj. / v.",
       "phonetic": "/teɪm/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "tame animals",
+          "meaning_zh": "驯服的动物"
+        },
+        {
+          "phrase": "tame a wild horse",
+          "meaning_zh": "驯服野马"
+        },
+        {
+          "phrase": "tame inflation",
+          "meaning_zh": "抑制通货膨胀"
+        },
+        {
+          "phrase": "tame the wilderness",
+          "meaning_zh": "开垦荒野"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "tamely",
+          "pos": "adv.",
+          "meaning_zh": "温顺地；平淡地"
+        },
+        {
+          "word": "tameness",
+          "pos": "n.",
+          "meaning_zh": "驯服；温顺"
+        },
+        {
+          "word": "tamer",
+          "pos": "n.",
+          "meaning_zh": "驯兽师；驯服者"
+        }
+      ],
+      "status": "ready",
       "term": "tame"
     },
     {
