@@ -3446,11 +3446,46 @@
       "example_en": "She has been late for three consecutive days.",
       "example_zh": "她已经连续三天迟到了。",
       "id": 84,
-      "meaning_en": "Following one after another in an unbroken sequence; happening or existing in order without interruption.",
-      "meaning_zh": "连续的；接连不断的；连贯的（指事件、数字等一个接一个不间断地发生）",
+      "meaning_en": "Following one after another in an unbroken sequence; successive.",
+      "meaning_zh": "连续的；接连的；连贯的",
       "part_of_speech": "adj.",
       "phonetic": "/kənˈsekjətɪv/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "consecutive days",
+          "meaning_zh": "连续几天"
+        },
+        {
+          "phrase": "consecutive numbers",
+          "meaning_zh": "连续数字"
+        },
+        {
+          "phrase": "consecutive terms",
+          "meaning_zh": "连续项；相邻项"
+        },
+        {
+          "phrase": "consecutive interpretation",
+          "meaning_zh": "交替传译"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "consecutively",
+          "pos": "adv.",
+          "meaning_zh": "连续地；接连地"
+        },
+        {
+          "word": "consecutiveness",
+          "pos": "n.",
+          "meaning_zh": "连续性；连贯性"
+        },
+        {
+          "word": "consecution",
+          "pos": "n.",
+          "meaning_zh": "连续；序列"
+        }
+      ],
+      "status": "ready",
       "term": "consecutive"
     },
     {
