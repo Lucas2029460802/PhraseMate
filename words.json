@@ -6064,14 +6064,54 @@
     },
     {
       "created_at": "2026-10-08T16:21:51Z",
-      "example_en": "She narrated the story of her journey across Asia.",
-      "example_zh": "她讲述了自己横跨亚洲的旅程。",
+      "example_en": "She narrated the documentary about ancient Egypt in a calm, steady voice.",
+      "example_zh": "她用平静而沉稳的声音为那部关于古埃及的纪录片担任解说。",
       "id": 145,
-      "meaning_en": "To tell a story or describe a series of events in speech or writing; also to provide the spoken commentary for a film, programme, etc.",
-      "meaning_zh": "讲述，叙述（故事、事件）；为（影片、节目等）作解说、旁白",
+      "meaning_en": "To tell a story or describe a series of events in speech or writing; to provide the spoken commentary for a film, programme or broadcast.",
+      "meaning_zh": "讲述，叙述（故事、事件）；为（电影、节目等）作解说，配旁白。",
       "part_of_speech": "v.",
       "phonetic": "/nəˈreɪt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "narrate a story",
+          "meaning_zh": "讲述一个故事"
+        },
+        {
+          "phrase": "narrate a documentary",
+          "meaning_zh": "为纪录片解说/配旁白"
+        },
+        {
+          "phrase": "narrate events in detail",
+          "meaning_zh": "详细叙述事件"
+        },
+        {
+          "phrase": "narrate in the first person",
+          "meaning_zh": "用第一人称叙述"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "narrator",
+          "pos": "n.",
+          "meaning_zh": "叙述者；解说员；旁白者"
+        },
+        {
+          "word": "narration",
+          "pos": "n.",
+          "meaning_zh": "叙述，讲述；解说，旁白"
+        },
+        {
+          "word": "narrative",
+          "pos": "adj.",
+          "meaning_zh": "叙事的，叙述的"
+        },
+        {
+          "word": "narratively",
+          "pos": "adv.",
+          "meaning_zh": "从叙事角度上"
+        }
+      ],
+      "status": "ready",
       "term": "narrate"
     },
     {
