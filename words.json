@@ -3851,14 +3851,44 @@
     },
     {
       "created_at": "2026-10-08T15:08:36Z",
-      "example_en": "The company made only cosmetic changes to the report, so the real problems remain unsolved.",
-      "example_zh": "公司对报告只做了些表面上的修改，所以真正的问题依然没有解决。",
+      "example_en": "The new policy is merely a cosmetic change and will not solve the real problem.",
+      "example_zh": "这项新政策只是表面上的改变，不会解决真正的问题。",
       "id": 93,
-      "meaning_en": "As a noun: a substance or preparation applied to the body, especially the face, to improve its appearance. As an adjective: relating to beauty treatment, or affecting only the appearance of something rather than its substance.",
-      "meaning_zh": "n. 化妆品；美容品。adj. 化妆用的，美容的；（改变）表面的，装门面的（指只改善外观而不解决实质问题）。",
-      "part_of_speech": "n. / adj.",
+      "meaning_en": "Relating to beauty treatment or intended to improve appearance; (of a change) superficial rather than substantive. As a noun, a preparation used to enhance appearance.",
+      "meaning_zh": "美容的；化妆用的；（改变）表面的，装饰性的；化妆品，美容品",
+      "part_of_speech": "adj. / n.",
       "phonetic": "/kɒzˈmetɪk/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "cosmetic surgery",
+          "meaning_zh": "整容手术"
+        },
+        {
+          "phrase": "cosmetic products",
+          "meaning_zh": "化妆品；美容产品"
+        },
+        {
+          "phrase": "cosmetic changes",
+          "meaning_zh": "表面性的改动"
+        },
+        {
+          "phrase": "cosmetic industry",
+          "meaning_zh": "化妆品行业"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "cosmetically",
+          "pos": "adv.",
+          "meaning_zh": "美容上；表面地"
+        },
+        {
+          "word": "cosmeticize",
+          "pos": "v.",
+          "meaning_zh": "使外表好看；美化；给…化妆"
+        }
+      ],
+      "status": "ready",
       "term": "cosmetic"
     },
     {
