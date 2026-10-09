@@ -4923,14 +4923,33 @@
     },
     {
       "created_at": "2026-10-08T15:40:14Z",
-      "example_en": "The store lured customers in with huge discounts.",
-      "example_zh": "这家商店用大幅折扣把顾客吸引进店。",
+      "example_en": "The bright lights of the city lured thousands of young people away from their hometowns.",
+      "example_zh": "城市的璀璨灯光吸引成千上万的年轻人离开了家乡。",
       "id": 118,
-      "meaning_en": "To persuade or attract someone to do something or go somewhere, often by offering something appealing; also a thing that tempts or attracts.",
-      "meaning_zh": "v. 引诱，诱惑；吸引（人或动物）。n. 诱惑物，吸引力；（钓鱼用的）诱饵。",
+      "meaning_en": "To persuade someone to do something or go somewhere by offering them something attractive; also the attractive thing itself that draws someone in.",
+      "meaning_zh": "v. 引诱，诱使（某人做某事或去某处）；n. 诱惑力，吸引力；诱饵",
       "part_of_speech": "v. \u0026 n.",
       "phonetic": "/lʊə(r)/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "lure sb into doing sth",
+          "meaning_zh": "诱使某人做某事"
+        },
+        {
+          "phrase": "lure sb away",
+          "meaning_zh": "把某人引诱走，诱使某人离开"
+        },
+        {
+          "phrase": "the lure of sth",
+          "meaning_zh": "某事物的诱惑／吸引力"
+        },
+        {
+          "phrase": "lure sb to a place",
+          "meaning_zh": "把某人诱骗到某地"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "lure"
     },
     {
