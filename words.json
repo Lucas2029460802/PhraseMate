@@ -4513,14 +4513,39 @@
     },
     {
       "created_at": "2026-10-08T15:24:30Z",
-      "example_en": "The nomadic herder led his flock of sheep across the wide grassland.",
-      "example_zh": "那位游牧牧民领着他的羊群穿过广阔的草原。",
+      "example_en": "The herder led his flock down to the river at dawn.",
+      "example_zh": "黎明时分，牧人把羊群赶到了河边。",
       "id": 109,
-      "meaning_en": "A person who takes care of and moves a group of animals such as cattle, sheep, or goats. It can also refer to someone who guides a group of people.",
-      "meaning_zh": "牧人；放牧者；牧民；（人群的）引领者",
+      "meaning_en": "A person who tends, drives, or looks after a herd of livestock such as cattle, sheep, goats, or reindeer.",
+      "meaning_zh": "牧人；放牧者；（牲畜）饲养员",
       "part_of_speech": "n.",
-      "phonetic": "/ˈhɜːrdər/",
-      "status": "pending",
+      "phonetic": "/ˈhɜːdə(r)/",
+      "phrases": [
+        {
+          "phrase": "reindeer herder",
+          "meaning_zh": "驯鹿牧民"
+        },
+        {
+          "phrase": "cattle herder",
+          "meaning_zh": "牧牛人，赶牛人"
+        },
+        {
+          "phrase": "goat herder",
+          "meaning_zh": "牧羊人（放山羊者）"
+        },
+        {
+          "phrase": "sheep herder",
+          "meaning_zh": "牧羊人"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "herd",
+          "pos": "v.",
+          "meaning_zh": "放牧；把（牲畜）聚拢、赶在一起"
+        }
+      ],
+      "status": "ready",
       "term": "herder"
     },
     {
