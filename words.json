@@ -5080,14 +5080,44 @@
     },
     {
       "created_at": "2026-10-08T15:50:44Z",
-      "example_en": "The patient was kept in isolation to prevent the virus from spreading.",
-      "example_zh": "为了防止病毒传播，这名病人被隔离了起来。",
+      "example_en": "The patient was kept in isolation until the test results came back.",
+      "example_zh": "在检测结果出来之前，这名患者一直被隔离。",
       "id": 122,
       "meaning_en": "The state of being separated from other people, places, or things; the act of keeping someone or something apart.",
-      "meaning_zh": "隔离；孤立；隔绝；孤独；单独",
+      "meaning_zh": "隔离；孤立；孤独；隔绝",
       "part_of_speech": "n.",
       "phonetic": "/ˌaɪsəˈleɪʃn/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "in isolation",
+          "meaning_zh": "孤立地；单独地"
+        },
+        {
+          "phrase": "social isolation",
+          "meaning_zh": "社会孤立"
+        },
+        {
+          "phrase": "isolation ward",
+          "meaning_zh": "隔离病房"
+        },
+        {
+          "phrase": "isolation period",
+          "meaning_zh": "隔离期"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "isolate",
+          "pos": "v.",
+          "meaning_zh": "隔离；孤立"
+        },
+        {
+          "word": "isolated",
+          "pos": "adj.",
+          "meaning_zh": "隔离的；孤立的"
+        }
+      ],
+      "status": "ready",
       "term": "isolation"
     },
     {
