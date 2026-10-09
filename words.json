@@ -4014,14 +4014,49 @@
     },
     {
       "created_at": "2026-10-08T15:12:31Z",
-      "example_en": "Such stereotypes only perpetuate the misunderstanding between the two cultures.",
-      "example_zh": "这类刻板印象只会使两种文化之间的误解延续下去。",
+      "example_en": "The new law could perpetuate inequality.",
+      "example_zh": "这项新法律可能会使不平等长期存在。",
       "id": 97,
-      "meaning_en": "To make something, especially something bad or unwanted, continue to exist or happen for a long time.",
-      "meaning_zh": "使（尤指不好的事物）持续存在；使永久化；使延续下去",
+      "meaning_en": "To make something continue or persist, especially something undesirable or harmful.",
+      "meaning_zh": "使持续；使永久化；使（错误、状况等）长期存在",
       "part_of_speech": "v.",
       "phonetic": "/pərˈpetʃueɪt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "perpetuate a myth",
+          "meaning_zh": "使谬见流传"
+        },
+        {
+          "phrase": "perpetuate stereotypes",
+          "meaning_zh": "使刻板印象延续"
+        },
+        {
+          "phrase": "perpetuate the cycle",
+          "meaning_zh": "使循环持续"
+        },
+        {
+          "phrase": "perpetuate inequality",
+          "meaning_zh": "使不平等长期存在"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "perpetuation",
+          "pos": "n.",
+          "meaning_zh": "永久化；持续"
+        },
+        {
+          "word": "perpetual",
+          "pos": "adj.",
+          "meaning_zh": "永久的；不断的"
+        },
+        {
+          "word": "perpetually",
+          "pos": "adv.",
+          "meaning_zh": "永久地；不断地"
+        }
+      ],
+      "status": "ready",
       "term": "perpetuate"
     },
     {
