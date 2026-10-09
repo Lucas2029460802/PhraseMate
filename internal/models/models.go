@@ -24,6 +24,9 @@ type Word struct {
 	Phrases      []Phrase      `json:"phrases,omitempty"`
 	Status       string        `json:"status"`
 	ErrorMsg     string        `json:"error_msg,omitempty"`
+	QuizTested   int           `json:"quiz_tested,omitempty"`
+	QuizWrong    int           `json:"quiz_wrong,omitempty"`
+	QuizLastAt   string        `json:"quiz_last_at,omitempty"`
 	CreatedAt    time.Time     `json:"created_at"`
 }
 
@@ -55,10 +58,20 @@ type TranslateResponse struct {
 	Direction   string `json:"direction"` // en2zh | zh2en
 }
 
+// Quiz question type constants.
+const (
+	QuizWordToDef      = "word_to_def"      // 看单词选英文释义
+	QuizDefToWord      = "def_to_word"      // 看英文释义选单词
+	QuizZhToWord       = "zh_to_word"       // 看中文释义选单词
+	QuizWordToZh       = "word_to_zh"       // 看单词选中文释义
+	QuizClosestMeaning = "closest_meaning" // 选最接近的英文释义
+)
+
 // QuizQuestion is a single self-test item.
 type QuizQuestion struct {
 	ID            int64    `json:"id"`
 	Term          string   `json:"term"`
+	Type          string   `json:"type,omitempty"`
 	Question      string   `json:"question"`
 	Options       []string `json:"options"`
 	CorrectIndex  int      `json:"correct_index"`
@@ -68,6 +81,17 @@ type QuizQuestion struct {
 // QuizResponse wraps generated questions.
 type QuizResponse struct {
 	Questions []QuizQuestion `json:"questions"`
+}
+
+// QuizAnswerResult is one answered item from the client.
+type QuizAnswerResult struct {
+	ID      int64 `json:"id"`
+	Correct bool  `json:"correct"`
+}
+
+// QuizResultRequest reports quiz answers for spaced practice.
+type QuizResultRequest struct {
+	Results []QuizAnswerResult `json:"results"`
 }
 
 // StatusResponse reports runtime configuration.

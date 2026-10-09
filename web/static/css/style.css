@@ -779,6 +779,20 @@ body.app-shell {
   margin: 0 0 0.65rem;
   font-size: 1rem;
   font-weight: 600;
+  line-height: 1.45;
+  white-space: normal;
+}
+
+.quiz-type {
+  display: inline-block;
+  margin-right: 0.45rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(31, 111, 120, 0.12);
+  color: var(--sea);
+  font-size: 0.72rem;
+  font-weight: 600;
+  vertical-align: 0.1em;
 }
 
 .options {

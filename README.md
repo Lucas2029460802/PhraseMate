@@ -149,7 +149,8 @@ PHRASEMATE_WEB=1 go run .
 无黑框控制台的桌面程序：
 
 ```powershell
-go build -ldflags="-H windowsgui -s -w" -o PhraseMate.exe .
+\
+
 ```
 
 把 `PhraseMate.exe` 发给用户即可；用户在界面填写 API Key，无需附带 `.env`。

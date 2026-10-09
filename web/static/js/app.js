@@ -621,9 +621,38 @@
     }
   }
 
+  function quizTypeLabel(type) {
+    switch (type) {
+      case "word_to_def":
+        return "看词选义";
+      case "def_to_word":
+        return "看义选词";
+      case "closest_meaning":
+        return "近义匹配";
+      case "zh_to_word":
+        return "中文选词";
+      case "word_to_zh":
+        return "看词选中文";
+      default:
+        return "";
+    }
+  }
+
+  async function reportQuizAnswer(wordId, correct) {
+    if (!wordId) return;
+    try {
+      await api("/api/quiz/result", {
+        method: "POST",
+        body: JSON.stringify({ results: [{ id: wordId, correct: !!correct }] }),
+      });
+    } catch (_) {
+      /* non-blocking */
+    }
+  }
+
   async function createQuiz() {
     els.btnNewQuiz.disabled = true;
-    els.quizArea.innerHTML = `<p class="empty">Generating English quiz…</p>`;
+    els.quizArea.innerHTML = `<p class="empty">正在出题…</p>`;
     quizScore = { correct: 0, total: 0 };
     try {
       const data = await api("/api/quiz", {
@@ -632,17 +661,21 @@
       });
       const qs = data.questions || [];
       if (!qs.length) {
-        els.quizArea.innerHTML = `<p class="empty">No questions generated. Try again.</p>`;
+        els.quizArea.innerHTML = `<p class="empty">没有生成题目，请稍后再试。</p>`;
         return;
       }
       quizScore.total = qs.length;
       els.quizArea.innerHTML = `
-        <div class="score-banner" id="scoreBanner">Progress: 0 / ${qs.length}</div>
+        <div class="score-banner" id="scoreBanner">进度：0 / ${qs.length}</div>
         ${qs
-          .map(
-            (q, qi) => `
-          <div class="quiz-q" data-qi="${qi}">
-            <h3>${qi + 1}. ${escapeHtml(q.question)}</h3>
+          .map((q, qi) => {
+            const typeLabel = quizTypeLabel(q.type);
+            const stem = escapeHtml(q.question || "").replace(/\n/g, "<br />");
+            return `
+          <div class="quiz-q" data-qi="${qi}" data-word-id="${q.id || ""}">
+            <h3>${qi + 1}. ${
+              typeLabel ? `<span class="quiz-type">${escapeHtml(typeLabel)}</span>` : ""
+            }${stem}</h3>
             <div class="options">
               ${(q.options || [])
                 .map(
@@ -654,8 +687,8 @@
                 .join("")}
             </div>
             <p class="explain" id="explain-${qi}" hidden></p>
-          </div>`
-          )
+          </div>`;
+          })
           .join("")}
       `;
     } catch (err) {
@@ -672,8 +705,8 @@
     const done = els.quizArea.querySelectorAll(".quiz-q.answered").length;
     el.textContent =
       done >= quizScore.total
-        ? `Done! Score ${quizScore.correct} / ${quizScore.total}`
-        : `Progress: ${done} / ${quizScore.total} · Correct ${quizScore.correct}`;
+        ? `完成！得分 ${quizScore.correct} / ${quizScore.total}`
+        : `进度：${done} / ${quizScore.total} · 正确 ${quizScore.correct}`;
   }
 
   els.filterInput.addEventListener("input", renderList);
@@ -789,12 +822,13 @@
 
     const correct = Number(btn.dataset.correct);
     const chosen = Number(btn.dataset.oi);
+    const isCorrect = chosen === correct;
     const options = block.querySelectorAll(".opt");
     options.forEach((o) => {
       o.disabled = true;
       if (Number(o.dataset.oi) === correct) o.classList.add("correct");
     });
-    if (chosen === correct) {
+    if (isCorrect) {
       quizScore.correct += 1;
     } else {
       btn.classList.add("wrong");
@@ -806,6 +840,8 @@
       explain.textContent = btn.dataset.explain;
     }
     updateScoreBanner();
+    const wordId = Number(block.dataset.wordId || 0);
+    reportQuizAnswer(wordId, isCorrect);
   });
 
   showPage("notebook");

@@ -80,6 +80,15 @@ CREATE TABLE IF NOT EXISTS settings (
 	if err := s.addColumn(`ALTER TABLE words ADD COLUMN phrases TEXT NOT NULL DEFAULT ''`); err != nil {
 		return err
 	}
+	if err := s.addColumn(`ALTER TABLE words ADD COLUMN quiz_tested INTEGER NOT NULL DEFAULT 0`); err != nil {
+		return err
+	}
+	if err := s.addColumn(`ALTER TABLE words ADD COLUMN quiz_wrong INTEGER NOT NULL DEFAULT 0`); err != nil {
+		return err
+	}
+	if err := s.addColumn(`ALTER TABLE words ADD COLUMN quiz_last_at TEXT NOT NULL DEFAULT ''`); err != nil {
+		return err
+	}
 	_, _ = s.db.Exec(`UPDATE words SET status='ready' WHERE IFNULL(status,'')=''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)=''`)
 	_, _ = s.db.Exec(`UPDATE words SET status='pending' WHERE status='ready' AND TRIM(meaning_zh)='' AND TRIM(meaning_en)<>''`)
@@ -386,7 +395,7 @@ func (s *Store) MarkError(id int64, msg string) error {
 	return nil
 }
 
-const wordSelectCols = `id, term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, related_forms, phrases, status, error_msg, created_at`
+const wordSelectCols = `id, term, phonetic, audio_url, meaning_en, meaning_zh, example_en, example_zh, part_of_speech, related_forms, phrases, status, error_msg, quiz_tested, quiz_wrong, quiz_last_at, created_at`
 
 // RequeueMissingFamily marks explained words that never received word-family
 // data so the enricher can fill forms and phrases.
@@ -458,10 +467,20 @@ FROM words ORDER BY datetime(created_at) DESC, id DESC`)
 }
 
 // ListReady returns explained words for quizzes.
+// Priority: never tested first, then higher wrong count, then fewer tests, then older last attempt.
 func (s *Store) ListReady() ([]models.Word, error) {
 	rows, err := s.db.Query(`
 SELECT `+wordSelectCols+`
-FROM words WHERE status=? AND TRIM(meaning_zh)<>'' ORDER BY datetime(created_at) DESC, id DESC`, models.StatusReady)
+FROM words
+WHERE status=? AND TRIM(meaning_zh)<>''
+ORDER BY
+  CASE WHEN IFNULL(quiz_tested,0)=0 THEN 0 ELSE 1 END ASC,
+  IFNULL(quiz_wrong,0) DESC,
+  IFNULL(quiz_tested,0) ASC,
+  CASE WHEN TRIM(IFNULL(quiz_last_at,''))='' THEN 0 ELSE 1 END ASC,
+  datetime(IFNULL(NULLIF(quiz_last_at,''),'1970-01-01T00:00:00Z')) ASC,
+  datetime(created_at) ASC,
+  id ASC`, models.StatusReady)
 	if err != nil {
 		return nil, err
 	}
@@ -475,6 +494,48 @@ FROM words WHERE status=? AND TRIM(meaning_zh)<>'' ORDER BY datetime(created_at)
 		list = append(list, *w)
 	}
 	return list, rows.Err()
+}
+
+// RecordQuizResults updates per-word quiz practice counters.
+// Correct answers reduce quiz_wrong (floor 0); wrong answers increase it.
+func (s *Store) RecordQuizResults(results []models.QuizAnswerResult) error {
+	if len(results) == 0 {
+		return nil
+	}
+	now := time.Now().UTC().Format(time.RFC3339)
+	tx, err := s.db.Begin()
+	if err != nil {
+		return err
+	}
+	defer func() { _ = tx.Rollback() }()
+
+	for _, r := range results {
+		if r.ID <= 0 {
+			continue
+		}
+		var q string
+		if r.Correct {
+			q = `UPDATE words SET
+  quiz_tested = IFNULL(quiz_tested,0) + 1,
+  quiz_wrong = CASE WHEN IFNULL(quiz_wrong,0) > 0 THEN quiz_wrong - 1 ELSE 0 END,
+  quiz_last_at = ?
+WHERE id = ?`
+		} else {
+			q = `UPDATE words SET
+  quiz_tested = IFNULL(quiz_tested,0) + 1,
+  quiz_wrong = IFNULL(quiz_wrong,0) + 1,
+  quiz_last_at = ?
+WHERE id = ?`
+		}
+		if _, err := tx.Exec(q, now, r.ID); err != nil {
+			return err
+		}
+	}
+	if err := tx.Commit(); err != nil {
+		return err
+	}
+	s.changed()
+	return nil
 }
 
 // Count returns total vocabulary size.
@@ -521,10 +582,11 @@ type scanner interface {
 
 func scanWord(row scanner) (*models.Word, error) {
 	var w models.Word
-	var created, formsJSON, phrasesJSON string
+	var created, formsJSON, phrasesJSON, quizLast string
 	err := row.Scan(
 		&w.ID, &w.Term, &w.Phonetic, &w.AudioURL, &w.MeaningEN, &w.MeaningZH, &w.ExampleEN, &w.ExampleZH,
-		&w.PartOfSpeech, &formsJSON, &phrasesJSON, &w.Status, &w.ErrorMsg, &created,
+		&w.PartOfSpeech, &formsJSON, &phrasesJSON, &w.Status, &w.ErrorMsg,
+		&w.QuizTested, &w.QuizWrong, &quizLast, &created,
 	)
 	if err == sql.ErrNoRows {
 		return nil, nil
@@ -535,6 +597,7 @@ func scanWord(row scanner) (*models.Word, error) {
 	if w.Status == "" {
 		w.Status = models.StatusReady
 	}
+	w.QuizLastAt = strings.TrimSpace(quizLast)
 	w.RelatedForms = models.ParseSlice[models.RelatedForm](formsJSON)
 	w.Phrases = models.ParseSlice[models.Phrase](phrasesJSON)
 	w.CreatedAt, _ = time.Parse(time.RFC3339, created)

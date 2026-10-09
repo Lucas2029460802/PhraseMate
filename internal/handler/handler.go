@@ -13,6 +13,7 @@ import (
 	"phrasemate/internal/dict"
 	"phrasemate/internal/enricher"
 	"phrasemate/internal/models"
+	"phrasemate/internal/quiz"
 	"phrasemate/internal/store"
 )
 
@@ -42,6 +43,7 @@ func (a *API) Register(mux *http.ServeMux) {
 	mux.HandleFunc("DELETE /api/words/{id}", a.handleDeleteWord)
 	mux.HandleFunc("POST /api/words/{id}/retry", a.handleRetry)
 	mux.HandleFunc("POST /api/quiz", a.handleQuiz)
+	mux.HandleFunc("POST /api/quiz/result", a.handleQuizResult)
 	mux.HandleFunc("POST /api/translate", a.handleTranslate)
 	mux.HandleFunc("GET /api/tts", a.handleTTS)
 }
@@ -275,12 +277,26 @@ func (a *API) handleQuiz(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	questions, err := a.ai.GenerateQuiz(r.Context(), words, req.Count)
+	// Prefer local generation so stems always include the target word/definition.
+	questions, err := quiz.Build(words, req.Count)
 	if err != nil {
-		writeErr(w, http.StatusBadGateway, err.Error())
+		writeErr(w, http.StatusBadRequest, err.Error())
 		return
 	}
 	writeJSON(w, http.StatusOK, models.QuizResponse{Questions: questions})
+}
+
+func (a *API) handleQuizResult(w http.ResponseWriter, r *http.Request) {
+	var req models.QuizResultRequest
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		writeErr(w, http.StatusBadRequest, "请求格式无效")
+		return
+	}
+	if err := a.store.RecordQuizResults(req.Results); err != nil {
+		writeErr(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]any{"ok": true})
 }
 
 func (a *API) handleTranslate(w http.ResponseWriter, r *http.Request) {
