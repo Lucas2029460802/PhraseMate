@@ -5931,14 +5931,54 @@
     },
     {
       "created_at": "2026-10-08T16:15:54Z",
-      "example_en": "The doctor prescribed some antibiotics for my infection.",
-      "example_zh": "医生给我开了一些抗生素来治疗感染。",
+      "example_en": "The doctor prescribed a course of antibiotics for the infection.",
+      "example_zh": "医生为这次感染开了一个疗程的抗生素。",
       "id": 142,
-      "meaning_en": "To order or give a medicine or treatment as a doctor; also to state officially what should be done or followed as a rule.",
-      "meaning_zh": "开处方，开药；规定，指定，指示",
+      "meaning_en": "To order or authorize the use of a medicine or treatment for a patient. It also means to lay down a rule, standard, or course of action officially.",
+      "meaning_zh": "开（处方），给……开药；规定，指令，指示（规则、标准等）",
       "part_of_speech": "v.",
       "phonetic": "/prɪˈskraɪb/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "prescribe medicine for sb.",
+          "meaning_zh": "给某人开药"
+        },
+        {
+          "phrase": "prescribe a treatment",
+          "meaning_zh": "规定治疗方案，开具疗法"
+        },
+        {
+          "phrase": "be prescribed by law",
+          "meaning_zh": "由法律规定"
+        },
+        {
+          "phrase": "prescribe standards for",
+          "meaning_zh": "为……规定标准"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "prescription",
+          "pos": "n.",
+          "meaning_zh": "处方，药方；规定"
+        },
+        {
+          "word": "prescriptive",
+          "pos": "adj.",
+          "meaning_zh": "规定的，规范性的"
+        },
+        {
+          "word": "prescriptively",
+          "pos": "adv.",
+          "meaning_zh": "按规定地，规范地"
+        },
+        {
+          "word": "prescript",
+          "pos": "n.",
+          "meaning_zh": "命令，规定，法令"
+        }
+      ],
+      "status": "ready",
       "term": "prescribe"
     },
     {
