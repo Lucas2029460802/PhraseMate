@@ -5569,14 +5569,49 @@
     },
     {
       "created_at": "2026-10-08T16:03:35Z",
-      "example_en": "The new government has a clear mandate to reform the economy.",
-      "example_zh": "新政府获得了改革经济的明确授权。",
+      "example_en": "The new president claimed a clear mandate to change the country's economic policy.",
+      "example_zh": "新总统声称获得了改变国家经济政策的明确授权。",
       "id": 133,
-      "meaning_en": "An official order or authorization given by a person or body with authority. As a verb, it means to officially require or authorize something.",
-      "meaning_zh": "n. 授权；命令，指令；委托；委任统治；v. 授权；强制执行，下令，规定",
+      "meaning_en": "An official order or authorization, especially from voters or a governing body; to officially require or authorize something.",
+      "meaning_zh": "n. 授权；命令；委托；选民赋予的权限；v. 授权；命令；强制执行",
       "part_of_speech": "n. / v.",
       "phonetic": "/ˈmændeɪt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "electoral mandate",
+          "meaning_zh": "选举授权；选民赋予的执政授权"
+        },
+        {
+          "phrase": "mandate for reform",
+          "meaning_zh": "改革授权"
+        },
+        {
+          "phrase": "government mandate",
+          "meaning_zh": "政府授权；政府指令"
+        },
+        {
+          "phrase": "mandate to do something",
+          "meaning_zh": "授权做某事"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "mandatory",
+          "pos": "adj.",
+          "meaning_zh": "强制的；义务的；法定的"
+        },
+        {
+          "word": "mandatorily",
+          "pos": "adv.",
+          "meaning_zh": "强制性地；义务性地"
+        },
+        {
+          "word": "mandative",
+          "pos": "adj.",
+          "meaning_zh": "表示命令的；祈使的（语言学）"
+        }
+      ],
+      "status": "ready",
       "term": "mandate"
     },
     {
