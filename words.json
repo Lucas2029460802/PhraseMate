@@ -3967,14 +3967,49 @@
     },
     {
       "created_at": "2026-10-08T15:12:16Z",
-      "example_en": "She had a suspicion that he was lying about where he had been.",
-      "example_zh": "她怀疑他在自己去了哪里这件事上撒了谎。",
+      "example_en": "Her strange behavior aroused suspicion.",
+      "example_zh": "她的奇怪行为引起了怀疑。",
       "id": 96,
-      "meaning_en": "A feeling or belief that something is wrong, or that someone has done something bad, usually without proof. It can also mean a very small amount of something.",
-      "meaning_zh": "怀疑；猜疑；嫌疑；（后接 of）一丝，一点，微量",
+      "meaning_en": "A feeling or belief that someone has done something wrong, or that something is true, without certain proof.",
+      "meaning_zh": "怀疑；嫌疑；疑虑",
       "part_of_speech": "n.",
-      "phonetic": "/səˈspɪʃn/",
-      "status": "pending",
+      "phonetic": "/səˈspɪʃən/",
+      "phrases": [
+        {
+          "phrase": "above suspicion",
+          "meaning_zh": "无可怀疑；不受怀疑"
+        },
+        {
+          "phrase": "on suspicion of",
+          "meaning_zh": "因涉嫌…；因怀疑…"
+        },
+        {
+          "phrase": "under suspicion",
+          "meaning_zh": "受到怀疑"
+        },
+        {
+          "phrase": "arouse suspicion",
+          "meaning_zh": "引起怀疑"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "suspicious",
+          "pos": "adj.",
+          "meaning_zh": "可疑的；怀疑的"
+        },
+        {
+          "word": "suspiciously",
+          "pos": "adv.",
+          "meaning_zh": "可疑地；怀疑地"
+        },
+        {
+          "word": "suspect",
+          "pos": "v.",
+          "meaning_zh": "怀疑；猜想"
+        }
+      ],
+      "status": "ready",
       "term": "suspicion"
     },
     {
