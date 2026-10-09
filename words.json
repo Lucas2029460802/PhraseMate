@@ -6233,14 +6233,44 @@
     },
     {
       "created_at": "2026-10-08T16:27:41Z",
-      "example_en": "She raised her shield to block the arrow, shielding the child behind her.",
-      "example_zh": "她举起盾牌挡住箭矢，护住了身后的孩子。",
+      "example_en": "She raised her hand to shield her eyes from the bright sunlight.",
+      "example_zh": "她抬起手遮挡刺眼的阳光。",
       "id": 149,
-      "meaning_en": "A broad piece of armor held on the arm to block blows; by extension, anything that protects or defends. As a verb, it means to protect someone or something from harm or danger.",
-      "meaning_zh": "n. 盾；盾牌；防护物，屏障；保护者；（盾形）徽章。v. 保护，掩护；遮挡，遮蔽。",
+      "meaning_en": "A broad piece of defensive armor or a protective barrier; to protect someone or something from harm or danger.",
+      "meaning_zh": "盾；盾牌；防护物；保护；掩护",
       "part_of_speech": "n. / v.",
       "phonetic": "/ʃiːld/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "riot shield",
+          "meaning_zh": "防暴盾牌"
+        },
+        {
+          "phrase": "heat shield",
+          "meaning_zh": "隔热罩；热屏蔽"
+        },
+        {
+          "phrase": "shield from",
+          "meaning_zh": "保护……免受"
+        },
+        {
+          "phrase": "human shield",
+          "meaning_zh": "人体盾牌"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "shieldless",
+          "pos": "adj.",
+          "meaning_zh": "无保护的；无盾的"
+        },
+        {
+          "word": "shielded",
+          "pos": "adj.",
+          "meaning_zh": "屏蔽的；受保护的"
+        }
+      ],
+      "status": "ready",
       "term": "shield"
     },
     {
