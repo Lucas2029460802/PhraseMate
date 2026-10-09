@@ -5402,14 +5402,49 @@
     },
     {
       "created_at": "2026-10-08T15:58:57Z",
-      "example_en": "She conversed with her grandmother in French for hours, and they never ran out of things to say.",
-      "example_zh": "她用法语和祖母交谈了几个小时，总有说不完的话。",
+      "example_en": "They sat by the fire and conversed quietly about their childhood.",
+      "example_zh": "他们坐在炉火旁，轻声交谈着各自的童年。",
       "id": 129,
-      "meaning_en": "As a verb: to talk with someone in a friendly or formal way. As an adjective or noun: the opposite of something, or the reverse proposition.",
-      "meaning_zh": "v. 交谈，谈话， converse with sb 与某人交谈（重音在后）；adj. 相反的，逆的；n. 相反的事物，反面（重音在前，读作 /ˈkɒnvɜːs/）",
-      "part_of_speech": "v. / adj. / n.",
+      "meaning_en": "To talk with someone in an informal way; to have a conversation. As a noun or adjective (pronounced /ˈkɒnvɜːs/), it means the opposite or reverse of something.",
+      "meaning_zh": "v. 交谈，谈话；n. 相反的事物，反面；adj. 相反的，逆的（作名词、形容词时读作 /ˈkɒnvɜːs/）",
+      "part_of_speech": "v.",
       "phonetic": "/kənˈvɜːs/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "converse with sb",
+          "meaning_zh": "与某人交谈"
+        },
+        {
+          "phrase": "converse in English",
+          "meaning_zh": "用英语交谈"
+        },
+        {
+          "phrase": "the converse is also true",
+          "meaning_zh": "反之亦然"
+        },
+        {
+          "phrase": "the converse of a statement",
+          "meaning_zh": "命题的逆命题"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "conversation",
+          "pos": "n.",
+          "meaning_zh": "谈话，对话，交谈"
+        },
+        {
+          "word": "conversant",
+          "pos": "adj.",
+          "meaning_zh": "熟悉的，精通的"
+        },
+        {
+          "word": "conversely",
+          "pos": "adv.",
+          "meaning_zh": "相反地，反过来说"
+        }
+      ],
+      "status": "ready",
       "term": "converse"
     },
     {
