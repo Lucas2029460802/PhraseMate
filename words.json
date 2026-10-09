@@ -5747,14 +5747,54 @@
     },
     {
       "created_at": "2026-10-08T16:07:02Z",
-      "example_en": "The company is facing a shortfall of two million dollars in its annual budget.",
-      "example_zh": "该公司年度预算面临两百万美元的缺口。",
+      "example_en": "The government is facing a shortfall of several billion dollars in tax revenue.",
+      "example_zh": "政府正面临数十亿美元的税收缺口。",
       "id": 137,
-      "meaning_en": "The amount by which something falls short of what is needed, expected, or required; a deficit.",
-      "meaning_zh": "缺口；差额；不足额；赤字",
+      "meaning_en": "A failure to reach a required or expected amount; the amount by which something is less than what is needed.",
+      "meaning_zh": "不足；缺口；亏空；差额",
       "part_of_speech": "n.",
       "phonetic": "/ˈʃɔːtfɔːl/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "a shortfall in revenue",
+          "meaning_zh": "收入缺口"
+        },
+        {
+          "phrase": "funding shortfall",
+          "meaning_zh": "资金短缺"
+        },
+        {
+          "phrase": "meet a shortfall",
+          "meaning_zh": "弥补缺口"
+        },
+        {
+          "phrase": "budget shortfall",
+          "meaning_zh": "预算亏空"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "short",
+          "pos": "adj.",
+          "meaning_zh": "短的；不足的"
+        },
+        {
+          "word": "shorten",
+          "pos": "v.",
+          "meaning_zh": "缩短；减少"
+        },
+        {
+          "word": "shortly",
+          "pos": "adv.",
+          "meaning_zh": "不久；简短地"
+        },
+        {
+          "word": "shortness",
+          "pos": "n.",
+          "meaning_zh": "短；不足"
+        }
+      ],
+      "status": "ready",
       "term": "shortfall"
     },
     {
