@@ -5984,13 +5984,39 @@
     {
       "created_at": "2026-10-08T16:16:00Z",
       "example_en": "She was hired to oversee the construction of the new bridge.",
-      "example_zh": "她被聘来监督这座新桥的建造工程。",
+      "example_zh": "她受聘监督新桥的建设。",
       "id": 143,
-      "meaning_en": "To watch over and direct a person, activity, or process in order to make sure that it is done properly.",
-      "meaning_zh": "监督；管理；监管；照管",
+      "meaning_en": "To watch and direct work or people; to supervise.",
+      "meaning_zh": "监督；管理；照看",
       "part_of_speech": "v.",
-      "phonetic": "/ˌəʊvəˈsiː/",
-      "status": "pending",
+      "phonetic": "/ˌoʊvərˈsiː/",
+      "phrases": [
+        {
+          "phrase": "oversee the project",
+          "meaning_zh": "监督项目"
+        },
+        {
+          "phrase": "oversee operations",
+          "meaning_zh": "监管运营"
+        },
+        {
+          "phrase": "oversee the implementation",
+          "meaning_zh": "监督实施"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "overseer",
+          "pos": "n.",
+          "meaning_zh": "监工；主管"
+        },
+        {
+          "word": "oversight",
+          "pos": "n.",
+          "meaning_zh": "监督；照管；疏忽"
+        }
+      ],
+      "status": "ready",
       "term": "oversee"
     },
     {
