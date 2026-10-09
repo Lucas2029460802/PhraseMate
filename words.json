@@ -3089,14 +3089,44 @@
     },
     {
       "created_at": "2026-10-01T16:59:48Z",
-      "example_en": "She queried whether the figures in the report were accurate.",
-      "example_zh": "她质疑报告中的数字是否准确。",
+      "example_en": "She queried the manager about the delay in delivery.",
+      "example_zh": "她就交货延迟一事询问了经理。",
       "id": 76,
-      "meaning_en": "A question, especially one asking for information or expressing doubt. As a verb, to ask a question or express doubt about something; in computing, to search a database or system for information.",
-      "meaning_zh": "n. 问题；疑问；询问；（计算机）查询；v. 询问；质疑；对……表示疑问；（计算机）查询",
+      "meaning_en": "A question, especially one asking for information or expressing doubt; to ask a question about something, or to express doubt about whether something is correct.",
+      "meaning_zh": "询问；疑问；（向某人）提问，询问；对……表示疑问，质疑",
       "part_of_speech": "n. / v.",
       "phonetic": "/ˈkwɪəri/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "query language",
+          "meaning_zh": "查询语言（如 SQL）"
+        },
+        {
+          "phrase": "database query",
+          "meaning_zh": "数据库查询"
+        },
+        {
+          "phrase": "raise a query",
+          "meaning_zh": "提出疑问"
+        },
+        {
+          "phrase": "query sb about sth",
+          "meaning_zh": "就某事询问某人"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "queryable",
+          "pos": "adj.",
+          "meaning_zh": "可查询的；可询问的"
+        },
+        {
+          "word": "querulous",
+          "pos": "adj.",
+          "meaning_zh": "爱抱怨的；爱发牢骚的"
+        }
+      ],
+      "status": "ready",
       "term": "query"
     },
     {
