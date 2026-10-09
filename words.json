@@ -3301,14 +3301,44 @@
     },
     {
       "created_at": "2026-10-08T11:00:34Z",
-      "example_en": "The jury found the defendant not guilty after three hours of discussion.",
-      "example_zh": "经过三个小时的讨论，陪审团裁定被告无罪。",
+      "example_en": "The jury returned a verdict of not guilty.",
+      "example_zh": "陪审团作出了无罪裁定。",
       "id": 81,
-      "meaning_en": "A group of people sworn to examine the evidence in a court case and give a verdict. It can also mean a group of judges who decide the winner in a competition.",
-      "meaning_zh": "陪审团；（竞赛的）评判委员会、评审团",
+      "meaning_en": "A group of people sworn to hear evidence in a court case and give a verdict.",
+      "meaning_zh": "陪审团；（竞赛、评审等的）评审团，评判委员会",
       "part_of_speech": "n.",
       "phonetic": "/ˈdʒʊəri/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "jury trial",
+          "meaning_zh": "陪审团审判"
+        },
+        {
+          "phrase": "jury duty",
+          "meaning_zh": "陪审义务"
+        },
+        {
+          "phrase": "grand jury",
+          "meaning_zh": "大陪审团"
+        },
+        {
+          "phrase": "hung jury",
+          "meaning_zh": "无法作出裁定的陪审团；悬案陪审团"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "juried",
+          "pos": "adj.",
+          "meaning_zh": "由评审团评选的"
+        },
+        {
+          "word": "juryless",
+          "pos": "adj.",
+          "meaning_zh": "无陪审团的"
+        }
+      ],
+      "status": "ready",
       "term": "jury"
     },
     {
