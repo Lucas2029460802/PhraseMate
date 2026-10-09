@@ -4874,15 +4874,51 @@
       "term": "incentive"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/gloomy-us.mp3",
       "created_at": "2026-10-08T15:38:49Z",
-      "example_en": "The gloomy weather matched his mood perfectly.",
-      "example_zh": "阴沉的天气与他的心情再相配不过了。",
+      "example_en": "The cavern was gloomy.",
+      "example_zh": "洞穴阴沉。",
       "id": 117,
-      "meaning_en": "Dark or poorly lit, especially because of clouds or lack of light. Also means feeling sad, hopeless, or without much hope for the future.",
-      "meaning_zh": "阴暗的，光线不足的；忧郁的，沮丧的；（前景）黯淡的，悲观的",
+      "meaning_en": "Not very illuminated; dim because of darkness, especially when appearing depressing or frightening; Suffering from gloom; melancholy; dejected",
+      "meaning_zh": "不太明亮；由于黑暗而昏暗，特别是在显得沮丧或可怕时；沮丧；忧郁；沮丧",
       "part_of_speech": "adj.",
-      "phonetic": "/ˈɡluːmi/",
-      "status": "pending",
+      "phonetic": "/ˈɡlumi/",
+      "phrases": [
+        {
+          "phrase": "gloomy weather",
+          "meaning_zh": "阴沉的天气"
+        },
+        {
+          "phrase": "gloomy mood",
+          "meaning_zh": "忧郁的情绪"
+        },
+        {
+          "phrase": "gloomy outlook",
+          "meaning_zh": "悲观的前景"
+        },
+        {
+          "phrase": "a gloomy day",
+          "meaning_zh": "阴沉的一天"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "gloom",
+          "pos": "n. / v.",
+          "meaning_zh": "忧郁；昏暗；变忧郁；变暗"
+        },
+        {
+          "word": "gloomily",
+          "pos": "adv.",
+          "meaning_zh": "忧郁地；阴沉地"
+        },
+        {
+          "word": "gloominess",
+          "pos": "n.",
+          "meaning_zh": "忧郁；阴沉"
+        }
+      ],
+      "status": "ready",
       "term": "gloomy"
     },
     {
