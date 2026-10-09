@@ -4831,15 +4831,46 @@
       "term": "nostalgia"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/incentive-uk.mp3",
       "created_at": "2026-10-08T15:38:20Z",
-      "example_en": "The company offers a cash bonus as an incentive for employees to meet their sales targets.",
-      "example_zh": "公司提供现金奖金，作为激励员工完成销售目标的奖励。",
+      "example_en": "I have no incentive to do housework right now.",
+      "example_zh": "我现在没有动力做家务。",
       "id": 116,
-      "meaning_en": "Something that encourages or motivates a person to do something, often a reward or benefit offered to stimulate effort or action.",
-      "meaning_zh": "激励；刺激；鼓励；动力；奖励措施",
+      "meaning_en": "Something that motivates, rouses, or encourages; A bonus or reward, often monetary, to work harder",
+      "meaning_zh": "激励、唤醒或鼓励；更努力工作的奖金或奖励，通常是金钱奖励",
       "part_of_speech": "n.",
-      "phonetic": "/ɪnˈsentɪv/",
-      "status": "pending",
+      "phonetic": "/ɪnˈsɛntɪv/",
+      "phrases": [
+        {
+          "phrase": "financial incentive",
+          "meaning_zh": "经济激励；财政奖励"
+        },
+        {
+          "phrase": "tax incentive",
+          "meaning_zh": "税收优惠；税收激励"
+        },
+        {
+          "phrase": "incentive to do something",
+          "meaning_zh": "做某事的激励"
+        },
+        {
+          "phrase": "provide an incentive",
+          "meaning_zh": "提供激励；给予奖励"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "incentivize",
+          "pos": "v.",
+          "meaning_zh": "激励；以奖励刺激"
+        },
+        {
+          "word": "incentively",
+          "pos": "adv.",
+          "meaning_zh": "激励地；起激励作用地"
+        }
+      ],
+      "status": "ready",
       "term": "incentive"
     },
     {
