@@ -3537,15 +3537,51 @@
       "term": "religion"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/legitimate-uk.mp3",
       "created_at": "2026-10-08T11:12:47Z",
       "example_en": "She has a legitimate claim to the property.",
       "example_zh": "她对这处房产有合法的所有权主张。",
       "id": 86,
-      "meaning_en": "Allowed or required by law; reasonable and fair; genuine or valid.",
-      "meaning_zh": "合法的；正当的；合理的；名副其实的",
-      "part_of_speech": "adj.",
+      "meaning_en": "A person born to a legally married couple",
+      "meaning_zh": "合法的；正当的；合理的；真正的",
+      "part_of_speech": "n.",
       "phonetic": "/lɪˈdʒɪtɪmət/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "legitimate business",
+          "meaning_zh": "合法生意"
+        },
+        {
+          "phrase": "legitimate concern",
+          "meaning_zh": "合理的担忧"
+        },
+        {
+          "phrase": "legitimate government",
+          "meaning_zh": "合法政府"
+        },
+        {
+          "phrase": "legitimate reason",
+          "meaning_zh": "正当理由"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "legitimacy",
+          "pos": "n.",
+          "meaning_zh": "合法性；正当性"
+        },
+        {
+          "word": "legitimize",
+          "pos": "v.",
+          "meaning_zh": "使合法化；使正当化"
+        },
+        {
+          "word": "legitimately",
+          "pos": "adv.",
+          "meaning_zh": "合法地；正当地；合理地"
+        }
+      ],
+      "status": "ready",
       "term": "legitimate"
     },
     {
