@@ -3921,13 +3921,48 @@
     {
       "created_at": "2026-10-08T15:11:41Z",
       "example_en": "The new restaurant caters to families with young children.",
-      "example_zh": "这家新餐厅迎合了有幼儿的家庭的需求。",
+      "example_zh": "这家新餐厅迎合了有小孩的家庭的需求。",
       "id": 95,
-      "meaning_en": "To provide what someone wants or needs, often by pleasing or indulging them; to be aimed at a particular group or taste.",
-      "meaning_zh": "迎合；满足……的需要；投合（某类人的口味或需求）；迁就",
+      "meaning_en": "To provide what someone wants or needs, often by satisfying their tastes or demands; sometimes implies doing so in a way that is excessive or flattering.",
+      "meaning_zh": "迎合；满足（某人的需要、口味等）；（贬义）迁就、讨好",
       "part_of_speech": "phrase",
-      "phonetic": "/ˈkeɪtər tuː/",
-      "status": "pending",
+      "phonetic": "/ˈkeɪtə(r) tuː/",
+      "phrases": [
+        {
+          "phrase": "cater to sb's needs",
+          "meaning_zh": "满足某人的需求"
+        },
+        {
+          "phrase": "cater to every taste",
+          "meaning_zh": "迎合各种口味"
+        },
+        {
+          "phrase": "cater to the masses",
+          "meaning_zh": "迎合大众口味"
+        },
+        {
+          "phrase": "cater for",
+          "meaning_zh": "（英式）为……提供饮食；满足……的需要"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "cater",
+          "pos": "v.",
+          "meaning_zh": "提供饮食服务；满足需要"
+        },
+        {
+          "word": "caterer",
+          "pos": "n.",
+          "meaning_zh": "餐饮承办者；酒席承办商"
+        },
+        {
+          "word": "catering",
+          "pos": "n.",
+          "meaning_zh": "餐饮供应；酒席承办业"
+        }
+      ],
+      "status": "ready",
       "term": "cater to"
     },
     {
