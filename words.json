@@ -3177,15 +3177,33 @@
       "term": "catastrophe"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/tunnel-us.mp3",
       "created_at": "2026-10-02T12:17:12Z",
-      "example_en": "The train went through a long tunnel under the mountain.",
-      "example_zh": "火车穿过山下的长隧道。",
       "id": 78,
-      "meaning_en": "A passage dug through or under ground, or a similar enclosed passage. As a verb, to dig such a passage.",
-      "meaning_zh": "隧道；地道；（动物的）洞穴；v. 挖隧道；挖地道",
-      "part_of_speech": "n. / v.",
-      "phonetic": "/ˈtʌnl/",
-      "status": "pending",
+      "meaning_en": "An underground or underwater passage; A passage through or under some obstacle",
+      "meaning_zh": "地下或水下通道；通过某个障碍物或在障碍物下方的通道",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈtʌn(ə)l/",
+      "phrases": [
+        {
+          "phrase": "tunnel vision",
+          "meaning_zh": "隧道视野；管状视野；比喻狭隘视野"
+        },
+        {
+          "phrase": "wind tunnel",
+          "meaning_zh": "风洞"
+        },
+        {
+          "phrase": "light at the end of the tunnel",
+          "meaning_zh": "隧道尽头的光；一线希望"
+        },
+        {
+          "phrase": "tunnel through",
+          "meaning_zh": "挖隧道穿过；穿越"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "tunnel"
     },
     {
