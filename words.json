@@ -3627,14 +3627,49 @@
     },
     {
       "created_at": "2026-10-08T15:05:40Z",
-      "example_en": "She comes from a very artistic family and has been painting since she was a child.",
-      "example_zh": "她出身于一个很有艺术气息的家庭，从小就画画。",
+      "example_en": "She has an artistic temperament and loves painting.",
+      "example_zh": "她具有艺术气质，热爱绘画。",
       "id": 88,
-      "meaning_en": "Relating to art or artists; showing natural skill and good taste in creating things, especially beautiful ones.",
-      "meaning_zh": "艺术的；艺术家的；有艺术天赋的；富有艺术鉴赏力的",
+      "meaning_en": "Relating to art or artists; showing creative skill and good taste.",
+      "meaning_zh": "艺术的；艺术家的；有艺术天赋的；富有艺术感的",
       "part_of_speech": "adj.",
-      "phonetic": "/ɑːˈtɪstɪk/",
-      "status": "pending",
+      "phonetic": "/ɑːrˈtɪstɪk/",
+      "phrases": [
+        {
+          "phrase": "artistic talent",
+          "meaning_zh": "艺术天赋"
+        },
+        {
+          "phrase": "artistic style",
+          "meaning_zh": "艺术风格"
+        },
+        {
+          "phrase": "artistic creation",
+          "meaning_zh": "艺术创作"
+        },
+        {
+          "phrase": "artistic value",
+          "meaning_zh": "艺术价值"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "artist",
+          "pos": "n.",
+          "meaning_zh": "艺术家；画家"
+        },
+        {
+          "word": "artistry",
+          "pos": "n.",
+          "meaning_zh": "艺术性；艺术技巧"
+        },
+        {
+          "word": "artistically",
+          "pos": "adv.",
+          "meaning_zh": "艺术地；在艺术上"
+        }
+      ],
+      "status": "ready",
       "term": "artistic"
     },
     {
