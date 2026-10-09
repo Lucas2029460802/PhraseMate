@@ -5000,15 +5000,51 @@
       "term": "drift away"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/drain-us.mp3",
       "created_at": "2026-10-08T15:45:00Z",
-      "example_en": "Please drain the pasta and then add the sauce.",
-      "example_zh": "请把意大利面沥干水分，然后加入酱汁。",
+      "example_en": "The drain in the kitchen sink is clogged.",
+      "example_zh": "厨房水槽的下水道堵塞。",
       "id": 120,
-      "meaning_en": "As a verb: to make liquid flow away from something, or to use up someone's energy or resources. As a noun: a pipe or channel that carries away waste water, or the act of using up resources.",
-      "meaning_zh": "v. 排水；使（液体）流走；耗尽（精力、资源）；喝干。n. 排水管；下水道；排水沟；消耗；耗尽。",
-      "part_of_speech": "v. / n.",
-      "phonetic": "/dreɪn/",
-      "status": "pending",
+      "meaning_en": "A conduit allowing liquid to flow out of an otherwise contained volume; a plughole (UK)",
+      "meaning_zh": "允许液体从原本容纳的体积中流出的导管；水管孔（英国）",
+      "part_of_speech": "n.",
+      "phonetic": "/dɹeɪn/",
+      "phrases": [
+        {
+          "phrase": "brain drain",
+          "meaning_zh": "人才外流"
+        },
+        {
+          "phrase": "down the drain",
+          "meaning_zh": "被浪费；白费"
+        },
+        {
+          "phrase": "storm drain",
+          "meaning_zh": "雨水管道"
+        },
+        {
+          "phrase": "drain pipe",
+          "meaning_zh": "排水管"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "drainable",
+          "pos": "adj.",
+          "meaning_zh": "可排水的"
+        },
+        {
+          "word": "drainless",
+          "pos": "adj.",
+          "meaning_zh": "无排水设施的"
+        },
+        {
+          "word": "undrained",
+          "pos": "adj.",
+          "meaning_zh": "未排水的"
+        }
+      ],
+      "status": "ready",
       "term": "drain"
     },
     {
