@@ -5480,14 +5480,49 @@
     },
     {
       "created_at": "2026-10-08T15:59:36Z",
-      "example_en": "Don't fret about the exam — you've studied hard and you'll do fine.",
-      "example_zh": "别为考试发愁了——你学得很努力，一定会考好的。",
+      "example_en": "Don't fret over things you can't control.",
+      "example_zh": "不要为你无法控制的事情烦恼。",
       "id": 131,
-      "meaning_en": "To worry or be anxious about something, often unnecessarily. As a noun, it means a state of worry or agitation; it can also refer to a metal ridge on the fingerboard of a guitar.",
-      "meaning_zh": "v. 烦恼；焦急；发愁；n. 烦恼；焦虑；（吉他等弦乐器指板上的）品丝，音柱",
-      "part_of_speech": "v. / n.",
-      "phonetic": "/fret/",
-      "status": "pending",
+      "meaning_en": "To worry or be anxious; (as a noun) a state of anxiety, or a metal ridge on the fingerboard of a stringed instrument.",
+      "meaning_zh": "烦恼，焦虑；烦躁；【音乐】（吉他等弦乐器指板上的）品，品丝",
+      "part_of_speech": "v.; n.",
+      "phonetic": "/frɛt/",
+      "phrases": [
+        {
+          "phrase": "fret over",
+          "meaning_zh": "为……担忧；为……烦恼"
+        },
+        {
+          "phrase": "fret about",
+          "meaning_zh": "为……焦虑"
+        },
+        {
+          "phrase": "fret and fume",
+          "meaning_zh": "烦躁发怒；焦躁不安"
+        },
+        {
+          "phrase": "fret saw",
+          "meaning_zh": "线锯；钢丝锯"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "fretful",
+          "pos": "adj.",
+          "meaning_zh": "烦躁的；焦虑的"
+        },
+        {
+          "word": "fretfully",
+          "pos": "adv.",
+          "meaning_zh": "烦躁地；焦虑地"
+        },
+        {
+          "word": "fretless",
+          "pos": "adj.",
+          "meaning_zh": "无品的；无品丝的"
+        }
+      ],
+      "status": "ready",
       "term": "fret"
     },
     {
