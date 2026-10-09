@@ -5527,14 +5527,44 @@
     },
     {
       "created_at": "2026-10-08T16:00:31Z",
-      "example_en": "She grabbed the broom and swept the kitchen floor.",
-      "example_zh": "她拿起扫帚，把厨房的地板扫了一遍。",
+      "example_en": "She grabbed a broom and swept the kitchen floor.",
+      "example_zh": "她拿起一把扫帚，扫了扫厨房的地板。",
       "id": 132,
-      "meaning_en": "A domestic utensil with fibers bound together at the end of a long handle, used for sweeping; An implement with which players sweep the ice to make a stone travel further and curl less; a sweeper",
-      "meaning_zh": "扫帚；扫把；金雀花（一种开黄色花的灌木）",
-      "part_of_speech": "n.",
-      "phonetic": "/bɹuːm/",
-      "status": "pending",
+      "meaning_en": "A cleaning tool with a long handle and stiff bristles, used for sweeping. As a verb, to sweep with a broom. It can also refer to a yellow-flowered shrub.",
+      "meaning_zh": "扫帚；用扫帚扫；金雀花（一种开黄花的灌木）。",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/bruːm/",
+      "phrases": [
+        {
+          "phrase": "broom closet",
+          "meaning_zh": "清洁用具柜；扫帚柜"
+        },
+        {
+          "phrase": "broom handle",
+          "meaning_zh": "扫帚柄"
+        },
+        {
+          "phrase": "a new broom",
+          "meaning_zh": "新上任者；新官"
+        },
+        {
+          "phrase": "broomstick",
+          "meaning_zh": "扫帚柄；女巫的扫帚"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "broomy",
+          "pos": "adj.",
+          "meaning_zh": "长满金雀花的；似扫帚的"
+        },
+        {
+          "word": "broomlike",
+          "pos": "adj.",
+          "meaning_zh": "像扫帚一样的"
+        }
+      ],
+      "status": "ready",
       "term": "broom"
     },
     {
