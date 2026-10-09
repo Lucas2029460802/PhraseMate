@@ -5122,14 +5122,49 @@
     },
     {
       "created_at": "2026-10-08T15:50:58Z",
-      "example_en": "The whole village rejoiced when they heard the good news.",
-      "example_zh": "听到这个好消息，全村人都欢欣鼓舞。",
+      "example_en": "The whole town rejoiced when the team won the championship.",
+      "example_zh": "球队夺冠时，全镇人都欢欣鼓舞。",
       "id": 123,
-      "meaning_en": "To feel or show great happiness and joy about something. It is often used in formal or literary contexts.",
-      "meaning_zh": "高兴，欣喜，欢欣鼓舞；（使）感到喜悦",
+      "meaning_en": "To feel or show great joy; to be very happy about something.",
+      "meaning_zh": "欣喜；高兴；感到喜悦；欢庆",
       "part_of_speech": "v.",
       "phonetic": "/rɪˈdʒɔɪs/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "rejoice in",
+          "meaning_zh": "因……而欣喜；为……感到高兴"
+        },
+        {
+          "phrase": "rejoice at",
+          "meaning_zh": "对……感到欣喜"
+        },
+        {
+          "phrase": "rejoice over",
+          "meaning_zh": "为……而欢欣"
+        },
+        {
+          "phrase": "rejoice with",
+          "meaning_zh": "与……一起欢庆"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "rejoicing",
+          "pos": "n.",
+          "meaning_zh": "欣喜；欢庆"
+        },
+        {
+          "word": "rejoicer",
+          "pos": "n.",
+          "meaning_zh": "欢欣的人（较少用）"
+        },
+        {
+          "word": "rejoiceful",
+          "pos": "adj.",
+          "meaning_zh": "充满喜悦的；欢欣的（较少用）"
+        }
+      ],
+      "status": "ready",
       "term": "rejoice"
     },
     {
