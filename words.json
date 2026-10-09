@@ -4107,13 +4107,51 @@
       "term": "distorted"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/preservation-us.mp3",
       "created_at": "2026-10-08T15:15:12Z",
+      "example_en": "The preservation of historic buildings is essential to the city's cultural heritage.",
+      "example_zh": "保护历史建筑对这座城市的文化遗产至关重要。",
       "id": 99,
       "meaning_en": "The act of preserving; care to preserve; act of keeping from destruction, decay or any ill",
-      "meaning_zh": "保存行为；注意保存；防止破坏、腐烂或任何疾病的行为",
+      "meaning_zh": "保护；维护；保存；保留；（食品的）防腐处理。",
       "part_of_speech": "n.",
       "phonetic": "/pɹɛ.zɝˈveɪ.ʃən/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "heritage preservation",
+          "meaning_zh": "遗产保护"
+        },
+        {
+          "phrase": "self-preservation",
+          "meaning_zh": "自我保护；自卫本能"
+        },
+        {
+          "phrase": "preservation order",
+          "meaning_zh": "（文物或建筑的）保护令"
+        },
+        {
+          "phrase": "in a good state of preservation",
+          "meaning_zh": "保存完好"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "preserve",
+          "pos": "v.",
+          "meaning_zh": "保存；保护；腌制"
+        },
+        {
+          "word": "preservative",
+          "pos": "adj.",
+          "meaning_zh": "防腐的；有保护作用的"
+        },
+        {
+          "word": "preservable",
+          "pos": "adj.",
+          "meaning_zh": "可保存的；可保护的"
+        }
+      ],
+      "status": "ready",
       "term": "preservation"
     },
     {
