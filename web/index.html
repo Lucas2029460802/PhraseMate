@@ -35,8 +35,41 @@
           <h2>生词本</h2>
           <span class="count" id="wordCount">0</span>
         </div>
-        <button type="button" class="btn" id="btnGoQuiz">英语自测</button>
+        <div class="head-actions">
+          <button type="button" class="btn ghost" id="btnToggleTranslate" aria-expanded="false">中英互译</button>
+          <button type="button" class="btn" id="btnGoQuiz">英语自测</button>
+        </div>
       </div>
+      <section class="translate-panel" id="translatePanel" hidden>
+        <div class="translate-toolbar">
+          <label class="translate-dir">
+            <span class="sr-only">翻译方向</span>
+            <select id="translateDirection" aria-label="翻译方向">
+              <option value="auto">自动检测</option>
+              <option value="en2zh">英 → 中</option>
+              <option value="zh2en">中 → 英</option>
+            </select>
+          </label>
+          <button type="button" class="btn ghost sm" id="btnSwapTranslate" title="交换原文与译文">⇄ 交换</button>
+          <button type="button" class="btn sm" id="btnDoTranslate">翻译</button>
+        </div>
+        <div class="translate-grid">
+          <label class="translate-box">
+            <span class="translate-label">原文</span>
+            <textarea id="translateInput" rows="4" placeholder="输入英文或中文，回车翻译（Shift+Enter 换行）" autocomplete="off"></textarea>
+          </label>
+          <div class="translate-box">
+            <div class="translate-label-row">
+              <span class="translate-label">译文</span>
+              <button type="button" class="linkish" id="btnCopyTranslation" hidden>复制</button>
+            </div>
+            <div class="translate-output" id="translateOutput" aria-live="polite">
+              <p class="empty">译文将显示在这里</p>
+            </div>
+          </div>
+        </div>
+        <p class="translate-meta" id="translateMeta" hidden></p>
+      </section>
       <div class="search-row">
         <input type="search" id="filterInput" placeholder="筛选生词…" autocomplete="off" />
       </div>

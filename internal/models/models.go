@@ -42,6 +42,19 @@ type QuizRequest struct {
 	Count int `json:"count"`
 }
 
+// TranslateRequest is the payload for Chinese↔English translation.
+type TranslateRequest struct {
+	Text      string `json:"text"`
+	Direction string `json:"direction"` // auto | en2zh | zh2en
+}
+
+// TranslateResponse is the AI translation result.
+type TranslateResponse struct {
+	SourceText  string `json:"source_text"`
+	Translation string `json:"translation"`
+	Direction   string `json:"direction"` // en2zh | zh2en
+}
+
 // QuizQuestion is a single self-test item.
 type QuizQuestion struct {
 	ID            int64    `json:"id"`

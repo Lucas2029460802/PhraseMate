@@ -206,6 +206,129 @@ body.app-shell {
   flex-wrap: wrap;
 }
 
+.head-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.translate-panel {
+  flex-shrink: 0;
+  margin: 0 0 0.85rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(31, 111, 120, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.55);
+  animation: rise 0.35s ease both;
+}
+
+.translate-panel[hidden] {
+  display: none !important;
+}
+
+.translate-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.translate-dir select {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--ink);
+  cursor: pointer;
+  outline: none;
+}
+
+.translate-dir select:focus {
+  border-color: rgba(31, 111, 120, 0.55);
+  box-shadow: 0 0 0 3px rgba(31, 111, 120, 0.14);
+}
+
+.translate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 720px) {
+  .translate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.translate-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.translate-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.translate-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.translate-box textarea,
+.translate-output {
+  width: 100%;
+  min-height: 6.5rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
+  font: inherit;
+  color: var(--ink);
+  outline: none;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.translate-box textarea:focus {
+  border-color: rgba(31, 111, 120, 0.55);
+  box-shadow: 0 0 0 3px rgba(31, 111, 120, 0.14);
+}
+
+.translate-output {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-y: auto;
+}
+
+.translate-output .empty {
+  margin: 0;
+}
+
+.translate-output.loading {
+  color: var(--ink-soft);
+  opacity: 0.85;
+}
+
+.translate-meta {
+  margin: 0.55rem 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  opacity: 0.85;
+}
+
 .quiz-lead {
   margin: -0.2rem 0 1rem;
   color: var(--ink-soft);
@@ -621,6 +744,11 @@ body.app-shell {
 
 .btn.ghost:hover {
   background: rgba(31, 111, 120, 0.08);
+}
+
+.btn.ghost.active {
+  background: rgba(31, 111, 120, 0.12);
+  border-color: rgba(31, 111, 120, 0.5);
 }
 
 .btn.danger {

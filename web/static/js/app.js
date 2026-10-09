@@ -10,6 +10,15 @@
     btnNewQuiz: $("#btnNewQuiz"),
     btnGoQuiz: $("#btnGoQuiz"),
     btnBackNotebook: $("#btnBackNotebook"),
+    btnToggleTranslate: $("#btnToggleTranslate"),
+    translatePanel: $("#translatePanel"),
+    translateDirection: $("#translateDirection"),
+    translateInput: $("#translateInput"),
+    translateOutput: $("#translateOutput"),
+    translateMeta: $("#translateMeta"),
+    btnDoTranslate: $("#btnDoTranslate"),
+    btnSwapTranslate: $("#btnSwapTranslate"),
+    btnCopyTranslation: $("#btnCopyTranslation"),
     btnShowFloat: $("#btnShowFloat"),
     btnSettings: $("#btnSettings"),
     settingsModal: $("#settingsModal"),
@@ -524,6 +533,94 @@
     await refreshAll();
   }
 
+  let lastTranslation = "";
+
+  function setTranslateOpen(open) {
+    if (!els.translatePanel || !els.btnToggleTranslate) return;
+    els.translatePanel.hidden = !open;
+    els.btnToggleTranslate.setAttribute("aria-expanded", open ? "true" : "false");
+    els.btnToggleTranslate.classList.toggle("active", open);
+    if (open) {
+      els.translateInput?.focus();
+    }
+  }
+
+  function directionLabel(dir) {
+    if (dir === "zh2en") return "中 → 英";
+    if (dir === "en2zh") return "英 → 中";
+    return "自动";
+  }
+
+  async function runTranslate() {
+    const text = (els.translateInput?.value || "").trim();
+    if (!text) {
+      toast("请输入要翻译的文本");
+      els.translateInput?.focus();
+      return;
+    }
+    const direction = els.translateDirection?.value || "auto";
+    els.btnDoTranslate.disabled = true;
+    els.translateOutput.classList.add("loading");
+    els.translateOutput.innerHTML = `<p class="empty">翻译中…</p>`;
+    els.translateMeta.hidden = true;
+    els.btnCopyTranslation.hidden = true;
+    lastTranslation = "";
+    try {
+      const data = await api("/api/translate", {
+        method: "POST",
+        body: JSON.stringify({ text, direction }),
+      });
+      lastTranslation = (data.translation || "").trim();
+      if (!lastTranslation) {
+        els.translateOutput.innerHTML = `<p class="empty">未得到译文</p>`;
+        return;
+      }
+      els.translateOutput.textContent = lastTranslation;
+      els.btnCopyTranslation.hidden = false;
+      if (els.translateMeta) {
+        els.translateMeta.hidden = false;
+        els.translateMeta.textContent = `方向：${directionLabel(data.direction)}`;
+      }
+    } catch (err) {
+      els.translateOutput.innerHTML = `<p class="empty">${escapeHtml(err.message)}</p>`;
+      toast(err.message);
+    } finally {
+      els.translateOutput.classList.remove("loading");
+      els.btnDoTranslate.disabled = false;
+    }
+  }
+
+  function swapTranslate() {
+    const src = (els.translateInput?.value || "").trim();
+    const dst = lastTranslation || (els.translateOutput?.textContent || "").trim();
+    if (!dst || dst === "译文将显示在这里" || dst === "翻译中…" || dst === "未得到译文") {
+      toast("没有可交换的译文");
+      return;
+    }
+    els.translateInput.value = dst;
+    lastTranslation = src;
+    els.translateOutput.textContent = src || "";
+    els.btnCopyTranslation.hidden = !src;
+    const dir = els.translateDirection?.value;
+    if (dir === "en2zh") els.translateDirection.value = "zh2en";
+    else if (dir === "zh2en") els.translateDirection.value = "en2zh";
+    if (els.translateMeta) {
+      els.translateMeta.hidden = false;
+      els.translateMeta.textContent = "已交换原文与译文";
+    }
+  }
+
+  async function copyTranslation() {
+    const text = lastTranslation || (els.translateOutput?.textContent || "").trim();
+    if (!text) return;
+    try {
+      await navigator.clipboard.writeText(text);
+      toast("译文已复制");
+    } catch {
+      toast("复制失败，请手动选择文本");
+    }
+  }
+
   async function createQuiz() {
     els.btnNewQuiz.disabled = true;
     els.quizArea.innerHTML = `<p class="empty">Generating English quiz…</p>`;
@@ -614,6 +711,27 @@
   });
 
   els.btnNewQuiz.addEventListener("click", createQuiz);
+
+  els.btnToggleTranslate?.addEventListener("click", () => {
+    const open = els.translatePanel?.hidden !== false;
+    setTranslateOpen(open);
+  });
+
+  els.btnDoTranslate?.addEventListener("click", () => {
+    runTranslate().catch((err) => toast(err.message));
+  });
+
+  els.btnSwapTranslate?.addEventListener("click", swapTranslate);
+  els.btnCopyTranslation?.addEventListener("click", () => {
+    copyTranslation().catch((err) => toast(err.message));
+  });
+
+  els.translateInput?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      runTranslate().catch((err) => toast(err.message));
+    }
+  });
 
   els.btnShowFloat?.addEventListener("click", () => {
     if (typeof window.showFloatWindow === "function") {

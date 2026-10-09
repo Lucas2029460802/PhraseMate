@@ -272,6 +272,92 @@ func decodePhrases(raw json.RawMessage) []models.Phrase {
 	return phrases
 }
 
+// Translate performs Chinese↔English mutual translation.
+// direction: auto | en2zh | zh2en
+func (c *Client) Translate(ctx context.Context, text, direction string) (*models.TranslateResponse, error) {
+	if !c.Enabled() {
+		return nil, fmt.Errorf("未配置 API Key，请在应用设置中填写")
+	}
+	text = strings.TrimSpace(text)
+	if text == "" {
+		return nil, fmt.Errorf("请输入要翻译的文本")
+	}
+	dir := normalizeTranslateDirection(direction, text)
+
+	var system string
+	switch dir {
+	case "zh2en":
+		system = `你是专业中英翻译。将用户给出的中文译成自然、准确的英文。
+只返回 JSON：
+{"translation":"英文译文","direction":"zh2en"}
+规则：
+- 保留原文语气与语域（口语/书面/术语）。
+- 单词或短语给出最常用译法；句子要通顺自然。
+- 不要解释、不要音标、不要 markdown。`
+	default:
+		dir = "en2zh"
+		system = `你是专业中英翻译。将用户给出的英文译成自然、准确的中文。
+只返回 JSON：
+{"translation":"中文译文","direction":"en2zh"}
+规则：
+- 保留原文语气与语域（口语/书面/术语）。
+- 单词或短语给出最常用译法；句子要通顺自然，使用中文标点。
+- 不要解释、不要音标、不要 markdown。`
+	}
+
+	content, err := c.chat(ctx, system, text, true)
+	if err != nil {
+		return nil, err
+	}
+	content = stripCodeFence(content)
+
+	var out struct {
+		Translation string `json:"translation"`
+		Direction   string `json:"direction"`
+	}
+	if err := json.Unmarshal([]byte(content), &out); err != nil {
+		return nil, fmt.Errorf("解析翻译结果失败: %w\n原始内容: %s", err, content)
+	}
+	translation := strings.TrimSpace(out.Translation)
+	if translation == "" {
+		return nil, fmt.Errorf("AI 未返回译文")
+	}
+	if d := strings.TrimSpace(out.Direction); d == "en2zh" || d == "zh2en" {
+		dir = d
+	}
+	return &models.TranslateResponse{
+		SourceText:  text,
+		Translation: translation,
+		Direction:   dir,
+	}, nil
+}
+
+func normalizeTranslateDirection(direction, text string) string {
+	switch strings.ToLower(strings.TrimSpace(direction)) {
+	case "en2zh", "en-zh", "en_to_zh", "to_zh":
+		return "en2zh"
+	case "zh2en", "zh-en", "zh_to_en", "to_en":
+		return "zh2en"
+	}
+	return detectTranslateDirection(text)
+}
+
+func detectTranslateDirection(text string) string {
+	var han, latin int
+	for _, r := range text {
+		switch {
+		case r >= 0x4e00 && r <= 0x9fff:
+			han++
+		case (r >= 'A' && r <= 'Z') || (r >= 'a' && r <= 'z'):
+			latin++
+		}
+	}
+	if han > 0 && han >= latin {
+		return "zh2en"
+	}
+	return "en2zh"
+}
+
 // GenerateQuiz builds multiple-choice questions from notebook entries.
 func (c *Client) GenerateQuiz(ctx context.Context, words []models.Word, count int) ([]models.QuizQuestion, error) {
 	if !c.Enabled() {

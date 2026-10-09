@@ -42,6 +42,7 @@ func (a *API) Register(mux *http.ServeMux) {
 	mux.HandleFunc("DELETE /api/words/{id}", a.handleDeleteWord)
 	mux.HandleFunc("POST /api/words/{id}/retry", a.handleRetry)
 	mux.HandleFunc("POST /api/quiz", a.handleQuiz)
+	mux.HandleFunc("POST /api/translate", a.handleTranslate)
 	mux.HandleFunc("GET /api/tts", a.handleTTS)
 }
 
@@ -280,6 +281,29 @@ func (a *API) handleQuiz(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	writeJSON(w, http.StatusOK, models.QuizResponse{Questions: questions})
+}
+
+func (a *API) handleTranslate(w http.ResponseWriter, r *http.Request) {
+	var req models.TranslateRequest
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		writeErr(w, http.StatusBadRequest, "请求格式无效")
+		return
+	}
+	if a.ai == nil || !a.ai.Enabled() {
+		writeErr(w, http.StatusBadRequest, "未配置 API Key，请在应用设置中填写")
+		return
+	}
+	out, err := a.ai.Translate(r.Context(), req.Text, req.Direction)
+	if err != nil {
+		msg := err.Error()
+		if strings.Contains(msg, "请输入") {
+			writeErr(w, http.StatusBadRequest, msg)
+			return
+		}
+		writeErr(w, http.StatusBadGateway, msg)
+		return
+	}
+	writeJSON(w, http.StatusOK, out)
 }
 
 func writeJSON(w http.ResponseWriter, status int, v any) {
