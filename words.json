@@ -6020,15 +6020,46 @@
       "term": "oversee"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/hazard-us.mp3",
       "created_at": "2026-10-08T16:21:12Z",
-      "example_en": "Smoking is a serious health hazard for both smokers and the people around them.",
-      "example_zh": "吸烟对吸烟者及其周围的人都是严重的健康危害。",
+      "example_en": "He encountered the enemy at the hazard of his reputation and life.",
+      "example_zh": "他在名誉和生命的危险中遇到了敌人。",
       "id": 144,
-      "meaning_en": "A danger or risk, especially something that could cause harm or injury. As a verb, it means to risk losing something or to venture a guess.",
-      "meaning_zh": "危险；危害；隐患；风险；（动词）使遭受危险；冒险尝试；大胆猜测",
-      "part_of_speech": "n. / v.",
-      "phonetic": "/ˈhæzəd/",
-      "status": "pending",
+      "meaning_en": "The chance of suffering harm; danger, peril, risk of loss; An obstacle or other feature which causes risk or danger; originally in sports, and now applied more generally",
+      "meaning_zh": "遭受伤害的可能性；危险、危险、损失风险；导致风险或危险的障碍物或其他特征；最初用于体育运动，现在更广泛地应用",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈhazəd/",
+      "phrases": [
+        {
+          "phrase": "health hazard",
+          "meaning_zh": "健康危害"
+        },
+        {
+          "phrase": "fire hazard",
+          "meaning_zh": "火灾隐患"
+        },
+        {
+          "phrase": "safety hazard",
+          "meaning_zh": "安全隐患"
+        },
+        {
+          "phrase": "occupational hazard",
+          "meaning_zh": "职业危害"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "hazardous",
+          "pos": "adj.",
+          "meaning_zh": "危险的；有害的"
+        },
+        {
+          "word": "hazardously",
+          "pos": "adv.",
+          "meaning_zh": "危险地；冒险地"
+        }
+      ],
+      "status": "ready",
       "term": "hazard"
     },
     {
