@@ -3804,14 +3804,49 @@
     },
     {
       "created_at": "2026-10-08T15:07:45Z",
-      "example_en": "Her provocative remarks sparked a heated debate among the audience.",
-      "example_zh": "她挑衅性的言论在观众中引发了一场激烈的辩论。",
+      "example_en": "His provocative remarks about the education system sparked a heated debate.",
+      "example_zh": "他就教育体制发表的挑衅性言论引发了一场激烈的辩论。",
       "id": 92,
-      "meaning_en": "Intended or likely to cause a strong reaction, especially anger, disagreement, or sexual interest.",
-      "meaning_zh": "挑衅的；煽动性的；引起争议的；挑逗的，性感的",
+      "meaning_en": "Intended or likely to cause a strong reaction, especially anger, shock, or sexual interest; deliberately stimulating thought or debate.",
+      "meaning_zh": "挑衅的；煽动性的；挑逗的；引人争论的",
       "part_of_speech": "adj.",
       "phonetic": "/prəˈvɒkətɪv/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "provocative question",
+          "meaning_zh": "挑衅性的问题"
+        },
+        {
+          "phrase": "provocative remarks",
+          "meaning_zh": "煽动性言论"
+        },
+        {
+          "phrase": "sexually provocative",
+          "meaning_zh": "性感挑逗的"
+        },
+        {
+          "phrase": "provocative behaviour",
+          "meaning_zh": "挑衅行为"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "provoke",
+          "pos": "v.",
+          "meaning_zh": "激起；挑动；惹怒"
+        },
+        {
+          "word": "provocation",
+          "pos": "n.",
+          "meaning_zh": "挑衅；激怒；刺激"
+        },
+        {
+          "word": "provocatively",
+          "pos": "adv.",
+          "meaning_zh": "挑衅地；挑逗地"
+        }
+      ],
+      "status": "ready",
       "term": "provocative"
     },
     {
