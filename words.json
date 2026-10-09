@@ -6275,14 +6275,49 @@
     },
     {
       "created_at": "2026-10-08T16:27:58Z",
-      "example_en": "Her colleagues dismissed her endless filtered posts as pure selfie-vanity.",
-      "example_zh": "同事们把她没完没了发滤镜自拍的行为斥为纯粹的自拍虚荣。",
+      "example_en": "Her feed is full of selfie-vanity, with every post carefully edited to impress.",
+      "example_zh": "她的动态充满自拍虚荣，每条帖子都精心修图以引人注目。",
       "id": 150,
-      "meaning_en": "Excessive pride or self-absorption shown by taking and sharing selfies, especially on social media. It describes vanity expressed through constant self-portraits.",
-      "meaning_zh": "自拍虚荣；指通过不停地自拍并在社交媒体上晒自拍所表现出的虚荣心和自我陶醉。",
+      "meaning_en": "Vanity or excessive pride in oneself, especially as expressed by taking and sharing selfies.",
+      "meaning_zh": "自拍虚荣；通过自拍展示自我、满足虚荣心的行为或心态。",
       "part_of_speech": "n.",
-      "phonetic": "/ˈsɛlfi ˈvænəti/",
-      "status": "pending",
+      "phonetic": "/ˈselfi ˈvænəti/",
+      "phrases": [
+        {
+          "phrase": "vanity selfie",
+          "meaning_zh": "虚荣自拍"
+        },
+        {
+          "phrase": "selfie stick",
+          "meaning_zh": "自拍杆"
+        },
+        {
+          "phrase": "vanity mirror",
+          "meaning_zh": "化妆镜"
+        },
+        {
+          "phrase": "vanity project",
+          "meaning_zh": "面子工程；虚荣项目"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "vain",
+          "pos": "adj.",
+          "meaning_zh": "虚荣的；自负的"
+        },
+        {
+          "word": "vainly",
+          "pos": "adv.",
+          "meaning_zh": "徒劳地；自负地"
+        },
+        {
+          "word": "vainglorious",
+          "pos": "adj.",
+          "meaning_zh": "极度虚荣的；自负的"
+        }
+      ],
+      "status": "ready",
       "term": "selfie-vanity"
     },
     {
