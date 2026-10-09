@@ -3752,15 +3752,54 @@
       "term": "sentiment"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/distinguish-us.mp3",
       "created_at": "2026-10-08T15:07:26Z",
-      "example_en": "It is hard to distinguish between the twin sisters.",
-      "example_zh": "很难分辨这对双胞胎姐妹。",
       "id": 91,
-      "meaning_en": "To recognize or show the difference between two or more things; to make something different or special.",
-      "meaning_zh": "区分，辨别，分辨；使有别于，使突出；辨认出。",
+      "meaning_en": "To recognize someone or something as different from others based on its characteristics; To see someone or something clearly or distinctly",
+      "meaning_zh": "根据某人或某事的特点将其识别为与其他人不同；清楚或清晰地看到某人或某事",
       "part_of_speech": "v.",
-      "phonetic": "/dɪˈstɪŋɡwɪʃ/",
-      "status": "pending",
+      "phonetic": "/dɪsˈtɪŋɡwɪʃ/",
+      "phrases": [
+        {
+          "phrase": "distinguish between A and B",
+          "meaning_zh": "区分A和B"
+        },
+        {
+          "phrase": "distinguish A from B",
+          "meaning_zh": "把A与B区分开"
+        },
+        {
+          "phrase": "distinguish oneself",
+          "meaning_zh": "使自己出众"
+        },
+        {
+          "phrase": "distinguish right from wrong",
+          "meaning_zh": "明辨是非"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "distinction",
+          "pos": "n.",
+          "meaning_zh": "区别；辨别；特质"
+        },
+        {
+          "word": "distinct",
+          "pos": "adj.",
+          "meaning_zh": "不同的；清楚的"
+        },
+        {
+          "word": "distinctive",
+          "pos": "adj.",
+          "meaning_zh": "独特的；有特色的"
+        },
+        {
+          "word": "distinguishable",
+          "pos": "adj.",
+          "meaning_zh": "可区分的；可辨认的"
+        }
+      ],
+      "status": "ready",
       "term": "distinguish"
     },
     {
