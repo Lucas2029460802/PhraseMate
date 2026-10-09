@@ -5278,13 +5278,43 @@
     {
       "created_at": "2026-10-08T15:54:08Z",
       "example_en": "It was sheer luck that we caught the last train home.",
-      "example_zh": "我们能赶上回家的末班车，纯属运气。",
+      "example_zh": "我们能赶上回家的末班车纯属运气。",
       "id": 126,
-      "meaning_en": "Used to emphasize that something is complete or pure, with nothing else involved; also describes a very steep surface or a very thin, transparent fabric.",
-      "meaning_zh": "完全的，纯粹的（用于强调）；陡峭的，几乎垂直的；（织物）极薄的，透明的",
+      "meaning_en": "Used to emphasize that something is complete or nothing but what is stated; also describes a steep surface or very thin, transparent fabric.",
+      "meaning_zh": "完全的，纯粹的（用于强调）；陡峭的，垂直的；（织物）极薄的，透明的",
       "part_of_speech": "adj.",
-      "phonetic": "/ʃɪr/",
-      "status": "pending",
+      "phonetic": "/ʃɪə(r)/",
+      "phrases": [
+        {
+          "phrase": "by sheer chance",
+          "meaning_zh": "纯属偶然"
+        },
+        {
+          "phrase": "sheer luck",
+          "meaning_zh": "纯粹的运气"
+        },
+        {
+          "phrase": "sheer size",
+          "meaning_zh": "巨大的规模"
+        },
+        {
+          "phrase": "a sheer cliff",
+          "meaning_zh": "陡峭的悬崖"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "sheerly",
+          "pos": "adv.",
+          "meaning_zh": "完全地，纯粹地"
+        },
+        {
+          "word": "sheerness",
+          "pos": "n.",
+          "meaning_zh": "陡峭；完全，纯粹"
+        }
+      ],
+      "status": "ready",
       "term": "sheer"
     },
     {
