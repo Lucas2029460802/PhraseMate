@@ -5851,7 +5851,42 @@
       "meaning_zh": "点燃（某物）、点燃（某物）；点燃（某物） ，触发",
       "part_of_speech": "v.",
       "phonetic": "/ɪɡˈnaɪt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "ignite a fire",
+          "meaning_zh": "点火；生火"
+        },
+        {
+          "phrase": "ignite interest",
+          "meaning_zh": "激起兴趣"
+        },
+        {
+          "phrase": "ignite the imagination",
+          "meaning_zh": "激发想象力"
+        },
+        {
+          "phrase": "ignite a debate",
+          "meaning_zh": "引发辩论"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "ignition",
+          "pos": "n.",
+          "meaning_zh": "点火；点火装置"
+        },
+        {
+          "word": "ignitable",
+          "pos": "adj.",
+          "meaning_zh": "可燃的；易点燃的"
+        },
+        {
+          "word": "igniter",
+          "pos": "n.",
+          "meaning_zh": "点火器；引燃剂"
+        }
+      ],
+      "status": "ready",
       "term": "ignite"
     },
     {
