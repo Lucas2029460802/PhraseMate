@@ -3585,15 +3585,44 @@
       "term": "legitimate"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/buzz-us.mp3",
       "created_at": "2026-10-08T15:03:23Z",
-      "example_en": "The room was buzzing with excitement as everyone waited for the results.",
-      "example_zh": "大家都在等待结果，房间里洋溢着一片兴奋的嗡嗡声。",
       "id": 87,
-      "meaning_en": "A low, continuous humming sound like that of a bee. As a verb, to make such a sound, or (of a place or group) to be full of excitement or activity.",
-      "meaning_zh": "n. 嗡嗡声，蜂鸣声；（人群的）嘈杂声、低声议论；兴奋热闹的气氛；（门铃等的）蜂鸣器响声。v. 发出嗡嗡声；用蜂鸣器呼叫；充满兴奋或忙碌（buzz with）；(口) 匆匆走动。",
-      "part_of_speech": "n. / v.",
+      "meaning_en": "A continuous, humming noise, as of bees; a confused murmur, as of general conversation in low tones; A whisper",
+      "meaning_zh": "持续的嗡嗡声，如蜜蜂；混乱的杂音，如低音调的一般谈话；一声呢喃",
+      "part_of_speech": "n.",
       "phonetic": "/bʌz/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "buzz off",
+          "meaning_zh": "走开（非正式）"
+        },
+        {
+          "phrase": "buzz around",
+          "meaning_zh": "嗡嗡地飞来飞去；忙碌地走动"
+        },
+        {
+          "phrase": "buzz with",
+          "meaning_zh": "充满嗡嗡声或兴奋的交谈"
+        },
+        {
+          "phrase": "give someone a buzz",
+          "meaning_zh": "给某人打个电话（非正式）"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "buzzy",
+          "pos": "adj.",
+          "meaning_zh": "嗡嗡响的；活跃热闹的"
+        },
+        {
+          "word": "buzzily",
+          "pos": "adv.",
+          "meaning_zh": "嗡嗡地；喧闹地"
+        }
+      ],
+      "status": "ready",
       "term": "buzz"
     },
     {
