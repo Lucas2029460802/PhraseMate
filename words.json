@@ -5891,14 +5891,42 @@
     },
     {
       "created_at": "2026-10-08T16:13:33Z",
-      "example_en": "The government is trying to reduce the budget deficit.",
-      "example_zh": "政府正在努力减少预算赤字。",
       "id": 141,
-      "meaning_en": "The amount by which something, especially money, falls short of what is required or expected; a shortage or shortfall.",
-      "meaning_zh": "赤字；亏损；不足额；欠缺，缺陷",
+      "meaning_en": "Deficiency in amount or quality; a falling short; lack; A situation wherein, or amount whereby, spending exceeds government revenue",
+      "meaning_zh": "数量或质量不足；不足；缺乏；支出或金额超过政府收入的情况",
       "part_of_speech": "n.",
-      "phonetic": "/ˈdefɪsɪt/",
-      "status": "pending",
+      "phonetic": "/ˈdɛfɪsɪt/",
+      "phrases": [
+        {
+          "phrase": "budget deficit",
+          "meaning_zh": "预算赤字"
+        },
+        {
+          "phrase": "trade deficit",
+          "meaning_zh": "贸易逆差"
+        },
+        {
+          "phrase": "deficit spending",
+          "meaning_zh": "赤字支出"
+        },
+        {
+          "phrase": "fiscal deficit",
+          "meaning_zh": "财政赤字"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "deficient",
+          "pos": "adj.",
+          "meaning_zh": "不足的；缺乏的"
+        },
+        {
+          "word": "deficiently",
+          "pos": "adv.",
+          "meaning_zh": "不足地；缺乏地"
+        }
+      ],
+      "status": "ready",
       "term": "deficit"
     },
     {
