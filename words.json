@@ -3893,12 +3893,29 @@
     },
     {
       "created_at": "2026-10-08T15:10:24Z",
+      "example_en": "She left the party at nine, and we went home shortly afterward.",
+      "example_zh": "她九点离开了聚会，我们随后不久就回家了。",
       "id": 94,
-      "meaning_en": "(temporal location) At a later or succeeding time",
-      "meaning_zh": "（时间位置）稍后或后续时间",
+      "meaning_en": "At a later time; after something else has happened.",
+      "meaning_zh": "后来；之后；随后",
       "part_of_speech": "adv.",
-      "phonetic": "/ˈɑːftə.wəd/",
-      "status": "pending",
+      "phonetic": "/ˈæftərwərd/",
+      "phrases": [
+        {
+          "phrase": "shortly afterward",
+          "meaning_zh": "不久之后"
+        },
+        {
+          "phrase": "soon afterward",
+          "meaning_zh": "很快之后；紧接着"
+        },
+        {
+          "phrase": "not long afterward",
+          "meaning_zh": "没过多久；不久以后"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "afterward"
     },
     {
