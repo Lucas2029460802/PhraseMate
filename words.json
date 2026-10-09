@@ -5449,11 +5449,33 @@
     },
     {
       "created_at": "2026-10-08T15:59:06Z",
+      "example_en": "She put on her headphones and listened to music on the train.",
+      "example_zh": "她戴上耳机，在火车上听音乐。",
       "id": 130,
-      "meaning_en": "A pair of speakers worn over or in the ears so only the wearer can hear the sound",
-      "meaning_zh": "一对扬声器戴在耳朵上或耳朵里，所以只有佩戴者才能听到声音",
+      "meaning_en": "A pair of small speakers that you wear over or in your ears so you can listen to music, audio, or speech without other people hearing it.",
+      "meaning_zh": "耳机；头戴式耳机（通常成对使用，戴在耳朵上或耳内收听声音）",
       "part_of_speech": "n.",
-      "status": "pending",
+      "phonetic": "/ˈhedfəʊnz/",
+      "phrases": [
+        {
+          "phrase": "put on headphones",
+          "meaning_zh": "戴上耳机"
+        },
+        {
+          "phrase": "noise-cancelling headphones",
+          "meaning_zh": "降噪耳机"
+        },
+        {
+          "phrase": "wireless headphones",
+          "meaning_zh": "无线耳机"
+        },
+        {
+          "phrase": "in-ear headphones",
+          "meaning_zh": "入耳式耳机"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "headphones"
     },
     {
