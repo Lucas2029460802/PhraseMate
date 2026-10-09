@@ -6322,8 +6322,49 @@
     },
     {
       "created_at": "2026-10-08T17:50:44Z",
+      "example_en": "Heavy rain gradually eroded the hillside.",
+      "example_zh": "大雨逐渐侵蚀了山坡。",
       "id": 152,
-      "status": "pending",
+      "meaning_en": "To wear away or destroy gradually, especially by natural forces such as wind, water, or chemical action; to weaken something over time.",
+      "meaning_zh": "侵蚀；腐蚀；逐渐削弱（或损害）",
+      "part_of_speech": "v.",
+      "phonetic": "/ɪˈroʊd/",
+      "phrases": [
+        {
+          "phrase": "erode away",
+          "meaning_zh": "逐渐侵蚀掉；使消失"
+        },
+        {
+          "phrase": "erode confidence",
+          "meaning_zh": "削弱信心"
+        },
+        {
+          "phrase": "erode trust",
+          "meaning_zh": "损害信任"
+        },
+        {
+          "phrase": "erode the foundation",
+          "meaning_zh": "侵蚀基础；动摇根基"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "erosion",
+          "pos": "n.",
+          "meaning_zh": "侵蚀；削弱"
+        },
+        {
+          "word": "erosive",
+          "pos": "adj.",
+          "meaning_zh": "侵蚀性的；腐蚀性的"
+        },
+        {
+          "word": "erodible",
+          "pos": "adj.",
+          "meaning_zh": "易受侵蚀的"
+        }
+      ],
+      "status": "ready",
       "term": "erode"
     },
     {
