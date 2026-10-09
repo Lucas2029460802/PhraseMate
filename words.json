@@ -3131,14 +3131,49 @@
     },
     {
       "created_at": "2026-10-01T17:22:28Z",
-      "example_en": "The tsunami was a catastrophe that destroyed the entire coastal city.",
-      "example_zh": "那场海啸是一场摧毁整座沿海城市的巨大灾难。",
+      "example_en": "The earthquake was the worst catastrophe the region had ever experienced.",
+      "example_zh": "这场地震是该地区有史以来最严重的灾难。",
       "id": 77,
-      "meaning_en": "A sudden event that causes great damage, suffering, or destruction; a terrible disaster. It can also mean a final disastrous outcome or failure.",
-      "meaning_zh": "大灾难；灾祸；浩劫；（戏剧的）悲剧性结局；惨败。",
+      "meaning_en": "A sudden event that causes great damage, suffering, or destruction; a complete failure or disaster.",
+      "meaning_zh": "大灾难；重大灾祸；惨败；彻底失败",
       "part_of_speech": "n.",
       "phonetic": "/kəˈtæstrəfi/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "natural catastrophe",
+          "meaning_zh": "自然灾害"
+        },
+        {
+          "phrase": "avert a catastrophe",
+          "meaning_zh": "避免一场灾难"
+        },
+        {
+          "phrase": "catastrophe theory",
+          "meaning_zh": "突变论（数学理论）"
+        },
+        {
+          "phrase": "climate catastrophe",
+          "meaning_zh": "气候灾难"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "catastrophic",
+          "pos": "adj.",
+          "meaning_zh": "灾难性的；毁灭性的"
+        },
+        {
+          "word": "catastrophically",
+          "pos": "adv.",
+          "meaning_zh": "灾难性地；极其糟糕地"
+        },
+        {
+          "word": "catastrophize",
+          "pos": "v.",
+          "meaning_zh": "把小事想成灾难；危言耸听"
+        }
+      ],
+      "status": "ready",
       "term": "catastrophe"
     },
     {
