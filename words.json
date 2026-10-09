@@ -5049,14 +5049,33 @@
     },
     {
       "created_at": "2026-10-08T15:47:13Z",
-      "example_en": "The American ambassador met with his British counterpart to discuss trade policy.",
-      "example_zh": "美国大使会见了与他职位相当的英国大使，讨论贸易政策。",
+      "example_en": "The Canadian prime minister met with his French counterpart in Paris to discuss trade.",
+      "example_zh": "加拿大总理在巴黎会见了他的法国对口领导人，讨论贸易问题。",
       "id": 121,
-      "meaning_en": "A person or thing that has the same function, position, or characteristics as another, especially in a different place or organization.",
-      "meaning_zh": "相对应的人（或物）；职位（或作用）相当的人；副本，对应版本",
+      "meaning_en": "A person or thing that has the same position, role, or function as another person or thing, especially in a different place or organization.",
+      "meaning_zh": "（职位或功能）相当的人；对应的事物；对口的人（或机构）；副本，仿制品。",
       "part_of_speech": "n.",
       "phonetic": "/ˈkaʊntəpɑːt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "counterpart funds",
+          "meaning_zh": "配套资金"
+        },
+        {
+          "phrase": "direct counterpart",
+          "meaning_zh": "直接对应的人（或物）"
+        },
+        {
+          "phrase": "foreign counterpart",
+          "meaning_zh": "外国同行；外方对口机构"
+        },
+        {
+          "phrase": "counterpart talks",
+          "meaning_zh": "对口会谈"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "counterpart"
     },
     {
