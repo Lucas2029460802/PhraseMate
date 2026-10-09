@@ -4550,14 +4550,49 @@
     },
     {
       "created_at": "2026-10-08T15:24:52Z",
-      "example_en": "The farmer led three asses along the dusty road.",
-      "example_zh": "农夫牵着三头驴沿着尘土飞扬的土路走去。",
+      "example_en": "The caravan used asses to carry goods across the mountains.",
+      "example_zh": "商队用驴子驮着货物翻山越岭。",
       "id": 110,
-      "meaning_en": "The plural form of 'ass', meaning donkeys, or (informally and rudely) a person's buttocks. It can also mean foolish or stubborn people.",
-      "meaning_zh": "ass 的复数形式：驴（多匹驴）；(粗俗) 屁股；(口语) 蠢人、固执的人。",
+      "meaning_en": "Plural of ass; donkeys, or (slang) buttocks; also a vulgar or offensive term for foolish people.",
+      "meaning_zh": "ass 的复数；驴（复数）；(俚语) 屁股（复数）；(粗俗、冒犯) 蠢人（复数）。",
       "part_of_speech": "n.",
       "phonetic": "/ˈæsɪz/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "make an ass of oneself",
+          "meaning_zh": "出丑；做傻事"
+        },
+        {
+          "phrase": "pain in the ass",
+          "meaning_zh": "令人讨厌的人或事"
+        },
+        {
+          "phrase": "kick ass",
+          "meaning_zh": "了不起；揍一顿"
+        },
+        {
+          "phrase": "cover one's ass",
+          "meaning_zh": "保护自己；自保"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "asinine",
+          "pos": "adj.",
+          "meaning_zh": "愚蠢的；驴一般的"
+        },
+        {
+          "word": "asininely",
+          "pos": "adv.",
+          "meaning_zh": "愚蠢地"
+        },
+        {
+          "word": "ass-like",
+          "pos": "adj.",
+          "meaning_zh": "像驴的"
+        }
+      ],
+      "status": "ready",
       "term": "asses"
     },
     {
