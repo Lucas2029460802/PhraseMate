@@ -4061,14 +4061,49 @@
     },
     {
       "created_at": "2026-10-08T15:12:55Z",
-      "example_en": "The recording was so distorted that I could barely understand what he said.",
-      "example_zh": "录音失真得很厉害，我几乎听不懂他说了什么。",
+      "example_en": "The report gave a distorted picture of what actually happened.",
+      "example_zh": "这篇报道歪曲了实际发生的情况。",
       "id": 98,
-      "meaning_en": "Changed from its original, natural, or true form so that it looks or sounds unnatural, unclear, or untrue.",
+      "meaning_en": "Changed from its original, natural, or true form so that it appears twisted, unclear, or inaccurate.",
       "meaning_zh": "扭曲的；变形的；失真的；被歪曲的",
       "part_of_speech": "adj.",
       "phonetic": "/dɪˈstɔːtɪd/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "distorted view",
+          "meaning_zh": "被歪曲的看法；扭曲的视角"
+        },
+        {
+          "phrase": "distorted image",
+          "meaning_zh": "失真的图像；变形的影像"
+        },
+        {
+          "phrase": "grossly distorted",
+          "meaning_zh": "被严重歪曲的"
+        },
+        {
+          "phrase": "become distorted",
+          "meaning_zh": "变得扭曲；发生变形"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "distort",
+          "pos": "v.",
+          "meaning_zh": "扭曲；使变形；歪曲"
+        },
+        {
+          "word": "distortion",
+          "pos": "n.",
+          "meaning_zh": "扭曲；变形；歪曲；失真"
+        },
+        {
+          "word": "distorter",
+          "pos": "n.",
+          "meaning_zh": "扭曲者；歪曲事实的人"
+        }
+      ],
+      "status": "ready",
       "term": "distorted"
     },
     {
