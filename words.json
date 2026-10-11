@@ -3877,14 +3877,33 @@
     },
     {
       "created_at": "2026-10-08T15:15:28Z",
-      "example_en": "The farmer loaded the heavy sacks onto two donkeys.",
-      "example_zh": "农夫把沉重的麻袋装到了两头驴背上。",
+      "example_en": "The farmer loaded the sacks onto the donkey.",
+      "example_zh": "农夫把麻袋装到了驴背上。",
       "id": 100,
-      "meaning_en": "A domesticated animal of the horse family, with long ears, a short mane and a loud bray, often used to carry loads. Informally, it can also mean a stubborn or foolish person.",
-      "meaning_zh": "驴（复数形式为 donkeys）；笨蛋，蠢人（非正式用法）",
+      "meaning_en": "A domesticated animal of the horse family with long ears, often used to carry loads. Informally, it can also mean a stubborn or foolish person.",
+      "meaning_zh": "驴；笨蛋，固执的人（非正式）",
       "part_of_speech": "n.",
       "phonetic": "/ˈdɒŋki/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "donkey work",
+          "meaning_zh": "繁重乏味的工作"
+        },
+        {
+          "phrase": "donkey's years",
+          "meaning_zh": "很长时间"
+        },
+        {
+          "phrase": "donkey jacket",
+          "meaning_zh": "厚夹克"
+        },
+        {
+          "phrase": "as stubborn as a donkey",
+          "meaning_zh": "非常固执"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "donkey"
     },
     {
