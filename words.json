@@ -6041,8 +6041,49 @@
     },
     {
       "created_at": "2026-10-08T17:57:05Z",
+      "example_en": "Papers and empty cups cluttered his desk.",
+      "example_zh": "文件和空杯子把他的书桌堆得乱七八糟。",
       "id": 153,
-      "status": "pending",
+      "meaning_en": "A large number of things scattered around in an untidy way; to fill a place with too many untidy things.",
+      "meaning_zh": "n. 杂乱，凌乱的东西，杂物；v. 使凌乱，乱堆，塞满",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈklʌtə(r)/",
+      "phrases": [
+        {
+          "phrase": "clutter up",
+          "meaning_zh": "把……塞得乱七八糟"
+        },
+        {
+          "phrase": "a clutter of",
+          "meaning_zh": "一堆杂乱的……"
+        },
+        {
+          "phrase": "mental clutter",
+          "meaning_zh": "心里的杂念，思绪混乱"
+        },
+        {
+          "phrase": "clear the clutter",
+          "meaning_zh": "清理杂物"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "cluttered",
+          "pos": "adj.",
+          "meaning_zh": "凌乱的，堆满东西的"
+        },
+        {
+          "word": "cluttering",
+          "pos": "n.",
+          "meaning_zh": "言语急促症（语速过快、语音含糊的言语障碍）"
+        },
+        {
+          "word": "clutter-free",
+          "pos": "adj.",
+          "meaning_zh": "整洁的，无杂物的"
+        }
+      ],
+      "status": "ready",
       "term": "clutter"
     },
     {
