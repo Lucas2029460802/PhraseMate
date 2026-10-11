@@ -6701,8 +6701,33 @@
     },
     {
       "created_at": "2026-10-11T18:43:13Z",
+      "example_en": "The kettle was kept on the simmer.",
+      "example_zh": "让汤用文火慢炖二十分钟。",
       "id": 169,
-      "status": "pending",
+      "meaning_en": "The state or process of simmering",
+      "meaning_zh": "（用文火）煨，炖，慢煮；（情绪、冲突等）酝酿，即将爆发，内心充满（怒火等）。",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈsɪmə/",
+      "phrases": [
+        {
+          "phrase": "simmer down",
+          "meaning_zh": "冷静下来；平静下来"
+        },
+        {
+          "phrase": "simmer with anger/rage",
+          "meaning_zh": "怒火中烧；强压怒火"
+        },
+        {
+          "phrase": "bring to a simmer",
+          "meaning_zh": "煮至微沸"
+        },
+        {
+          "phrase": "at a simmer",
+          "meaning_zh": "处于微沸状态"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "simmer"
     }
   ]
