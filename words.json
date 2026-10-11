@@ -5092,14 +5092,40 @@
     },
     {
       "created_at": "2026-10-08T15:55:49Z",
-      "example_en": "The enlivening music filled the hall and soon everyone was on their feet.",
-      "example_zh": "令人振奋的音乐充满了大厅，很快大家都站了起来。",
+      "example_en": "The enlivening music made the whole room feel more cheerful.",
+      "example_zh": "那令人振奋的音乐让整个房间变得更加欢快。",
       "id": 128,
-      "meaning_en": "Making something more lively, cheerful, or interesting; giving energy or spirit to a place, event, or atmosphere.",
-      "meaning_zh": "使活跃的；令人振奋的；使有生气的；增添趣味的",
+      "meaning_en": "Making someone or something more lively, energetic, or interesting.",
+      "meaning_zh": "令人活跃的；使有生气的；令人振奋的",
       "part_of_speech": "adj.",
-      "phonetic": "/ɪnˈlaɪvnɪŋ/",
-      "status": "pending",
+      "phonetic": "/ɪnˈlaɪvənɪŋ/",
+      "phrases": [
+        {
+          "phrase": "enlivening effect",
+          "meaning_zh": "提神/活跃效果"
+        },
+        {
+          "phrase": "enlivening conversation",
+          "meaning_zh": "令人活跃的谈话"
+        },
+        {
+          "phrase": "enlivening music",
+          "meaning_zh": "令人振奋的音乐"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "enliven",
+          "pos": "v.",
+          "meaning_zh": "使活跃；使有生气"
+        },
+        {
+          "word": "enlivenment",
+          "pos": "n.",
+          "meaning_zh": "活跃；生机；振奋"
+        }
+      ],
+      "status": "ready",
       "term": "enlivening"
     },
     {
