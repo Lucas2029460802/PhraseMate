@@ -4147,14 +4147,49 @@
     },
     {
       "created_at": "2026-10-08T15:20:56Z",
-      "example_en": "She was chosen to portray a young queen in the new historical drama.",
-      "example_zh": "她被选中在这部新的历史剧中饰演一位年轻的王后。",
+      "example_en": "The novel portrays life in a small nineteenth-century village.",
+      "example_zh": "这部小说描绘了一个19世纪小村庄的生活。",
       "id": 107,
-      "meaning_en": "To represent or describe someone or something in a particular way, especially in a work of art, film, or book; to play the role of a character.",
-      "meaning_zh": "描绘，描写，刻画；扮演，饰演（某个角色）",
+      "meaning_en": "To depict or represent someone or something in a work of art, in words, or on stage; to describe a person or thing in a particular way.",
+      "meaning_zh": "描绘，刻画；（用语言）描述，表现；（在戏剧、电影中）扮演，饰演。",
       "part_of_speech": "v.",
       "phonetic": "/pɔːˈtreɪ/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "portray sb as sth",
+          "meaning_zh": "把某人描绘成某事物"
+        },
+        {
+          "phrase": "portray a character",
+          "meaning_zh": "饰演／塑造一个角色"
+        },
+        {
+          "phrase": "accurately portray",
+          "meaning_zh": "准确地描绘"
+        },
+        {
+          "phrase": "be portrayed in the media",
+          "meaning_zh": "在媒体上被描述／呈现"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "portrayal",
+          "pos": "n.",
+          "meaning_zh": "描绘，描写；扮演，演绎"
+        },
+        {
+          "word": "portrait",
+          "pos": "n.",
+          "meaning_zh": "肖像，画像；生动的描写"
+        },
+        {
+          "word": "portraiture",
+          "pos": "n.",
+          "meaning_zh": "肖像绘制；肖像画艺术"
+        }
+      ],
+      "status": "ready",
       "term": "portray"
     },
     {
