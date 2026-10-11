@@ -4035,14 +4035,49 @@
     },
     {
       "created_at": "2026-10-08T15:19:50Z",
-      "example_en": "The domestication of dogs is believed to have begun more than 15,000 years ago.",
-      "example_zh": "据信，狗的驯化始于一万五千多年前。",
+      "example_en": "The domestication of wolves eventually gave rise to the many breeds of dog we know today.",
+      "example_zh": "狼的驯化最终造就了今天我们熟知的众多犬种。",
       "id": 104,
-      "meaning_en": "The process of taming wild animals or plants so that they can be kept and used by humans; also the act of making someone accustomed to home life.",
-      "meaning_zh": "驯化，培育（野生动植物）；使适应家庭生活，归化。",
+      "meaning_en": "The process of taming wild animals or plants so that they can be kept and used by humans; also the act of making something familiar or home-centred.",
+      "meaning_zh": "驯化，驯养；（动植物的）家养化；适应家庭生活。",
       "part_of_speech": "n.",
       "phonetic": "/dəˌmestɪˈkeɪʃn/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "animal domestication",
+          "meaning_zh": "动物驯化"
+        },
+        {
+          "phrase": "the domestication of plants",
+          "meaning_zh": "植物的栽培驯化"
+        },
+        {
+          "phrase": "domestication syndrome",
+          "meaning_zh": "驯化综合征"
+        },
+        {
+          "phrase": "self-domestication",
+          "meaning_zh": "自我驯化"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "domesticate",
+          "pos": "v.",
+          "meaning_zh": "驯化，驯养"
+        },
+        {
+          "word": "domestic",
+          "pos": "adj.",
+          "meaning_zh": "家庭的；家养的；国内的"
+        },
+        {
+          "word": "domesticity",
+          "pos": "n.",
+          "meaning_zh": "家庭生活；居家情趣"
+        }
+      ],
+      "status": "ready",
       "term": "domestication"
     },
     {
