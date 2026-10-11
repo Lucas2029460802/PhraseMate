@@ -4263,14 +4263,40 @@
     },
     {
       "created_at": "2026-10-08T15:24:52Z",
-      "example_en": "The farmer led three asses along the dusty road.",
-      "example_zh": "农夫牵着三头驴沿着尘土飞扬的土路走去。",
+      "example_en": "The farmer keeps several asses in the field.",
+      "example_zh": "农夫在田里养了几头驴。",
       "id": 110,
-      "meaning_en": "The plural form of 'ass', meaning donkeys, or (informally and rudely) a person's buttocks. It can also mean foolish or stubborn people.",
-      "meaning_zh": "ass 的复数形式：驴（多匹驴）；(粗俗) 屁股；(口语) 蠢人、固执的人。",
+      "meaning_en": "Plural of ass; donkeys, foolish people, or (vulgar) buttocks.",
+      "meaning_zh": "ass 的复数；驴；蠢人；〈粗〉屁股（注意：表示“评估”的动词是 assess）。",
       "part_of_speech": "n.",
       "phonetic": "/ˈæsɪz/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "wild asses",
+          "meaning_zh": "野驴"
+        },
+        {
+          "phrase": "dumb asses",
+          "meaning_zh": "蠢驴（粗）"
+        },
+        {
+          "phrase": "a herd of asses",
+          "meaning_zh": "一群驴"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "asinine",
+          "pos": "adj.",
+          "meaning_zh": "愚蠢的；像驴的"
+        },
+        {
+          "word": "asininely",
+          "pos": "adv.",
+          "meaning_zh": "愚蠢地"
+        }
+      ],
+      "status": "ready",
       "term": "asses"
     },
     {
