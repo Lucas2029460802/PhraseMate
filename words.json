@@ -6446,6 +6446,12 @@
       ],
       "status": "ready",
       "term": "command"
+    },
+    {
+      "created_at": "2026-10-11T16:20:01Z",
+      "id": 162,
+      "status": "pending",
+      "term": "deficiency"
     }
   ]
 }
