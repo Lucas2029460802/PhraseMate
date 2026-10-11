@@ -6496,9 +6496,56 @@
     },
     {
       "created_at": "2026-10-11T16:25:18Z",
+      "example_en": "The recipe is foolproof—anyone can make it.",
+      "example_zh": "这个食谱万无一失——任何人都能做。",
       "id": 163,
-      "status": "pending",
+      "meaning_en": "So simple, reliable, or well designed that it cannot fail or be used incorrectly.",
+      "meaning_zh": "万无一失的；不会出差错的；（方法、装置等）简单易懂的，傻瓜式的。",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˈfuːl.pruːf/",
+      "phrases": [
+        {
+          "phrase": "foolproof method",
+          "meaning_zh": "万无一失的方法；傻瓜式方法"
+        },
+        {
+          "phrase": "foolproof plan",
+          "meaning_zh": "万无一失的计划"
+        },
+        {
+          "phrase": "foolproof system",
+          "meaning_zh": "傻瓜式系统；万无一失的系统"
+        },
+        {
+          "phrase": "foolproof design",
+          "meaning_zh": "防误设计"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "foolproofness",
+          "pos": "n.",
+          "meaning_zh": "万无一失；防误性"
+        },
+        {
+          "word": "foolishly",
+          "pos": "adv.",
+          "meaning_zh": "愚蠢地；傻乎乎地"
+        },
+        {
+          "word": "befool",
+          "pos": "v.",
+          "meaning_zh": "愚弄；欺骗"
+        }
+      ],
+      "status": "ready",
       "term": "foolproof"
+    },
+    {
+      "created_at": "2026-10-11T16:25:25Z",
+      "id": 164,
+      "status": "pending",
+      "term": "bountiful"
     }
   ]
 }
