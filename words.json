@@ -3612,13 +3612,33 @@
       "term": "cosmetic"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/afterward-us.mp3",
       "created_at": "2026-10-08T15:10:24Z",
       "id": 94,
       "meaning_en": "(temporal location) At a later or succeeding time",
       "meaning_zh": "（时间位置）稍后或后续时间",
       "part_of_speech": "adv.",
       "phonetic": "/ˈɑːftə.wəd/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "soon afterward",
+          "meaning_zh": "不久之后"
+        },
+        {
+          "phrase": "shortly afterward",
+          "meaning_zh": "很快之后；不久"
+        },
+        {
+          "phrase": "not long afterward",
+          "meaning_zh": "没过多久"
+        },
+        {
+          "phrase": "long afterward",
+          "meaning_zh": "很久之后"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "afterward"
     },
     {
