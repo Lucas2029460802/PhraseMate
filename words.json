@@ -3830,12 +3830,49 @@
     },
     {
       "created_at": "2026-10-08T15:15:12Z",
+      "example_en": "The preservation of historic buildings is essential for future generations.",
+      "example_zh": "保护历史建筑对子孙后代至关重要。",
       "id": 99,
-      "meaning_en": "The act of preserving; care to preserve; act of keeping from destruction, decay or any ill",
-      "meaning_zh": "保存行为；注意保存；防止破坏、腐烂或任何疾病的行为",
+      "meaning_en": "The act of keeping something in its original condition, or protecting it from damage, decay, or loss.",
+      "meaning_zh": "保护；保存；维护；（食物）防腐保存",
       "part_of_speech": "n.",
-      "phonetic": "/pɹɛ.zɝˈveɪ.ʃən/",
-      "status": "pending",
+      "phonetic": "/ˌprezəˈveɪʃn/",
+      "phrases": [
+        {
+          "phrase": "historic preservation",
+          "meaning_zh": "历史建筑保护"
+        },
+        {
+          "phrase": "food preservation",
+          "meaning_zh": "食品保存；食物防腐"
+        },
+        {
+          "phrase": "in a good state of preservation",
+          "meaning_zh": "保存完好"
+        },
+        {
+          "phrase": "preservation order",
+          "meaning_zh": "（文物或建筑的）保护令"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "preserve",
+          "pos": "v.",
+          "meaning_zh": "保护；保存；保留"
+        },
+        {
+          "word": "preservative",
+          "pos": "adj.",
+          "meaning_zh": "防腐的；有保护作用的"
+        },
+        {
+          "word": "preservable",
+          "pos": "adj.",
+          "meaning_zh": "可保存的；可保护的"
+        }
+      ],
+      "status": "ready",
       "term": "preservation"
     },
     {
