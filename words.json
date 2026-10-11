@@ -5994,8 +5994,49 @@
     },
     {
       "created_at": "2026-10-08T17:50:44Z",
+      "example_en": "Heavy rain and wind have eroded the cliffs along the coast.",
+      "example_zh": "大雨和大风侵蚀了沿海的悬崖。",
       "id": 152,
-      "status": "pending",
+      "meaning_en": "To wear away or destroy something gradually, especially by wind, water, or chemical action; to weaken or reduce something over time.",
+      "meaning_zh": "侵蚀，腐蚀（使逐渐磨损或毁坏）；逐渐削弱，损害（信心、权力、价值等）",
+      "part_of_speech": "v.",
+      "phonetic": "/ɪˈrəʊd/",
+      "phrases": [
+        {
+          "phrase": "erode away",
+          "meaning_zh": "逐渐侵蚀掉，逐步消磨"
+        },
+        {
+          "phrase": "erode confidence",
+          "meaning_zh": "削弱信心"
+        },
+        {
+          "phrase": "erode trust",
+          "meaning_zh": "损害信任"
+        },
+        {
+          "phrase": "erode the foundations of",
+          "meaning_zh": "侵蚀……的基础"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "erosion",
+          "pos": "n.",
+          "meaning_zh": "侵蚀，腐蚀；削弱"
+        },
+        {
+          "word": "erosive",
+          "pos": "adj.",
+          "meaning_zh": "侵蚀性的，腐蚀性的"
+        },
+        {
+          "word": "erodible",
+          "pos": "adj.",
+          "meaning_zh": "易受侵蚀的"
+        }
+      ],
+      "status": "ready",
       "term": "erode"
     },
     {
