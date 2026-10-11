@@ -6628,8 +6628,44 @@
     },
     {
       "created_at": "2026-10-11T18:40:23Z",
+      "example_en": "The company's new slogan is short and easy to remember.",
+      "example_zh": "这家公司的新口号简短又好记。",
       "id": 167,
-      "status": "pending",
+      "meaning_en": "A short, striking phrase used in advertising, politics, or by a group to promote something or express an aim.",
+      "meaning_zh": "标语；口号；广告词。",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈsləʊɡən/",
+      "phrases": [
+        {
+          "phrase": "advertising slogan",
+          "meaning_zh": "广告标语"
+        },
+        {
+          "phrase": "campaign slogan",
+          "meaning_zh": "竞选口号"
+        },
+        {
+          "phrase": "brand slogan",
+          "meaning_zh": "品牌口号"
+        },
+        {
+          "phrase": "catchy slogan",
+          "meaning_zh": "朗朗上口的口号"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "sloganeer",
+          "pos": "v.",
+          "meaning_zh": "使用（或制造）口号"
+        },
+        {
+          "word": "sloganeering",
+          "pos": "adj.",
+          "meaning_zh": "口号式的，空喊口号的"
+        }
+      ],
+      "status": "ready",
       "term": "slogan"
     }
   ]
