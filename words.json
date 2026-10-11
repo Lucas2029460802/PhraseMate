@@ -6182,8 +6182,45 @@
     },
     {
       "created_at": "2026-10-11T15:33:10Z",
+      "example_en": "The Earth revolves around the Sun once every year.",
+      "example_zh": "地球每年绕太阳公转一周。",
       "id": 156,
-      "status": "pending",
+      "meaning_en": "To move in a circle around a central point or axis. It also means to be mainly about or centred on a particular subject or person.",
+      "meaning_zh": "旋转；环绕；以…为中心（常与 around 连用）",
+      "part_of_speech": "v.",
+      "phonetic": "/rɪˈvɒlv/",
+      "phrases": [
+        {
+          "phrase": "revolve around",
+          "meaning_zh": "围绕…旋转；以…为中心"
+        },
+        {
+          "phrase": "revolve on its axis",
+          "meaning_zh": "绕轴自转"
+        },
+        {
+          "phrase": "revolving door",
+          "meaning_zh": "旋转门"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "revolution",
+          "pos": "n.",
+          "meaning_zh": "旋转；公转；革命"
+        },
+        {
+          "word": "revolutionary",
+          "pos": "adj.",
+          "meaning_zh": "革命性的；突破性的"
+        },
+        {
+          "word": "revolver",
+          "pos": "n.",
+          "meaning_zh": "左轮手枪"
+        }
+      ],
+      "status": "ready",
       "term": "revolve"
     },
     {
