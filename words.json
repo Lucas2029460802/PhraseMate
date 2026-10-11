@@ -6891,8 +6891,44 @@
     },
     {
       "created_at": "2026-10-11T18:56:44Z",
+      "example_en": "She is very keen on learning Japanese and practises every morning.",
+      "example_zh": "她非常热衷于学习日语，每天早上都练习。",
       "id": 174,
-      "status": "pending",
+      "meaning_en": "Very eager or enthusiastic about something; also describes something sharp, acute, or intense, such as a sense or a feeling.",
+      "meaning_zh": "热衷的，渴望的，热切的；敏锐的，灵敏的；锋利的；（感情、竞争等）强烈的，激烈的",
+      "part_of_speech": "adj.",
+      "phonetic": "/kiːn/",
+      "phrases": [
+        {
+          "phrase": "be keen on sth/sb",
+          "meaning_zh": "对某事物／某人很感兴趣、很喜欢"
+        },
+        {
+          "phrase": "be keen to do sth",
+          "meaning_zh": "渴望做某事，急于做某事"
+        },
+        {
+          "phrase": "a keen eye",
+          "meaning_zh": "敏锐的眼光"
+        },
+        {
+          "phrase": "keen competition",
+          "meaning_zh": "激烈的竞争"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "keenly",
+          "pos": "adv.",
+          "meaning_zh": "敏锐地；强烈地；热切地"
+        },
+        {
+          "word": "keenness",
+          "pos": "n.",
+          "meaning_zh": "热情；敏锐；锋利"
+        }
+      ],
+      "status": "ready",
       "term": "keen"
     }
   ]
