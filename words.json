@@ -5761,14 +5761,45 @@
     },
     {
       "created_at": "2026-10-08T16:21:51Z",
-      "example_en": "She narrated the story of her journey across Asia.",
-      "example_zh": "她讲述了自己横跨亚洲的旅程。",
+      "example_en": "She narrated the story of her journey across Asia to a captivated audience.",
+      "example_zh": "她向听得入迷的观众讲述了自己横跨亚洲的旅行故事。",
       "id": 145,
-      "meaning_en": "To tell a story or describe a series of events in speech or writing; also to provide the spoken commentary for a film, programme, etc.",
-      "meaning_zh": "讲述，叙述（故事、事件）；为（影片、节目等）作解说、旁白",
+      "meaning_en": "To tell a story or describe a series of events in speech or writing; to provide the spoken commentary for a film or programme.",
+      "meaning_zh": "讲述，叙述（故事、事件）；为（电影、纪录片等）作解说",
       "part_of_speech": "v.",
       "phonetic": "/nəˈreɪt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "narrate a story",
+          "meaning_zh": "讲述一个故事"
+        },
+        {
+          "phrase": "narrate a documentary",
+          "meaning_zh": "为纪录片作解说"
+        },
+        {
+          "phrase": "narrate one's experience",
+          "meaning_zh": "讲述自己的经历"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "narration",
+          "pos": "n.",
+          "meaning_zh": "叙述，讲述；解说"
+        },
+        {
+          "word": "narrator",
+          "pos": "n.",
+          "meaning_zh": "叙述者，讲述人；解说员"
+        },
+        {
+          "word": "narrative",
+          "pos": "adj.",
+          "meaning_zh": "叙事的，叙述性的"
+        }
+      ],
+      "status": "ready",
       "term": "narrate"
     },
     {
