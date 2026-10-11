@@ -6088,8 +6088,44 @@
     },
     {
       "created_at": "2026-10-11T15:25:15Z",
+      "example_en": "He dashed across the street to catch the bus.",
+      "example_zh": "他冲过马路去赶公交车。",
       "id": 154,
-      "status": "pending",
+      "meaning_en": "To run or move quickly and suddenly; a small amount of something added, or a punctuation mark (—).",
+      "meaning_zh": "猛冲，急奔；少量，少许；破折号；冲劲，短跑。",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/dæʃ/",
+      "phrases": [
+        {
+          "phrase": "dash off",
+          "meaning_zh": "匆匆写下；匆匆离开"
+        },
+        {
+          "phrase": "a dash of",
+          "meaning_zh": "少量；一点"
+        },
+        {
+          "phrase": "make a dash for",
+          "meaning_zh": "冲向；奔向"
+        },
+        {
+          "phrase": "dash someone's hopes",
+          "meaning_zh": "使某人的希望破灭"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "dashing",
+          "pos": "adj.",
+          "meaning_zh": "风度翩翩的；时髦的"
+        },
+        {
+          "word": "dashingly",
+          "pos": "adv.",
+          "meaning_zh": "风度翩翩地；时髦地"
+        }
+      ],
+      "status": "ready",
       "term": "dash"
     },
     {
