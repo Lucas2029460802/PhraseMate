@@ -6780,8 +6780,40 @@
     },
     {
       "created_at": "2026-10-11T18:43:35Z",
+      "example_en": "Marathon runners need great stamina to keep going for over two hours.",
+      "example_zh": "马拉松选手需要极强的耐力才能坚持跑两个多小时。",
       "id": 171,
-      "status": "pending",
+      "meaning_en": "The physical or mental strength and energy that allows you to keep doing something for a long time without getting tired.",
+      "meaning_zh": "耐力；持久力；精力（尤指长时间保持体力或精神活动的能力）",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈstæmɪnə/",
+      "phrases": [
+        {
+          "phrase": "build up stamina",
+          "meaning_zh": "增强耐力"
+        },
+        {
+          "phrase": "mental stamina",
+          "meaning_zh": "心理耐力；精神韧性"
+        },
+        {
+          "phrase": "physical stamina",
+          "meaning_zh": "体能；身体耐力"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "staminal",
+          "pos": "adj.",
+          "meaning_zh": "与耐力有关的；雄蕊的"
+        },
+        {
+          "word": "staminate",
+          "pos": "adj.",
+          "meaning_zh": "有雄蕊的（植物学）"
+        }
+      ],
+      "status": "ready",
       "term": "stamina"
     },
     {
