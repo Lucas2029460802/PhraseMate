@@ -5416,14 +5416,49 @@
     },
     {
       "created_at": "2026-10-08T16:06:38Z",
-      "example_en": "Her voice had a soothing cadence that made the story captivating.",
-      "example_zh": "她的声音抑扬顿挫，舒缓悦耳，让这个故事引人入胜。",
+      "example_en": "She spoke with a gentle Southern cadence that made every sentence sound like a lullaby.",
+      "example_zh": "她说话带着一种柔和的南方腔调，每句话听起来都像摇篮曲。",
       "id": 136,
-      "meaning_en": "The rhythmic flow or modulation of a sound, especially in speech, music, or poetry; also the beat or rhythm of a repeated action such as walking or running.",
-      "meaning_zh": "（说话、音乐或诗歌的）抑扬顿挫，节奏，韵律；（步伐等的）节拍，步调。",
+      "meaning_en": "The rhythmic flow or modulation of a sequence of sounds, especially in speech, music, or movement; also the rhythm of a repeated action such as pedalling or running.",
+      "meaning_zh": "（声音的）抑扬顿挫，节律；韵律，节奏；（音乐中的）终止式；（骑车、跑步时的）踏频，步频。",
       "part_of_speech": "n.",
       "phonetic": "/ˈkeɪdns/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "in cadence",
+          "meaning_zh": "有节奏地；按节拍"
+        },
+        {
+          "phrase": "the cadence of speech",
+          "meaning_zh": "说话的抑扬顿挫"
+        },
+        {
+          "phrase": "pedalling cadence",
+          "meaning_zh": "踏频，蹬踏节奏"
+        },
+        {
+          "phrase": "fall into a cadence",
+          "meaning_zh": "进入某种节奏"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "cadenced",
+          "pos": "adj.",
+          "meaning_zh": "有节奏的，抑扬顿挫的"
+        },
+        {
+          "word": "cadential",
+          "pos": "adj.",
+          "meaning_zh": "（音乐）终止式的"
+        },
+        {
+          "word": "cadentially",
+          "pos": "adv.",
+          "meaning_zh": "以终止式的方式"
+        }
+      ],
+      "status": "ready",
       "term": "cadence"
     },
     {
