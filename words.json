@@ -6818,8 +6818,44 @@
     },
     {
       "created_at": "2026-10-11T18:43:43Z",
+      "example_en": "Scientists are studying the diet and habits that contribute to human longevity.",
+      "example_zh": "科学家正在研究有助于人类长寿的饮食和习惯。",
       "id": 172,
-      "status": "pending",
+      "meaning_en": "The fact or quality of living or lasting for a long time; long life or long duration.",
+      "meaning_zh": "长寿；寿命长；（事物的）持久，长期存在",
+      "part_of_speech": "n.",
+      "phonetic": "/lɒnˈdʒevəti/",
+      "phrases": [
+        {
+          "phrase": "human longevity",
+          "meaning_zh": "人类长寿；人类寿命"
+        },
+        {
+          "phrase": "longevity risk",
+          "meaning_zh": "长寿风险（金融保险术语）"
+        },
+        {
+          "phrase": "longevity pay",
+          "meaning_zh": "工龄津贴；年资补贴"
+        },
+        {
+          "phrase": "longevity noodle",
+          "meaning_zh": "长寿面"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "longevous",
+          "pos": "adj.",
+          "meaning_zh": "长寿的；活得久的"
+        },
+        {
+          "word": "longevously",
+          "pos": "adv.",
+          "meaning_zh": "长寿地；长久地"
+        }
+      ],
+      "status": "ready",
       "term": "longevity"
     }
   ]
