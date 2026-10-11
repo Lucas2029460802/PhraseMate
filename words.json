@@ -4172,14 +4172,44 @@
     },
     {
       "created_at": "2026-10-08T15:54:03Z",
-      "example_en": "Her testimony was crucial in convicting the defendant.",
-      "example_zh": "她的证词对判定被告有罪起了关键作用。",
+      "example_en": "Her testimony was crucial to the jury's final decision.",
+      "example_zh": "她的证词对陪审团的最终裁决至关重要。",
       "id": 106,
-      "meaning_en": "A formal statement a witness makes under oath, especially in a court of law. It can also mean clear evidence or proof that something exists or is true.",
-      "meaning_zh": "证词；证言；（法庭上的）宣誓陈述；证据；证明",
+      "meaning_en": "A formal spoken or written statement, especially one given by a witness in a court of law. It can also mean clear evidence or proof of something.",
+      "meaning_zh": "证词，证言；（法庭上的）证据；证明，见证。",
       "part_of_speech": "n.",
       "phonetic": "/ˈtestɪməni/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "bear testimony to",
+          "meaning_zh": "为……作证；证明……"
+        },
+        {
+          "phrase": "give testimony",
+          "meaning_zh": "作证，提供证词"
+        },
+        {
+          "phrase": "false testimony",
+          "meaning_zh": "伪证，假证词"
+        },
+        {
+          "phrase": "expert testimony",
+          "meaning_zh": "专家证词"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "testify",
+          "pos": "v.",
+          "meaning_zh": "作证；证明，表明"
+        },
+        {
+          "word": "testimonial",
+          "pos": "n.",
+          "meaning_zh": "推荐信；证明书；纪念品"
+        }
+      ],
+      "status": "ready",
       "term": "testimony"
     },
     {
