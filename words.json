@@ -6860,8 +6860,33 @@
     },
     {
       "created_at": "2026-10-11T18:45:37Z",
+      "example_en": "I relish the opportunity to learn new things.",
+      "example_zh": "我享受学习新事物的机会。",
       "id": 173,
-      "status": "pending",
+      "meaning_en": "Great enjoyment or pleasure; a condiment eaten with food to add flavor; to enjoy greatly.",
+      "meaning_zh": "乐趣；滋味；调味品；享受；喜爱",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈrelɪʃ/",
+      "phrases": [
+        {
+          "phrase": "with relish",
+          "meaning_zh": "津津有味地；饶有兴趣地"
+        },
+        {
+          "phrase": "relish the thought",
+          "meaning_zh": "喜欢这个想法"
+        },
+        {
+          "phrase": "relish the opportunity",
+          "meaning_zh": "珍惜/享受这个机会"
+        },
+        {
+          "phrase": "a relish for",
+          "meaning_zh": "对……的喜爱/兴趣"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "relish"
     }
   ]
