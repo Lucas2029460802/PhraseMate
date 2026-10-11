@@ -3298,14 +3298,44 @@
     },
     {
       "created_at": "2026-10-08T15:03:23Z",
-      "example_en": "The room was buzzing with excitement as everyone waited for the results.",
-      "example_zh": "大家都在等待结果，房间里洋溢着一片兴奋的嗡嗡声。",
+      "example_en": "The bees buzzed around the garden.",
+      "example_zh": "蜜蜂在花园里嗡嗡地飞来飞去。",
       "id": 87,
-      "meaning_en": "A low, continuous humming sound like that of a bee. As a verb, to make such a sound, or (of a place or group) to be full of excitement or activity.",
-      "meaning_zh": "n. 嗡嗡声，蜂鸣声；（人群的）嘈杂声、低声议论；兴奋热闹的气氛；（门铃等的）蜂鸣器响声。v. 发出嗡嗡声；用蜂鸣器呼叫；充满兴奋或忙碌（buzz with）；(口) 匆匆走动。",
+      "meaning_en": "A low continuous humming sound, as made by a bee; to make this sound or to be full of lively activity or talk.",
+      "meaning_zh": "嗡嗡声；蜂鸣声；发出嗡嗡声；（人群或地方）充满嘈杂声、议论或兴奋气氛。",
       "part_of_speech": "n. / v.",
       "phonetic": "/bʌz/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "buzz off",
+          "meaning_zh": "走开（非正式）"
+        },
+        {
+          "phrase": "buzz around",
+          "meaning_zh": "嗡嗡盘旋；忙碌地走动"
+        },
+        {
+          "phrase": "buzz with",
+          "meaning_zh": "充满…的嗡嗡声或议论"
+        },
+        {
+          "phrase": "buzz cut",
+          "meaning_zh": "寸头；极短的平头"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "buzzy",
+          "pos": "adj.",
+          "meaning_zh": "嗡嗡作响的；热闹活跃的"
+        },
+        {
+          "word": "buzzworthy",
+          "pos": "adj.",
+          "meaning_zh": "有话题度的；值得热议的"
+        }
+      ],
+      "status": "ready",
       "term": "buzz"
     },
     {
