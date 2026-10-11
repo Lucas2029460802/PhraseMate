@@ -95,7 +95,23 @@ CREATE TABLE IF NOT EXISTS settings (
 	if err := s.normalizeStoredPhonetics(); err != nil {
 		return err
 	}
-	return nil
+	_, err = s.db.Exec(`
+CREATE TABLE IF NOT EXISTS writings (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  prompt TEXT NOT NULL DEFAULT '',
+  prompt_images TEXT NOT NULL DEFAULT '',
+  body TEXT NOT NULL DEFAULT '',
+  model_text TEXT NOT NULL DEFAULT '',
+  model_filename TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_writings_updated ON writings(updated_at);
+`)
+	if err != nil {
+		return err
+	}
+	return s.migrateWritingsSchema()
 }
 
 func (s *Store) addColumn(ddl string) error {

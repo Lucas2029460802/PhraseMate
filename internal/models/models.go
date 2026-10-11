@@ -156,3 +156,38 @@ type Phrase struct {
 	MeaningZH string `json:"meaning_zh"`
 	Meaning   string `json:"meaning,omitempty"`
 }
+
+// WritingImage is a screenshot or picture attached to the writing prompt.
+type WritingImage struct {
+	Mime string `json:"mime"`
+	Data string `json:"data"` // raw base64 payload (no data: prefix)
+}
+
+// Writing is an English composition entry with an optional model essay.
+type Writing struct {
+	ID               int64          `json:"id"`
+	Prompt           string         `json:"prompt"` // 作文题目
+	PromptImages     []WritingImage `json:"prompt_images,omitempty"`
+	PromptImageCount int            `json:"prompt_image_count,omitempty"`
+	Body             string         `json:"body"`
+	ModelText        string         `json:"model_text"`
+	ModelFilename    string         `json:"model_filename,omitempty"`
+	CreatedAt        time.Time      `json:"created_at"`
+	UpdatedAt        time.Time      `json:"updated_at"`
+}
+
+// WritingCreateRequest creates a writing entry (fields may be empty).
+type WritingCreateRequest struct {
+	Prompt       string         `json:"prompt"`
+	PromptImages []WritingImage `json:"prompt_images"`
+	Body         string         `json:"body"`
+	ModelText    string         `json:"model_text"`
+}
+
+// WritingUpdateRequest saves prompt, body, and model essay text.
+type WritingUpdateRequest struct {
+	Prompt       string         `json:"prompt"`
+	PromptImages []WritingImage `json:"prompt_images"`
+	Body         string         `json:"body"`
+	ModelText    string         `json:"model_text"`
+}

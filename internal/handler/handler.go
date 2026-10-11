@@ -46,6 +46,12 @@ func (a *API) Register(mux *http.ServeMux) {
 	mux.HandleFunc("POST /api/quiz/result", a.handleQuizResult)
 	mux.HandleFunc("POST /api/translate", a.handleTranslate)
 	mux.HandleFunc("GET /api/tts", a.handleTTS)
+	mux.HandleFunc("GET /api/writings", a.handleListWritings)
+	mux.HandleFunc("POST /api/writings", a.handleCreateWriting)
+	mux.HandleFunc("GET /api/writings/{id}", a.handleGetWriting)
+	mux.HandleFunc("PUT /api/writings/{id}", a.handleUpdateWriting)
+	mux.HandleFunc("DELETE /api/writings/{id}", a.handleDeleteWriting)
+	mux.HandleFunc("POST /api/writings/{id}/model-file", a.handleUploadWritingModel)
 }
 
 func (a *API) handleStatus(w http.ResponseWriter, r *http.Request) {

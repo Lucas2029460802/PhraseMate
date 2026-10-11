@@ -6,7 +6,7 @@
   <title>PhraseMate</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Syne:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Syne:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:opsz,wght@7..72,400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/static/css/style.css" />
 </head>
 <body class="app-shell">
@@ -37,6 +37,7 @@
         </div>
         <div class="head-actions">
           <button type="button" class="btn ghost" id="btnToggleTranslate" aria-expanded="false">中英互译</button>
+          <button type="button" class="btn ghost" id="btnGoWriting">写作本</button>
           <button type="button" class="btn" id="btnGoQuiz">英语自测</button>
         </div>
       </div>
@@ -84,6 +85,96 @@
     </section>
     <p class="dock-hint">右下角置顶速记条：回车立刻入库。关闭本窗口会隐藏到后台；退出请用托盘菜单。</p>
   </main>
+
+  <!-- Writing notebook -->
+  <main class="page page-writing" id="pageWriting" hidden>
+    <section class="panel writing-panel">
+      <div class="panel-head">
+        <div class="head-left">
+          <button type="button" class="btn ghost" id="btnBackFromWriting">← 返回生词本</button>
+          <h2>写作本</h2>
+          <span class="count" id="writingCount">0</span>
+        </div>
+        <div class="head-actions">
+          <span class="writing-save-hint" id="writingSaveHint" aria-live="polite"></span>
+          <button type="button" class="btn ghost" id="btnDeleteWriting" disabled>删除</button>
+          <button type="button" class="btn" id="btnNewWriting">新建作文</button>
+        </div>
+      </div>
+      <div class="writing-layout">
+        <aside class="writing-sidebar">
+          <div class="writing-list" id="writingList">
+            <p class="empty">还没有作文。点击「新建作文」开始。</p>
+          </div>
+        </aside>
+        <div class="writing-main">
+          <div class="writing-editor" id="writingEditor" hidden>
+            <div class="writing-prompt-field" id="writingPromptField">
+              <div class="writing-pane-head">
+                <span class="writing-pane-label">作文题目</span>
+                <div class="writing-pane-actions">
+                  <button type="button" class="btn ghost sm" id="btnAddPromptImage">添加截图</button>
+                  <input type="file" id="writingPromptImageFile" accept="image/png,image/jpeg,image/webp,image/gif" multiple hidden />
+                </div>
+              </div>
+              <textarea id="writingPrompt" rows="3" placeholder="输入作文题目，也可直接 Ctrl+V 粘贴截图…" autocomplete="off"></textarea>
+              <div class="writing-prompt-images" id="writingPromptImages" hidden></div>
+              <p class="writing-prompt-hint">支持粘贴或导入截图（最多 6 张）</p>
+            </div>
+            <section class="writing-model">
+              <div class="writing-pane-head">
+                <span class="writing-pane-label">范文</span>
+                <div class="writing-pane-actions">
+                  <span class="writing-file-name" id="writingModelFilename" hidden></span>
+                  <button type="button" class="btn ghost sm" id="btnToggleModelEdit">编辑 Markdown</button>
+                  <button type="button" class="btn ghost sm" id="btnUploadModel">导入文件</button>
+                  <button type="button" class="btn sm" id="btnExpandModel">放大阅读</button>
+                  <input type="file" id="writingModelFile" accept=".txt,.md,.text,text/plain" hidden />
+                </div>
+              </div>
+              <button type="button" class="writing-model-preview" id="writingModelPreview" title="点击放大阅读">
+                <div class="md-prose" id="writingModelRendered">
+                  <p class="empty">粘贴或导入 Markdown 范文后，点击此处放大阅读。</p>
+                </div>
+              </button>
+              <textarea
+                id="writingModel"
+                class="writing-model-source"
+                hidden
+                placeholder="在此粘贴 Markdown 范文，或点击「导入文件」…"
+                spellcheck="true"
+              ></textarea>
+            </section>
+          </div>
+          <div class="writing-empty" id="writingEmpty">
+            <p class="empty">选择左侧条目，或新建一篇保存题目与范文。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop writing-reader-backdrop" id="writingReader" hidden>
+    <div class="writing-reader" role="dialog" aria-modal="true" aria-labelledby="writingReaderTitle">
+      <div class="writing-reader-head">
+        <h2 id="writingReaderTitle" class="writing-reader-title">范文</h2>
+        <div class="writing-reader-head-actions">
+          <span class="writing-zoom-hint" id="writingZoomHint">100%</span>
+          <button type="button" class="icon-btn modal-close" id="btnCloseWritingReader" aria-label="关闭">×</button>
+        </div>
+      </div>
+      <div class="writing-reader-body" id="writingReaderBody">
+        <div class="writing-reader-zoom md-prose md-prose-lg" id="writingReaderZoom"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop writing-image-lightbox" id="writingImageLightbox" hidden>
+    <button type="button" class="icon-btn writing-lightbox-close" id="btnCloseImageLightbox" aria-label="关闭">×</button>
+    <div class="writing-lightbox-stage" id="writingLightboxStage">
+      <img id="writingLightboxImg" alt="题目截图" />
+    </div>
+  </div>
 
   <!-- Quiz page -->
   <main class="page page-quiz" id="pageQuiz" hidden>
@@ -139,6 +230,7 @@
     </div>
   </div>
 
+  <script src="/static/js/markdown.js"></script>
   <script src="/static/js/app.js"></script>
 </body>
 </html>
