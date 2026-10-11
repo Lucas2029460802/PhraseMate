@@ -4444,14 +4444,49 @@
     },
     {
       "created_at": "2026-10-08T15:31:44Z",
-      "example_en": "The company decided to suspend all flights to the region because of the storm.",
-      "example_zh": "由于暴风雨，该公司决定暂停所有飞往该地区的航班。",
+      "example_en": "The company suspended all non-essential travel during the crisis.",
+      "example_zh": "危机期间，公司暂停了所有非必要旅行。",
       "id": 114,
-      "meaning_en": "To stop something temporarily, or to officially prevent someone from taking part in their job or an activity for a period of time. It can also mean to hang something from above.",
-      "meaning_zh": "暂停，中止（某事一段时间）；使停职，使停学（作为处分）；悬挂，吊起",
+      "meaning_en": "To stop or delay something for a period of time; to hang something from above; to temporarily remove someone from a job, school, or activity.",
+      "meaning_zh": "暂停；中止；悬挂；使暂时停职（或停学、禁赛等）。",
       "part_of_speech": "v.",
       "phonetic": "/səˈspend/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "suspend judgment",
+          "meaning_zh": "暂缓判断；不急于下结论"
+        },
+        {
+          "phrase": "suspend operations",
+          "meaning_zh": "暂停运营"
+        },
+        {
+          "phrase": "suspend sb from sth",
+          "meaning_zh": "使某人暂时停职（或停学）"
+        },
+        {
+          "phrase": "suspend payment",
+          "meaning_zh": "停止支付"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "suspension",
+          "pos": "n.",
+          "meaning_zh": "暂停；悬挂；停职"
+        },
+        {
+          "word": "suspender",
+          "pos": "n.",
+          "meaning_zh": "吊带；悬挂物"
+        },
+        {
+          "word": "suspensory",
+          "pos": "adj.",
+          "meaning_zh": "悬吊的；悬带的"
+        }
+      ],
+      "status": "ready",
       "term": "suspend"
     },
     {
