@@ -3467,14 +3467,49 @@
     },
     {
       "created_at": "2026-10-08T15:07:26Z",
-      "example_en": "It is hard to distinguish between the twin sisters.",
-      "example_zh": "很难分辨这对双胞胎姐妹。",
+      "example_en": "Young children often cannot distinguish between fantasy and reality.",
+      "example_zh": "幼儿常常无法区分幻想和现实。",
       "id": 91,
-      "meaning_en": "To recognize or show the difference between two or more things; to make something different or special.",
-      "meaning_zh": "区分，辨别，分辨；使有别于，使突出；辨认出。",
+      "meaning_en": "To recognize or show the difference between two or more things. It can also mean to make someone or something special or different from others.",
+      "meaning_zh": "区分，辨别；分辨出；使有别于，使突出；使杰出（distinguish oneself）",
       "part_of_speech": "v.",
       "phonetic": "/dɪˈstɪŋɡwɪʃ/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "distinguish between A and B",
+          "meaning_zh": "区分 A 和 B"
+        },
+        {
+          "phrase": "distinguish A from B",
+          "meaning_zh": "把 A 与 B 区别开来"
+        },
+        {
+          "phrase": "distinguish oneself",
+          "meaning_zh": "使自己出众，表现出色"
+        },
+        {
+          "phrase": "distinguish right from wrong",
+          "meaning_zh": "明辨是非"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "distinction",
+          "pos": "n.",
+          "meaning_zh": "区别，差别；优异，卓越"
+        },
+        {
+          "word": "distinguishable",
+          "pos": "adj.",
+          "meaning_zh": "可区分的，可辨别的"
+        },
+        {
+          "word": "distinct",
+          "pos": "adj.",
+          "meaning_zh": "明显不同的，截然不同的；清楚的"
+        }
+      ],
+      "status": "ready",
       "term": "distinguish"
     },
     {
