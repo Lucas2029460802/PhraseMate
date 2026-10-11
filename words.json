@@ -6130,9 +6130,55 @@
     },
     {
       "created_at": "2026-10-11T15:26:33Z",
+      "example_en": "The teacher demonstrated how to solve the equation step by step.",
+      "example_zh": "老师逐步演示了如何解这个方程。",
       "id": 155,
-      "status": "pending",
-      "term": "demostrate"
+      "meaning_en": "To show clearly that something is true or to explain something by doing it yourself. It can also mean to take part in a public protest.",
+      "meaning_zh": "证明，证实；演示，示范；游行示威",
+      "part_of_speech": "v.",
+      "phonetic": "/ˈdemənstreɪt/",
+      "phrases": [
+        {
+          "phrase": "demonstrate against sth",
+          "meaning_zh": "为反对某事而游行示威"
+        },
+        {
+          "phrase": "demonstrate one's ability",
+          "meaning_zh": "展示自己的能力"
+        },
+        {
+          "phrase": "demonstrate how to do sth",
+          "meaning_zh": "演示如何做某事"
+        },
+        {
+          "phrase": "clearly demonstrate",
+          "meaning_zh": "清楚地表明"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "demonstration",
+          "pos": "n.",
+          "meaning_zh": "演示；证明；示威游行"
+        },
+        {
+          "word": "demonstrative",
+          "pos": "adj.",
+          "meaning_zh": "说明的；感情外露的"
+        },
+        {
+          "word": "demonstrably",
+          "pos": "adv.",
+          "meaning_zh": "明显地，可证明地"
+        },
+        {
+          "word": "demonstrator",
+          "pos": "n.",
+          "meaning_zh": "演示者；示威者"
+        }
+      ],
+      "status": "ready",
+      "term": "demonstrate"
     }
   ]
 }
