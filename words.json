@@ -5808,7 +5808,26 @@
       "meaning_en": "A body of standing water, such as a lake or a pond. More specifically, it can refer to a lake that is broad in relation to its depth. Also included in place names such as Windermere",
       "meaning_zh": "积水，如湖泊或池塘。更具体地说，它可以指相对于其深度而言较宽的湖泊。也包括在温德米尔等地名中",
       "part_of_speech": "n.",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "a broad mere",
+          "meaning_zh": "宽广的湖泊"
+        },
+        {
+          "phrase": "a shallow mere",
+          "meaning_zh": "浅水湖"
+        },
+        {
+          "phrase": "Windermere",
+          "meaning_zh": "温德米尔湖"
+        },
+        {
+          "phrase": "Grasmere",
+          "meaning_zh": "格拉斯米尔湖"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "mere"
     },
     {
