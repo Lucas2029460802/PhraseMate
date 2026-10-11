@@ -6318,8 +6318,54 @@
     },
     {
       "created_at": "2026-10-11T16:03:42Z",
+      "example_en": "The company released a stream of contradictory statements to muddy the waters before the investigation began.",
+      "example_zh": "在调查开始之前，该公司发布了一连串自相矛盾的声明，以搅乱局面。",
       "id": 159,
-      "status": "pending",
+      "meaning_en": "To make a situation, issue, or argument more confusing and less clear, often deliberately so that the truth is harder to see.",
+      "meaning_zh": "把水搅浑；使情况（或问题）变得混乱不清，常指故意混淆视听、搅乱局面。",
+      "part_of_speech": "phrase",
+      "phonetic": "/ˈmʌdi ðə ˈwɔːtərz/",
+      "phrases": [
+        {
+          "phrase": "muddy the issue",
+          "meaning_zh": "把问题搅乱，使问题复杂化"
+        },
+        {
+          "phrase": "muddy the picture",
+          "meaning_zh": "使情况变得模糊不清"
+        },
+        {
+          "phrase": "fish in muddy waters",
+          "meaning_zh": "浑水摸鱼"
+        },
+        {
+          "phrase": "muddy waters",
+          "meaning_zh": "浑浊的水；混乱的局面"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "muddy",
+          "pos": "adj.",
+          "meaning_zh": "泥泞的；浑浊的；含糊不清的"
+        },
+        {
+          "word": "mud",
+          "pos": "n.",
+          "meaning_zh": "泥，泥浆"
+        },
+        {
+          "word": "muddiness",
+          "pos": "n.",
+          "meaning_zh": "浑浊；含糊不清"
+        },
+        {
+          "word": "muddily",
+          "pos": "adv.",
+          "meaning_zh": "浑浊地；含糊地"
+        }
+      ],
+      "status": "ready",
       "term": "muddy the waters"
     }
   ]
