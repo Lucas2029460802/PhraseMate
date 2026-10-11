@@ -4649,14 +4649,49 @@
     },
     {
       "created_at": "2026-10-08T15:44:00Z",
-      "example_en": "After graduation, we promised to stay in touch, but we slowly drifted away from each other.",
-      "example_zh": "毕业后我们约好保持联系，但彼此还是渐渐疏远了。",
+      "example_en": "After she moved to another city, she gradually drifted away from her old friends.",
+      "example_zh": "搬到另一个城市后，她渐渐与老朋友疏远了。",
       "id": 119,
-      "meaning_en": "To gradually move away or disappear, either literally by floating slowly, or figuratively by losing interest, contact, or closeness with someone.",
-      "meaning_zh": "漂走；飘散；渐渐疏远；（感情、关系）逐渐淡漠、消失",
+      "meaning_en": "To move away slowly and gradually, often carried by water, wind, or currents; by extension, to slowly lose interest, feeling, or connection with someone or something.",
+      "meaning_zh": "漂走；缓缓飘离；（感情、兴趣等）逐渐淡去，渐渐疏远",
       "part_of_speech": "phrase",
       "phonetic": "/drɪft əˈweɪ/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "drift apart",
+          "meaning_zh": "（关系）逐渐疏远"
+        },
+        {
+          "phrase": "drift off",
+          "meaning_zh": "不知不觉入睡；走神"
+        },
+        {
+          "phrase": "drift into",
+          "meaning_zh": "不知不觉地进入（某种状态）"
+        },
+        {
+          "phrase": "let things drift",
+          "meaning_zh": "听之任之；任其自然发展"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "drift",
+          "pos": "v.",
+          "meaning_zh": "漂流；缓缓移动；不知不觉陷入"
+        },
+        {
+          "word": "drifter",
+          "pos": "n.",
+          "meaning_zh": "漂泊者；流浪者"
+        },
+        {
+          "word": "adrift",
+          "pos": "adj./adv.",
+          "meaning_zh": "漂浮的；漂泊无依的"
+        }
+      ],
+      "status": "ready",
       "term": "drift away"
     },
     {
