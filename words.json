@@ -4491,14 +4491,44 @@
     },
     {
       "created_at": "2026-10-08T15:36:33Z",
-      "example_en": "Listening to that old song filled her with nostalgia for the summers of her childhood.",
-      "example_zh": "听那首老歌让她对童年的夏天充满了怀念。",
+      "example_en": "The old photographs filled her with nostalgia for her childhood.",
+      "example_zh": "那些老照片让她对童年充满了怀旧之情。",
       "id": 115,
-      "meaning_en": "A sentimental longing or wistful affection for a past period, place, or experience that one remembers fondly.",
-      "meaning_zh": "怀旧；怀旧之情；对往昔（或故乡）的眷恋与思念。",
+      "meaning_en": "A sentimental longing or wistful affection for a period in the past, often one remembered as happier.",
+      "meaning_zh": "怀旧；念旧；对往昔的眷恋",
       "part_of_speech": "n.",
       "phonetic": "/nɒˈstældʒə/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "nostalgia for something",
+          "meaning_zh": "对某事物的怀旧之情"
+        },
+        {
+          "phrase": "a wave of nostalgia",
+          "meaning_zh": "一阵怀旧情绪"
+        },
+        {
+          "phrase": "nostalgia trip",
+          "meaning_zh": "怀旧之旅；怀旧体验"
+        },
+        {
+          "phrase": "nostalgia buff",
+          "meaning_zh": "怀旧爱好者"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "nostalgic",
+          "pos": "adj.",
+          "meaning_zh": "怀旧的；念旧的"
+        },
+        {
+          "word": "nostalgically",
+          "pos": "adv.",
+          "meaning_zh": "怀旧地；念旧地"
+        }
+      ],
+      "status": "ready",
       "term": "nostalgia"
     },
     {
