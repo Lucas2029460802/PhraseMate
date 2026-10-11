@@ -3089,11 +3089,11 @@
     },
     {
       "created_at": "2026-10-01T16:59:48Z",
-      "example_en": "She queried the manager about the delay in delivery.",
-      "example_zh": "她就交货延迟一事询问了经理。",
+      "example_en": "She queried the database to find the customer's order history.",
+      "example_zh": "她查询数据库，以查找该客户的订单记录。",
       "id": 76,
-      "meaning_en": "A question, especially one asking for information or expressing doubt; to ask a question about something, or to express doubt about whether something is correct.",
-      "meaning_zh": "询问；疑问；（向某人）提问，询问；对……表示疑问，质疑",
+      "meaning_en": "A question, especially one asked to get information or to express doubt. As a verb, it means to ask about something or to check whether something is correct.",
+      "meaning_zh": "（名词）疑问，询问；（计算机）查询；（动词）询问，提问；对……表示疑问，质疑",
       "part_of_speech": "n. / v.",
       "phonetic": "/ˈkwɪəri/",
       "phrases": [
@@ -3102,8 +3102,8 @@
           "meaning_zh": "查询语言（如 SQL）"
         },
         {
-          "phrase": "database query",
-          "meaning_zh": "数据库查询"
+          "phrase": "search query",
+          "meaning_zh": "搜索查询，搜索词"
         },
         {
           "phrase": "raise a query",
@@ -3118,12 +3118,17 @@
         {
           "word": "queryable",
           "pos": "adj.",
-          "meaning_zh": "可查询的；可询问的"
+          "meaning_zh": "可查询的，可检索的"
         },
         {
-          "word": "querulous",
-          "pos": "adj.",
-          "meaning_zh": "爱抱怨的；爱发牢骚的"
+          "word": "querist",
+          "pos": "n.",
+          "meaning_zh": "提问者，询问者"
+        },
+        {
+          "word": "queryingly",
+          "pos": "adv.",
+          "meaning_zh": "带着疑问地"
         }
       ],
       "status": "ready",
@@ -3131,1289 +3136,352 @@
     },
     {
       "created_at": "2026-10-01T17:22:28Z",
-      "example_en": "The earthquake was the worst catastrophe the region had ever experienced.",
-      "example_zh": "这场地震是该地区有史以来最严重的灾难。",
+      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
+      "example_en": "The tsunami was a catastrophe that destroyed the entire coastal city.",
+      "example_zh": "那场海啸是一场摧毁整座沿海城市的巨大灾难。",
       "id": 77,
-      "meaning_en": "A sudden event that causes great damage, suffering, or destruction; a complete failure or disaster.",
-      "meaning_zh": "大灾难；重大灾祸；惨败；彻底失败",
+      "meaning_en": "A sudden event that causes great damage, suffering, or destruction; a terrible disaster. It can also mean a final disastrous outcome or failure.",
+      "meaning_zh": "大灾难；灾祸；浩劫；（戏剧的）悲剧性结局；惨败。",
       "part_of_speech": "n.",
       "phonetic": "/kəˈtæstrəfi/",
-      "phrases": [
-        {
-          "phrase": "natural catastrophe",
-          "meaning_zh": "自然灾害"
-        },
-        {
-          "phrase": "avert a catastrophe",
-          "meaning_zh": "避免一场灾难"
-        },
-        {
-          "phrase": "catastrophe theory",
-          "meaning_zh": "突变论（数学理论）"
-        },
-        {
-          "phrase": "climate catastrophe",
-          "meaning_zh": "气候灾难"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "catastrophic",
-          "pos": "adj.",
-          "meaning_zh": "灾难性的；毁灭性的"
-        },
-        {
-          "word": "catastrophically",
-          "pos": "adv.",
-          "meaning_zh": "灾难性地；极其糟糕地"
-        },
-        {
-          "word": "catastrophize",
-          "pos": "v.",
-          "meaning_zh": "把小事想成灾难；危言耸听"
-        }
-      ],
-      "status": "ready",
+      "status": "error",
       "term": "catastrophe"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/tunnel-us.mp3",
       "created_at": "2026-10-02T12:17:12Z",
+      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
+      "example_en": "The train went through a long tunnel under the mountain.",
+      "example_zh": "火车穿过山下的长隧道。",
       "id": 78,
-      "meaning_en": "An underground or underwater passage; A passage through or under some obstacle",
-      "meaning_zh": "地下或水下通道；通过某个障碍物或在障碍物下方的通道",
-      "part_of_speech": "n.",
-      "phonetic": "/ˈtʌn(ə)l/",
-      "phrases": [
-        {
-          "phrase": "tunnel vision",
-          "meaning_zh": "隧道视野；管状视野；比喻狭隘视野"
-        },
-        {
-          "phrase": "wind tunnel",
-          "meaning_zh": "风洞"
-        },
-        {
-          "phrase": "light at the end of the tunnel",
-          "meaning_zh": "隧道尽头的光；一线希望"
-        },
-        {
-          "phrase": "tunnel through",
-          "meaning_zh": "挖隧道穿过；穿越"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "meaning_en": "A passage dug through or under ground, or a similar enclosed passage. As a verb, to dig such a passage.",
+      "meaning_zh": "隧道；地道；（动物的）洞穴；v. 挖隧道；挖地道",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈtʌnl/",
+      "status": "error",
       "term": "tunnel"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/spice-us.mp3",
       "created_at": "2026-10-03T13:24:07Z",
+      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
+      "example_en": "Cinnamon, nutmeg and cloves are common spices used in baking.",
+      "example_zh": "肉桂、肉豆蔻和丁香是烘焙中常用的香料。",
       "id": 79,
-      "meaning_en": "Aromatic or pungent plant matter (usually dried) used to season or flavour food; Appeal, interest; an attribute that makes something appealing, interesting, or engaging",
-      "meaning_zh": "用于调味或调味食物的芳香或辛辣植物物质（通常干燥）；吸引力、兴趣；使某事具有吸引力、趣味性或吸引力的属性",
+      "meaning_en": "A strong-smelling or strong-tasting substance, usually made from a plant, that is used to flavour food. It can also mean something that adds interest or excitement to something.",
+      "meaning_zh": "香料；调味品；（增添趣味的）情趣，刺激",
       "part_of_speech": "n.",
       "phonetic": "/spaɪs/",
-      "phrases": [
-        {
-          "phrase": "spice up",
-          "meaning_zh": "使更有趣；增添趣味"
-        },
-        {
-          "phrase": "spice mix",
-          "meaning_zh": "混合香料"
-        },
-        {
-          "phrase": "add spice to",
-          "meaning_zh": "为…增添趣味"
-        },
-        {
-          "phrase": "variety is the spice of life",
-          "meaning_zh": "变化是生活的调味品"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "spicy",
-          "pos": "adj.",
-          "meaning_zh": "辛辣的；有趣味的"
-        },
-        {
-          "word": "spiced",
-          "pos": "adj.",
-          "meaning_zh": "加香料的；五香的"
-        },
-        {
-          "word": "spicily",
-          "pos": "adv.",
-          "meaning_zh": "辛辣地；刺激地"
-        }
-      ],
-      "status": "ready",
+      "status": "error",
       "term": "spice"
     },
     {
       "created_at": "2026-10-08T10:51:37Z",
-      "example_en": "The spacecraft's orbit was slightly altered by gravitational perturbations from Jupiter.",
-      "example_zh": "木星的引力摄动使航天器的轨道发生了轻微改变。",
+      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
+      "example_en": "The slight perturbation in the planet's orbit was caused by the gravity of a nearby moon.",
+      "example_zh": "这颗行星轨道的轻微摄动是由附近一颗卫星的引力造成的。",
       "id": 80,
-      "meaning_en": "A small change or disturbance that affects a system, process, or state; also a feeling of anxiety or unease.",
-      "meaning_zh": "扰动；干扰；微扰；摄动；不安；烦扰",
+      "meaning_en": "A disturbance or deviation from a normal or expected state; also the state of being worried or uneasy. In science, a small change in a system caused by an outside influence.",
+      "meaning_zh": "扰乱，扰动，干扰；不安，烦恼，忧虑；（物理学、天文学）微扰，摄动",
       "part_of_speech": "n.",
       "phonetic": "/ˌpɜːtəˈbeɪʃn/",
-      "phrases": [
-        {
-          "phrase": "perturbation theory",
-          "meaning_zh": "微扰理论"
-        },
-        {
-          "phrase": "gravitational perturbation",
-          "meaning_zh": "引力摄动；引力扰动"
-        },
-        {
-          "phrase": "environmental perturbation",
-          "meaning_zh": "环境扰动"
-        },
-        {
-          "phrase": "perturbation analysis",
-          "meaning_zh": "扰动分析"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "perturb",
-          "pos": "v.",
-          "meaning_zh": "扰乱；使不安"
-        },
-        {
-          "word": "perturbed",
-          "pos": "adj.",
-          "meaning_zh": "不安的；烦恼的"
-        },
-        {
-          "word": "perturbing",
-          "pos": "adj.",
-          "meaning_zh": "令人不安的；扰动的"
-        }
-      ],
-      "status": "ready",
+      "status": "error",
       "term": "perturbation"
     },
     {
       "created_at": "2026-10-08T11:00:34Z",
-      "example_en": "The jury returned a verdict of not guilty.",
-      "example_zh": "陪审团作出了无罪裁定。",
+      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
+      "example_en": "The jury found the defendant not guilty after three hours of discussion.",
+      "example_zh": "经过三个小时的讨论，陪审团裁定被告无罪。",
       "id": 81,
-      "meaning_en": "A group of people sworn to hear evidence in a court case and give a verdict.",
-      "meaning_zh": "陪审团；（竞赛、评审等的）评审团，评判委员会",
+      "meaning_en": "A group of people sworn to examine the evidence in a court case and give a verdict. It can also mean a group of judges who decide the winner in a competition.",
+      "meaning_zh": "陪审团；（竞赛的）评判委员会、评审团",
       "part_of_speech": "n.",
       "phonetic": "/ˈdʒʊəri/",
-      "phrases": [
-        {
-          "phrase": "jury trial",
-          "meaning_zh": "陪审团审判"
-        },
-        {
-          "phrase": "jury duty",
-          "meaning_zh": "陪审义务"
-        },
-        {
-          "phrase": "grand jury",
-          "meaning_zh": "大陪审团"
-        },
-        {
-          "phrase": "hung jury",
-          "meaning_zh": "无法作出裁定的陪审团；悬案陪审团"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "juried",
-          "pos": "adj.",
-          "meaning_zh": "由评审团评选的"
-        },
-        {
-          "word": "juryless",
-          "pos": "adj.",
-          "meaning_zh": "无陪审团的"
-        }
-      ],
-      "status": "ready",
+      "status": "error",
       "term": "jury"
     },
     {
       "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/internal-us.mp3",
       "created_at": "2026-10-08T11:01:18Z",
       "example_en": "We saw the internal compartments.",
-      "example_zh": "我们看到了内部隔间。",
       "id": 82,
       "meaning_en": "Inside of something; Within the body",
-      "meaning_zh": "内在的某种东西；体内",
       "part_of_speech": "adj.",
       "phonetic": "/ɪnˈtɝnəl/",
-      "phrases": [
-        {
-          "phrase": "internal affairs",
-          "meaning_zh": "内政；内部事务"
-        },
-        {
-          "phrase": "internal medicine",
-          "meaning_zh": "内科"
-        },
-        {
-          "phrase": "internal organs",
-          "meaning_zh": "内脏"
-        },
-        {
-          "phrase": "internal conflict",
-          "meaning_zh": "内心冲突；内部冲突"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "internally",
-          "pos": "adv.",
-          "meaning_zh": "内部地；在内部"
-        },
-        {
-          "word": "internalize",
-          "pos": "v.",
-          "meaning_zh": "使内化；使内在化"
-        },
-        {
-          "word": "internality",
-          "pos": "n.",
-          "meaning_zh": "内在性"
-        },
-        {
-          "word": "internalization",
-          "pos": "n.",
-          "meaning_zh": "内化"
-        }
-      ],
       "status": "ready",
       "term": "internal"
     },
     {
       "created_at": "2026-10-08T11:02:37Z",
-      "example_en": "It is difficult to justify such a decision without more evidence.",
-      "example_zh": "没有更多证据，很难为这样的决定提供正当理由。",
+      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
+      "example_en": "Nothing can justify treating people so cruelly.",
+      "example_zh": "没有任何理由能为如此残忍地对待他人开脱。",
       "id": 83,
-      "meaning_en": "To show that something is reasonable, right, or necessary; to give a good reason for something.",
-      "meaning_zh": "证明…正当（或有理）；为…辩护；使…合理化；（排版）使（文字）两端对齐",
+      "meaning_en": "To show or prove that something is reasonable, right, or acceptable; to be a good reason for something. In publishing, to arrange text so that the lines have equal width.",
+      "meaning_zh": "证明……正当（合理）；为……辩护；为……提供正当理由；（排版）使（文字）两端对齐",
       "part_of_speech": "v.",
       "phonetic": "/ˈdʒʌstɪfaɪ/",
-      "phrases": [
-        {
-          "phrase": "justify oneself",
-          "meaning_zh": "为自己辩解；证明自己有理"
-        },
-        {
-          "phrase": "justify a decision",
-          "meaning_zh": "为某个决定提供正当理由"
-        },
-        {
-          "phrase": "justify the cost",
-          "meaning_zh": "证明花费合理"
-        },
-        {
-          "phrase": "justify one's actions",
-          "meaning_zh": "为某人的行为辩护"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "justification",
-          "pos": "n.",
-          "meaning_zh": "正当理由；辩护；辩解"
-        },
-        {
-          "word": "justifiable",
-          "pos": "adj.",
-          "meaning_zh": "可证明为正当的；有道理的"
-        },
-        {
-          "word": "justifiably",
-          "pos": "adv.",
-          "meaning_zh": "正当地；有理由地"
-        }
-      ],
-      "status": "ready",
+      "status": "error",
       "term": "justify"
     },
     {
       "created_at": "2026-10-08T11:09:38Z",
+      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
       "example_en": "She has been late for three consecutive days.",
       "example_zh": "她已经连续三天迟到了。",
       "id": 84,
-      "meaning_en": "Following one after another in an unbroken sequence; successive.",
-      "meaning_zh": "连续的；接连的；连贯的",
+      "meaning_en": "Following one after another in an unbroken sequence; happening or existing in order without interruption.",
+      "meaning_zh": "连续的；接连不断的；连贯的（指事件、数字等一个接一个不间断地发生）",
       "part_of_speech": "adj.",
       "phonetic": "/kənˈsekjətɪv/",
-      "phrases": [
-        {
-          "phrase": "consecutive days",
-          "meaning_zh": "连续几天"
-        },
-        {
-          "phrase": "consecutive numbers",
-          "meaning_zh": "连续数字"
-        },
-        {
-          "phrase": "consecutive terms",
-          "meaning_zh": "连续项；相邻项"
-        },
-        {
-          "phrase": "consecutive interpretation",
-          "meaning_zh": "交替传译"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "consecutively",
-          "pos": "adv.",
-          "meaning_zh": "连续地；接连地"
-        },
-        {
-          "word": "consecutiveness",
-          "pos": "n.",
-          "meaning_zh": "连续性；连贯性"
-        },
-        {
-          "word": "consecution",
-          "pos": "n.",
-          "meaning_zh": "连续；序列"
-        }
-      ],
-      "status": "ready",
+      "status": "error",
       "term": "consecutive"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/religion-us.mp3",
       "created_at": "2026-10-08T11:10:54Z",
-      "example_en": "My brother tends to value religion, but my sister not as much.",
-      "example_zh": "我哥哥倾向于重视宗教，但我姐姐没有那么重视。",
+      "example_en": "Religion plays an important role in many cultures around the world.",
+      "example_zh": "宗教在世界许多文化中都发挥着重要作用。",
       "id": 85,
-      "meaning_en": "Belief in a spiritual or metaphysical reality (often including at least one deity), accompanied by practices or rituals pertaining to the belief",
-      "meaning_zh": "信仰精神或形而上学的现实（通常包括至少一个神） ，伴随着与信仰有关的实践或仪式",
+      "meaning_en": "A system of beliefs, practices, and worship, usually centered on a god or gods and often involving moral rules and rituals.",
+      "meaning_zh": "宗教；宗教信仰；宗教活动",
       "part_of_speech": "n.",
-      "phonetic": "/ɹɪˈlɪdʒən/",
-      "phrases": [
-        {
-          "phrase": "freedom of religion",
-          "meaning_zh": "宗教自由"
-        },
-        {
-          "phrase": "organized religion",
-          "meaning_zh": "有组织的宗教"
-        },
-        {
-          "phrase": "state religion",
-          "meaning_zh": "国教"
-        },
-        {
-          "phrase": "practice a religion",
-          "meaning_zh": "信奉某种宗教"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "religious",
-          "pos": "adj.",
-          "meaning_zh": "宗教的；虔诚的"
-        },
-        {
-          "word": "religiously",
-          "pos": "adv.",
-          "meaning_zh": "虔诚地；在宗教上"
-        },
-        {
-          "word": "irreligious",
-          "pos": "adj.",
-          "meaning_zh": "无宗教信仰的；不敬神的"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/rɪˈlɪdʒən/",
+      "status": "pending",
       "term": "religion"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/legitimate-uk.mp3",
       "created_at": "2026-10-08T11:12:47Z",
       "example_en": "She has a legitimate claim to the property.",
       "example_zh": "她对这处房产有合法的所有权主张。",
       "id": 86,
-      "meaning_en": "A person born to a legally married couple",
-      "meaning_zh": "合法的；正当的；合理的；真正的",
-      "part_of_speech": "n.",
+      "meaning_en": "Allowed or required by law; reasonable and fair; genuine or valid.",
+      "meaning_zh": "合法的；正当的；合理的；名副其实的",
+      "part_of_speech": "adj.",
       "phonetic": "/lɪˈdʒɪtɪmət/",
-      "phrases": [
-        {
-          "phrase": "legitimate business",
-          "meaning_zh": "合法生意"
-        },
-        {
-          "phrase": "legitimate concern",
-          "meaning_zh": "合理的担忧"
-        },
-        {
-          "phrase": "legitimate government",
-          "meaning_zh": "合法政府"
-        },
-        {
-          "phrase": "legitimate reason",
-          "meaning_zh": "正当理由"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "legitimacy",
-          "pos": "n.",
-          "meaning_zh": "合法性；正当性"
-        },
-        {
-          "word": "legitimize",
-          "pos": "v.",
-          "meaning_zh": "使合法化；使正当化"
-        },
-        {
-          "word": "legitimately",
-          "pos": "adv.",
-          "meaning_zh": "合法地；正当地；合理地"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "legitimate"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/buzz-us.mp3",
       "created_at": "2026-10-08T15:03:23Z",
+      "example_en": "The room was buzzing with excitement as everyone waited for the results.",
+      "example_zh": "大家都在等待结果，房间里洋溢着一片兴奋的嗡嗡声。",
       "id": 87,
-      "meaning_en": "A continuous, humming noise, as of bees; a confused murmur, as of general conversation in low tones; A whisper",
-      "meaning_zh": "持续的嗡嗡声，如蜜蜂；混乱的杂音，如低音调的一般谈话；一声呢喃",
-      "part_of_speech": "n.",
+      "meaning_en": "A low, continuous humming sound like that of a bee. As a verb, to make such a sound, or (of a place or group) to be full of excitement or activity.",
+      "meaning_zh": "n. 嗡嗡声，蜂鸣声；（人群的）嘈杂声、低声议论；兴奋热闹的气氛；（门铃等的）蜂鸣器响声。v. 发出嗡嗡声；用蜂鸣器呼叫；充满兴奋或忙碌（buzz with）；(口) 匆匆走动。",
+      "part_of_speech": "n. / v.",
       "phonetic": "/bʌz/",
-      "phrases": [
-        {
-          "phrase": "buzz off",
-          "meaning_zh": "走开（非正式）"
-        },
-        {
-          "phrase": "buzz around",
-          "meaning_zh": "嗡嗡地飞来飞去；忙碌地走动"
-        },
-        {
-          "phrase": "buzz with",
-          "meaning_zh": "充满嗡嗡声或兴奋的交谈"
-        },
-        {
-          "phrase": "give someone a buzz",
-          "meaning_zh": "给某人打个电话（非正式）"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "buzzy",
-          "pos": "adj.",
-          "meaning_zh": "嗡嗡响的；活跃热闹的"
-        },
-        {
-          "word": "buzzily",
-          "pos": "adv.",
-          "meaning_zh": "嗡嗡地；喧闹地"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "buzz"
     },
     {
       "created_at": "2026-10-08T15:05:40Z",
-      "example_en": "She has an artistic temperament and loves painting.",
-      "example_zh": "她具有艺术气质，热爱绘画。",
+      "example_en": "She comes from a very artistic family and has been painting since she was a child.",
+      "example_zh": "她出身于一个很有艺术气息的家庭，从小就画画。",
       "id": 88,
-      "meaning_en": "Relating to art or artists; showing creative skill and good taste.",
-      "meaning_zh": "艺术的；艺术家的；有艺术天赋的；富有艺术感的",
+      "meaning_en": "Relating to art or artists; showing natural skill and good taste in creating things, especially beautiful ones.",
+      "meaning_zh": "艺术的；艺术家的；有艺术天赋的；富有艺术鉴赏力的",
       "part_of_speech": "adj.",
-      "phonetic": "/ɑːrˈtɪstɪk/",
-      "phrases": [
-        {
-          "phrase": "artistic talent",
-          "meaning_zh": "艺术天赋"
-        },
-        {
-          "phrase": "artistic style",
-          "meaning_zh": "艺术风格"
-        },
-        {
-          "phrase": "artistic creation",
-          "meaning_zh": "艺术创作"
-        },
-        {
-          "phrase": "artistic value",
-          "meaning_zh": "艺术价值"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "artist",
-          "pos": "n.",
-          "meaning_zh": "艺术家；画家"
-        },
-        {
-          "word": "artistry",
-          "pos": "n.",
-          "meaning_zh": "艺术性；艺术技巧"
-        },
-        {
-          "word": "artistically",
-          "pos": "adv.",
-          "meaning_zh": "艺术地；在艺术上"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ɑːˈtɪstɪk/",
+      "status": "pending",
       "term": "artistic"
     },
     {
       "created_at": "2026-10-08T15:06:15Z",
-      "example_en": "She endeavored to finish the project on time.",
-      "example_zh": "她努力按时完成这个项目。",
+      "example_en": "She endeavors to improve her English a little every day.",
+      "example_zh": "她每天都努力让自己的英语进步一点。",
       "id": 89,
-      "meaning_en": "To try hard to achieve something; a serious attempt or effort.",
-      "meaning_zh": "努力；尽力；尝试；事业；活动",
+      "meaning_en": "As a verb: to try hard to achieve something. As a noun: a serious and determined effort, or an enterprise/undertaking. \"Endeavors\" is the plural noun form or the third-person singular verb form.",
+      "meaning_zh": "v. 努力；尽力；力图；n. 努力；尝试；事业，活动（endeavors 为名词复数或动词第三人称单数形式）",
       "part_of_speech": "n. / v.",
       "phonetic": "/ɪnˈdevər/",
-      "phrases": [
-        {
-          "phrase": "endeavor to do something",
-          "meaning_zh": "努力做某事"
-        },
-        {
-          "phrase": "scientific endeavor",
-          "meaning_zh": "科学探索；科学事业"
-        },
-        {
-          "phrase": "human endeavor",
-          "meaning_zh": "人类事业；人类努力"
-        },
-        {
-          "phrase": "make an endeavor",
-          "meaning_zh": "作出努力；进行尝试"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "status": "pending",
       "term": "endeavor"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/sentiment-us.mp3",
       "created_at": "2026-10-08T15:07:11Z",
-      "example_en": "The sentiment emerged that we were acting too soon.",
-      "example_zh": "出现了一种情绪，即我们的行动太早了。",
+      "example_en": "Public sentiment turned sharply against the new policy.",
+      "example_zh": "公众舆论急剧转向，反对这项新政策。",
       "id": 90,
-      "meaning_en": "A general thought, feeling, or sense; Feelings, especially tender feelings, as apart from reason or judgment, or of a weak or foolish kind",
-      "meaning_zh": "一般的思想、感觉或感觉；除了理性或判断之外的感受，尤其是温柔的感受，或软弱或愚蠢的感受",
+      "meaning_en": "A view, opinion, or feeling that people have about something; also, gentle or tender emotion.",
+      "meaning_zh": "（对某事的）看法，观点；情绪，情感；（公众的）普遍意见，舆情；感伤情绪。",
       "part_of_speech": "n.",
-      "phonetic": "/ˈsɛn.tɪ.mənt/",
-      "phrases": [
-        {
-          "phrase": "public sentiment",
-          "meaning_zh": "公众情绪；民意"
-        },
-        {
-          "phrase": "market sentiment",
-          "meaning_zh": "市场情绪；市场人气"
-        },
-        {
-          "phrase": "anti-war sentiment",
-          "meaning_zh": "反战情绪"
-        },
-        {
-          "phrase": "sentiment analysis",
-          "meaning_zh": "情感分析"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "sentimental",
-          "pos": "adj.",
-          "meaning_zh": "多愁善感的；感伤的"
-        },
-        {
-          "word": "sentimentally",
-          "pos": "adv.",
-          "meaning_zh": "多愁善感地；感伤地"
-        },
-        {
-          "word": "sentimentalize",
-          "pos": "v.",
-          "meaning_zh": "感伤；多愁善感地对待"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˈsentɪmənt/",
+      "status": "pending",
       "term": "sentiment"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/distinguish-us.mp3",
       "created_at": "2026-10-08T15:07:26Z",
+      "example_en": "It is hard to distinguish between the twin sisters.",
+      "example_zh": "很难分辨这对双胞胎姐妹。",
       "id": 91,
-      "meaning_en": "To recognize someone or something as different from others based on its characteristics; To see someone or something clearly or distinctly",
-      "meaning_zh": "根据某人或某事的特点将其识别为与其他人不同；清楚或清晰地看到某人或某事",
+      "meaning_en": "To recognize or show the difference between two or more things; to make something different or special.",
+      "meaning_zh": "区分，辨别，分辨；使有别于，使突出；辨认出。",
       "part_of_speech": "v.",
-      "phonetic": "/dɪsˈtɪŋɡwɪʃ/",
-      "phrases": [
-        {
-          "phrase": "distinguish between A and B",
-          "meaning_zh": "区分A和B"
-        },
-        {
-          "phrase": "distinguish A from B",
-          "meaning_zh": "把A与B区分开"
-        },
-        {
-          "phrase": "distinguish oneself",
-          "meaning_zh": "使自己出众"
-        },
-        {
-          "phrase": "distinguish right from wrong",
-          "meaning_zh": "明辨是非"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "distinction",
-          "pos": "n.",
-          "meaning_zh": "区别；辨别；特质"
-        },
-        {
-          "word": "distinct",
-          "pos": "adj.",
-          "meaning_zh": "不同的；清楚的"
-        },
-        {
-          "word": "distinctive",
-          "pos": "adj.",
-          "meaning_zh": "独特的；有特色的"
-        },
-        {
-          "word": "distinguishable",
-          "pos": "adj.",
-          "meaning_zh": "可区分的；可辨认的"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/dɪˈstɪŋɡwɪʃ/",
+      "status": "pending",
       "term": "distinguish"
     },
     {
       "created_at": "2026-10-08T15:07:45Z",
-      "example_en": "His provocative remarks about the education system sparked a heated debate.",
-      "example_zh": "他就教育体制发表的挑衅性言论引发了一场激烈的辩论。",
+      "example_en": "Her provocative remarks sparked a heated debate among the audience.",
+      "example_zh": "她挑衅性的言论在观众中引发了一场激烈的辩论。",
       "id": 92,
-      "meaning_en": "Intended or likely to cause a strong reaction, especially anger, shock, or sexual interest; deliberately stimulating thought or debate.",
-      "meaning_zh": "挑衅的；煽动性的；挑逗的；引人争论的",
+      "meaning_en": "Intended or likely to cause a strong reaction, especially anger, disagreement, or sexual interest.",
+      "meaning_zh": "挑衅的；煽动性的；引起争议的；挑逗的，性感的",
       "part_of_speech": "adj.",
       "phonetic": "/prəˈvɒkətɪv/",
-      "phrases": [
-        {
-          "phrase": "provocative question",
-          "meaning_zh": "挑衅性的问题"
-        },
-        {
-          "phrase": "provocative remarks",
-          "meaning_zh": "煽动性言论"
-        },
-        {
-          "phrase": "sexually provocative",
-          "meaning_zh": "性感挑逗的"
-        },
-        {
-          "phrase": "provocative behaviour",
-          "meaning_zh": "挑衅行为"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "provoke",
-          "pos": "v.",
-          "meaning_zh": "激起；挑动；惹怒"
-        },
-        {
-          "word": "provocation",
-          "pos": "n.",
-          "meaning_zh": "挑衅；激怒；刺激"
-        },
-        {
-          "word": "provocatively",
-          "pos": "adv.",
-          "meaning_zh": "挑衅地；挑逗地"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "provocative"
     },
     {
       "created_at": "2026-10-08T15:08:36Z",
-      "example_en": "The new policy is merely a cosmetic change and will not solve the real problem.",
-      "example_zh": "这项新政策只是表面上的改变，不会解决真正的问题。",
+      "example_en": "The company made only cosmetic changes to the report, so the real problems remain unsolved.",
+      "example_zh": "公司对报告只做了些表面上的修改，所以真正的问题依然没有解决。",
       "id": 93,
-      "meaning_en": "Relating to beauty treatment or intended to improve appearance; (of a change) superficial rather than substantive. As a noun, a preparation used to enhance appearance.",
-      "meaning_zh": "美容的；化妆用的；（改变）表面的，装饰性的；化妆品，美容品",
-      "part_of_speech": "adj. / n.",
+      "meaning_en": "As a noun: a substance or preparation applied to the body, especially the face, to improve its appearance. As an adjective: relating to beauty treatment, or affecting only the appearance of something rather than its substance.",
+      "meaning_zh": "n. 化妆品；美容品。adj. 化妆用的，美容的；（改变）表面的，装门面的（指只改善外观而不解决实质问题）。",
+      "part_of_speech": "n. / adj.",
       "phonetic": "/kɒzˈmetɪk/",
-      "phrases": [
-        {
-          "phrase": "cosmetic surgery",
-          "meaning_zh": "整容手术"
-        },
-        {
-          "phrase": "cosmetic products",
-          "meaning_zh": "化妆品；美容产品"
-        },
-        {
-          "phrase": "cosmetic changes",
-          "meaning_zh": "表面性的改动"
-        },
-        {
-          "phrase": "cosmetic industry",
-          "meaning_zh": "化妆品行业"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "cosmetically",
-          "pos": "adv.",
-          "meaning_zh": "美容上；表面地"
-        },
-        {
-          "word": "cosmeticize",
-          "pos": "v.",
-          "meaning_zh": "使外表好看；美化；给…化妆"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "cosmetic"
     },
     {
       "created_at": "2026-10-08T15:10:24Z",
-      "example_en": "She left the party at nine, and we went home shortly afterward.",
-      "example_zh": "她九点离开了聚会，我们随后不久就回家了。",
       "id": 94,
-      "meaning_en": "At a later time; after something else has happened.",
-      "meaning_zh": "后来；之后；随后",
+      "meaning_en": "(temporal location) At a later or succeeding time",
+      "meaning_zh": "（时间位置）稍后或后续时间",
       "part_of_speech": "adv.",
-      "phonetic": "/ˈæftərwərd/",
-      "phrases": [
-        {
-          "phrase": "shortly afterward",
-          "meaning_zh": "不久之后"
-        },
-        {
-          "phrase": "soon afterward",
-          "meaning_zh": "很快之后；紧接着"
-        },
-        {
-          "phrase": "not long afterward",
-          "meaning_zh": "没过多久；不久以后"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "phonetic": "/ˈɑːftə.wəd/",
+      "status": "pending",
       "term": "afterward"
     },
     {
       "created_at": "2026-10-08T15:11:41Z",
       "example_en": "The new restaurant caters to families with young children.",
-      "example_zh": "这家新餐厅迎合了有小孩的家庭的需求。",
+      "example_zh": "这家新餐厅迎合了有幼儿的家庭的需求。",
       "id": 95,
-      "meaning_en": "To provide what someone wants or needs, often by satisfying their tastes or demands; sometimes implies doing so in a way that is excessive or flattering.",
-      "meaning_zh": "迎合；满足（某人的需要、口味等）；（贬义）迁就、讨好",
+      "meaning_en": "To provide what someone wants or needs, often by pleasing or indulging them; to be aimed at a particular group or taste.",
+      "meaning_zh": "迎合；满足……的需要；投合（某类人的口味或需求）；迁就",
       "part_of_speech": "phrase",
-      "phonetic": "/ˈkeɪtə(r) tuː/",
-      "phrases": [
-        {
-          "phrase": "cater to sb's needs",
-          "meaning_zh": "满足某人的需求"
-        },
-        {
-          "phrase": "cater to every taste",
-          "meaning_zh": "迎合各种口味"
-        },
-        {
-          "phrase": "cater to the masses",
-          "meaning_zh": "迎合大众口味"
-        },
-        {
-          "phrase": "cater for",
-          "meaning_zh": "（英式）为……提供饮食；满足……的需要"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "cater",
-          "pos": "v.",
-          "meaning_zh": "提供饮食服务；满足需要"
-        },
-        {
-          "word": "caterer",
-          "pos": "n.",
-          "meaning_zh": "餐饮承办者；酒席承办商"
-        },
-        {
-          "word": "catering",
-          "pos": "n.",
-          "meaning_zh": "餐饮供应；酒席承办业"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˈkeɪtər tuː/",
+      "status": "pending",
       "term": "cater to"
     },
     {
       "created_at": "2026-10-08T15:12:16Z",
-      "example_en": "Her strange behavior aroused suspicion.",
-      "example_zh": "她的奇怪行为引起了怀疑。",
+      "example_en": "She had a suspicion that he was lying about where he had been.",
+      "example_zh": "她怀疑他在自己去了哪里这件事上撒了谎。",
       "id": 96,
-      "meaning_en": "A feeling or belief that someone has done something wrong, or that something is true, without certain proof.",
-      "meaning_zh": "怀疑；嫌疑；疑虑",
+      "meaning_en": "A feeling or belief that something is wrong, or that someone has done something bad, usually without proof. It can also mean a very small amount of something.",
+      "meaning_zh": "怀疑；猜疑；嫌疑；（后接 of）一丝，一点，微量",
       "part_of_speech": "n.",
-      "phonetic": "/səˈspɪʃən/",
-      "phrases": [
-        {
-          "phrase": "above suspicion",
-          "meaning_zh": "无可怀疑；不受怀疑"
-        },
-        {
-          "phrase": "on suspicion of",
-          "meaning_zh": "因涉嫌…；因怀疑…"
-        },
-        {
-          "phrase": "under suspicion",
-          "meaning_zh": "受到怀疑"
-        },
-        {
-          "phrase": "arouse suspicion",
-          "meaning_zh": "引起怀疑"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "suspicious",
-          "pos": "adj.",
-          "meaning_zh": "可疑的；怀疑的"
-        },
-        {
-          "word": "suspiciously",
-          "pos": "adv.",
-          "meaning_zh": "可疑地；怀疑地"
-        },
-        {
-          "word": "suspect",
-          "pos": "v.",
-          "meaning_zh": "怀疑；猜想"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/səˈspɪʃn/",
+      "status": "pending",
       "term": "suspicion"
     },
     {
       "created_at": "2026-10-08T15:12:31Z",
-      "example_en": "The new law could perpetuate inequality.",
-      "example_zh": "这项新法律可能会使不平等长期存在。",
+      "example_en": "Such stereotypes only perpetuate the misunderstanding between the two cultures.",
+      "example_zh": "这类刻板印象只会使两种文化之间的误解延续下去。",
       "id": 97,
-      "meaning_en": "To make something continue or persist, especially something undesirable or harmful.",
-      "meaning_zh": "使持续；使永久化；使（错误、状况等）长期存在",
+      "meaning_en": "To make something, especially something bad or unwanted, continue to exist or happen for a long time.",
+      "meaning_zh": "使（尤指不好的事物）持续存在；使永久化；使延续下去",
       "part_of_speech": "v.",
       "phonetic": "/pərˈpetʃueɪt/",
-      "phrases": [
-        {
-          "phrase": "perpetuate a myth",
-          "meaning_zh": "使谬见流传"
-        },
-        {
-          "phrase": "perpetuate stereotypes",
-          "meaning_zh": "使刻板印象延续"
-        },
-        {
-          "phrase": "perpetuate the cycle",
-          "meaning_zh": "使循环持续"
-        },
-        {
-          "phrase": "perpetuate inequality",
-          "meaning_zh": "使不平等长期存在"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "perpetuation",
-          "pos": "n.",
-          "meaning_zh": "永久化；持续"
-        },
-        {
-          "word": "perpetual",
-          "pos": "adj.",
-          "meaning_zh": "永久的；不断的"
-        },
-        {
-          "word": "perpetually",
-          "pos": "adv.",
-          "meaning_zh": "永久地；不断地"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "perpetuate"
     },
     {
       "created_at": "2026-10-08T15:12:55Z",
-      "example_en": "The report gave a distorted picture of what actually happened.",
-      "example_zh": "这篇报道歪曲了实际发生的情况。",
+      "example_en": "The recording was so distorted that I could barely understand what he said.",
+      "example_zh": "录音失真得很厉害，我几乎听不懂他说了什么。",
       "id": 98,
-      "meaning_en": "Changed from its original, natural, or true form so that it appears twisted, unclear, or inaccurate.",
+      "meaning_en": "Changed from its original, natural, or true form so that it looks or sounds unnatural, unclear, or untrue.",
       "meaning_zh": "扭曲的；变形的；失真的；被歪曲的",
       "part_of_speech": "adj.",
       "phonetic": "/dɪˈstɔːtɪd/",
-      "phrases": [
-        {
-          "phrase": "distorted view",
-          "meaning_zh": "被歪曲的看法；扭曲的视角"
-        },
-        {
-          "phrase": "distorted image",
-          "meaning_zh": "失真的图像；变形的影像"
-        },
-        {
-          "phrase": "grossly distorted",
-          "meaning_zh": "被严重歪曲的"
-        },
-        {
-          "phrase": "become distorted",
-          "meaning_zh": "变得扭曲；发生变形"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "distort",
-          "pos": "v.",
-          "meaning_zh": "扭曲；使变形；歪曲"
-        },
-        {
-          "word": "distortion",
-          "pos": "n.",
-          "meaning_zh": "扭曲；变形；歪曲；失真"
-        },
-        {
-          "word": "distorter",
-          "pos": "n.",
-          "meaning_zh": "扭曲者；歪曲事实的人"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "distorted"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/preservation-us.mp3",
       "created_at": "2026-10-08T15:15:12Z",
-      "example_en": "The preservation of historic buildings is essential to the city's cultural heritage.",
-      "example_zh": "保护历史建筑对这座城市的文化遗产至关重要。",
       "id": 99,
       "meaning_en": "The act of preserving; care to preserve; act of keeping from destruction, decay or any ill",
-      "meaning_zh": "保护；维护；保存；保留；（食品的）防腐处理。",
+      "meaning_zh": "保存行为；注意保存；防止破坏、腐烂或任何疾病的行为",
       "part_of_speech": "n.",
       "phonetic": "/pɹɛ.zɝˈveɪ.ʃən/",
-      "phrases": [
-        {
-          "phrase": "heritage preservation",
-          "meaning_zh": "遗产保护"
-        },
-        {
-          "phrase": "self-preservation",
-          "meaning_zh": "自我保护；自卫本能"
-        },
-        {
-          "phrase": "preservation order",
-          "meaning_zh": "（文物或建筑的）保护令"
-        },
-        {
-          "phrase": "in a good state of preservation",
-          "meaning_zh": "保存完好"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "preserve",
-          "pos": "v.",
-          "meaning_zh": "保存；保护；腌制"
-        },
-        {
-          "word": "preservative",
-          "pos": "adj.",
-          "meaning_zh": "防腐的；有保护作用的"
-        },
-        {
-          "word": "preservable",
-          "pos": "adj.",
-          "meaning_zh": "可保存的；可保护的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "preservation"
     },
     {
       "created_at": "2026-10-08T15:15:28Z",
-      "example_en": "The farmer loaded the sacks onto the donkey and led it down the dusty track.",
-      "example_zh": "农夫把麻袋装上驴背，牵着它沿着尘土飞扬的小路走去。",
+      "example_en": "The farmer loaded the heavy sacks onto two donkeys.",
+      "example_zh": "农夫把沉重的麻袋装到了两头驴背上。",
       "id": 100,
-      "meaning_en": "A domesticated animal of the horse family that has long ears and a loud bray, often used to carry loads. Informally, it can also mean a stupid or stubborn person.",
-      "meaning_zh": "驴；〈非正式〉笨蛋，顽固的人",
+      "meaning_en": "A domesticated animal of the horse family, with long ears, a short mane and a loud bray, often used to carry loads. Informally, it can also mean a stubborn or foolish person.",
+      "meaning_zh": "驴（复数形式为 donkeys）；笨蛋，蠢人（非正式用法）",
       "part_of_speech": "n.",
       "phonetic": "/ˈdɒŋki/",
-      "phrases": [
-        {
-          "phrase": "donkey work",
-          "meaning_zh": "枯燥乏味的苦活儿，杂活"
-        },
-        {
-          "phrase": "donkey's years",
-          "meaning_zh": "很长时间，好些年"
-        },
-        {
-          "phrase": "talk the hind leg off a donkey",
-          "meaning_zh": "滔滔不绝地讲个没完"
-        },
-        {
-          "phrase": "donkey jacket",
-          "meaning_zh": "（工人穿的）厚短外套"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "status": "pending",
       "term": "donkey"
     },
     {
       "created_at": "2026-10-08T15:15:35Z",
-      "example_en": "The engineers developed a new engine to propel the spacecraft.",
-      "example_zh": "工程师们开发了一种新发动机来推进航天器。",
+      "example_en": "The powerful engine propels the boat smoothly across the lake.",
+      "example_zh": "强劲的发动机推动小船平稳地驶过湖面。",
       "id": 101,
-      "meaning_en": "To drive, push, or cause something to move in a particular direction, especially forward.",
-      "meaning_zh": "推进；推动；驱使",
+      "meaning_en": "To drive, push, or cause something or someone to move forward; to impel or urge onward.",
+      "meaning_zh": "推动；推进；（在某一方向上）驱动；驱使；促使",
       "part_of_speech": "v.",
       "phonetic": "/prəˈpel/",
-      "phrases": [
-        {
-          "phrase": "propel forward",
-          "meaning_zh": "推进；向前推动"
-        },
-        {
-          "phrase": "propel sb/sth into sth",
-          "meaning_zh": "把…推入；促使进入"
-        },
-        {
-          "phrase": "propel the economy",
-          "meaning_zh": "推动经济"
-        },
-        {
-          "phrase": "propel growth",
-          "meaning_zh": "推动增长"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "propulsion",
-          "pos": "n.",
-          "meaning_zh": "推进；推进力"
-        },
-        {
-          "word": "propeller",
-          "pos": "n.",
-          "meaning_zh": "螺旋桨；推进器"
-        },
-        {
-          "word": "propulsive",
-          "pos": "adj.",
-          "meaning_zh": "推进的；有推进力的"
-        },
-        {
-          "word": "propellant",
-          "pos": "n.",
-          "meaning_zh": "推进剂；发射药"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "propel"
     },
     {
       "created_at": "2026-10-08T15:19:29Z",
-      "example_en": "Their fates were intertwined from the very beginning.",
-      "example_zh": "他们的命运从一开始就紧密交织在一起。",
+      "example_en": "Their lives became intertwined after they worked on the same project.",
+      "example_zh": "在参与同一个项目之后，他们的生活变得紧密交织在一起。",
       "id": 102,
-      "meaning_en": "to twist or weave things together, or to be closely connected.",
-      "meaning_zh": "（使）缠绕；（使）交织；紧密相连。",
+      "meaning_en": "To twist or weave two or more things together; to be closely connected or linked with each other.",
+      "meaning_zh": "缠结；缠绕；交织；密切相关，紧密相连",
       "part_of_speech": "v.",
       "phonetic": "/ˌɪntəˈtwaɪn/",
-      "phrases": [
-        {
-          "phrase": "intertwine with",
-          "meaning_zh": "与…交织；与…紧密相连"
-        },
-        {
-          "phrase": "closely intertwined",
-          "meaning_zh": "紧密交织的；密切相关的"
-        },
-        {
-          "phrase": "inextricably intertwined",
-          "meaning_zh": "密不可分地交织在一起"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "intertwinement",
-          "pos": "n.",
-          "meaning_zh": "交织；纠缠；紧密关联"
-        },
-        {
-          "word": "intertwined",
-          "pos": "adj.",
-          "meaning_zh": "交织的；紧密相连的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "intertwine"
     },
     {
       "created_at": "2026-10-08T15:19:37Z",
-      "example_en": "Scientists have finished sequencing the human genome.",
-      "example_zh": "科学家们已经完成了人类基因组的测序。",
+      "example_en": "Scientists finished sequencing the human genome in 2003.",
+      "example_zh": "科学家于2003年完成了人类基因组的测序。",
       "id": 103,
-      "meaning_en": "The complete set of genetic material (DNA) contained in a cell or organism, including all of its genes.",
-      "meaning_zh": "基因组；一个生物体或细胞中全部遗传物质（DNA）的总和。",
+      "meaning_en": "The complete set of genetic material, especially DNA, contained in a cell or organism, including all of its genes.",
+      "meaning_zh": "基因组；（生物体的）全部遗传物质",
       "part_of_speech": "n.",
-      "phonetic": "/ˈdʒiːnoʊm/",
-      "phrases": [
-        {
-          "phrase": "human genome",
-          "meaning_zh": "人类基因组"
-        },
-        {
-          "phrase": "genome sequencing",
-          "meaning_zh": "基因组测序"
-        },
-        {
-          "phrase": "genome-wide",
-          "meaning_zh": "全基因组范围的"
-        },
-        {
-          "phrase": "reference genome",
-          "meaning_zh": "参考基因组"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "genomic",
-          "pos": "adj.",
-          "meaning_zh": "基因组的；基因组学的"
-        },
-        {
-          "word": "genomics",
-          "pos": "n.",
-          "meaning_zh": "基因组学"
-        },
-        {
-          "word": "genomically",
-          "pos": "adv.",
-          "meaning_zh": "在基因组层面上"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˈdʒiːnəʊm/",
+      "status": "pending",
       "term": "genome"
     },
     {
       "created_at": "2026-10-08T15:19:50Z",
-      "example_en": "The domestication of wolves over thousands of years eventually gave rise to the modern dog.",
-      "example_zh": "狼经过数千年的驯化，最终演变成了现代的狗。",
+      "example_en": "The domestication of dogs is believed to have begun more than 15,000 years ago.",
+      "example_zh": "据信，狗的驯化始于一万五千多年前。",
       "id": 104,
-      "meaning_en": "The process of taming wild animals or plants so that they can be kept and used by humans; also the act of making something familiar or suited to home life.",
-      "meaning_zh": "驯化，驯养（动植物被人类培育利用的过程）；对家居生活的适应。",
+      "meaning_en": "The process of taming wild animals or plants so that they can be kept and used by humans; also the act of making someone accustomed to home life.",
+      "meaning_zh": "驯化，培育（野生动植物）；使适应家庭生活，归化。",
       "part_of_speech": "n.",
       "phonetic": "/dəˌmestɪˈkeɪʃn/",
-      "phrases": [
-        {
-          "phrase": "animal domestication",
-          "meaning_zh": "动物驯化"
-        },
-        {
-          "phrase": "plant domestication",
-          "meaning_zh": "植物驯化"
-        },
-        {
-          "phrase": "the domestication of horses",
-          "meaning_zh": "马的驯养"
-        },
-        {
-          "phrase": "domestication syndrome",
-          "meaning_zh": "驯化综合征"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "domesticate",
-          "pos": "v.",
-          "meaning_zh": "驯化，驯养；使适应家庭生活"
-        },
-        {
-          "word": "domestic",
-          "pos": "adj.",
-          "meaning_zh": "家庭的；国内的；家养的"
-        },
-        {
-          "word": "domestically",
-          "pos": "adv.",
-          "meaning_zh": "在家庭方面；在国内"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "domestication"
     },
     {
       "created_at": "2026-10-08T15:20:04Z",
-      "example_en": "The once wild horse is now tame and gentle.",
-      "example_zh": "那匹曾经野性十足的马现在很温顺。",
+      "example_en": "He tamed the wild horse.",
+      "example_zh": "他驯服了野马。",
       "id": 105,
-      "meaning_en": "Not wild or dangerous; domesticated or gentle. As a verb, to make an animal or person less wild, fearful, or uncontrollable.",
-      "meaning_zh": "adj. 驯服的；温顺的；平淡的；v. 驯服；使顺从；开垦（土地）",
-      "part_of_speech": "adj. / v.",
+      "meaning_en": "To make (an animal) tame; to domesticate; To become tame or domesticated",
+      "meaning_zh": "驯养（动物） ；驯养；驯服或驯化",
+      "part_of_speech": "v.",
       "phonetic": "/teɪm/",
-      "phrases": [
-        {
-          "phrase": "tame animals",
-          "meaning_zh": "驯服的动物"
-        },
-        {
-          "phrase": "tame a wild horse",
-          "meaning_zh": "驯服野马"
-        },
-        {
-          "phrase": "tame inflation",
-          "meaning_zh": "抑制通货膨胀"
-        },
-        {
-          "phrase": "tame the wilderness",
-          "meaning_zh": "开垦荒野"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "tamely",
-          "pos": "adv.",
-          "meaning_zh": "温顺地；平淡地"
-        },
-        {
-          "word": "tameness",
-          "pos": "n.",
-          "meaning_zh": "驯服；温顺"
-        },
-        {
-          "word": "tamer",
-          "pos": "n.",
-          "meaning_zh": "驯兽师；驯服者"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "tame"
     },
     {
@@ -4421,1427 +3489,390 @@
       "example_en": "Her testimony was crucial in convicting the defendant.",
       "example_zh": "她的证词对判定被告有罪起了关键作用。",
       "id": 106,
-      "meaning_en": "A formal written or spoken statement, especially one given in a court of law; evidence or proof of something.",
-      "meaning_zh": "证词；证言；证据；证明",
+      "meaning_en": "A formal statement a witness makes under oath, especially in a court of law. It can also mean clear evidence or proof that something exists or is true.",
+      "meaning_zh": "证词；证言；（法庭上的）宣誓陈述；证据；证明",
       "part_of_speech": "n.",
       "phonetic": "/ˈtestɪməni/",
-      "phrases": [
-        {
-          "phrase": "give testimony",
-          "meaning_zh": "作证；提供证词"
-        },
-        {
-          "phrase": "bear testimony to",
-          "meaning_zh": "证明；表明"
-        },
-        {
-          "phrase": "false testimony",
-          "meaning_zh": "伪证；虚假证词"
-        },
-        {
-          "phrase": "expert testimony",
-          "meaning_zh": "专家证词"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "testify",
-          "pos": "v.",
-          "meaning_zh": "作证；证明"
-        },
-        {
-          "word": "testimonial",
-          "pos": "adj.",
-          "meaning_zh": "证明的；表扬的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "testimony"
     },
     {
       "created_at": "2026-10-08T15:20:56Z",
-      "example_en": "I will portray a king on horseback.",
-      "example_zh": "我将描绘一个骑在马背上的国王。",
+      "example_en": "She was chosen to portray a young queen in the new historical drama.",
+      "example_zh": "她被选中在这部新的历史剧中饰演一位年轻的王后。",
       "id": 107,
-      "meaning_en": "To paint or draw the likeness of; To describe in words; to convey",
-      "meaning_zh": "画画或画画的肖像；用文字描述；传达",
+      "meaning_en": "To represent or describe someone or something in a particular way, especially in a work of art, film, or book; to play the role of a character.",
+      "meaning_zh": "描绘，描写，刻画；扮演，饰演（某个角色）",
       "part_of_speech": "v.",
-      "phonetic": "/pɔɹˈtɹeɪ/",
-      "phrases": [
-        {
-          "phrase": "portray as",
-          "meaning_zh": "把……描绘成"
-        },
-        {
-          "phrase": "portray a character",
-          "meaning_zh": "刻画或扮演角色"
-        },
-        {
-          "phrase": "accurately portray",
-          "meaning_zh": "准确描绘"
-        },
-        {
-          "phrase": "portray in detail",
-          "meaning_zh": "详细描述"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "portrayal",
-          "pos": "n.",
-          "meaning_zh": "描绘；肖像"
-        },
-        {
-          "word": "portrait",
-          "pos": "n.",
-          "meaning_zh": "肖像；描写"
-        },
-        {
-          "word": "portraitist",
-          "pos": "n.",
-          "meaning_zh": "肖像画家"
-        },
-        {
-          "word": "portraiture",
-          "pos": "n.",
-          "meaning_zh": "肖像画；肖像画法"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/pɔːˈtreɪ/",
+      "status": "pending",
       "term": "portray"
     },
     {
       "created_at": "2026-10-08T15:24:22Z",
-      "example_en": "The investigators were able to pinpoint the cause of the fire.",
-      "example_zh": "调查人员得以准确查明火灾的起因。",
+      "example_en": "The engineers were able to pinpoint the cause of the failure within hours.",
+      "example_zh": "工程师们在几个小时内就准确找出了故障的原因。",
       "id": 108,
-      "meaning_en": "To find or locate something exactly; also, exact and precise.",
-      "meaning_zh": "精准确定；查明；精确的；精准的；针尖（原义）",
-      "part_of_speech": "v. / adj. / n.",
+      "meaning_en": "To find or identify something exactly, such as a location, cause, or problem. As a noun, it means a very small point or exact spot.",
+      "meaning_zh": "v. 精确指出；准确确定（位置、原因、问题等）；n. 针尖；极小的点；精确的位置；adj. 精确的，精准的",
+      "part_of_speech": "v. / n. / adj.",
       "phonetic": "/ˈpɪnpɔɪnt/",
-      "phrases": [
-        {
-          "phrase": "pinpoint accuracy",
-          "meaning_zh": "极高的精确度"
-        },
-        {
-          "phrase": "pinpoint the problem",
-          "meaning_zh": "准确找出问题"
-        },
-        {
-          "phrase": "pinpoint a location",
-          "meaning_zh": "精确定位地点"
-        },
-        {
-          "phrase": "pinpoint strike",
-          "meaning_zh": "精确打击"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "status": "pending",
       "term": "pinpoint"
     },
     {
       "created_at": "2026-10-08T15:24:30Z",
-      "example_en": "The herder led his flock down to the river at dawn.",
-      "example_zh": "黎明时分，牧人把羊群赶到了河边。",
+      "example_en": "The nomadic herder led his flock of sheep across the wide grassland.",
+      "example_zh": "那位游牧牧民领着他的羊群穿过广阔的草原。",
       "id": 109,
-      "meaning_en": "A person who tends, drives, or looks after a herd of livestock such as cattle, sheep, goats, or reindeer.",
-      "meaning_zh": "牧人；放牧者；（牲畜）饲养员",
+      "meaning_en": "A person who takes care of and moves a group of animals such as cattle, sheep, or goats. It can also refer to someone who guides a group of people.",
+      "meaning_zh": "牧人；放牧者；牧民；（人群的）引领者",
       "part_of_speech": "n.",
-      "phonetic": "/ˈhɜːdə(r)/",
-      "phrases": [
-        {
-          "phrase": "reindeer herder",
-          "meaning_zh": "驯鹿牧民"
-        },
-        {
-          "phrase": "cattle herder",
-          "meaning_zh": "牧牛人，赶牛人"
-        },
-        {
-          "phrase": "goat herder",
-          "meaning_zh": "牧羊人（放山羊者）"
-        },
-        {
-          "phrase": "sheep herder",
-          "meaning_zh": "牧羊人"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "herd",
-          "pos": "v.",
-          "meaning_zh": "放牧；把（牲畜）聚拢、赶在一起"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˈhɜːrdər/",
+      "status": "pending",
       "term": "herder"
     },
     {
       "created_at": "2026-10-08T15:24:52Z",
-      "example_en": "The caravan used asses to carry goods across the mountains.",
-      "example_zh": "商队用驴子驮着货物翻山越岭。",
+      "example_en": "The farmer led three asses along the dusty road.",
+      "example_zh": "农夫牵着三头驴沿着尘土飞扬的土路走去。",
       "id": 110,
-      "meaning_en": "Plural of ass; donkeys, or (slang) buttocks; also a vulgar or offensive term for foolish people.",
-      "meaning_zh": "ass 的复数；驴（复数）；(俚语) 屁股（复数）；(粗俗、冒犯) 蠢人（复数）。",
+      "meaning_en": "The plural form of 'ass', meaning donkeys, or (informally and rudely) a person's buttocks. It can also mean foolish or stubborn people.",
+      "meaning_zh": "ass 的复数形式：驴（多匹驴）；(粗俗) 屁股；(口语) 蠢人、固执的人。",
       "part_of_speech": "n.",
       "phonetic": "/ˈæsɪz/",
-      "phrases": [
-        {
-          "phrase": "make an ass of oneself",
-          "meaning_zh": "出丑；做傻事"
-        },
-        {
-          "phrase": "pain in the ass",
-          "meaning_zh": "令人讨厌的人或事"
-        },
-        {
-          "phrase": "kick ass",
-          "meaning_zh": "了不起；揍一顿"
-        },
-        {
-          "phrase": "cover one's ass",
-          "meaning_zh": "保护自己；自保"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "asinine",
-          "pos": "adj.",
-          "meaning_zh": "愚蠢的；驴一般的"
-        },
-        {
-          "word": "asininely",
-          "pos": "adv.",
-          "meaning_zh": "愚蠢地"
-        },
-        {
-          "word": "ass-like",
-          "pos": "adj.",
-          "meaning_zh": "像驴的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "asses"
     },
     {
       "created_at": "2026-10-08T15:26:14Z",
-      "example_en": "My holiday coincides with the school holidays this year.",
-      "example_zh": "今年我的假期正好和学校的假期重合。",
+      "example_en": "Our holidays coincide this year, so we can travel together.",
+      "example_zh": "今年我们的假期正好在同一时间，所以可以一起去旅行。",
       "id": 111,
-      "meaning_en": "To happen at the same time as something else, or to be the same or very similar to something.",
-      "meaning_zh": "同时发生；相符，一致",
+      "meaning_en": "To happen at the same time as something else, or to be the same or in agreement with something.",
+      "meaning_zh": "同时发生；一致，相符；重合，位置相同",
       "part_of_speech": "v.",
       "phonetic": "/ˌkəʊɪnˈsaɪd/",
-      "phrases": [
-        {
-          "phrase": "coincide with",
-          "meaning_zh": "与…同时发生；与…相符"
-        },
-        {
-          "phrase": "coincide in",
-          "meaning_zh": "在…方面一致"
-        },
-        {
-          "phrase": "happen to coincide",
-          "meaning_zh": "碰巧重合、恰好一致"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "coincidence",
-          "pos": "n.",
-          "meaning_zh": "巧合；同时发生"
-        },
-        {
-          "word": "coincident",
-          "pos": "adj.",
-          "meaning_zh": "同时发生的；一致的"
-        },
-        {
-          "word": "coincidental",
-          "pos": "adj.",
-          "meaning_zh": "巧合的；碰巧的"
-        },
-        {
-          "word": "coincidentally",
-          "pos": "adv.",
-          "meaning_zh": "碰巧地；巧合地"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "coincide"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/alter-us.mp3",
       "created_at": "2026-10-08T15:28:19Z",
+      "example_en": "We had to alter our plans because of the bad weather.",
+      "example_zh": "由于天气恶劣，我们不得不改变计划。",
       "id": 112,
-      "meaning_en": "To change the form or structure of; To become different",
-      "meaning_zh": "要更改的形式或结构，；与众不同",
+      "meaning_en": "To change something, or to become different, often slightly.",
+      "meaning_zh": "改变；改动；修改；（使）变化",
       "part_of_speech": "v.",
-      "phonetic": "/ˈɒl.tə/",
-      "phrases": [
-        {
-          "phrase": "alter ego",
-          "meaning_zh": "另一个自我；知己"
-        },
-        {
-          "phrase": "alter the course of",
-          "meaning_zh": "改变……的进程"
-        },
-        {
-          "phrase": "alter one's appearance",
-          "meaning_zh": "改变外貌"
-        },
-        {
-          "phrase": "alter for the better",
-          "meaning_zh": "向好的方向改变"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "alteration",
-          "pos": "n.",
-          "meaning_zh": "改变，变更"
-        },
-        {
-          "word": "alterable",
-          "pos": "adj.",
-          "meaning_zh": "可改变的"
-        },
-        {
-          "word": "alterably",
-          "pos": "adv.",
-          "meaning_zh": "可改变地"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˈɔːltər/",
+      "status": "pending",
       "term": "alter"
     },
     {
       "created_at": "2026-10-08T15:31:28Z",
-      "example_en": "Stop being so melodramatic—it's only a small mistake.",
-      "example_zh": "别这么夸张了——这只是个小错误。",
+      "example_en": "She threw her hands up and let out a melodramatic sigh when she saw the tiny scratch on her car.",
+      "example_zh": "看到车上那道小小的划痕，她夸张地举起双手叹了口气。",
       "id": 113,
-      "meaning_en": "Characteristic of melodrama; excessively dramatic, emotional, or exaggerated.",
-      "meaning_zh": "情节剧般的；夸张的；感情夸张的，大惊小怪的",
+      "meaning_en": "Relating to or characteristic of melodrama; behaving in an exaggerated, overly emotional way that seems unrealistic.",
+      "meaning_zh": "情节剧的；夸张的，感情夸张的，大惊小怪的（多含贬义）",
       "part_of_speech": "adj.",
       "phonetic": "/ˌmelədrəˈmætɪk/",
-      "phrases": [
-        {
-          "phrase": "melodramatic gesture",
-          "meaning_zh": "夸张的举动"
-        },
-        {
-          "phrase": "melodramatic performance",
-          "meaning_zh": "情节剧式的表演；夸张的表演"
-        },
-        {
-          "phrase": "sound melodramatic",
-          "meaning_zh": "听起来很夸张"
-        },
-        {
-          "phrase": "a bit melodramatic",
-          "meaning_zh": "有点夸张"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "melodrama",
-          "pos": "n.",
-          "meaning_zh": "情节剧；夸张的事件或行为"
-        },
-        {
-          "word": "melodramatize",
-          "pos": "v.",
-          "meaning_zh": "使情节剧化；夸张地表现"
-        },
-        {
-          "word": "melodramatically",
-          "pos": "adv.",
-          "meaning_zh": "夸张地；以情节剧方式"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "melodramatic"
     },
     {
       "created_at": "2026-10-08T15:31:44Z",
-      "example_en": "The company decided to suspend production until safety checks were completed.",
-      "example_zh": "公司决定暂停生产，直到安全检查完成。",
+      "example_en": "The company decided to suspend all flights to the region because of the storm.",
+      "example_zh": "由于暴风雨，该公司决定暂停所有飞往该地区的航班。",
       "id": 114,
-      "meaning_en": "To stop something temporarily, or to hang something from above; also to officially keep someone out of a job, school, or activity for a period.",
-      "meaning_zh": "暂停；中止；悬挂；使停职（或停学等）。",
+      "meaning_en": "To stop something temporarily, or to officially prevent someone from taking part in their job or an activity for a period of time. It can also mean to hang something from above.",
+      "meaning_zh": "暂停，中止（某事一段时间）；使停职，使停学（作为处分）；悬挂，吊起",
       "part_of_speech": "v.",
       "phonetic": "/səˈspend/",
-      "phrases": [
-        {
-          "phrase": "suspend operations",
-          "meaning_zh": "暂停运营"
-        },
-        {
-          "phrase": "suspend from school",
-          "meaning_zh": "令停学"
-        },
-        {
-          "phrase": "suspend judgment",
-          "meaning_zh": "暂不判断"
-        },
-        {
-          "phrase": "suspend payment",
-          "meaning_zh": "停止付款"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "suspension",
-          "pos": "n.",
-          "meaning_zh": "暂停；中止；悬架"
-        },
-        {
-          "word": "suspender",
-          "pos": "n.",
-          "meaning_zh": "吊带；悬挂物"
-        },
-        {
-          "word": "suspensive",
-          "pos": "adj.",
-          "meaning_zh": "暂停的；悬而未决的"
-        },
-        {
-          "word": "suspensory",
-          "pos": "adj.",
-          "meaning_zh": "悬吊的；支持性的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "suspend"
     },
     {
       "created_at": "2026-10-08T15:36:33Z",
-      "example_en": "The old photographs filled her with nostalgia for her childhood.",
-      "example_zh": "那些旧照片让她对童年充满了怀念。",
+      "example_en": "Listening to that old song filled her with nostalgia for the summers of her childhood.",
+      "example_zh": "听那首老歌让她对童年的夏天充满了怀念。",
       "id": 115,
-      "meaning_en": "A sentimental longing or wistful affection for the past, typically for a period or place with happy personal associations.",
-      "meaning_zh": "怀旧；乡愁；对往昔的留恋（常带有感伤或美好回忆）",
+      "meaning_en": "A sentimental longing or wistful affection for a past period, place, or experience that one remembers fondly.",
+      "meaning_zh": "怀旧；怀旧之情；对往昔（或故乡）的眷恋与思念。",
       "part_of_speech": "n.",
       "phonetic": "/nɒˈstældʒə/",
-      "phrases": [
-        {
-          "phrase": "nostalgia for something",
-          "meaning_zh": "对某事的怀念"
-        },
-        {
-          "phrase": "a wave of nostalgia",
-          "meaning_zh": "一阵怀旧之情"
-        },
-        {
-          "phrase": "a sense of nostalgia",
-          "meaning_zh": "怀旧感"
-        },
-        {
-          "phrase": "nostalgia trip",
-          "meaning_zh": "怀旧之旅；怀旧体验"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "nostalgic",
-          "pos": "adj.",
-          "meaning_zh": "怀旧的；怀乡的"
-        },
-        {
-          "word": "nostalgically",
-          "pos": "adv.",
-          "meaning_zh": "怀旧地；带着怀念地"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "nostalgia"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/incentive-uk.mp3",
       "created_at": "2026-10-08T15:38:20Z",
-      "example_en": "I have no incentive to do housework right now.",
-      "example_zh": "我现在没有动力做家务。",
+      "example_en": "The company offers a cash bonus as an incentive for employees to meet their sales targets.",
+      "example_zh": "公司提供现金奖金，作为激励员工完成销售目标的奖励。",
       "id": 116,
-      "meaning_en": "Something that motivates, rouses, or encourages; A bonus or reward, often monetary, to work harder",
-      "meaning_zh": "激励、唤醒或鼓励；更努力工作的奖金或奖励，通常是金钱奖励",
+      "meaning_en": "Something that encourages or motivates a person to do something, often a reward or benefit offered to stimulate effort or action.",
+      "meaning_zh": "激励；刺激；鼓励；动力；奖励措施",
       "part_of_speech": "n.",
-      "phonetic": "/ɪnˈsɛntɪv/",
-      "phrases": [
-        {
-          "phrase": "financial incentive",
-          "meaning_zh": "经济激励；财政奖励"
-        },
-        {
-          "phrase": "tax incentive",
-          "meaning_zh": "税收优惠；税收激励"
-        },
-        {
-          "phrase": "incentive to do something",
-          "meaning_zh": "做某事的激励"
-        },
-        {
-          "phrase": "provide an incentive",
-          "meaning_zh": "提供激励；给予奖励"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "incentivize",
-          "pos": "v.",
-          "meaning_zh": "激励；以奖励刺激"
-        },
-        {
-          "word": "incentively",
-          "pos": "adv.",
-          "meaning_zh": "激励地；起激励作用地"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ɪnˈsentɪv/",
+      "status": "pending",
       "term": "incentive"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/gloomy-us.mp3",
       "created_at": "2026-10-08T15:38:49Z",
-      "example_en": "The cavern was gloomy.",
-      "example_zh": "洞穴阴沉。",
+      "example_en": "The gloomy weather matched his mood perfectly.",
+      "example_zh": "阴沉的天气与他的心情再相配不过了。",
       "id": 117,
-      "meaning_en": "Not very illuminated; dim because of darkness, especially when appearing depressing or frightening; Suffering from gloom; melancholy; dejected",
-      "meaning_zh": "不太明亮；由于黑暗而昏暗，特别是在显得沮丧或可怕时；沮丧；忧郁；沮丧",
+      "meaning_en": "Dark or poorly lit, especially because of clouds or lack of light. Also means feeling sad, hopeless, or without much hope for the future.",
+      "meaning_zh": "阴暗的，光线不足的；忧郁的，沮丧的；（前景）黯淡的，悲观的",
       "part_of_speech": "adj.",
-      "phonetic": "/ˈɡlumi/",
-      "phrases": [
-        {
-          "phrase": "gloomy weather",
-          "meaning_zh": "阴沉的天气"
-        },
-        {
-          "phrase": "gloomy mood",
-          "meaning_zh": "忧郁的情绪"
-        },
-        {
-          "phrase": "gloomy outlook",
-          "meaning_zh": "悲观的前景"
-        },
-        {
-          "phrase": "a gloomy day",
-          "meaning_zh": "阴沉的一天"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "gloom",
-          "pos": "n. / v.",
-          "meaning_zh": "忧郁；昏暗；变忧郁；变暗"
-        },
-        {
-          "word": "gloomily",
-          "pos": "adv.",
-          "meaning_zh": "忧郁地；阴沉地"
-        },
-        {
-          "word": "gloominess",
-          "pos": "n.",
-          "meaning_zh": "忧郁；阴沉"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˈɡluːmi/",
+      "status": "pending",
       "term": "gloomy"
     },
     {
       "created_at": "2026-10-08T15:40:14Z",
-      "example_en": "The bright lights of the city lured thousands of young people away from their hometowns.",
-      "example_zh": "城市的璀璨灯光吸引成千上万的年轻人离开了家乡。",
+      "example_en": "The store lured customers in with huge discounts.",
+      "example_zh": "这家商店用大幅折扣把顾客吸引进店。",
       "id": 118,
-      "meaning_en": "To persuade someone to do something or go somewhere by offering them something attractive; also the attractive thing itself that draws someone in.",
-      "meaning_zh": "v. 引诱，诱使（某人做某事或去某处）；n. 诱惑力，吸引力；诱饵",
+      "meaning_en": "To persuade or attract someone to do something or go somewhere, often by offering something appealing; also a thing that tempts or attracts.",
+      "meaning_zh": "v. 引诱，诱惑；吸引（人或动物）。n. 诱惑物，吸引力；（钓鱼用的）诱饵。",
       "part_of_speech": "v. \u0026 n.",
       "phonetic": "/lʊə(r)/",
-      "phrases": [
-        {
-          "phrase": "lure sb into doing sth",
-          "meaning_zh": "诱使某人做某事"
-        },
-        {
-          "phrase": "lure sb away",
-          "meaning_zh": "把某人引诱走，诱使某人离开"
-        },
-        {
-          "phrase": "the lure of sth",
-          "meaning_zh": "某事物的诱惑／吸引力"
-        },
-        {
-          "phrase": "lure sb to a place",
-          "meaning_zh": "把某人诱骗到某地"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "status": "pending",
       "term": "lure"
     },
     {
       "created_at": "2026-10-08T15:44:00Z",
-      "example_en": "After college, we slowly drifted away from each other and hardly ever talked.",
-      "example_zh": "大学毕业后，我们渐渐疏远了，几乎不再联系。",
+      "example_en": "After graduation, we promised to stay in touch, but we slowly drifted away from each other.",
+      "example_zh": "毕业后我们约好保持联系，但彼此还是渐渐疏远了。",
       "id": 119,
-      "meaning_en": "To gradually move away or become distant, either physically or in a relationship; also to slowly lose attention or fall asleep.",
-      "meaning_zh": "渐渐漂走；逐渐疏远；（注意力）慢慢涣散、迷迷糊糊入睡",
+      "meaning_en": "To gradually move away or disappear, either literally by floating slowly, or figuratively by losing interest, contact, or closeness with someone.",
+      "meaning_zh": "漂走；飘散；渐渐疏远；（感情、关系）逐渐淡漠、消失",
       "part_of_speech": "phrase",
       "phonetic": "/drɪft əˈweɪ/",
-      "phrases": [
-        {
-          "phrase": "drift away from sth",
-          "meaning_zh": "逐渐偏离、疏离某事物"
-        },
-        {
-          "phrase": "let things drift",
-          "meaning_zh": "听其自然，放任不管"
-        },
-        {
-          "phrase": "drift apart",
-          "meaning_zh": "（彼此）渐行渐远，关系疏远"
-        },
-        {
-          "phrase": "drift off",
-          "meaning_zh": "迷迷糊糊地睡去"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "drift",
-          "pos": "n.",
-          "meaning_zh": "漂流；趋势；大意"
-        },
-        {
-          "word": "drifter",
-          "pos": "n.",
-          "meaning_zh": "漂泊者；流浪者"
-        },
-        {
-          "word": "adrift",
-          "pos": "adj.",
-          "meaning_zh": "漂浮的；漂泊无依的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "drift away"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/drain-us.mp3",
       "created_at": "2026-10-08T15:45:00Z",
-      "example_en": "The drain in the kitchen sink is clogged.",
-      "example_zh": "厨房水槽的下水道堵塞。",
+      "example_en": "Please drain the pasta and then add the sauce.",
+      "example_zh": "请把意大利面沥干水分，然后加入酱汁。",
       "id": 120,
-      "meaning_en": "A conduit allowing liquid to flow out of an otherwise contained volume; a plughole (UK)",
-      "meaning_zh": "允许液体从原本容纳的体积中流出的导管；水管孔（英国）",
-      "part_of_speech": "n.",
-      "phonetic": "/dɹeɪn/",
-      "phrases": [
-        {
-          "phrase": "brain drain",
-          "meaning_zh": "人才外流"
-        },
-        {
-          "phrase": "down the drain",
-          "meaning_zh": "被浪费；白费"
-        },
-        {
-          "phrase": "storm drain",
-          "meaning_zh": "雨水管道"
-        },
-        {
-          "phrase": "drain pipe",
-          "meaning_zh": "排水管"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "drainable",
-          "pos": "adj.",
-          "meaning_zh": "可排水的"
-        },
-        {
-          "word": "drainless",
-          "pos": "adj.",
-          "meaning_zh": "无排水设施的"
-        },
-        {
-          "word": "undrained",
-          "pos": "adj.",
-          "meaning_zh": "未排水的"
-        }
-      ],
-      "status": "ready",
+      "meaning_en": "As a verb: to make liquid flow away from something, or to use up someone's energy or resources. As a noun: a pipe or channel that carries away waste water, or the act of using up resources.",
+      "meaning_zh": "v. 排水；使（液体）流走；耗尽（精力、资源）；喝干。n. 排水管；下水道；排水沟；消耗；耗尽。",
+      "part_of_speech": "v. / n.",
+      "phonetic": "/dreɪn/",
+      "status": "pending",
       "term": "drain"
     },
     {
       "created_at": "2026-10-08T15:47:13Z",
-      "example_en": "The Canadian prime minister met with his French counterpart in Paris to discuss trade.",
-      "example_zh": "加拿大总理在巴黎会见了他的法国对口领导人，讨论贸易问题。",
+      "example_en": "The American ambassador met with his British counterpart to discuss trade policy.",
+      "example_zh": "美国大使会见了与他职位相当的英国大使，讨论贸易政策。",
       "id": 121,
-      "meaning_en": "A person or thing that has the same position, role, or function as another person or thing, especially in a different place or organization.",
-      "meaning_zh": "（职位或功能）相当的人；对应的事物；对口的人（或机构）；副本，仿制品。",
+      "meaning_en": "A person or thing that has the same function, position, or characteristics as another, especially in a different place or organization.",
+      "meaning_zh": "相对应的人（或物）；职位（或作用）相当的人；副本，对应版本",
       "part_of_speech": "n.",
       "phonetic": "/ˈkaʊntəpɑːt/",
-      "phrases": [
-        {
-          "phrase": "counterpart funds",
-          "meaning_zh": "配套资金"
-        },
-        {
-          "phrase": "direct counterpart",
-          "meaning_zh": "直接对应的人（或物）"
-        },
-        {
-          "phrase": "foreign counterpart",
-          "meaning_zh": "外国同行；外方对口机构"
-        },
-        {
-          "phrase": "counterpart talks",
-          "meaning_zh": "对口会谈"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "status": "pending",
       "term": "counterpart"
     },
     {
       "created_at": "2026-10-08T15:50:44Z",
-      "example_en": "The patient was kept in isolation until the test results came back.",
-      "example_zh": "在检测结果出来之前，这名患者一直被隔离。",
+      "example_en": "The patient was kept in isolation to prevent the virus from spreading.",
+      "example_zh": "为了防止病毒传播，这名病人被隔离了起来。",
       "id": 122,
       "meaning_en": "The state of being separated from other people, places, or things; the act of keeping someone or something apart.",
-      "meaning_zh": "隔离；孤立；孤独；隔绝",
+      "meaning_zh": "隔离；孤立；隔绝；孤独；单独",
       "part_of_speech": "n.",
       "phonetic": "/ˌaɪsəˈleɪʃn/",
-      "phrases": [
-        {
-          "phrase": "in isolation",
-          "meaning_zh": "孤立地；单独地"
-        },
-        {
-          "phrase": "social isolation",
-          "meaning_zh": "社会孤立"
-        },
-        {
-          "phrase": "isolation ward",
-          "meaning_zh": "隔离病房"
-        },
-        {
-          "phrase": "isolation period",
-          "meaning_zh": "隔离期"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "isolate",
-          "pos": "v.",
-          "meaning_zh": "隔离；孤立"
-        },
-        {
-          "word": "isolated",
-          "pos": "adj.",
-          "meaning_zh": "隔离的；孤立的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "isolation"
     },
     {
       "created_at": "2026-10-08T15:50:58Z",
-      "example_en": "The whole town rejoiced when the team won the championship.",
-      "example_zh": "球队夺冠时，全镇人都欢欣鼓舞。",
+      "example_en": "The whole village rejoiced when they heard the good news.",
+      "example_zh": "听到这个好消息，全村人都欢欣鼓舞。",
       "id": 123,
-      "meaning_en": "To feel or show great joy; to be very happy about something.",
-      "meaning_zh": "欣喜；高兴；感到喜悦；欢庆",
+      "meaning_en": "To feel or show great happiness and joy about something. It is often used in formal or literary contexts.",
+      "meaning_zh": "高兴，欣喜，欢欣鼓舞；（使）感到喜悦",
       "part_of_speech": "v.",
       "phonetic": "/rɪˈdʒɔɪs/",
-      "phrases": [
-        {
-          "phrase": "rejoice in",
-          "meaning_zh": "因……而欣喜；为……感到高兴"
-        },
-        {
-          "phrase": "rejoice at",
-          "meaning_zh": "对……感到欣喜"
-        },
-        {
-          "phrase": "rejoice over",
-          "meaning_zh": "为……而欢欣"
-        },
-        {
-          "phrase": "rejoice with",
-          "meaning_zh": "与……一起欢庆"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "rejoicing",
-          "pos": "n.",
-          "meaning_zh": "欣喜；欢庆"
-        },
-        {
-          "word": "rejoicer",
-          "pos": "n.",
-          "meaning_zh": "欢欣的人（较少用）"
-        },
-        {
-          "word": "rejoiceful",
-          "pos": "adj.",
-          "meaning_zh": "充满喜悦的；欢欣的（较少用）"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "rejoice"
     },
     {
       "created_at": "2026-10-08T15:52:33Z",
-      "example_en": "The museum's curated collection of modern art attracted thousands of visitors.",
-      "example_zh": "博物馆精选的现代艺术藏品吸引了成千上万的参观者。",
+      "example_en": "The museum's curated collection features works by emerging artists from around the world.",
+      "example_zh": "这家博物馆精心策划的藏品汇集了来自世界各地新兴艺术家的作品。",
       "id": 124,
-      "meaning_en": "Carefully selected, organized, and presented, often by an expert or according to a theme.",
-      "meaning_zh": "精选的；精心策划的；经专业挑选并编排的",
+      "meaning_en": "Carefully selected, organized, and presented, especially content, products, or information chosen for their quality or relevance. It is also the past tense and past participle of the verb \"curate\".",
+      "meaning_zh": "精心挑选的；经过整理编排的；（展览、内容等）由策展人策划的。",
       "part_of_speech": "adj.",
       "phonetic": "/kjʊˈreɪtɪd/",
-      "phrases": [
-        {
-          "phrase": "a curated selection",
-          "meaning_zh": "精选合集；精挑细选的选项"
-        },
-        {
-          "phrase": "curated content",
-          "meaning_zh": "精选内容；人工筛选的内容"
-        },
-        {
-          "phrase": "curated exhibition",
-          "meaning_zh": "策划的展览；主题策展"
-        },
-        {
-          "phrase": "hand-curated",
-          "meaning_zh": "人工精选的"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "curate",
-          "pos": "v.",
-          "meaning_zh": "挑选并组织（展品、内容等）；策划"
-        },
-        {
-          "word": "curator",
-          "pos": "n.",
-          "meaning_zh": "（博物馆等的）馆长；策展人"
-        },
-        {
-          "word": "curation",
-          "pos": "n.",
-          "meaning_zh": "精选；策划；编纂"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "curated"
     },
     {
       "created_at": "2026-10-08T15:53:21Z",
-      "example_en": "She quoted the passage verbatim from the original document.",
-      "example_zh": "她逐字引用了原文件中的那段话。",
+      "example_en": "She repeated his speech verbatim, without changing a single word.",
+      "example_zh": "她一字不差地复述了他的演讲，一个字都没改。",
       "id": 125,
       "meaning_en": "Using exactly the same words as were originally used; word for word.",
-      "meaning_zh": "逐字的；一字不差的；逐字地；一字不差地",
-      "part_of_speech": "adj./adv.",
-      "phonetic": "/vɜːrˈbeɪtɪm/",
-      "phrases": [
-        {
-          "phrase": "verbatim quote",
-          "meaning_zh": "逐字引用"
-        },
-        {
-          "phrase": "verbatim transcript",
-          "meaning_zh": "逐字记录；文字记录"
-        },
-        {
-          "phrase": "repeat verbatim",
-          "meaning_zh": "逐字重复"
-        },
-        {
-          "phrase": "quote verbatim",
-          "meaning_zh": "一字不差地引用"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "meaning_zh": "adv. 逐字地；一字不差地；adj. 逐字的；一字不差的",
+      "part_of_speech": "adv. / adj.",
+      "phonetic": "/vɜːˈbeɪtɪm/",
+      "status": "pending",
       "term": "verbatim"
     },
     {
       "created_at": "2026-10-08T15:54:08Z",
       "example_en": "It was sheer luck that we caught the last train home.",
-      "example_zh": "我们能赶上回家的末班车纯属运气。",
+      "example_zh": "我们能赶上回家的末班车，纯属运气。",
       "id": 126,
-      "meaning_en": "Used to emphasize that something is complete or nothing but what is stated; also describes a steep surface or very thin, transparent fabric.",
-      "meaning_zh": "完全的，纯粹的（用于强调）；陡峭的，垂直的；（织物）极薄的，透明的",
+      "meaning_en": "Used to emphasize that something is complete or pure, with nothing else involved; also describes a very steep surface or a very thin, transparent fabric.",
+      "meaning_zh": "完全的，纯粹的（用于强调）；陡峭的，几乎垂直的；（织物）极薄的，透明的",
       "part_of_speech": "adj.",
-      "phonetic": "/ʃɪə(r)/",
-      "phrases": [
-        {
-          "phrase": "by sheer chance",
-          "meaning_zh": "纯属偶然"
-        },
-        {
-          "phrase": "sheer luck",
-          "meaning_zh": "纯粹的运气"
-        },
-        {
-          "phrase": "sheer size",
-          "meaning_zh": "巨大的规模"
-        },
-        {
-          "phrase": "a sheer cliff",
-          "meaning_zh": "陡峭的悬崖"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "sheerly",
-          "pos": "adv.",
-          "meaning_zh": "完全地，纯粹地"
-        },
-        {
-          "word": "sheerness",
-          "pos": "n.",
-          "meaning_zh": "陡峭；完全，纯粹"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ʃɪr/",
+      "status": "pending",
       "term": "sheer"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/serendipity-us.mp3",
       "created_at": "2026-10-08T15:55:38Z",
       "id": 127,
       "meaning_en": "A combination of events which have come together by chance to make a surprisingly good or wonderful outcome",
       "meaning_zh": "偶然结合在一起的事件，产生了令人惊讶的好或美妙的结果",
       "part_of_speech": "n.",
       "phonetic": "/ˌsɛ.ɹən.ˈdɪ.pɪ.ti/",
-      "phrases": [
-        {
-          "phrase": "pure serendipity",
-          "meaning_zh": "纯粹的机缘巧合"
-        },
-        {
-          "phrase": "a moment of serendipity",
-          "meaning_zh": "机缘巧合的一刻"
-        },
-        {
-          "phrase": "by serendipity",
-          "meaning_zh": "偶然地；意外地"
-        },
-        {
-          "phrase": "a case of serendipity",
-          "meaning_zh": "机缘巧合的例子"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "serendipitous",
-          "pos": "adj.",
-          "meaning_zh": "偶然发现的；幸运的"
-        },
-        {
-          "word": "serendipitously",
-          "pos": "adv.",
-          "meaning_zh": "偶然地；幸运地"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "serendipity"
     },
     {
       "created_at": "2026-10-08T15:55:49Z",
-      "example_en": "The enlivening music lifted everyone's spirits.",
-      "example_zh": "那振奋人心的音乐让大家精神一振。",
+      "example_en": "The enlivening music filled the hall and soon everyone was on their feet.",
+      "example_zh": "令人振奋的音乐充满了大厅，很快大家都站了起来。",
       "id": 128,
-      "meaning_en": "Making someone or something more lively, cheerful, or interesting.",
-      "meaning_zh": "使有生气的；令人活跃的；令人愉快的",
+      "meaning_en": "Making something more lively, cheerful, or interesting; giving energy or spirit to a place, event, or atmosphere.",
+      "meaning_zh": "使活跃的；令人振奋的；使有生气的；增添趣味的",
       "part_of_speech": "adj.",
-      "phonetic": "/ɪnˈlaɪvənɪŋ/",
-      "phrases": [
-        {
-          "phrase": "enlivening atmosphere",
-          "meaning_zh": "活跃气氛"
-        },
-        {
-          "phrase": "enlivening conversation",
-          "meaning_zh": "令人愉快的谈话"
-        },
-        {
-          "phrase": "enlivening effect",
-          "meaning_zh": "令人活跃的效果"
-        },
-        {
-          "phrase": "an enlivening experience",
-          "meaning_zh": "一次令人振奋的经历"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "enliven",
-          "pos": "v.",
-          "meaning_zh": "使活跃；使有生气"
-        },
-        {
-          "word": "enlivenment",
-          "pos": "n.",
-          "meaning_zh": "活跃；生气；鼓舞"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ɪnˈlaɪvnɪŋ/",
+      "status": "pending",
       "term": "enlivening"
     },
     {
       "created_at": "2026-10-08T15:58:57Z",
-      "example_en": "They sat by the fire and conversed quietly about their childhood.",
-      "example_zh": "他们坐在炉火旁，轻声交谈着各自的童年。",
+      "example_en": "She conversed with her grandmother in French for hours, and they never ran out of things to say.",
+      "example_zh": "她用法语和祖母交谈了几个小时，总有说不完的话。",
       "id": 129,
-      "meaning_en": "To talk with someone in an informal way; to have a conversation. As a noun or adjective (pronounced /ˈkɒnvɜːs/), it means the opposite or reverse of something.",
-      "meaning_zh": "v. 交谈，谈话；n. 相反的事物，反面；adj. 相反的，逆的（作名词、形容词时读作 /ˈkɒnvɜːs/）",
-      "part_of_speech": "v.",
+      "meaning_en": "As a verb: to talk with someone in a friendly or formal way. As an adjective or noun: the opposite of something, or the reverse proposition.",
+      "meaning_zh": "v. 交谈，谈话， converse with sb 与某人交谈（重音在后）；adj. 相反的，逆的；n. 相反的事物，反面（重音在前，读作 /ˈkɒnvɜːs/）",
+      "part_of_speech": "v. / adj. / n.",
       "phonetic": "/kənˈvɜːs/",
-      "phrases": [
-        {
-          "phrase": "converse with sb",
-          "meaning_zh": "与某人交谈"
-        },
-        {
-          "phrase": "converse in English",
-          "meaning_zh": "用英语交谈"
-        },
-        {
-          "phrase": "the converse is also true",
-          "meaning_zh": "反之亦然"
-        },
-        {
-          "phrase": "the converse of a statement",
-          "meaning_zh": "命题的逆命题"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "conversation",
-          "pos": "n.",
-          "meaning_zh": "谈话，对话，交谈"
-        },
-        {
-          "word": "conversant",
-          "pos": "adj.",
-          "meaning_zh": "熟悉的，精通的"
-        },
-        {
-          "word": "conversely",
-          "pos": "adv.",
-          "meaning_zh": "相反地，反过来说"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "converse"
     },
     {
       "created_at": "2026-10-08T15:59:06Z",
-      "example_en": "She put on her headphones and listened to music on the train.",
-      "example_zh": "她戴上耳机，在火车上听音乐。",
       "id": 130,
-      "meaning_en": "A pair of small speakers that you wear over or in your ears so you can listen to music, audio, or speech without other people hearing it.",
-      "meaning_zh": "耳机；头戴式耳机（通常成对使用，戴在耳朵上或耳内收听声音）",
+      "meaning_en": "A pair of speakers worn over or in the ears so only the wearer can hear the sound",
+      "meaning_zh": "一对扬声器戴在耳朵上或耳朵里，所以只有佩戴者才能听到声音",
       "part_of_speech": "n.",
-      "phonetic": "/ˈhedfəʊnz/",
-      "phrases": [
-        {
-          "phrase": "put on headphones",
-          "meaning_zh": "戴上耳机"
-        },
-        {
-          "phrase": "noise-cancelling headphones",
-          "meaning_zh": "降噪耳机"
-        },
-        {
-          "phrase": "wireless headphones",
-          "meaning_zh": "无线耳机"
-        },
-        {
-          "phrase": "in-ear headphones",
-          "meaning_zh": "入耳式耳机"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "status": "pending",
       "term": "headphones"
     },
     {
       "created_at": "2026-10-08T15:59:36Z",
-      "example_en": "Don't fret over things you can't control.",
-      "example_zh": "不要为你无法控制的事情烦恼。",
+      "example_en": "Don't fret about the exam — you've studied hard and you'll do fine.",
+      "example_zh": "别为考试发愁了——你学得很努力，一定会考好的。",
       "id": 131,
-      "meaning_en": "To worry or be anxious; (as a noun) a state of anxiety, or a metal ridge on the fingerboard of a stringed instrument.",
-      "meaning_zh": "烦恼，焦虑；烦躁；【音乐】（吉他等弦乐器指板上的）品，品丝",
-      "part_of_speech": "v.; n.",
-      "phonetic": "/frɛt/",
-      "phrases": [
-        {
-          "phrase": "fret over",
-          "meaning_zh": "为……担忧；为……烦恼"
-        },
-        {
-          "phrase": "fret about",
-          "meaning_zh": "为……焦虑"
-        },
-        {
-          "phrase": "fret and fume",
-          "meaning_zh": "烦躁发怒；焦躁不安"
-        },
-        {
-          "phrase": "fret saw",
-          "meaning_zh": "线锯；钢丝锯"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "fretful",
-          "pos": "adj.",
-          "meaning_zh": "烦躁的；焦虑的"
-        },
-        {
-          "word": "fretfully",
-          "pos": "adv.",
-          "meaning_zh": "烦躁地；焦虑地"
-        },
-        {
-          "word": "fretless",
-          "pos": "adj.",
-          "meaning_zh": "无品的；无品丝的"
-        }
-      ],
-      "status": "ready",
+      "meaning_en": "To worry or be anxious about something, often unnecessarily. As a noun, it means a state of worry or agitation; it can also refer to a metal ridge on the fingerboard of a guitar.",
+      "meaning_zh": "v. 烦恼；焦急；发愁；n. 烦恼；焦虑；（吉他等弦乐器指板上的）品丝，音柱",
+      "part_of_speech": "v. / n.",
+      "phonetic": "/fret/",
+      "status": "pending",
       "term": "fret"
     },
     {
       "created_at": "2026-10-08T16:00:31Z",
-      "example_en": "She grabbed a broom and swept the kitchen floor.",
-      "example_zh": "她拿起一把扫帚，扫了扫厨房的地板。",
+      "example_en": "She grabbed the broom and swept the kitchen floor.",
+      "example_zh": "她拿起扫帚，把厨房的地板扫了一遍。",
       "id": 132,
-      "meaning_en": "A cleaning tool with a long handle and stiff bristles, used for sweeping. As a verb, to sweep with a broom. It can also refer to a yellow-flowered shrub.",
-      "meaning_zh": "扫帚；用扫帚扫；金雀花（一种开黄花的灌木）。",
-      "part_of_speech": "n. / v.",
-      "phonetic": "/bruːm/",
-      "phrases": [
-        {
-          "phrase": "broom closet",
-          "meaning_zh": "清洁用具柜；扫帚柜"
-        },
-        {
-          "phrase": "broom handle",
-          "meaning_zh": "扫帚柄"
-        },
-        {
-          "phrase": "a new broom",
-          "meaning_zh": "新上任者；新官"
-        },
-        {
-          "phrase": "broomstick",
-          "meaning_zh": "扫帚柄；女巫的扫帚"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "broomy",
-          "pos": "adj.",
-          "meaning_zh": "长满金雀花的；似扫帚的"
-        },
-        {
-          "word": "broomlike",
-          "pos": "adj.",
-          "meaning_zh": "像扫帚一样的"
-        }
-      ],
-      "status": "ready",
+      "meaning_en": "A domestic utensil with fibers bound together at the end of a long handle, used for sweeping; An implement with which players sweep the ice to make a stone travel further and curl less; a sweeper",
+      "meaning_zh": "扫帚；扫把；金雀花（一种开黄色花的灌木）",
+      "part_of_speech": "n.",
+      "phonetic": "/bɹuːm/",
+      "status": "pending",
       "term": "broom"
     },
     {
       "created_at": "2026-10-08T16:03:35Z",
-      "example_en": "The new president claimed a clear mandate to change the country's economic policy.",
-      "example_zh": "新总统声称获得了改变国家经济政策的明确授权。",
+      "example_en": "The new government has a clear mandate to reform the economy.",
+      "example_zh": "新政府获得了改革经济的明确授权。",
       "id": 133,
-      "meaning_en": "An official order or authorization, especially from voters or a governing body; to officially require or authorize something.",
-      "meaning_zh": "n. 授权；命令；委托；选民赋予的权限；v. 授权；命令；强制执行",
+      "meaning_en": "An official order or authorization given by a person or body with authority. As a verb, it means to officially require or authorize something.",
+      "meaning_zh": "n. 授权；命令，指令；委托；委任统治；v. 授权；强制执行，下令，规定",
       "part_of_speech": "n. / v.",
       "phonetic": "/ˈmændeɪt/",
-      "phrases": [
-        {
-          "phrase": "electoral mandate",
-          "meaning_zh": "选举授权；选民赋予的执政授权"
-        },
-        {
-          "phrase": "mandate for reform",
-          "meaning_zh": "改革授权"
-        },
-        {
-          "phrase": "government mandate",
-          "meaning_zh": "政府授权；政府指令"
-        },
-        {
-          "phrase": "mandate to do something",
-          "meaning_zh": "授权做某事"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "mandatory",
-          "pos": "adj.",
-          "meaning_zh": "强制的；义务的；法定的"
-        },
-        {
-          "word": "mandatorily",
-          "pos": "adv.",
-          "meaning_zh": "强制性地；义务性地"
-        },
-        {
-          "word": "mandative",
-          "pos": "adj.",
-          "meaning_zh": "表示命令的；祈使的（语言学）"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "mandate"
     },
     {
       "created_at": "2026-10-08T16:04:09Z",
-      "example_en": "Firefighters battled the blaze for more than three hours before it was brought under control.",
-      "example_zh": "消防员与大火搏斗了三个多小时才将其控制住。",
+      "example_en": "Firefighters worked through the night to put out the blaze.",
+      "example_zh": "消防员通宵奋战，扑灭了大火。",
       "id": 134,
-      "meaning_en": "A very large, fierce fire. As a verb, to burn or shine very brightly and intensely.",
-      "meaning_zh": "n. 大火，烈火；熊熊燃烧；（感情的）迸发；v. 燃烧，熊熊燃烧；闪耀，发光；连续射击",
+      "meaning_en": "As a noun: a very large, bright fire, or a bright glow of light. As a verb: to burn or shine very brightly and strongly.",
+      "meaning_zh": "n. 熊熊大火；烈火；（光、色彩的）闪耀，强光；（感情的）爆发；v. 熊熊燃烧；闪耀，发光；猛烈地燃烧；（枪炮）连发。",
       "part_of_speech": "n. / v.",
       "phonetic": "/bleɪz/",
-      "phrases": [
-        {
-          "phrase": "blaze a trail",
-          "meaning_zh": "开辟道路；开创新领域"
-        },
-        {
-          "phrase": "a blaze of colour",
-          "meaning_zh": "一片绚丽的色彩"
-        },
-        {
-          "phrase": "blaze with anger",
-          "meaning_zh": "怒火中烧"
-        },
-        {
-          "phrase": "blaze away at",
-          "meaning_zh": "向……连续射击；不停地做"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "blazing",
-          "pos": "adj.",
-          "meaning_zh": "熊熊燃烧的；炽热的，强烈的"
-        },
-        {
-          "word": "ablaze",
-          "pos": "adj.",
-          "meaning_zh": "燃烧着的；闪耀的；充满（激情）的"
-        },
-        {
-          "word": "blazer",
-          "pos": "n.",
-          "meaning_zh": "运动夹克；西装外套"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "blaze"
     },
     {
       "created_at": "2026-10-08T16:06:00Z",
-      "example_en": "It took years to rid the garden of weeds.",
-      "example_zh": "花了好几年才清除花园里的杂草。",
+      "example_en": "We need to rid the house of mice.",
+      "example_zh": "我们需要把房子里的老鼠清除掉。",
       "id": 135,
-      "meaning_en": "To free someone or something from something unwanted; to remove or eliminate something unpleasant.",
+      "meaning_en": "To make someone or something free from something unwanted or unpleasant; to relieve or remove.",
       "meaning_zh": "使摆脱；使去掉；清除",
       "part_of_speech": "v.",
       "phonetic": "/rɪd/",
-      "phrases": [
-        {
-          "phrase": "get rid of",
-          "meaning_zh": "摆脱；处理掉；去除"
-        },
-        {
-          "phrase": "be rid of",
-          "meaning_zh": "摆脱；清除掉"
-        },
-        {
-          "phrase": "rid oneself of",
-          "meaning_zh": "摆脱；戒除"
-        },
-        {
-          "phrase": "good riddance",
-          "meaning_zh": "终于摆脱了（表示庆幸）"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "riddance",
-          "pos": "n.",
-          "meaning_zh": "摆脱；清除（如 good riddance）"
-        },
-        {
-          "word": "ridder",
-          "pos": "n.",
-          "meaning_zh": "清除者；排除者（罕用）"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "rid"
     },
     {
       "created_at": "2026-10-08T16:06:38Z",
-      "example_en": "The slow cadence of her voice made the poem come alive.",
-      "example_zh": "她舒缓的语调让这首诗鲜活了起来。",
+      "example_en": "Her voice had a soothing cadence that made the story captivating.",
+      "example_zh": "她的声音抑扬顿挫，舒缓悦耳，让这个故事引人入胜。",
       "id": 136,
-      "meaning_en": "The rhythmic flow or modulation of a sequence of sounds, words, or movements; also a closing sequence of chords in music.",
-      "meaning_zh": "节奏；韵律；（说话声音的）抑扬顿挫；（音乐的）终止式，收束。",
+      "meaning_en": "The rhythmic flow or modulation of a sound, especially in speech, music, or poetry; also the beat or rhythm of a repeated action such as walking or running.",
+      "meaning_zh": "（说话、音乐或诗歌的）抑扬顿挫，节奏，韵律；（步伐等的）节拍，步调。",
       "part_of_speech": "n.",
       "phonetic": "/ˈkeɪdns/",
-      "phrases": [
-        {
-          "phrase": "in cadence",
-          "meaning_zh": "有节奏地，按节拍"
-        },
-        {
-          "phrase": "the cadence of speech",
-          "meaning_zh": "说话的语调节奏"
-        },
-        {
-          "phrase": "perfect cadence",
-          "meaning_zh": "（音乐）完全终止"
-        },
-        {
-          "phrase": "rhythmic cadence",
-          "meaning_zh": "节奏韵律"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "cadenced",
-          "pos": "adj.",
-          "meaning_zh": "有节奏的，抑扬顿挫的"
-        },
-        {
-          "word": "cadential",
-          "pos": "adj.",
-          "meaning_zh": "（音乐）终止式的，收束的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "cadence"
     },
     {
       "created_at": "2026-10-08T16:07:02Z",
-      "example_en": "The government is facing a shortfall of several billion dollars in tax revenue.",
-      "example_zh": "政府正面临数十亿美元的税收缺口。",
+      "example_en": "The company is facing a shortfall of two million dollars in its annual budget.",
+      "example_zh": "该公司年度预算面临两百万美元的缺口。",
       "id": 137,
-      "meaning_en": "A failure to reach a required or expected amount; the amount by which something is less than what is needed.",
-      "meaning_zh": "不足；缺口；亏空；差额",
+      "meaning_en": "The amount by which something falls short of what is needed, expected, or required; a deficit.",
+      "meaning_zh": "缺口；差额；不足额；赤字",
       "part_of_speech": "n.",
       "phonetic": "/ˈʃɔːtfɔːl/",
-      "phrases": [
-        {
-          "phrase": "a shortfall in revenue",
-          "meaning_zh": "收入缺口"
-        },
-        {
-          "phrase": "funding shortfall",
-          "meaning_zh": "资金短缺"
-        },
-        {
-          "phrase": "meet a shortfall",
-          "meaning_zh": "弥补缺口"
-        },
-        {
-          "phrase": "budget shortfall",
-          "meaning_zh": "预算亏空"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "short",
-          "pos": "adj.",
-          "meaning_zh": "短的；不足的"
-        },
-        {
-          "word": "shorten",
-          "pos": "v.",
-          "meaning_zh": "缩短；减少"
-        },
-        {
-          "word": "shortly",
-          "pos": "adv.",
-          "meaning_zh": "不久；简短地"
-        },
-        {
-          "word": "shortness",
-          "pos": "n.",
-          "meaning_zh": "短；不足"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "shortfall"
     },
     {
       "created_at": "2026-10-08T16:07:31Z",
-      "example_en": "The government's suppression of the protests drew international criticism.",
-      "example_zh": "政府对抗议活动的镇压引发了国际社会的批评。",
+      "example_en": "The government's brutal suppression of the protests drew widespread international criticism.",
+      "example_zh": "政府对抗议活动的残酷镇压招致了国际社会的广泛批评。",
       "id": 138,
-      "meaning_en": "The act of stopping something from happening, developing, or being expressed; the state of being kept under control or hidden.",
-      "meaning_zh": "压制；抑制；镇压；（生理或心理上的）压抑；抑制（作用）",
+      "meaning_en": "The act of stopping something by force, or of preventing something such as a feeling, fact, or activity from being expressed, known, or developing.",
+      "meaning_zh": "压制；镇压；抑制；压抑；（对信息、证据等的）隐瞒、封锁；（生理或心理上的）抑制",
       "part_of_speech": "n.",
-      "phonetic": "/səˈprɛʃən/",
-      "phrases": [
-        {
-          "phrase": "noise suppression",
-          "meaning_zh": "噪声抑制；降噪"
-        },
-        {
-          "phrase": "fire suppression",
-          "meaning_zh": "灭火；消防抑制"
-        },
-        {
-          "phrase": "suppression order",
-          "meaning_zh": "（法庭的）禁止报道令"
-        },
-        {
-          "phrase": "suppression of evidence",
-          "meaning_zh": "证据排除；隐匿证据"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "suppress",
-          "pos": "v.",
-          "meaning_zh": "镇压；抑制；忍住"
-        },
-        {
-          "word": "suppressive",
-          "pos": "adj.",
-          "meaning_zh": "抑制的；压制的"
-        },
-        {
-          "word": "suppressively",
-          "pos": "adv.",
-          "meaning_zh": "压制地；抑制地"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/səˈpreʃn/",
+      "status": "pending",
       "term": "suppression"
     },
     {
@@ -5851,267 +3882,67 @@
       "meaning_zh": "点燃（某物）、点燃（某物）；点燃（某物） ，触发",
       "part_of_speech": "v.",
       "phonetic": "/ɪɡˈnaɪt/",
-      "phrases": [
-        {
-          "phrase": "ignite a fire",
-          "meaning_zh": "点火；生火"
-        },
-        {
-          "phrase": "ignite interest",
-          "meaning_zh": "激起兴趣"
-        },
-        {
-          "phrase": "ignite the imagination",
-          "meaning_zh": "激发想象力"
-        },
-        {
-          "phrase": "ignite a debate",
-          "meaning_zh": "引发辩论"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "ignition",
-          "pos": "n.",
-          "meaning_zh": "点火；点火装置"
-        },
-        {
-          "word": "ignitable",
-          "pos": "adj.",
-          "meaning_zh": "可燃的；易点燃的"
-        },
-        {
-          "word": "igniter",
-          "pos": "n.",
-          "meaning_zh": "点火器；引燃剂"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "ignite"
     },
     {
       "created_at": "2026-10-08T16:13:33Z",
+      "example_en": "The government is trying to reduce the budget deficit.",
+      "example_zh": "政府正在努力减少预算赤字。",
       "id": 141,
-      "meaning_en": "Deficiency in amount or quality; a falling short; lack; A situation wherein, or amount whereby, spending exceeds government revenue",
-      "meaning_zh": "数量或质量不足；不足；缺乏；支出或金额超过政府收入的情况",
+      "meaning_en": "The amount by which something, especially money, falls short of what is required or expected; a shortage or shortfall.",
+      "meaning_zh": "赤字；亏损；不足额；欠缺，缺陷",
       "part_of_speech": "n.",
-      "phonetic": "/ˈdɛfɪsɪt/",
-      "phrases": [
-        {
-          "phrase": "budget deficit",
-          "meaning_zh": "预算赤字"
-        },
-        {
-          "phrase": "trade deficit",
-          "meaning_zh": "贸易逆差"
-        },
-        {
-          "phrase": "deficit spending",
-          "meaning_zh": "赤字支出"
-        },
-        {
-          "phrase": "fiscal deficit",
-          "meaning_zh": "财政赤字"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "deficient",
-          "pos": "adj.",
-          "meaning_zh": "不足的；缺乏的"
-        },
-        {
-          "word": "deficiently",
-          "pos": "adv.",
-          "meaning_zh": "不足地；缺乏地"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˈdefɪsɪt/",
+      "status": "pending",
       "term": "deficit"
     },
     {
       "created_at": "2026-10-08T16:15:54Z",
-      "example_en": "The doctor prescribed a course of antibiotics for the infection.",
-      "example_zh": "医生为这次感染开了一个疗程的抗生素。",
+      "example_en": "The doctor prescribed some antibiotics for my infection.",
+      "example_zh": "医生给我开了一些抗生素来治疗感染。",
       "id": 142,
-      "meaning_en": "To order or authorize the use of a medicine or treatment for a patient. It also means to lay down a rule, standard, or course of action officially.",
-      "meaning_zh": "开（处方），给……开药；规定，指令，指示（规则、标准等）",
+      "meaning_en": "To order or give a medicine or treatment as a doctor; also to state officially what should be done or followed as a rule.",
+      "meaning_zh": "开处方，开药；规定，指定，指示",
       "part_of_speech": "v.",
       "phonetic": "/prɪˈskraɪb/",
-      "phrases": [
-        {
-          "phrase": "prescribe medicine for sb.",
-          "meaning_zh": "给某人开药"
-        },
-        {
-          "phrase": "prescribe a treatment",
-          "meaning_zh": "规定治疗方案，开具疗法"
-        },
-        {
-          "phrase": "be prescribed by law",
-          "meaning_zh": "由法律规定"
-        },
-        {
-          "phrase": "prescribe standards for",
-          "meaning_zh": "为……规定标准"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "prescription",
-          "pos": "n.",
-          "meaning_zh": "处方，药方；规定"
-        },
-        {
-          "word": "prescriptive",
-          "pos": "adj.",
-          "meaning_zh": "规定的，规范性的"
-        },
-        {
-          "word": "prescriptively",
-          "pos": "adv.",
-          "meaning_zh": "按规定地，规范地"
-        },
-        {
-          "word": "prescript",
-          "pos": "n.",
-          "meaning_zh": "命令，规定，法令"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "prescribe"
     },
     {
       "created_at": "2026-10-08T16:16:00Z",
       "example_en": "She was hired to oversee the construction of the new bridge.",
-      "example_zh": "她受聘监督新桥的建设。",
+      "example_zh": "她被聘来监督这座新桥的建造工程。",
       "id": 143,
-      "meaning_en": "To watch and direct work or people; to supervise.",
-      "meaning_zh": "监督；管理；照看",
+      "meaning_en": "To watch over and direct a person, activity, or process in order to make sure that it is done properly.",
+      "meaning_zh": "监督；管理；监管；照管",
       "part_of_speech": "v.",
-      "phonetic": "/ˌoʊvərˈsiː/",
-      "phrases": [
-        {
-          "phrase": "oversee the project",
-          "meaning_zh": "监督项目"
-        },
-        {
-          "phrase": "oversee operations",
-          "meaning_zh": "监管运营"
-        },
-        {
-          "phrase": "oversee the implementation",
-          "meaning_zh": "监督实施"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "overseer",
-          "pos": "n.",
-          "meaning_zh": "监工；主管"
-        },
-        {
-          "word": "oversight",
-          "pos": "n.",
-          "meaning_zh": "监督；照管；疏忽"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˌəʊvəˈsiː/",
+      "status": "pending",
       "term": "oversee"
     },
     {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/hazard-us.mp3",
       "created_at": "2026-10-08T16:21:12Z",
-      "example_en": "He encountered the enemy at the hazard of his reputation and life.",
-      "example_zh": "他在名誉和生命的危险中遇到了敌人。",
+      "example_en": "Smoking is a serious health hazard for both smokers and the people around them.",
+      "example_zh": "吸烟对吸烟者及其周围的人都是严重的健康危害。",
       "id": 144,
-      "meaning_en": "The chance of suffering harm; danger, peril, risk of loss; An obstacle or other feature which causes risk or danger; originally in sports, and now applied more generally",
-      "meaning_zh": "遭受伤害的可能性；危险、危险、损失风险；导致风险或危险的障碍物或其他特征；最初用于体育运动，现在更广泛地应用",
-      "part_of_speech": "n.",
-      "phonetic": "/ˈhazəd/",
-      "phrases": [
-        {
-          "phrase": "health hazard",
-          "meaning_zh": "健康危害"
-        },
-        {
-          "phrase": "fire hazard",
-          "meaning_zh": "火灾隐患"
-        },
-        {
-          "phrase": "safety hazard",
-          "meaning_zh": "安全隐患"
-        },
-        {
-          "phrase": "occupational hazard",
-          "meaning_zh": "职业危害"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "hazardous",
-          "pos": "adj.",
-          "meaning_zh": "危险的；有害的"
-        },
-        {
-          "word": "hazardously",
-          "pos": "adv.",
-          "meaning_zh": "危险地；冒险地"
-        }
-      ],
-      "status": "ready",
+      "meaning_en": "A danger or risk, especially something that could cause harm or injury. As a verb, it means to risk losing something or to venture a guess.",
+      "meaning_zh": "危险；危害；隐患；风险；（动词）使遭受危险；冒险尝试；大胆猜测",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈhæzəd/",
+      "status": "pending",
       "term": "hazard"
     },
     {
       "created_at": "2026-10-08T16:21:51Z",
-      "example_en": "She narrated the documentary about ancient Egypt in a calm, steady voice.",
-      "example_zh": "她用平静而沉稳的声音为那部关于古埃及的纪录片担任解说。",
+      "example_en": "She narrated the story of her journey across Asia.",
+      "example_zh": "她讲述了自己横跨亚洲的旅程。",
       "id": 145,
-      "meaning_en": "To tell a story or describe a series of events in speech or writing; to provide the spoken commentary for a film, programme or broadcast.",
-      "meaning_zh": "讲述，叙述（故事、事件）；为（电影、节目等）作解说，配旁白。",
+      "meaning_en": "To tell a story or describe a series of events in speech or writing; also to provide the spoken commentary for a film, programme, etc.",
+      "meaning_zh": "讲述，叙述（故事、事件）；为（影片、节目等）作解说、旁白",
       "part_of_speech": "v.",
       "phonetic": "/nəˈreɪt/",
-      "phrases": [
-        {
-          "phrase": "narrate a story",
-          "meaning_zh": "讲述一个故事"
-        },
-        {
-          "phrase": "narrate a documentary",
-          "meaning_zh": "为纪录片解说/配旁白"
-        },
-        {
-          "phrase": "narrate events in detail",
-          "meaning_zh": "详细叙述事件"
-        },
-        {
-          "phrase": "narrate in the first person",
-          "meaning_zh": "用第一人称叙述"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "narrator",
-          "pos": "n.",
-          "meaning_zh": "叙述者；解说员；旁白者"
-        },
-        {
-          "word": "narration",
-          "pos": "n.",
-          "meaning_zh": "叙述，讲述；解说，旁白"
-        },
-        {
-          "word": "narrative",
-          "pos": "adj.",
-          "meaning_zh": "叙事的，叙述的"
-        },
-        {
-          "word": "narratively",
-          "pos": "adv.",
-          "meaning_zh": "从叙事角度上"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "narrate"
     },
     {
@@ -6120,293 +3951,67 @@
       "meaning_en": "A body of standing water, such as a lake or a pond. More specifically, it can refer to a lake that is broad in relation to its depth. Also included in place names such as Windermere",
       "meaning_zh": "积水，如湖泊或池塘。更具体地说，它可以指相对于其深度而言较宽的湖泊。也包括在温德米尔等地名中",
       "part_of_speech": "n.",
-      "phrases": [
-        {
-          "phrase": "Windermere",
-          "meaning_zh": "温德米尔湖（英格兰最大湖泊）"
-        },
-        {
-          "phrase": "Grasmere",
-          "meaning_zh": "格拉斯米尔湖（湖区著名湖泊）"
-        },
-        {
-          "phrase": "Buttermere",
-          "meaning_zh": "巴特米尔湖（湖区湖泊）"
-        },
-        {
-          "phrase": "Thirlmere",
-          "meaning_zh": "瑟尔米尔湖（湖区湖泊/水库）"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
+      "status": "pending",
       "term": "mere"
     },
     {
       "created_at": "2026-10-08T16:26:54Z",
-      "example_en": "Many adolescents struggle with peer pressure.",
-      "example_zh": "许多青少年面临同伴压力。",
+      "example_en": "Many adolescents struggle with peer pressure during their teenage years.",
+      "example_zh": "许多青少年在十几岁时都会因同伴压力而感到困扰。",
       "id": 147,
-      "meaning_en": "A young person who is developing from a child into an adult; relating to this stage of development.",
-      "meaning_zh": "青少年；青春期的；青少年的",
+      "meaning_en": "A young person who is developing from a child into an adult, roughly between the ages of 13 and 19. As an adjective, it describes something relating to this stage of life.",
+      "meaning_zh": "n. 青少年，青春期的人（约13至19岁）；adj. 青春期的，青少年的；不成熟的",
       "part_of_speech": "n. / adj.",
-      "phonetic": "/ˌædəˈlesənt/",
-      "phrases": [
-        {
-          "phrase": "adolescent behavior",
-          "meaning_zh": "青少年行为"
-        },
-        {
-          "phrase": "adolescent development",
-          "meaning_zh": "青春期发育；青少年发展"
-        },
-        {
-          "phrase": "adolescent years",
-          "meaning_zh": "青春期；青少年时期"
-        },
-        {
-          "phrase": "adolescent health",
-          "meaning_zh": "青少年健康"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "adolesce",
-          "pos": "v.",
-          "meaning_zh": "进入青春期；成长为青少年（罕用）"
-        },
-        {
-          "word": "adolescently",
-          "pos": "adv.",
-          "meaning_zh": "以青少年的方式；青春期地（罕用）"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˌædəˈlesnt/",
+      "status": "pending",
       "term": "adolescent"
     },
     {
       "created_at": "2026-10-08T16:27:30Z",
-      "example_en": "Smartphones have created a techno-social environment in which online and offline relationships constantly overlap.",
-      "example_zh": "智能手机营造出一种技术-社会环境，线上与线下的人际关系在其中不断交织。",
+      "example_en": "The internet is a techno-social system in which technical protocols and human behaviour constantly shape each other.",
+      "example_zh": "互联网是一个技术—社会系统，其中技术协议与人类行为不断相互塑造。",
       "id": 148,
-      "meaning_en": "Relating to the interaction or combination of technology and social structures, practices, or relationships.",
-      "meaning_zh": "技术-社会的；涉及技术与社会相互作用的；由技术因素与社会因素共同构成的",
+      "meaning_en": "Relating to the interaction or combination of technology and social structures, practices, or human relationships. Often used to describe systems in which technical and social elements shape each other.",
+      "meaning_zh": "技术-社会的；科技与社会互动的；兼有技术与社会双重属性的。常用于描述技术因素与社会因素相互作用、彼此塑造的系统或现象。",
       "part_of_speech": "adj.",
       "phonetic": "/ˌteknoʊˈsoʊʃəl/",
-      "phrases": [
-        {
-          "phrase": "techno-social system",
-          "meaning_zh": "技术-社会系统"
-        },
-        {
-          "phrase": "techno-social change",
-          "meaning_zh": "技术与社会变迁"
-        },
-        {
-          "phrase": "techno-social interaction",
-          "meaning_zh": "技术与社会互动"
-        },
-        {
-          "phrase": "techno-social network",
-          "meaning_zh": "技术-社会网络"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "socially",
-          "pos": "adv.",
-          "meaning_zh": "在社会方面；社交上"
-        },
-        {
-          "word": "society",
-          "pos": "n.",
-          "meaning_zh": "社会；社团"
-        },
-        {
-          "word": "socialize",
-          "pos": "v.",
-          "meaning_zh": "社交；使社会化"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "techno-social"
     },
     {
       "created_at": "2026-10-08T16:27:41Z",
-      "example_en": "She raised her hand to shield her eyes from the bright sunlight.",
-      "example_zh": "她抬起手遮挡刺眼的阳光。",
+      "example_en": "She raised her shield to block the arrow, shielding the child behind her.",
+      "example_zh": "她举起盾牌挡住箭矢，护住了身后的孩子。",
       "id": 149,
-      "meaning_en": "A broad piece of defensive armor or a protective barrier; to protect someone or something from harm or danger.",
-      "meaning_zh": "盾；盾牌；防护物；保护；掩护",
+      "meaning_en": "A broad piece of armor held on the arm to block blows; by extension, anything that protects or defends. As a verb, it means to protect someone or something from harm or danger.",
+      "meaning_zh": "n. 盾；盾牌；防护物，屏障；保护者；（盾形）徽章。v. 保护，掩护；遮挡，遮蔽。",
       "part_of_speech": "n. / v.",
       "phonetic": "/ʃiːld/",
-      "phrases": [
-        {
-          "phrase": "riot shield",
-          "meaning_zh": "防暴盾牌"
-        },
-        {
-          "phrase": "heat shield",
-          "meaning_zh": "隔热罩；热屏蔽"
-        },
-        {
-          "phrase": "shield from",
-          "meaning_zh": "保护……免受"
-        },
-        {
-          "phrase": "human shield",
-          "meaning_zh": "人体盾牌"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "shieldless",
-          "pos": "adj.",
-          "meaning_zh": "无保护的；无盾的"
-        },
-        {
-          "word": "shielded",
-          "pos": "adj.",
-          "meaning_zh": "屏蔽的；受保护的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "shield"
     },
     {
       "created_at": "2026-10-08T16:27:58Z",
-      "example_en": "Her feed is full of selfie-vanity, with every post carefully edited to impress.",
-      "example_zh": "她的动态充满自拍虚荣，每条帖子都精心修图以引人注目。",
+      "example_en": "Her colleagues dismissed her endless filtered posts as pure selfie-vanity.",
+      "example_zh": "同事们把她没完没了发滤镜自拍的行为斥为纯粹的自拍虚荣。",
       "id": 150,
-      "meaning_en": "Vanity or excessive pride in oneself, especially as expressed by taking and sharing selfies.",
-      "meaning_zh": "自拍虚荣；通过自拍展示自我、满足虚荣心的行为或心态。",
+      "meaning_en": "Excessive pride or self-absorption shown by taking and sharing selfies, especially on social media. It describes vanity expressed through constant self-portraits.",
+      "meaning_zh": "自拍虚荣；指通过不停地自拍并在社交媒体上晒自拍所表现出的虚荣心和自我陶醉。",
       "part_of_speech": "n.",
-      "phonetic": "/ˈselfi ˈvænəti/",
-      "phrases": [
-        {
-          "phrase": "vanity selfie",
-          "meaning_zh": "虚荣自拍"
-        },
-        {
-          "phrase": "selfie stick",
-          "meaning_zh": "自拍杆"
-        },
-        {
-          "phrase": "vanity mirror",
-          "meaning_zh": "化妆镜"
-        },
-        {
-          "phrase": "vanity project",
-          "meaning_zh": "面子工程；虚荣项目"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "vain",
-          "pos": "adj.",
-          "meaning_zh": "虚荣的；自负的"
-        },
-        {
-          "word": "vainly",
-          "pos": "adv.",
-          "meaning_zh": "徒劳地；自负地"
-        },
-        {
-          "word": "vainglorious",
-          "pos": "adj.",
-          "meaning_zh": "极度虚荣的；自负的"
-        }
-      ],
-      "status": "ready",
+      "phonetic": "/ˈsɛlfi ˈvænəti/",
+      "status": "pending",
       "term": "selfie-vanity"
     },
     {
       "created_at": "2026-10-08T17:50:44Z",
-      "example_en": "Heavy rain gradually eroded the hillside.",
-      "example_zh": "大雨逐渐侵蚀了山坡。",
       "id": 152,
-      "meaning_en": "To wear away or destroy gradually, especially by natural forces such as wind, water, or chemical action; to weaken something over time.",
-      "meaning_zh": "侵蚀；腐蚀；逐渐削弱（或损害）",
-      "part_of_speech": "v.",
-      "phonetic": "/ɪˈroʊd/",
-      "phrases": [
-        {
-          "phrase": "erode away",
-          "meaning_zh": "逐渐侵蚀掉；使消失"
-        },
-        {
-          "phrase": "erode confidence",
-          "meaning_zh": "削弱信心"
-        },
-        {
-          "phrase": "erode trust",
-          "meaning_zh": "损害信任"
-        },
-        {
-          "phrase": "erode the foundation",
-          "meaning_zh": "侵蚀基础；动摇根基"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "erosion",
-          "pos": "n.",
-          "meaning_zh": "侵蚀；削弱"
-        },
-        {
-          "word": "erosive",
-          "pos": "adj.",
-          "meaning_zh": "侵蚀性的；腐蚀性的"
-        },
-        {
-          "word": "erodible",
-          "pos": "adj.",
-          "meaning_zh": "易受侵蚀的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "erode"
     },
     {
       "created_at": "2026-10-08T17:57:05Z",
-      "example_en": "Papers and books cluttered the desk, making it hard to work.",
-      "example_zh": "文件和书籍杂乱地堆在书桌上，让人难以工作。",
       "id": 153,
-      "meaning_en": "A collection of things lying about in an untidy mass; to fill or cover a place with an untidy collection of things.",
-      "meaning_zh": "（名词）杂乱的东西；凌乱；混乱；（动词）使凌乱；胡乱堆放；塞满",
-      "part_of_speech": "n. / v.",
-      "phonetic": "/ˈklʌtər/",
-      "phrases": [
-        {
-          "phrase": "clutter up",
-          "meaning_zh": "堆满；塞满；使凌乱"
-        },
-        {
-          "phrase": "a clutter of",
-          "meaning_zh": "一堆杂乱的……"
-        },
-        {
-          "phrase": "mental clutter",
-          "meaning_zh": "精神杂念；思绪混乱"
-        },
-        {
-          "phrase": "household clutter",
-          "meaning_zh": "家里的杂物"
-        }
-      ],
-      "related_forms": [
-        {
-          "word": "cluttered",
-          "pos": "adj.",
-          "meaning_zh": "凌乱的；塞满的"
-        },
-        {
-          "word": "clutter-free",
-          "pos": "adj.",
-          "meaning_zh": "无杂物的；整洁的"
-        }
-      ],
-      "status": "ready",
+      "status": "pending",
       "term": "clutter"
     }
   ]
