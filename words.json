@@ -6670,8 +6670,33 @@
     },
     {
       "created_at": "2026-10-11T18:42:45Z",
+      "example_en": "He pinched the bridge of his nose and sighed.",
+      "example_zh": "他捏了捏鼻梁，叹了口气。",
       "id": 168,
-      "status": "pending",
+      "meaning_en": "To squeeze something tightly between the finger and thumb; a small amount, especially of salt, or a tight squeeze.",
+      "meaning_zh": "捏；拧；掐；夹痛；一撮；少量；紧要关头",
+      "part_of_speech": "v. / n.",
+      "phonetic": "/pɪntʃ/",
+      "phrases": [
+        {
+          "phrase": "a pinch of salt",
+          "meaning_zh": "一撮盐；少量"
+        },
+        {
+          "phrase": "at a pinch",
+          "meaning_zh": "必要时；在紧要关头"
+        },
+        {
+          "phrase": "in a pinch",
+          "meaning_zh": "在紧要关头；必要时"
+        },
+        {
+          "phrase": "feel the pinch",
+          "meaning_zh": "感到手头拮据；感到压力"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "pinch"
     }
   ]
