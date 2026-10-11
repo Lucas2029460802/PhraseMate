@@ -4533,14 +4533,44 @@
     },
     {
       "created_at": "2026-10-08T15:38:20Z",
-      "example_en": "The company offers a cash bonus as an incentive for employees to meet their sales targets.",
-      "example_zh": "公司提供现金奖金，作为激励员工完成销售目标的奖励。",
+      "example_en": "The bonus acts as an incentive for workers to improve productivity.",
+      "example_zh": "奖金作为一种激励，促使工人提高生产率。",
       "id": 116,
-      "meaning_en": "Something that encourages or motivates a person to do something, often a reward or benefit offered to stimulate effort or action.",
-      "meaning_zh": "激励；刺激；鼓励；动力；奖励措施",
+      "meaning_en": "A thing that motivates or encourages someone to do something; a reward or advantage offered to stimulate action.",
+      "meaning_zh": "激励；刺激；诱因；奖励；鼓励措施",
       "part_of_speech": "n.",
       "phonetic": "/ɪnˈsentɪv/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "financial incentive",
+          "meaning_zh": "经济激励；财务激励"
+        },
+        {
+          "phrase": "tax incentive",
+          "meaning_zh": "税收优惠；税收激励"
+        },
+        {
+          "phrase": "incentive scheme",
+          "meaning_zh": "激励方案；奖励计划"
+        },
+        {
+          "phrase": "incentive to do something",
+          "meaning_zh": "做某事的动力；做某事的诱因"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "incentivize",
+          "pos": "v.",
+          "meaning_zh": "激励；刺激；给予奖励"
+        },
+        {
+          "word": "incentivized",
+          "pos": "adj.",
+          "meaning_zh": "受到激励的；有奖励的"
+        }
+      ],
+      "status": "ready",
       "term": "incentive"
     },
     {
