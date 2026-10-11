@@ -6543,8 +6543,45 @@
     },
     {
       "created_at": "2026-10-11T16:25:25Z",
+      "example_en": "The farmers celebrated a bountiful harvest after the rainy season.",
+      "example_zh": "雨季过后，农民们庆祝了一个大丰收。",
       "id": 164,
-      "status": "pending",
+      "meaning_en": "Large in amount; abundantly generous or plentiful.",
+      "meaning_zh": "大量的；丰富的；慷慨的",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˈbaʊntɪfl/",
+      "phrases": [
+        {
+          "phrase": "a bountiful harvest",
+          "meaning_zh": "大丰收"
+        },
+        {
+          "phrase": "bountiful supply",
+          "meaning_zh": "充足的供应"
+        },
+        {
+          "phrase": "bountiful blessings",
+          "meaning_zh": "丰厚的恩赐"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "bounty",
+          "pos": "n.",
+          "meaning_zh": "慷慨；赏金；恩惠"
+        },
+        {
+          "word": "bountifully",
+          "pos": "adv.",
+          "meaning_zh": "慷慨地；丰富地"
+        },
+        {
+          "word": "bountifulness",
+          "pos": "n.",
+          "meaning_zh": "慷慨；丰富"
+        }
+      ],
+      "status": "ready",
       "term": "bountiful"
     }
   ]
