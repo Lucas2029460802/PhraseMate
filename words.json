@@ -6586,9 +6586,45 @@
     },
     {
       "created_at": "2026-10-11T18:12:47Z",
+      "example_en": "She was forced into prostitution at a young age.",
+      "example_zh": "她年幼时被迫卖淫。",
       "id": 166,
-      "status": "pending",
-      "term": "prostituation"
+      "meaning_en": "The practice or occupation of engaging in sexual activity for payment.",
+      "meaning_zh": "卖淫；娼妓业；卖淫行为",
+      "part_of_speech": "n.",
+      "phonetic": "/ˌprɒstɪˈtjuːʃn/",
+      "phrases": [
+        {
+          "phrase": "forced prostitution",
+          "meaning_zh": "强迫卖淫"
+        },
+        {
+          "phrase": "child prostitution",
+          "meaning_zh": "儿童卖淫"
+        },
+        {
+          "phrase": "prostitution ring",
+          "meaning_zh": "卖淫团伙"
+        },
+        {
+          "phrase": "engage in prostitution",
+          "meaning_zh": "从事卖淫"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "prostitute",
+          "pos": "v.",
+          "meaning_zh": "卖淫；出卖（自己或才能）"
+        },
+        {
+          "word": "prostitutional",
+          "pos": "adj.",
+          "meaning_zh": "卖淫的；与卖淫有关的"
+        }
+      ],
+      "status": "ready",
+      "term": "prostitution"
     }
   ]
 }
