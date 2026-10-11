@@ -6449,8 +6449,49 @@
     },
     {
       "created_at": "2026-10-11T16:20:01Z",
+      "example_en": "The doctor said her constant tiredness was caused by an iron deficiency.",
+      "example_zh": "医生说，她经常感到疲倦是缺铁造成的。",
       "id": 162,
-      "status": "pending",
+      "meaning_en": "A lack or shortage of something necessary, especially a nutrient or vitamin; also a fault or weakness in something.",
+      "meaning_zh": "缺乏，不足（尤指维生素、营养等）；缺陷，缺点。",
+      "part_of_speech": "n.",
+      "phonetic": "/dɪˈfɪʃnsi/",
+      "phrases": [
+        {
+          "phrase": "vitamin deficiency",
+          "meaning_zh": "维生素缺乏"
+        },
+        {
+          "phrase": "deficiency disease",
+          "meaning_zh": "营养缺乏病"
+        },
+        {
+          "phrase": "make up for a deficiency",
+          "meaning_zh": "弥补不足"
+        },
+        {
+          "phrase": "deficiency in",
+          "meaning_zh": "在……方面的缺乏"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "deficient",
+          "pos": "adj.",
+          "meaning_zh": "缺乏的，不足的；有缺陷的"
+        },
+        {
+          "word": "deficit",
+          "pos": "n.",
+          "meaning_zh": "赤字，亏损；不足额"
+        },
+        {
+          "word": "deficiently",
+          "pos": "adv.",
+          "meaning_zh": "不足地，欠缺地"
+        }
+      ],
+      "status": "ready",
       "term": "deficiency"
     }
   ]
