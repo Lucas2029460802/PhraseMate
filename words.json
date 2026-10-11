@@ -5332,14 +5332,49 @@
     },
     {
       "created_at": "2026-10-08T16:04:09Z",
-      "example_en": "Firefighters worked through the night to put out the blaze.",
-      "example_zh": "消防员通宵奋战，扑灭了大火。",
+      "example_en": "Firefighters battled the blaze for hours before bringing it under control.",
+      "example_zh": "消防员与大火搏斗了数小时才将其控制住。",
       "id": 134,
-      "meaning_en": "As a noun: a very large, bright fire, or a bright glow of light. As a verb: to burn or shine very brightly and strongly.",
-      "meaning_zh": "n. 熊熊大火；烈火；（光、色彩的）闪耀，强光；（感情的）爆发；v. 熊熊燃烧；闪耀，发光；猛烈地燃烧；（枪炮）连发。",
+      "meaning_en": "A very large or fiercely burning fire; to burn brightly and strongly.",
+      "meaning_zh": "大火；烈火；熊熊燃烧；闪耀；（怒气等）爆发",
       "part_of_speech": "n. / v.",
       "phonetic": "/bleɪz/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "blaze a trail",
+          "meaning_zh": "开辟道路；做先锋"
+        },
+        {
+          "phrase": "blaze up",
+          "meaning_zh": "突然燃烧起来；突然发怒"
+        },
+        {
+          "phrase": "a blaze of glory",
+          "meaning_zh": "荣耀的光辉；辉煌的结局"
+        },
+        {
+          "phrase": "blaze with anger",
+          "meaning_zh": "怒火中烧"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "blazing",
+          "pos": "adj.",
+          "meaning_zh": "炽热的；闪耀的；激烈的"
+        },
+        {
+          "word": "ablaze",
+          "pos": "adj.",
+          "meaning_zh": "燃烧的；闪耀的；激动的"
+        },
+        {
+          "word": "blazingly",
+          "pos": "adv.",
+          "meaning_zh": "极其；耀眼地"
+        }
+      ],
+      "status": "ready",
       "term": "blaze"
     },
     {
