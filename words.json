@@ -5541,12 +5541,49 @@
     },
     {
       "created_at": "2026-10-08T16:12:26Z",
+      "example_en": "The spark ignited the dry grass.",
+      "example_zh": "火花点燃了干草。",
       "id": 140,
-      "meaning_en": "To set fire to (something), to light (something); To spark off (something), to trigger",
-      "meaning_zh": "点燃（某物）、点燃（某物）；点燃（某物） ，触发",
+      "meaning_en": "To cause something to start burning, or to cause strong feelings or reactions.",
+      "meaning_zh": "点燃；引发，激起（感情、争论等）",
       "part_of_speech": "v.",
       "phonetic": "/ɪɡˈnaɪt/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "ignite a fire",
+          "meaning_zh": "点火，生火"
+        },
+        {
+          "phrase": "ignite interest",
+          "meaning_zh": "激起兴趣"
+        },
+        {
+          "phrase": "ignite a debate",
+          "meaning_zh": "引发争论"
+        },
+        {
+          "phrase": "ignite the fuel",
+          "meaning_zh": "点燃燃料"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "ignition",
+          "pos": "n.",
+          "meaning_zh": "点火，点燃；点火装置"
+        },
+        {
+          "word": "ignitable",
+          "pos": "adj.",
+          "meaning_zh": "可燃的，易燃的"
+        },
+        {
+          "word": "igniter",
+          "pos": "n.",
+          "meaning_zh": "点火器，引燃物"
+        }
+      ],
+      "status": "ready",
       "term": "ignite"
     },
     {
