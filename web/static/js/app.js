@@ -1472,7 +1472,7 @@
         // 滚轮 / 触摸板滚动手势：只缩放内部文字；平移请按住拖动
         e.preventDefault();
         const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
-        const factor = Math.exp(-delta * 0.01);
+        const factor = Math.exp(-delta * 0.0025);
         setReaderZoom(readerZoom * factor, { x: e.clientX, y: e.clientY });
       },
       { passive: false }
