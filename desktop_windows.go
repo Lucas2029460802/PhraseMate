@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"runtime"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -24,14 +25,25 @@ func runDesktop(url string) {
 	dpi.Enable()
 
 	var (
-		mainView  atomic.Pointer[webviewHolder]
-		floatHost *floatwin.Host
-		trayHost  *tray.Host
-		mu        sync.Mutex
+		mainView       atomic.Pointer[webviewHolder]
+		writingView    atomic.Pointer[webviewHolder]
+		writingStartMu sync.Mutex
+		writingStarting bool
+		floatHost      *floatwin.Host
+		trayHost       *tray.Host
+		mu             sync.Mutex
 	)
 
 	refreshMain := func() {
 		if p := mainView.Load(); p != nil && p.w != nil {
+			p.w.Dispatch(func() {
+				p.w.Eval(`window.phrasemateRefresh && window.phrasemateRefresh();`)
+			})
+		}
+	}
+
+	refreshWriting := func() {
+		if p := writingView.Load(); p != nil && p.w != nil {
 			p.w.Dispatch(func() {
 				p.w.Eval(`window.phrasemateRefresh && window.phrasemateRefresh();`)
 			})
@@ -67,6 +79,60 @@ func runDesktop(url string) {
 		}
 	}
 
+	showWriting := func() {
+		if p := writingView.Load(); p != nil && p.hwnd != 0 {
+			winutil.Show(p.hwnd)
+			refreshWriting()
+			return
+		}
+		writingStartMu.Lock()
+		if writingStarting {
+			writingStartMu.Unlock()
+			return
+		}
+		writingStarting = true
+		writingStartMu.Unlock()
+
+		go func() {
+			runtime.LockOSThread()
+			defer func() {
+				writingStartMu.Lock()
+				writingStarting = false
+				writingStartMu.Unlock()
+			}()
+
+			w := webview2.NewWithOptions(webview2.WebViewOptions{
+				Debug:     envTruthy("PHRASEMATE_DEBUG"),
+				AutoFocus: true,
+				DataPath:  filepathJoinTemp("phrasemate-webview-writing"),
+				WindowOptions: webview2.WindowOptions{
+					Title:  "PhraseMate 写作本",
+					Width:  1180,
+					Height: 760,
+					Center: true,
+				},
+			})
+			if w == nil {
+				log.Println("无法创建写作本窗口（WebView2）")
+				return
+			}
+			hwnd := winutil.Hwnd(w.Window())
+			restore := winutil.HideOnClose(hwnd)
+			holder := &webviewHolder{w: w, hwnd: hwnd, restore: restore}
+			writingView.Store(holder)
+
+			_ = w.Bind("showFloatWindow", func() { showFloat() })
+			_ = w.Bind("showNotebookWindow", func() { showNotebook() })
+			_ = w.Bind("hideNotebookWindow", func() { hideNotebook() })
+
+			w.SetSize(1180, 760, webview2.HintNone)
+			w.Navigate(url + "/?page=writing")
+			log.Println("写作本窗口已启动：可与生词本同时显示")
+			w.Run()
+			writingView.Store(nil)
+		}()
+	}
+
 	createShortcut := func() {
 		path, err := shortcut.CreateDesktop()
 		if err != nil {
@@ -81,6 +147,10 @@ func runDesktop(url string) {
 		defer mu.Unlock()
 		if floatHost != nil {
 			floatHost.Close()
+		}
+		if p := writingView.Load(); p != nil && p.w != nil {
+			p.restore()
+			p.w.Destroy()
 		}
 		if p := mainView.Load(); p != nil && p.w != nil {
 			// Force destroy (bypass hide-on-close) by restoring then destroying.
@@ -146,6 +216,12 @@ func runDesktop(url string) {
 	})
 	_ = w.Bind("hideNotebookWindow", func() {
 		hideNotebook()
+	})
+	_ = w.Bind("openWritingWindow", func() {
+		showWriting()
+	})
+	_ = w.Bind("showNotebookWindow", func() {
+		showNotebook()
 	})
 
 	w.SetSize(1180, 760, webview2.HintNone)

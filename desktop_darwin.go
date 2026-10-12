@@ -26,14 +26,21 @@ func runDesktop(url string) {
 	}
 
 	var (
-		mainView  atomic.Pointer[macWindow]
-		floatHost *floatwin.Host
-		trayHost  *tray.Host
-		mu        sync.Mutex
+		mainView    atomic.Pointer[macWindow]
+		writingView atomic.Pointer[macWindow]
+		floatHost   *floatwin.Host
+		trayHost    *tray.Host
+		mu          sync.Mutex
 	)
 
 	refreshMain := func() {
 		if p := mainView.Load(); p != nil && p.w != nil {
+			p.w.Eval(`window.phrasemateRefresh && window.phrasemateRefresh();`)
+		}
+	}
+
+	refreshWriting := func() {
+		if p := writingView.Load(); p != nil && p.w != nil {
 			p.w.Eval(`window.phrasemateRefresh && window.phrasemateRefresh();`)
 		}
 	}
@@ -67,6 +74,30 @@ func runDesktop(url string) {
 		}
 	}
 
+	showWriting := func() {
+		if p := writingView.Load(); p != nil && p.w != nil {
+			p.w.Show()
+			refreshWriting()
+			return
+		}
+		flags := macui.WindowHideOnClose | macui.WindowCenter
+		if envTruthy("PHRASEMATE_DEBUG") {
+			flags |= macui.WindowDebug
+		}
+		ww := macui.NewWindow("PhraseMate 写作本", 1180, 760, flags)
+		if ww == nil {
+			log.Println("无法创建写作本窗口")
+			return
+		}
+		writingView.Store(&macWindow{w: ww})
+		ww.Bind("showFloatWindow", func(_ []string) { showFloat() })
+		ww.Bind("showNotebookWindow", func(_ []string) { showNotebook() })
+		ww.Bind("hideNotebookWindow", func(_ []string) { hideNotebook() })
+		ww.Navigate(url + "/?page=writing")
+		ww.Show()
+		log.Println("写作本窗口已启动：可与生词本同时显示")
+	}
+
 	createShortcut := func() {
 		path, err := shortcut.CreateDesktop()
 		if err != nil {
@@ -81,6 +112,10 @@ func runDesktop(url string) {
 		defer mu.Unlock()
 		if floatHost != nil {
 			floatHost.Close()
+		}
+		if p := writingView.Load(); p != nil && p.w != nil {
+			p.w.Destroy()
+			writingView.Store(nil)
 		}
 		if p := mainView.Load(); p != nil && p.w != nil {
 			p.w.Destroy()
@@ -133,6 +168,12 @@ func runDesktop(url string) {
 	})
 	w.Bind("hideNotebookWindow", func(_ []string) {
 		hideNotebook()
+	})
+	w.Bind("openWritingWindow", func(_ []string) {
+		showWriting()
+	})
+	w.Bind("showNotebookWindow", func(_ []string) {
+		showNotebook()
 	})
 	w.Navigate(url)
 	w.Show()

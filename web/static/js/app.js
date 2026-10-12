@@ -81,6 +81,29 @@
   let writingModelEditing = false;
   let promptImages = [];
   const MAX_PROMPT_IMAGES = 6;
+  const bootPage = new URLSearchParams(location.search).get("page") || "notebook";
+  const isAuxWritingWindow = bootPage === "writing";
+
+  function openWritingWindowPreferred() {
+    if (typeof window.openWritingWindow === "function") {
+      window.openWritingWindow();
+      return true;
+    }
+    try {
+      window.open(`${location.origin}/?page=writing`, "phrasemate-writing");
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  function showNotebookWindowPreferred() {
+    if (typeof window.showNotebookWindow === "function") {
+      window.showNotebookWindow();
+      return true;
+    }
+    return false;
+  }
 
   async function api(path, options = {}) {
     const res = await fetch(path, {
@@ -995,6 +1018,15 @@
   }
 
   async function refreshAll({ silent } = {}) {
+    const onWriting =
+      isAuxWritingWindow || (els.pageWriting && !els.pageWriting.hidden);
+    if (onWriting) {
+      await Promise.all([
+        loadStatus({ silent }),
+        loadWritings({ silent: true }).catch(() => {}),
+      ]);
+      return;
+    }
     await Promise.all([loadWords({ silent }), loadStatus({ silent })]);
   }
 
@@ -1232,6 +1264,7 @@
   });
 
   els.btnGoWriting?.addEventListener("click", () => {
+    if (openWritingWindowPreferred()) return;
     openWritingPage().catch((err) => toast(err.message));
   });
 
@@ -1247,6 +1280,12 @@
         toast(err.message);
         return;
       }
+    }
+    if (isAuxWritingWindow) {
+      if (!showNotebookWindowPreferred()) {
+        location.href = "/";
+      }
+      return;
     }
     showPage("notebook");
   });
@@ -1625,7 +1664,19 @@
     reportQuizAnswer(wordId, isCorrect);
   });
 
-  showPage("notebook");
-  loadStatus();
-  loadWords().catch((err) => toast(err.message));
+  if (isAuxWritingWindow) {
+    document.body.classList.add("aux-writing");
+    document.title = "PhraseMate 写作本";
+    if (els.btnBackFromWriting) {
+      els.btnBackFromWriting.textContent = "显示生词本";
+    }
+    if (els.btnGoWriting) els.btnGoWriting.hidden = true;
+    if (els.btnGoQuiz) els.btnGoQuiz.hidden = true;
+    openWritingPage().catch((err) => toast(err.message));
+    loadStatus();
+  } else {
+    showPage("notebook");
+    loadStatus();
+    loadWords().catch((err) => toast(err.message));
+  }
 })();
