@@ -6933,8 +6933,40 @@
     },
     {
       "created_at": "2026-10-12T15:15:13Z",
+      "example_en": "She is one of the foremost experts in the field.",
+      "example_zh": "她是该领域最杰出的专家之一。",
       "id": 175,
-      "status": "pending",
+      "meaning_en": "Most important, leading, or prominent; also, before anything else.",
+      "meaning_zh": "最重要的；首要的；领先的；首先；居于首位地",
+      "part_of_speech": "adj. / adv.",
+      "phonetic": "/ˈfɔːrmoʊst/",
+      "phrases": [
+        {
+          "phrase": "first and foremost",
+          "meaning_zh": "首先；首要的是"
+        },
+        {
+          "phrase": "foremost among",
+          "meaning_zh": "在……中居首；在……中最为突出"
+        },
+        {
+          "phrase": "the foremost authority on",
+          "meaning_zh": "……方面的最高权威"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "fore",
+          "pos": "n.",
+          "meaning_zh": "前部；船头"
+        },
+        {
+          "word": "former",
+          "pos": "n.",
+          "meaning_zh": "前者"
+        }
+      ],
+      "status": "ready",
       "term": "foremost"
     }
   ]
