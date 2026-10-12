@@ -154,20 +154,21 @@
     </section>
   </main>
 
-  <div class="modal-backdrop writing-reader-backdrop" id="writingReader" hidden>
-    <div class="writing-reader" role="dialog" aria-modal="true" aria-labelledby="writingReaderTitle">
+  <!-- Standalone model-essay reader (own window or in-app page) -->
+  <main class="page page-reader" id="pageReader" hidden>
+    <section class="panel writing-reader writing-reader-standalone">
       <div class="writing-reader-head">
         <h2 id="writingReaderTitle" class="writing-reader-title">范文</h2>
         <div class="writing-reader-head-actions">
           <span class="writing-zoom-hint" id="writingZoomHint">100%</span>
-          <button type="button" class="icon-btn modal-close" id="btnCloseWritingReader" aria-label="关闭">×</button>
+          <button type="button" class="btn ghost sm" id="btnReaderZoomReset">重置缩放</button>
         </div>
       </div>
       <div class="writing-reader-body" id="writingReaderBody">
         <div class="writing-reader-zoom md-prose md-prose-lg" id="writingReaderZoom"></div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <div class="modal-backdrop writing-image-lightbox" id="writingImageLightbox" hidden>
     <button type="button" class="icon-btn writing-lightbox-close" id="btnCloseImageLightbox" aria-label="关闭">×</button>

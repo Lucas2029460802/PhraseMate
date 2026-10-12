@@ -32,11 +32,12 @@
     writingSaveHint: $("#writingSaveHint"),
     btnToggleModelEdit: $("#btnToggleModelEdit"),
     btnExpandModel: $("#btnExpandModel"),
-    writingReader: $("#writingReader"),
+    pageReader: $("#pageReader"),
+    writingReaderTitle: $("#writingReaderTitle"),
     writingReaderBody: $("#writingReaderBody"),
     writingReaderZoom: $("#writingReaderZoom"),
     writingZoomHint: $("#writingZoomHint"),
-    btnCloseWritingReader: $("#btnCloseWritingReader"),
+    btnReaderZoomReset: $("#btnReaderZoomReset"),
     writingImageLightbox: $("#writingImageLightbox"),
     writingLightboxImg: $("#writingLightboxImg"),
     btnCloseImageLightbox: $("#btnCloseImageLightbox"),
@@ -81,8 +82,11 @@
   let writingModelEditing = false;
   let promptImages = [];
   const MAX_PROMPT_IMAGES = 6;
-  const bootPage = new URLSearchParams(location.search).get("page") || "notebook";
+  const bootParams = new URLSearchParams(location.search);
+  const bootPage = bootParams.get("page") || "notebook";
+  const bootReaderId = Number(bootParams.get("id") || 0);
   const isAuxWritingWindow = bootPage === "writing";
+  const isAuxReaderWindow = bootPage === "reader";
 
   function openWritingWindowPreferred() {
     if (typeof window.openWritingWindow === "function") {
@@ -103,6 +107,24 @@
       return true;
     }
     return false;
+  }
+
+  function openReaderWindowPreferred(writingId) {
+    const id = Number(writingId);
+    if (!id) return false;
+    if (typeof window.openReaderWindow === "function") {
+      window.openReaderWindow(id);
+      return true;
+    }
+    try {
+      window.open(
+        `${location.origin}/?page=reader&id=${id}`,
+        `phrasemate-reader-${id}-${Date.now()}`
+      );
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   async function api(path, options = {}) {
@@ -150,11 +172,14 @@
   function showPage(name) {
     const isQuiz = name === "quiz";
     const isWriting = name === "writing";
-    els.pageNotebook.hidden = isQuiz || isWriting;
+    const isReader = name === "reader";
+    els.pageNotebook.hidden = isQuiz || isWriting || isReader;
     els.pageQuiz.hidden = !isQuiz;
     if (els.pageWriting) els.pageWriting.hidden = !isWriting;
+    if (els.pageReader) els.pageReader.hidden = !isReader;
     document.body.classList.toggle("on-quiz", isQuiz);
     document.body.classList.toggle("on-writing", isWriting);
+    document.body.classList.toggle("on-reader", isReader);
   }
 
   function formatWritingTime(iso) {
@@ -345,22 +370,48 @@
     }
   }
 
-  function openWritingReader() {
-    if (!selectedWritingId || writingModelEditing) return;
-    const src = els.writingModel?.value || "";
+  function fillReaderContent(modelText, title) {
     const target = els.writingReaderZoom || els.writingReaderBody;
     if (target) {
-      target.innerHTML = src.trim()
-        ? renderModelMarkdown(src)
+      target.innerHTML = (modelText || "").trim()
+        ? renderModelMarkdown(modelText)
         : `<p class="empty">暂无范文内容。</p>`;
     }
+    if (els.writingReaderTitle) {
+      els.writingReaderTitle.textContent = title || "范文";
+    }
     resetReaderZoom();
-    if (els.writingReader) els.writingReader.hidden = false;
   }
 
-  function closeWritingReader() {
-    if (els.writingReader) els.writingReader.hidden = true;
-    resetReaderZoom();
+  async function openModelReaderWindow() {
+    if (!selectedWritingId || writingModelEditing) return;
+    if (writingDirty) {
+      try {
+        await saveWritingNow();
+      } catch (err) {
+        toast(err.message);
+        return;
+      }
+    }
+    if (openReaderWindowPreferred(selectedWritingId)) return;
+    // Fallback: same-window reader page
+    fillReaderContent(els.writingModel?.value || "", "范文");
+    showPage("reader");
+  }
+
+  async function bootStandaloneReader(id) {
+    showPage("reader");
+    document.body.classList.add("aux-reader");
+    document.title = "PhraseMate 范文阅读";
+    try {
+      const w = await api(`/api/writings/${id}`);
+      const title = (w.prompt || "").trim() || "范文";
+      document.title = `范文 · ${title.slice(0, 40)}`;
+      fillReaderContent(w.model_text || "", "范文");
+    } catch (err) {
+      fillReaderContent("", "范文");
+      toast(err.message);
+    }
   }
 
   function renderWritingList() {
@@ -412,7 +463,6 @@
 
   function clearWritingEditor() {
     selectedWritingId = null;
-    closeWritingReader();
     closeImageLightbox();
     if (els.writingEditor) els.writingEditor.hidden = true;
     if (els.writingEmpty) els.writingEmpty.hidden = false;
@@ -1442,17 +1492,19 @@
       toast("请先新建或选择一篇作文");
       return;
     }
-    openWritingReader();
+    openModelReaderWindow().catch((err) => toast(err.message));
   });
 
   els.writingModelPreview?.addEventListener("click", () => {
-    openWritingReader();
+    if (!selectedWritingId) {
+      toast("请先新建或选择一篇作文");
+      return;
+    }
+    openModelReaderWindow().catch((err) => toast(err.message));
   });
 
-  els.btnCloseWritingReader?.addEventListener("click", closeWritingReader);
-
-  els.writingReader?.addEventListener("click", (e) => {
-    if (e.target === els.writingReader) closeWritingReader();
+  els.btnReaderZoomReset?.addEventListener("click", () => {
+    resetReaderZoom();
   });
 
   (() => {
@@ -1596,10 +1648,6 @@
       closeImageLightbox();
       return;
     }
-    if (e.key === "Escape" && els.writingReader && !els.writingReader.hidden) {
-      closeWritingReader();
-      return;
-    }
     if (e.key === "Escape" && els.settingsModal && !els.settingsModal.hidden) {
       closeSettings();
     }
@@ -1655,7 +1703,9 @@
     reportQuizAnswer(wordId, isCorrect);
   });
 
-  if (isAuxWritingWindow) {
+  if (isAuxReaderWindow) {
+    bootStandaloneReader(bootReaderId).catch((err) => toast(err.message));
+  } else if (isAuxWritingWindow) {
     document.body.classList.add("aux-writing");
     document.title = "PhraseMate 写作本";
     if (els.btnBackFromWriting) {

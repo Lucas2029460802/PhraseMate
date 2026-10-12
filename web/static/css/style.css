@@ -1602,33 +1602,33 @@ body.app-shell {
   font-size: 1.45rem;
 }
 
-.writing-reader-backdrop {
-  z-index: 95;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  height: 100%;
-  max-height: 100vh;
-  padding: clamp(0.75rem, 3vw, 1.5rem);
-  box-sizing: border-box;
-  overflow: hidden;
+body.aux-reader .topbar {
+  display: none;
 }
 
-.writing-reader-backdrop[hidden] {
-  display: none !important;
+.page-reader {
+  max-width: none;
+  padding: 0;
+}
+
+.page-reader .writing-reader-standalone {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background: #f7fafb;
+  animation: none;
 }
 
 .writing-reader {
-  width: min(860px, 100%);
-  height: 100%;
-  max-height: calc(100vh - 1.5rem);
   min-height: 0;
   display: flex;
   flex-direction: column;
   background: #f7fafb;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
   overflow: hidden;
 }
 

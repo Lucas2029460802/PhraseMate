@@ -3,9 +3,11 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"runtime"
+	"strconv"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -28,6 +30,8 @@ func runDesktop(url string) {
 	var (
 		mainView    atomic.Pointer[macWindow]
 		writingView atomic.Pointer[macWindow]
+		readerSeq   atomic.Int64
+		readers     sync.Map // seq -> *macWindow
 		floatHost   *floatwin.Host
 		trayHost    *tray.Host
 		mu          sync.Mutex
@@ -74,6 +78,38 @@ func runDesktop(url string) {
 		}
 	}
 
+	openReader := func(id int64) {
+		if id <= 0 {
+			return
+		}
+		seq := readerSeq.Add(1)
+		flags := macui.WindowCenter
+		if envTruthy("PHRASEMATE_DEBUG") {
+			flags |= macui.WindowDebug
+		}
+		rw := macui.NewWindow("PhraseMate 范文阅读", 960, 820, flags)
+		if rw == nil {
+			log.Printf("无法创建范文阅读窗口 id=%d", id)
+			return
+		}
+		holder := &macWindow{w: rw}
+		readers.Store(seq, holder)
+		rw.Navigate(fmt.Sprintf("%s/?page=reader&id=%d", url, id))
+		rw.Show()
+		log.Printf("范文阅读窗口已打开 id=%d", id)
+	}
+
+	bindReader := func(args []string) {
+		if len(args) == 0 {
+			return
+		}
+		id, err := strconv.ParseInt(args[0], 10, 64)
+		if err != nil {
+			return
+		}
+		openReader(id)
+	}
+
 	showWriting := func() {
 		if p := writingView.Load(); p != nil && p.w != nil {
 			p.w.Show()
@@ -93,6 +129,7 @@ func runDesktop(url string) {
 		ww.Bind("showFloatWindow", func(_ []string) { showFloat() })
 		ww.Bind("showNotebookWindow", func(_ []string) { showNotebook() })
 		ww.Bind("hideNotebookWindow", func(_ []string) { hideNotebook() })
+		ww.Bind("openReaderWindow", bindReader)
 		ww.Navigate(url + "/?page=writing")
 		ww.Show()
 		log.Println("写作本窗口已启动：可与生词本同时显示")
@@ -113,6 +150,12 @@ func runDesktop(url string) {
 		if floatHost != nil {
 			floatHost.Close()
 		}
+		readers.Range(func(_, v any) bool {
+			if p, ok := v.(*macWindow); ok && p != nil && p.w != nil {
+				p.w.Destroy()
+			}
+			return true
+		})
 		if p := writingView.Load(); p != nil && p.w != nil {
 			p.w.Destroy()
 			writingView.Store(nil)
@@ -175,6 +218,7 @@ func runDesktop(url string) {
 	w.Bind("showNotebookWindow", func(_ []string) {
 		showNotebook()
 	})
+	w.Bind("openReaderWindow", bindReader)
 	w.Navigate(url)
 	w.Show()
 	log.Println("生词本窗口已启动：关闭窗口会隐藏到菜单栏，可重新打开；速记窗保持运行")

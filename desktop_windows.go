@@ -3,6 +3,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"path/filepath"
@@ -25,13 +26,15 @@ func runDesktop(url string) {
 	dpi.Enable()
 
 	var (
-		mainView       atomic.Pointer[webviewHolder]
-		writingView    atomic.Pointer[webviewHolder]
-		writingStartMu sync.Mutex
+		mainView        atomic.Pointer[webviewHolder]
+		writingView     atomic.Pointer[webviewHolder]
+		writingStartMu  sync.Mutex
 		writingStarting bool
-		floatHost      *floatwin.Host
-		trayHost       *tray.Host
-		mu             sync.Mutex
+		readerSeq       atomic.Int64
+		readers         sync.Map // seq int64 -> *webviewHolder
+		floatHost       *floatwin.Host
+		trayHost        *tray.Host
+		mu              sync.Mutex
 	)
 
 	refreshMain := func() {
@@ -79,6 +82,41 @@ func runDesktop(url string) {
 		}
 	}
 
+	var openReader func(id float64)
+	openReader = func(id float64) {
+		wid := int64(id)
+		if wid <= 0 {
+			return
+		}
+		seq := readerSeq.Add(1)
+		go func() {
+			runtime.LockOSThread()
+			w := webview2.NewWithOptions(webview2.WebViewOptions{
+				Debug:     envTruthy("PHRASEMATE_DEBUG"),
+				AutoFocus: true,
+				DataPath:  filepathJoinTemp(fmt.Sprintf("phrasemate-webview-reader-%d-%d", wid, seq)),
+				WindowOptions: webview2.WindowOptions{
+					Title:  "PhraseMate 范文阅读",
+					Width:  960,
+					Height: 820,
+					Center: true,
+				},
+			})
+			if w == nil {
+				log.Printf("无法创建范文阅读窗口 id=%d", wid)
+				return
+			}
+			hwnd := winutil.Hwnd(w.Window())
+			holder := &webviewHolder{w: w, hwnd: hwnd, restore: func() {}}
+			readers.Store(seq, holder)
+			w.SetSize(960, 820, webview2.HintNone)
+			w.Navigate(fmt.Sprintf("%s/?page=reader&id=%d", url, wid))
+			log.Printf("范文阅读窗口已打开 id=%d", wid)
+			w.Run()
+			readers.Delete(seq)
+		}()
+	}
+
 	showWriting := func() {
 		if p := writingView.Load(); p != nil && p.hwnd != 0 {
 			winutil.Show(p.hwnd)
@@ -124,6 +162,7 @@ func runDesktop(url string) {
 			_ = w.Bind("showFloatWindow", func() { showFloat() })
 			_ = w.Bind("showNotebookWindow", func() { showNotebook() })
 			_ = w.Bind("hideNotebookWindow", func() { hideNotebook() })
+			_ = w.Bind("openReaderWindow", func(id float64) { openReader(id) })
 
 			w.SetSize(1180, 760, webview2.HintNone)
 			w.Navigate(url + "/?page=writing")
@@ -148,6 +187,12 @@ func runDesktop(url string) {
 		if floatHost != nil {
 			floatHost.Close()
 		}
+		readers.Range(func(_, v any) bool {
+			if p, ok := v.(*webviewHolder); ok && p != nil && p.w != nil {
+				p.w.Destroy()
+			}
+			return true
+		})
 		if p := writingView.Load(); p != nil && p.w != nil {
 			p.restore()
 			p.w.Destroy()
@@ -222,6 +267,9 @@ func runDesktop(url string) {
 	})
 	_ = w.Bind("showNotebookWindow", func() {
 		showNotebook()
+	})
+	_ = w.Bind("openReaderWindow", func(id float64) {
+		openReader(id)
 	})
 
 	w.SetSize(1180, 760, webview2.HintNone)
