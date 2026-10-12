@@ -1469,20 +1469,11 @@
     scroller.addEventListener(
       "wheel",
       (e) => {
-        // Trackpad pinch / Ctrl+滚轮：只放大内部文字，外层容器不变
-        if (e.ctrlKey || e.metaKey) {
-          e.preventDefault();
-          const factor = Math.exp(-e.deltaY * 0.01);
-          setReaderZoom(readerZoom * factor, { x: e.clientX, y: e.clientY });
-          return;
-        }
-        // 普通双指滑动：在容器内平移
-        if (e.shiftKey) {
-          scroller.scrollLeft += e.deltaY;
-        } else {
-          scroller.scrollTop += e.deltaY;
-          scroller.scrollLeft += e.deltaX;
-        }
+        // 滚轮 / 触摸板滚动手势：只缩放内部文字；平移请按住拖动
+        e.preventDefault();
+        const delta = e.deltaY !== 0 ? e.deltaY : e.deltaX;
+        const factor = Math.exp(-delta * 0.01);
+        setReaderZoom(readerZoom * factor, { x: e.clientX, y: e.clientY });
       },
       { passive: false }
     );
