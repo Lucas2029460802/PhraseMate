@@ -6971,8 +6971,49 @@
     },
     {
       "created_at": "2026-10-12T17:05:16Z",
+      "example_en": "She responded to my email within an hour.",
+      "example_zh": "她在一小时内回复了我的邮件。",
       "id": 176,
-      "status": "pending",
+      "meaning_en": "To say or write something as a reply to someone; to react or show a reaction to something.",
+      "meaning_zh": "回答，答复；作出反应，响应；对……有反应（如对治疗）",
+      "part_of_speech": "v.",
+      "phonetic": "/rɪˈspɒnd/",
+      "phrases": [
+        {
+          "phrase": "respond to",
+          "meaning_zh": "对……作出回应；对……有反应"
+        },
+        {
+          "phrase": "respond to treatment",
+          "meaning_zh": "对治疗有反应，治疗见效"
+        },
+        {
+          "phrase": "respond promptly",
+          "meaning_zh": "迅速回应"
+        },
+        {
+          "phrase": "respond with",
+          "meaning_zh": "以……回应"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "response",
+          "pos": "n.",
+          "meaning_zh": "回答，答复；反应，响应"
+        },
+        {
+          "word": "responsive",
+          "pos": "adj.",
+          "meaning_zh": "反应迅速的；积极响应"
+        },
+        {
+          "word": "respondent",
+          "pos": "n.",
+          "meaning_zh": "回答者；（法律）被告"
+        }
+      ],
+      "status": "ready",
       "term": "respond"
     }
   ]
