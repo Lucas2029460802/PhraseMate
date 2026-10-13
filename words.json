@@ -7480,8 +7480,40 @@
     },
     {
       "created_at": "2026-10-13T16:10:17Z",
+      "example_en": "The senate chamber was silent as the vote was announced.",
+      "example_zh": "当投票结果宣布时，参议院会议厅里一片寂静。",
       "id": 188,
-      "status": "pending",
+      "meaning_en": "A room, especially a private room or a hall used for formal meetings; also an enclosed space or cavity, or a compartment in a mechanism. As a verb, it means to place in or as if in a chamber.",
+      "meaning_zh": "房间；会议厅；议院；腔，室；（枪）弹膛；把……关在室内；给……装腔或装弹药。",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈtʃeɪmbər/",
+      "phrases": [
+        {
+          "phrase": "chamber of commerce",
+          "meaning_zh": "商会"
+        },
+        {
+          "phrase": "chamber music",
+          "meaning_zh": "室内乐"
+        },
+        {
+          "phrase": "echo chamber",
+          "meaning_zh": "回声室；回音室；回音壁"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "chambered",
+          "pos": "adj.",
+          "meaning_zh": "有腔的；有室的；有弹膛的"
+        },
+        {
+          "word": "chamberless",
+          "pos": "adj.",
+          "meaning_zh": "无腔的；无室的"
+        }
+      ],
+      "status": "ready",
       "term": "chamber"
     },
     {
