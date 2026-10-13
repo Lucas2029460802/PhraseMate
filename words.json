@@ -7102,9 +7102,44 @@
       "term": "scath"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/sink-us.mp3",
       "created_at": "2026-10-13T15:12:03Z",
       "id": 179,
-      "status": "pending",
+      "meaning_en": "A basin used for holding water for washing; A drain for carrying off wastewater",
+      "meaning_zh": "一种用于存放洗涤用水的洗脸盆；带走废水的排水管",
+      "part_of_speech": "n.",
+      "phonetic": "/sɪŋk/",
+      "phrases": [
+        {
+          "phrase": "kitchen sink",
+          "meaning_zh": "厨房水槽"
+        },
+        {
+          "phrase": "bathroom sink",
+          "meaning_zh": "浴室洗手池"
+        },
+        {
+          "phrase": "sink drain",
+          "meaning_zh": "水槽排水管"
+        },
+        {
+          "phrase": "everything but the kitchen sink",
+          "meaning_zh": "几乎什么都带上了"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "sinkable",
+          "pos": "adj.",
+          "meaning_zh": "可下沉的；易下沉的"
+        },
+        {
+          "word": "sunken",
+          "pos": "adj.",
+          "meaning_zh": "下沉的；凹陷的"
+        }
+      ],
+      "status": "ready",
       "term": "sink"
     }
   ]
