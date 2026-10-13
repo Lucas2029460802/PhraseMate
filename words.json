@@ -7384,8 +7384,33 @@
     },
     {
       "created_at": "2026-10-13T16:06:29Z",
+      "example_en": "The factory produces textiles for export.",
+      "example_zh": "这家工厂生产用于出口的纺织品。",
       "id": 185,
-      "status": "pending",
+      "meaning_en": "A type of cloth or woven fabric; also relating to cloth, weaving, or the textile industry.",
+      "meaning_zh": "纺织品；织物；纺织的；纺织业的",
+      "part_of_speech": "n. / adj.",
+      "phonetic": "/ˈtekstaɪl/",
+      "phrases": [
+        {
+          "phrase": "textile industry",
+          "meaning_zh": "纺织工业"
+        },
+        {
+          "phrase": "textile design",
+          "meaning_zh": "纺织品设计"
+        },
+        {
+          "phrase": "textile manufacturing",
+          "meaning_zh": "纺织制造；纺织品生产"
+        },
+        {
+          "phrase": "textile arts",
+          "meaning_zh": "纺织艺术"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "textile"
     },
     {
