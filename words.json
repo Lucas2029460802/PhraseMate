@@ -7144,8 +7144,49 @@
     },
     {
       "created_at": "2026-10-13T15:14:22Z",
+      "example_en": "People who sit for long hours are more prone to back pain.",
+      "example_zh": "长时间坐着的人更容易背痛。",
       "id": 180,
-      "status": "pending",
+      "meaning_en": "Likely to do something or to suffer from something; also lying flat, especially face down.",
+      "meaning_zh": "易于…的；有…倾向的；俯卧的，脸朝下躺着的。",
+      "part_of_speech": "adj.",
+      "phonetic": "/prəʊn/",
+      "phrases": [
+        {
+          "phrase": "be prone to",
+          "meaning_zh": "易于…；有…倾向"
+        },
+        {
+          "phrase": "accident-prone",
+          "meaning_zh": "易出事故的"
+        },
+        {
+          "phrase": "prone position",
+          "meaning_zh": "俯卧位"
+        },
+        {
+          "phrase": "prone to error",
+          "meaning_zh": "容易出错"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "proneness",
+          "pos": "n.",
+          "meaning_zh": "倾向；易患性"
+        },
+        {
+          "word": "pronate",
+          "pos": "v.",
+          "meaning_zh": "使手掌向下（或内转）"
+        },
+        {
+          "word": "pronation",
+          "pos": "n.",
+          "meaning_zh": "内转；俯卧姿势"
+        }
+      ],
+      "status": "ready",
       "term": "prone"
     }
   ]
