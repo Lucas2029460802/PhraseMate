@@ -7056,8 +7056,49 @@
     },
     {
       "created_at": "2026-10-13T14:32:54Z",
+      "example_en": "The scath of the raid was felt for generations.",
+      "example_zh": "那次袭击造成的伤害影响了几代人。",
       "id": 178,
-      "status": "pending",
+      "meaning_en": "An archaic variant of scathe: harm, injury, or damage; to harm or injure.",
+      "meaning_zh": "（古）伤害，损伤；损害（scathe 的变体）。",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/skæθ/",
+      "phrases": [
+        {
+          "phrase": "scathing criticism",
+          "meaning_zh": "尖刻的批评"
+        },
+        {
+          "phrase": "scathing attack",
+          "meaning_zh": "严厉抨击"
+        },
+        {
+          "phrase": "scathing remarks",
+          "meaning_zh": "尖刻的评论"
+        },
+        {
+          "phrase": "unscathed by",
+          "meaning_zh": "未受……伤害"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "scathing",
+          "pos": "adj.",
+          "meaning_zh": "严厉的；尖刻的"
+        },
+        {
+          "word": "scathingly",
+          "pos": "adv.",
+          "meaning_zh": "严厉地；尖刻地"
+        },
+        {
+          "word": "unscathed",
+          "pos": "adj.",
+          "meaning_zh": "未受伤的；安然无恙的"
+        }
+      ],
+      "status": "ready",
       "term": "scath"
     }
   ]
