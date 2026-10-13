@@ -7592,8 +7592,45 @@
     },
     {
       "created_at": "2026-10-13T16:21:24Z",
+      "example_en": "The submarine submerged to avoid detection.",
+      "example_zh": "潜艇下潜以躲避探测。",
       "id": 191,
-      "status": "pending",
+      "meaning_en": "To put something or go completely under water or another liquid; to cover or overwhelm completely.",
+      "meaning_zh": "使浸没；使淹没；潜入水中；使陷入或沉浸于某种状态。",
+      "part_of_speech": "v.",
+      "phonetic": "/səbˈmɜːdʒ/",
+      "phrases": [
+        {
+          "phrase": "submerge in water",
+          "meaning_zh": "浸入水中；没入水中"
+        },
+        {
+          "phrase": "submerge oneself in",
+          "meaning_zh": "使自己沉浸于；埋头于"
+        },
+        {
+          "phrase": "be submerged in",
+          "meaning_zh": "被淹没于；全神贯注于"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "submergence",
+          "pos": "n.",
+          "meaning_zh": "浸没；淹没"
+        },
+        {
+          "word": "submersion",
+          "pos": "n.",
+          "meaning_zh": "浸没；淹没；下潜"
+        },
+        {
+          "word": "submersible",
+          "pos": "adj.",
+          "meaning_zh": "可潜水的；可浸没的"
+        }
+      ],
+      "status": "ready",
       "term": "submerge"
     }
   ]
