@@ -7565,8 +7565,29 @@
     },
     {
       "created_at": "2026-10-13T16:12:39Z",
+      "example_en": "Archaeologists mapping Pavlopetri discovered streets, courtyards and building foundations preserved beneath the waves.",
+      "example_zh": "绘制帕夫洛佩特里地图的考古学家发现了保存于水下的街道、庭院和建筑地基。",
       "id": 190,
-      "status": "pending",
+      "meaning_en": "Pavlopetri is a submerged prehistoric town off the coast of Laconia in southern Greece, with remains dating back to roughly 2800 BCE; it is one of the oldest known underwater cities.",
+      "meaning_zh": "帕夫洛佩特里（希腊南部拉科尼亚海岸附近的史前水下古城遗址，年代约公元前2800年起，是已知最古老的水下城市之一）。",
+      "part_of_speech": "proper noun",
+      "phonetic": "/ˌpævloʊˈpɛtri/",
+      "phrases": [
+        {
+          "phrase": "the sunken city of Pavlopetri",
+          "meaning_zh": "帕夫洛佩特里水下古城"
+        },
+        {
+          "phrase": "the Pavlopetri Project",
+          "meaning_zh": "帕夫洛佩特里（考古调查）项目"
+        },
+        {
+          "phrase": "the Pavlopetri underwater archaeological site",
+          "meaning_zh": "帕夫洛佩特里水下考古遗址"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "Pavlopetri"
     }
   ]
