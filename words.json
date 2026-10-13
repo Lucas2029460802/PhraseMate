@@ -7238,8 +7238,49 @@
     },
     {
       "created_at": "2026-10-13T15:17:30Z",
+      "example_en": "The company reported robust sales growth despite the economic downturn.",
+      "example_zh": "尽管经济低迷，该公司仍报告了强劲的销售增长。",
       "id": 182,
-      "status": "pending",
+      "meaning_en": "Strong and healthy; sturdy. Also used to describe something that is vigorous, resilient, or able to withstand difficult conditions.",
+      "meaning_zh": "强健的；结实的；强劲的；稳健的；有韧性的",
+      "part_of_speech": "adj.",
+      "phonetic": "/roʊˈbʌst/",
+      "phrases": [
+        {
+          "phrase": "robust health",
+          "meaning_zh": "强健的体魄"
+        },
+        {
+          "phrase": "robust growth",
+          "meaning_zh": "强劲增长"
+        },
+        {
+          "phrase": "robust design",
+          "meaning_zh": "稳健设计；鲁棒设计"
+        },
+        {
+          "phrase": "robust economy",
+          "meaning_zh": "强劲的经济"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "robustness",
+          "pos": "n.",
+          "meaning_zh": "强健；稳健；鲁棒性"
+        },
+        {
+          "word": "robustly",
+          "pos": "adv.",
+          "meaning_zh": "强健地；坚定地；稳健地"
+        },
+        {
+          "word": "robustify",
+          "pos": "v.",
+          "meaning_zh": "使更稳健；增强鲁棒性（技术用语）"
+        }
+      ],
+      "status": "ready",
       "term": "robust"
     }
   ]
