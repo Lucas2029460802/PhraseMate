@@ -7518,8 +7518,49 @@
     },
     {
       "created_at": "2026-10-13T16:10:33Z",
+      "example_en": "The archaeologist carefully brushed the soil away from the ancient pottery.",
+      "example_zh": "考古学家小心地刷去古老陶器上的泥土。",
       "id": 189,
-      "status": "pending",
+      "meaning_en": "A person who studies ancient human societies and cultures by excavating sites and analyzing artifacts and other remains.",
+      "meaning_zh": "考古学家",
+      "part_of_speech": "n.",
+      "phonetic": "/ˌɑːkiˈɒlədʒɪst/",
+      "phrases": [
+        {
+          "phrase": "marine archaeologist",
+          "meaning_zh": "海洋考古学家"
+        },
+        {
+          "phrase": "field archaeologist",
+          "meaning_zh": "田野考古学家"
+        },
+        {
+          "phrase": "amateur archaeologist",
+          "meaning_zh": "业余考古学家"
+        },
+        {
+          "phrase": "professional archaeologist",
+          "meaning_zh": "专业考古学家"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "archaeological",
+          "pos": "adj.",
+          "meaning_zh": "考古学的"
+        },
+        {
+          "word": "archaeologically",
+          "pos": "adv.",
+          "meaning_zh": "从考古学角度；考古学上"
+        },
+        {
+          "word": "archaeologize",
+          "pos": "v.",
+          "meaning_zh": "从事考古研究；进行考古发掘"
+        }
+      ],
+      "status": "ready",
       "term": "archaeologist"
     }
   ]
