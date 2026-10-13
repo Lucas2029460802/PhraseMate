@@ -7285,8 +7285,49 @@
     },
     {
       "created_at": "2026-10-13T15:17:50Z",
+      "example_en": "The customs in this country felt completely alien to her at first.",
+      "example_zh": "起初，这个国家的风俗对她来说完全陌生。",
       "id": 183,
-      "status": "pending",
+      "meaning_en": "As a noun: a person from another country, or a creature from another world. As an adjective: foreign, unfamiliar, or completely different in nature.",
+      "meaning_zh": "n. 外国人；外侨；外星人；adj. 外国的；陌生的；格格不入的；截然不同的",
+      "part_of_speech": "n. / adj.",
+      "phonetic": "/ˈeɪliən/",
+      "phrases": [
+        {
+          "phrase": "alien to",
+          "meaning_zh": "对……来说是陌生的；与……格格不入"
+        },
+        {
+          "phrase": "illegal alien",
+          "meaning_zh": "非法外侨；非法移民"
+        },
+        {
+          "phrase": "alien species",
+          "meaning_zh": "外来物种；入侵物种"
+        },
+        {
+          "phrase": "alien life",
+          "meaning_zh": "外星生命"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "alienate",
+          "pos": "v.",
+          "meaning_zh": "使疏远；使不友好"
+        },
+        {
+          "word": "alienation",
+          "pos": "n.",
+          "meaning_zh": "疏远；异化； alienation"
+        },
+        {
+          "word": "alienable",
+          "pos": "adj.",
+          "meaning_zh": "可转让的；可让与的"
+        }
+      ],
+      "status": "ready",
       "term": "alien"
     }
   ]
