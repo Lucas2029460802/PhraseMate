@@ -7453,8 +7453,29 @@
     },
     {
       "created_at": "2026-10-13T16:10:12Z",
+      "example_en": "Dark clouds loomed on the horizon.",
+      "example_zh": "乌云隐约出现在地平线上。",
       "id": 187,
-      "status": "pending",
+      "meaning_en": "To appear as a large, unclear shape, especially in a threatening way; (of an event) to be imminent. As a noun, a device used for weaving cloth.",
+      "meaning_zh": "隐约显现，逼近；（事件）即将来临；织布机",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/luːm/",
+      "phrases": [
+        {
+          "phrase": "loom large",
+          "meaning_zh": "显得突出；逼近"
+        },
+        {
+          "phrase": "loom over",
+          "meaning_zh": "笼罩；逼近"
+        },
+        {
+          "phrase": "loom up",
+          "meaning_zh": "隐约出现"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "loom"
     },
     {
