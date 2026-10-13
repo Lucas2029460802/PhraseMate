@@ -7191,9 +7191,50 @@
     },
     {
       "created_at": "2026-10-13T15:17:16Z",
+      "example_en": "The meeting will resume after a short break.",
+      "example_zh": "会议将在短暂休息后继续进行。",
       "id": 181,
-      "status": "pending",
-      "term": "rresum"
+      "meaning_en": "To begin again after a pause or interruption; to return to an activity or position. As a noun (often written résumé), it means a short document listing your education and work experience.",
+      "meaning_zh": "v. 重新开始；继续；（中断后）恢复；重新担任（职位）。n.（多写作 résumé）简历，履历。",
+      "part_of_speech": "v.",
+      "phonetic": "/rɪˈzjuːm/",
+      "phrases": [
+        {
+          "phrase": "resume work",
+          "meaning_zh": "复工；恢复工作"
+        },
+        {
+          "phrase": "resume talks",
+          "meaning_zh": "恢复谈判"
+        },
+        {
+          "phrase": "resume one's studies",
+          "meaning_zh": "复学；继续学业"
+        },
+        {
+          "phrase": "resume one's post",
+          "meaning_zh": "重新任职；复职"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "resumption",
+          "pos": "n.",
+          "meaning_zh": "恢复；重新开始"
+        },
+        {
+          "word": "resumable",
+          "pos": "adj.",
+          "meaning_zh": "可恢复的；可继续的"
+        },
+        {
+          "word": "resumptive",
+          "pos": "adj.",
+          "meaning_zh": "恢复的；概括性的"
+        }
+      ],
+      "status": "ready",
+      "term": "resume"
     }
   ]
 }
