@@ -7332,8 +7332,54 @@
     },
     {
       "created_at": "2026-10-13T15:18:03Z",
+      "example_en": "The improvement in sales was marginal, so the company changed its strategy.",
+      "example_zh": "销售改善微不足道，因此公司改变了策略。",
       "id": 184,
-      "status": "pending",
+      "meaning_en": "Relating to or situated at the edge; of minor importance or barely significant.",
+      "meaning_zh": "边缘的；页边的；微不足道的，微小的；边际的（经济学）",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˈmɑːdʒɪnəl/",
+      "phrases": [
+        {
+          "phrase": "marginal cost",
+          "meaning_zh": "边际成本"
+        },
+        {
+          "phrase": "marginal benefit",
+          "meaning_zh": "边际收益"
+        },
+        {
+          "phrase": "marginal utility",
+          "meaning_zh": "边际效用"
+        },
+        {
+          "phrase": "marginal note",
+          "meaning_zh": "页边注；旁注"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "margin",
+          "pos": "n.",
+          "meaning_zh": "边缘；页边空白；差额；利润"
+        },
+        {
+          "word": "marginalize",
+          "pos": "v.",
+          "meaning_zh": "使边缘化；排挤"
+        },
+        {
+          "word": "marginally",
+          "pos": "adv.",
+          "meaning_zh": "轻微地；略微地"
+        },
+        {
+          "word": "marginality",
+          "pos": "n.",
+          "meaning_zh": "边缘性；边缘化状态"
+        }
+      ],
+      "status": "ready",
       "term": "marginal"
     }
   ]
