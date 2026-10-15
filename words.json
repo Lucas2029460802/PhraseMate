@@ -8766,8 +8766,49 @@
     },
     {
       "created_at": "2026-10-15T11:59:39Z",
+      "example_en": "Blend the ingredients until smooth.",
+      "example_zh": "把原料混合搅拌至顺滑。",
       "id": 219,
-      "status": "pending",
+      "meaning_en": "To mix things together so they combine smoothly; a mixture of different things.",
+      "meaning_zh": "混合；融合；调和；混合物；混成品",
+      "part_of_speech": "v./n.",
+      "phonetic": "/blend/",
+      "phrases": [
+        {
+          "phrase": "blend in",
+          "meaning_zh": "融入；混入"
+        },
+        {
+          "phrase": "blend into",
+          "meaning_zh": "融入；与…融合"
+        },
+        {
+          "phrase": "blend with",
+          "meaning_zh": "与…混合"
+        },
+        {
+          "phrase": "a blend of",
+          "meaning_zh": "…的混合"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "blender",
+          "pos": "n.",
+          "meaning_zh": "搅拌机；混合器"
+        },
+        {
+          "word": "blendable",
+          "pos": "adj.",
+          "meaning_zh": "可混合的"
+        },
+        {
+          "word": "blendability",
+          "pos": "n.",
+          "meaning_zh": "可混合性"
+        }
+      ],
+      "status": "ready",
       "term": "blend"
     }
   ]
