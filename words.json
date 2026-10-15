@@ -8673,6 +8673,12 @@
       "related_forms": [],
       "status": "ready",
       "term": "sake"
+    },
+    {
+      "created_at": "2026-10-15T11:59:17Z",
+      "id": 217,
+      "status": "pending",
+      "term": "pottery"
     }
   ]
 }
