@@ -8956,6 +8956,12 @@
       ],
       "status": "ready",
       "term": "commuter"
+    },
+    {
+      "created_at": "2026-10-15T14:13:22Z",
+      "id": 223,
+      "status": "pending",
+      "term": "metropolis"
     }
   ]
 }
