@@ -8645,8 +8645,33 @@
     },
     {
       "created_at": "2026-10-15T11:51:31Z",
+      "example_en": "For the sake of your health, you should quit smoking.",
+      "example_zh": "为了你的健康，你应该戒烟。",
       "id": 216,
-      "status": "pending",
+      "meaning_en": "The benefit, interest, or purpose of someone or something, used especially in phrases like 'for the sake of'.",
+      "meaning_zh": "利益；好处；目的；缘故（常用于 for the sake of 等短语）",
+      "part_of_speech": "n.",
+      "phonetic": "/seɪk/",
+      "phrases": [
+        {
+          "phrase": "for the sake of",
+          "meaning_zh": "为了；为了……的利益"
+        },
+        {
+          "phrase": "for God's sake",
+          "meaning_zh": "看在上帝份上；天哪"
+        },
+        {
+          "phrase": "for old times' sake",
+          "meaning_zh": "看在旧日情分上"
+        },
+        {
+          "phrase": "for argument's sake",
+          "meaning_zh": "为了讨论起见；姑且这么说"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "sake"
     }
   ]
