@@ -8912,8 +8912,49 @@
     },
     {
       "created_at": "2026-10-15T14:04:05Z",
+      "example_en": "The 7 a.m. train is always packed with commuters heading into the city.",
+      "example_zh": "早上七点的火车上总是挤满了进城上班的通勤者。",
       "id": 222,
-      "status": "pending",
+      "meaning_en": "A person who travels regularly between home and work, especially over a fairly long distance.",
+      "meaning_zh": "通勤者；经常往返于住处与工作地点（或学校）之间的人。",
+      "part_of_speech": "n.",
+      "phonetic": "/kəˈmjuːtə(r)/",
+      "phrases": [
+        {
+          "phrase": "commuter train",
+          "meaning_zh": "通勤列车"
+        },
+        {
+          "phrase": "commuter belt",
+          "meaning_zh": "通勤者居住带（大城市周边的通勤区域）"
+        },
+        {
+          "phrase": "commuter town",
+          "meaning_zh": "卧城；通勤者聚居的市镇"
+        },
+        {
+          "phrase": "commuter traffic",
+          "meaning_zh": "通勤交通；上下班车流"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "commute",
+          "pos": "v.",
+          "meaning_zh": "通勤；上下班往返"
+        },
+        {
+          "word": "commutable",
+          "pos": "adj.",
+          "meaning_zh": "可通勤往来的；可减刑的"
+        },
+        {
+          "word": "commutation",
+          "pos": "n.",
+          "meaning_zh": "减刑； commuting 往返"
+        }
+      ],
+      "status": "ready",
       "term": "commuter"
     }
   ]
