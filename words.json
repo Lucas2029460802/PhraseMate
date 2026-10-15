@@ -8127,8 +8127,49 @@
     },
     {
       "created_at": "2026-10-15T06:47:40Z",
+      "example_en": "The new policy is intended to curb inflation.",
+      "example_zh": "新政策旨在抑制通货膨胀。",
       "id": 204,
-      "status": "pending",
+      "meaning_en": "To control or limit something harmful; the edge of a sidewalk or street.",
+      "meaning_zh": "控制，抑制；路缘，马路牙子。",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/kɜːb/",
+      "phrases": [
+        {
+          "phrase": "curb inflation",
+          "meaning_zh": "抑制通货膨胀"
+        },
+        {
+          "phrase": "curb spending",
+          "meaning_zh": "控制开支"
+        },
+        {
+          "phrase": "curb appeal",
+          "meaning_zh": "房屋外观吸引力"
+        },
+        {
+          "phrase": "curb your enthusiasm",
+          "meaning_zh": "克制热情"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "curbside",
+          "pos": "adj.",
+          "meaning_zh": "路边的"
+        },
+        {
+          "word": "curbable",
+          "pos": "adj.",
+          "meaning_zh": "可抑制的；可控制的"
+        },
+        {
+          "word": "curbless",
+          "pos": "adj.",
+          "meaning_zh": "无路缘的"
+        }
+      ],
+      "status": "ready",
       "term": "curb"
     },
     {
