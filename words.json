@@ -8463,8 +8463,49 @@
     },
     {
       "created_at": "2026-10-15T06:53:38Z",
+      "example_en": "The police arrested the suspect outside the bank.",
+      "example_zh": "警方在银行外逮捕了嫌疑人。",
       "id": 212,
-      "status": "pending",
+      "meaning_en": "To take someone into legal custody, or to stop something from continuing; as a noun, the act of being taken into custody or a stoppage.",
+      "meaning_zh": "逮捕；拘捕；阻止，抑制（进展等）；（名词）逮捕，拘捕；心脏骤停",
+      "part_of_speech": "v. \u0026 n.",
+      "phonetic": "/əˈrest/",
+      "phrases": [
+        {
+          "phrase": "under arrest",
+          "meaning_zh": "被逮捕；在押"
+        },
+        {
+          "phrase": "house arrest",
+          "meaning_zh": "软禁"
+        },
+        {
+          "phrase": "arrest someone's attention",
+          "meaning_zh": "引起某人注意"
+        },
+        {
+          "phrase": "cardiac arrest",
+          "meaning_zh": "心脏骤停"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "arresting",
+          "pos": "adj.",
+          "meaning_zh": "引人注目的；醒目的"
+        },
+        {
+          "word": "arrestable",
+          "pos": "adj.",
+          "meaning_zh": "可逮捕的（如 arrestable offence）"
+        },
+        {
+          "word": "arrestingly",
+          "pos": "adv.",
+          "meaning_zh": "引人注目地"
+        }
+      ],
+      "status": "ready",
       "term": "arrest"
     }
   ]
