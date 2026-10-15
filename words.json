@@ -7855,9 +7855,50 @@
     },
     {
       "created_at": "2026-10-15T06:15:14Z",
+      "example_en": "Over the course of two millennia, the city grew from a small village into a major metropolis.",
+      "example_zh": "在两千年的时间里，这座城市从一个小村庄发展成了大都市。",
       "id": 198,
-      "status": "pending",
-      "term": "millennia"
+      "meaning_en": "A period of one thousand years. It can also refer to a period of great happiness or a golden age, especially in religious writing.",
+      "meaning_zh": "一千年，千年期；（常大写）千禧年；太平盛世，黄金时代",
+      "part_of_speech": "n.",
+      "phonetic": "/mɪˈleniəm/",
+      "phrases": [
+        {
+          "phrase": "the turn of the millennium",
+          "meaning_zh": "千年之交"
+        },
+        {
+          "phrase": "the new millennium",
+          "meaning_zh": "新千年"
+        },
+        {
+          "phrase": "over the millennia",
+          "meaning_zh": "数千年来"
+        },
+        {
+          "phrase": "Millennium Development Goals",
+          "meaning_zh": "千年发展目标"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "millennial",
+          "pos": "adj.",
+          "meaning_zh": "一千年的；千禧一代的"
+        },
+        {
+          "word": "millenarian",
+          "pos": "adj.",
+          "meaning_zh": "千禧年的；太平盛世说的"
+        },
+        {
+          "word": "millenary",
+          "pos": "adj.",
+          "meaning_zh": "一千年的；千个的"
+        }
+      ],
+      "status": "ready",
+      "term": "millennium"
     }
   ]
 }
