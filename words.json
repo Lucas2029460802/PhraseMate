@@ -8860,8 +8860,54 @@
     },
     {
       "created_at": "2026-10-15T13:21:31Z",
+      "example_en": "The new library has a strong aesthetic appeal, with its clean lines and natural light.",
+      "example_zh": "新图书馆线条简洁、自然采光充足，极具美感。",
       "id": 221,
-      "status": "pending",
+      "meaning_en": "Concerned with beauty or the appreciation of beauty; having a pleasing appearance.",
+      "meaning_zh": "美学的；审美的；具有审美趣味的；悦目的。",
+      "part_of_speech": "adj.",
+      "phonetic": "/iːsˈθetɪk/",
+      "phrases": [
+        {
+          "phrase": "aesthetic appeal",
+          "meaning_zh": "美感；美学吸引力"
+        },
+        {
+          "phrase": "aesthetic value",
+          "meaning_zh": "美学价值"
+        },
+        {
+          "phrase": "aesthetic standards",
+          "meaning_zh": "审美标准"
+        },
+        {
+          "phrase": "aesthetic experience",
+          "meaning_zh": "审美体验"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "aesthetically",
+          "pos": "adv.",
+          "meaning_zh": "审美上；美学上"
+        },
+        {
+          "word": "aesthete",
+          "pos": "n.",
+          "meaning_zh": "审美家；唯美主义者"
+        },
+        {
+          "word": "aestheticism",
+          "pos": "n.",
+          "meaning_zh": "唯美主义"
+        },
+        {
+          "word": "aestheticize",
+          "pos": "v.",
+          "meaning_zh": "使审美化；赋予美学意味"
+        }
+      ],
+      "status": "ready",
       "term": "aesthetic"
     }
   ]
