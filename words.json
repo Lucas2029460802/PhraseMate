@@ -7676,10 +7676,58 @@
       "term": "sunken"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/ponder-us.mp3",
       "created_at": "2026-10-15T06:05:30Z",
+      "example_en": "I lit my pipe and had a ponder about it, but reached no definite conclusion.",
+      "example_zh": "我点燃了烟斗，思考了一下，但没有得出明确的结论。",
       "id": 194,
-      "status": "pending",
+      "meaning_en": "A period of deep thought",
+      "meaning_zh": "一段深思熟虑的时期",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈpɒn.də(ɹ)/",
+      "phrases": [
+        {
+          "phrase": "ponder over",
+          "meaning_zh": "仔细考虑；反复思量"
+        },
+        {
+          "phrase": "ponder on/upon",
+          "meaning_zh": "深思；思索"
+        },
+        {
+          "phrase": "ponder a question",
+          "meaning_zh": "思考一个问题"
+        },
+        {
+          "phrase": "ponder the meaning of life",
+          "meaning_zh": "思索人生的意义"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "ponderous",
+          "pos": "adj.",
+          "meaning_zh": "笨重的；沉闷乏味的"
+        },
+        {
+          "word": "ponderable",
+          "pos": "adj.",
+          "meaning_zh": "可估量的；值得考虑的"
+        },
+        {
+          "word": "ponderously",
+          "pos": "adv.",
+          "meaning_zh": "笨重地；沉闷地"
+        }
+      ],
+      "status": "ready",
       "term": "ponder"
+    },
+    {
+      "created_at": "2026-10-15T06:05:44Z",
+      "id": 195,
+      "status": "pending",
+      "term": "ephemeral"
     }
   ]
 }
