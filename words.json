@@ -8296,8 +8296,33 @@
     },
     {
       "created_at": "2026-10-15T06:49:32Z",
+      "example_en": "After rapid growth, sales reached a plateau.",
+      "example_zh": "在快速增长之后，销售额进入了平稳期。",
       "id": 208,
-      "status": "pending",
+      "meaning_en": "A plateau is a large area of high, flat land. It can also mean a period when something stops increasing and stays at a steady level.",
+      "meaning_zh": "高原；平稳期，停滞期；（增长后）达到稳定水平",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/plæˈtoʊ/",
+      "phrases": [
+        {
+          "phrase": "reach a plateau",
+          "meaning_zh": "达到平稳期；进入停滞阶段"
+        },
+        {
+          "phrase": "plateau at",
+          "meaning_zh": "在……水平上趋于平稳"
+        },
+        {
+          "phrase": "high plateau",
+          "meaning_zh": "高原"
+        },
+        {
+          "phrase": "plateau phase",
+          "meaning_zh": "平台期；平稳阶段"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "plateau"
     },
     {
