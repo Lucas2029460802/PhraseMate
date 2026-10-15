@@ -8959,8 +8959,40 @@
     },
     {
       "created_at": "2026-10-15T14:13:22Z",
+      "example_en": "Shanghai is a bustling metropolis on China's east coast.",
+      "example_zh": "上海是中国东海岸一座繁华的大都市。",
       "id": 223,
-      "status": "pending",
+      "meaning_en": "A very large and important city, especially the main city of a country or region.",
+      "meaning_zh": "大都市；主要城市；都会",
+      "part_of_speech": "n.",
+      "phonetic": "/məˈtrɒpəlɪs/",
+      "phrases": [
+        {
+          "phrase": "a bustling metropolis",
+          "meaning_zh": "熙熙攘攘的大都市"
+        },
+        {
+          "phrase": "a major metropolis",
+          "meaning_zh": "主要大都市"
+        },
+        {
+          "phrase": "a sprawling metropolis",
+          "meaning_zh": "不断扩张的大都市"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "metropolitan",
+          "pos": "adj.",
+          "meaning_zh": "大都市的；首都的"
+        },
+        {
+          "word": "metropolitanize",
+          "pos": "v.",
+          "meaning_zh": "使大都市化；使都市化"
+        }
+      ],
+      "status": "ready",
       "term": "metropolis"
     }
   ]
