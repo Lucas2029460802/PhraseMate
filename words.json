@@ -7902,8 +7902,49 @@
     },
     {
       "created_at": "2026-10-15T06:31:45Z",
+      "example_en": "He was so busy with work that he neglected his health and his family.",
+      "example_zh": "他工作太忙，结果忽视了自己的健康和家人。",
       "id": 199,
-      "status": "pending",
+      "meaning_en": "To fail to give proper attention or care to someone or something; to fail to do something you should do.",
+      "meaning_zh": "忽视，忽略；疏于照料；未做（该做的事）",
+      "part_of_speech": "v.",
+      "phonetic": "/nɪˈɡlekt/",
+      "phrases": [
+        {
+          "phrase": "neglect of duty",
+          "meaning_zh": "失职，玩忽职守"
+        },
+        {
+          "phrase": "neglect to do something",
+          "meaning_zh": "疏忽而未做某事"
+        },
+        {
+          "phrase": "child neglect",
+          "meaning_zh": "对儿童的疏于照管"
+        },
+        {
+          "phrase": "benign neglect",
+          "meaning_zh": "善意忽视，放任不管"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "neglectful",
+          "pos": "adj.",
+          "meaning_zh": "疏忽的，不尽责的"
+        },
+        {
+          "word": "negligence",
+          "pos": "n.",
+          "meaning_zh": "疏忽，过失"
+        },
+        {
+          "word": "neglectfully",
+          "pos": "adv.",
+          "meaning_zh": "疏忽地，漫不经心地"
+        }
+      ],
+      "status": "ready",
       "term": "neglect"
     }
   ]
