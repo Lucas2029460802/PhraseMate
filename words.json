@@ -8174,8 +8174,29 @@
     },
     {
       "created_at": "2026-10-15T06:47:47Z",
+      "example_en": "The new subway line has been a real boon to commuters.",
+      "example_zh": "新地铁线路对通勤者来说真是一大福音。",
       "id": 205,
-      "status": "pending",
+      "meaning_en": "Something that is very helpful or beneficial; a blessing or advantage.",
+      "meaning_zh": "恩惠；益处；福祉；一大好事",
+      "part_of_speech": "n.",
+      "phonetic": "/buːn/",
+      "phrases": [
+        {
+          "phrase": "a boon to/for sb",
+          "meaning_zh": "对某人来说是大有益处的东西"
+        },
+        {
+          "phrase": "prove a boon",
+          "meaning_zh": "证明很有益处；成为一大好事"
+        },
+        {
+          "phrase": "boon companion",
+          "meaning_zh": "知心好友；欢聚的伙伴"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "boon"
     },
     {
