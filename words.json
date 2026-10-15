@@ -8374,8 +8374,44 @@
     },
     {
       "created_at": "2026-10-15T06:50:14Z",
+      "example_en": "She had to confront her fear of public speaking.",
+      "example_zh": "她不得不直面自己对公开演讲的恐惧。",
       "id": 210,
-      "status": "pending",
+      "meaning_en": "To face and deal with a problem or difficult situation, or to stand in front of someone in a hostile or challenging way.",
+      "meaning_zh": "面对；直面；对抗；使面对；使对峙",
+      "part_of_speech": "v.",
+      "phonetic": "/kənˈfrʌnt/",
+      "phrases": [
+        {
+          "phrase": "confront someone with something",
+          "meaning_zh": "使某人面对某事；就某事质问某人"
+        },
+        {
+          "phrase": "confront the issue",
+          "meaning_zh": "直面问题"
+        },
+        {
+          "phrase": "confront one's fears",
+          "meaning_zh": "面对自己的恐惧"
+        },
+        {
+          "phrase": "confront reality",
+          "meaning_zh": "面对现实"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "confrontation",
+          "pos": "n.",
+          "meaning_zh": "对抗；冲突；对峙"
+        },
+        {
+          "word": "confrontational",
+          "pos": "adj.",
+          "meaning_zh": "挑衅的；对抗的"
+        }
+      ],
+      "status": "ready",
       "term": "confront"
     }
   ]
