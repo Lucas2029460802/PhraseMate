@@ -7771,8 +7771,44 @@
     },
     {
       "created_at": "2026-10-15T06:06:07Z",
+      "example_en": "Many audiophiles prefer the warm sound of analog recordings to digital ones.",
+      "example_zh": "许多音响发烧友更喜欢模拟录音那种温暖的音色，而不是数字录音。",
       "id": 196,
-      "status": "pending",
+      "meaning_en": "Using or represented by continuously variable physical quantities, as opposed to digital; also, something that is similar or analogous to another.",
+      "meaning_zh": "模拟的（用连续变化的物理量表示信息，与数字相对）；类似物；对应物",
+      "part_of_speech": "n. / adj.",
+      "phonetic": "/ˈænəˌlɔːɡ/",
+      "phrases": [
+        {
+          "phrase": "analog signal",
+          "meaning_zh": "模拟信号"
+        },
+        {
+          "phrase": "analog clock",
+          "meaning_zh": "指针式时钟；模拟时钟"
+        },
+        {
+          "phrase": "analog computer",
+          "meaning_zh": "模拟计算机"
+        },
+        {
+          "phrase": "analog recording",
+          "meaning_zh": "模拟录音"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "analogize",
+          "pos": "v.",
+          "meaning_zh": "类比；用类比说明"
+        },
+        {
+          "word": "analogously",
+          "pos": "adv.",
+          "meaning_zh": "类似地；类推地"
+        }
+      ],
+      "status": "ready",
       "term": "analog"
     }
   ]
