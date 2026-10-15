@@ -8679,6 +8679,12 @@
       "id": 217,
       "status": "pending",
       "term": "pottery"
+    },
+    {
+      "created_at": "2026-10-15T11:59:28Z",
+      "id": 218,
+      "status": "pending",
+      "term": "bold"
     }
   ]
 }
