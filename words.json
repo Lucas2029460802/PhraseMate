@@ -8813,8 +8813,49 @@
     },
     {
       "created_at": "2026-10-15T13:21:20Z",
+      "example_en": "Her music is a fusion of jazz and electronic sounds.",
+      "example_zh": "她的音乐是爵士乐与电子音的融合。",
       "id": 220,
-      "status": "pending",
+      "meaning_en": "The process or result of joining two or more things together to form a single entity, especially a style, culture, or musical genre that combines different elements; also the process of atomic nuclei combining and releasing energy.",
+      "meaning_zh": "融合；熔合；聚变（核反应）；融合风格（如音乐、烹饪等）",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈfjuːʒn/",
+      "phrases": [
+        {
+          "phrase": "nuclear fusion",
+          "meaning_zh": "核聚变"
+        },
+        {
+          "phrase": "fusion cuisine",
+          "meaning_zh": "融合菜；无国界料理"
+        },
+        {
+          "phrase": "fusion reactor",
+          "meaning_zh": "聚变反应堆"
+        },
+        {
+          "phrase": "jazz fusion",
+          "meaning_zh": "爵士融合乐"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "fuse",
+          "pos": "v.",
+          "meaning_zh": "熔合；融合"
+        },
+        {
+          "word": "fusible",
+          "pos": "adj.",
+          "meaning_zh": "可熔的；易熔的"
+        },
+        {
+          "word": "fusional",
+          "pos": "adj.",
+          "meaning_zh": "融合的；熔合的"
+        }
+      ],
+      "status": "ready",
       "term": "fusion"
     },
     {
