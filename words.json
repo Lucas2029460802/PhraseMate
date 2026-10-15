@@ -8676,8 +8676,44 @@
     },
     {
       "created_at": "2026-10-15T11:59:17Z",
+      "example_en": "She sells handmade pottery at the local market.",
+      "example_zh": "她在当地市场出售手工陶器。",
       "id": 217,
-      "status": "pending",
+      "meaning_en": "Ceramic ware made by shaping and firing clay, or the craft or activity of making such ware.",
+      "meaning_zh": "陶器；陶艺；制陶术；陶器厂",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈpɒtəri/",
+      "phrases": [
+        {
+          "phrase": "pottery class",
+          "meaning_zh": "陶艺课"
+        },
+        {
+          "phrase": "pottery wheel",
+          "meaning_zh": "陶轮；制陶转盘"
+        },
+        {
+          "phrase": "pottery kiln",
+          "meaning_zh": "陶窑"
+        },
+        {
+          "phrase": "piece of pottery",
+          "meaning_zh": "一件陶器"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "pot",
+          "pos": "v.",
+          "meaning_zh": "把（植物）栽入盆中；把…装罐"
+        },
+        {
+          "word": "potter",
+          "pos": "v.",
+          "meaning_zh": "悠闲地做琐事；闲逛"
+        }
+      ],
+      "status": "ready",
       "term": "pottery"
     },
     {
