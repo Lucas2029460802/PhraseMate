@@ -7810,6 +7810,12 @@
       ],
       "status": "ready",
       "term": "analog"
+    },
+    {
+      "created_at": "2026-10-15T06:13:45Z",
+      "id": 197,
+      "status": "pending",
+      "term": "obsolete"
     }
   ]
 }
