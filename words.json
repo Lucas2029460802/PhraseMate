@@ -7949,8 +7949,49 @@
     },
     {
       "created_at": "2026-10-15T06:35:32Z",
+      "example_en": "She was invited to curate an exhibition of contemporary photography.",
+      "example_zh": "她受邀策划一场当代摄影展。",
       "id": 200,
-      "status": "pending",
+      "meaning_en": "To select, organize, and present items such as art, music, or information for an exhibition, collection, or audience.",
+      "meaning_zh": "策划（展览等）；精选并组织（内容、藏品等）；担任策展人。",
+      "part_of_speech": "v.",
+      "phonetic": "/kjʊəˈreɪt/",
+      "phrases": [
+        {
+          "phrase": "curate an exhibition",
+          "meaning_zh": "策划展览"
+        },
+        {
+          "phrase": "curate content",
+          "meaning_zh": "精选/组织内容"
+        },
+        {
+          "phrase": "curate a playlist",
+          "meaning_zh": "精选歌单"
+        },
+        {
+          "phrase": "curate a collection",
+          "meaning_zh": "策划/整理藏品或系列"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "curator",
+          "pos": "n.",
+          "meaning_zh": "策展人；博物馆馆长"
+        },
+        {
+          "word": "curatorial",
+          "pos": "adj.",
+          "meaning_zh": "策展的；策展人的"
+        },
+        {
+          "word": "curation",
+          "pos": "n.",
+          "meaning_zh": "策展；精选与整理"
+        }
+      ],
+      "status": "ready",
       "term": "curate"
     }
   ]
