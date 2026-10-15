@@ -8201,8 +8201,49 @@
     },
     {
       "created_at": "2026-10-15T06:48:25Z",
+      "example_en": "The workers laid a new underground cable.",
+      "example_zh": "工人们铺设了一条新的地下电缆。",
       "id": 206,
-      "status": "pending",
+      "meaning_en": "A thick rope or wire used for support, carrying electricity, or transmitting signals; also to send a message or program by cable.",
+      "meaning_zh": "电缆；缆绳；电报；有线电视；用电缆传送（或发电报）",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈkeɪbl/",
+      "phrases": [
+        {
+          "phrase": "cable car",
+          "meaning_zh": "缆车"
+        },
+        {
+          "phrase": "cable TV",
+          "meaning_zh": "有线电视"
+        },
+        {
+          "phrase": "power cable",
+          "meaning_zh": "电源线；电力电缆"
+        },
+        {
+          "phrase": "cable modem",
+          "meaning_zh": "电缆调制解调器"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "cableless",
+          "pos": "adj.",
+          "meaning_zh": "无电缆的"
+        },
+        {
+          "word": "cablelike",
+          "pos": "adj.",
+          "meaning_zh": "像电缆的"
+        },
+        {
+          "word": "cable-ready",
+          "pos": "adj.",
+          "meaning_zh": "可接有线电视的；有线电视就绪的"
+        }
+      ],
+      "status": "ready",
       "term": "cable"
     },
     {
