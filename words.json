@@ -7813,8 +7813,44 @@
     },
     {
       "created_at": "2026-10-15T06:13:45Z",
+      "example_en": "The typewriter became obsolete soon after personal computers appeared.",
+      "example_zh": "个人电脑出现后不久，打字机就过时了。",
       "id": 197,
-      "status": "pending",
+      "meaning_en": "No longer used, produced, or useful because something newer has replaced it.",
+      "meaning_zh": "过时的；淘汰的；废弃不用的。",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˈɒbsəliːt/",
+      "phrases": [
+        {
+          "phrase": "become obsolete",
+          "meaning_zh": "变得过时；被淘汰"
+        },
+        {
+          "phrase": "obsolete technology",
+          "meaning_zh": "过时的技术"
+        },
+        {
+          "phrase": "render something obsolete",
+          "meaning_zh": "使某物被淘汰"
+        },
+        {
+          "phrase": "planned obsolescence",
+          "meaning_zh": "计划性淘汰（产品故意设计成易过时）"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "obsolescence",
+          "pos": "n.",
+          "meaning_zh": "过时；淘汰；废弃"
+        },
+        {
+          "word": "obsolesce",
+          "pos": "v.",
+          "meaning_zh": "变得过时；逐渐被淘汰"
+        }
+      ],
+      "status": "ready",
       "term": "obsolete"
     }
   ]
