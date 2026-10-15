@@ -8327,8 +8327,49 @@
     },
     {
       "created_at": "2026-10-15T06:49:38Z",
+      "example_en": "The committee finally reached a consensus on the new policy.",
+      "example_zh": "委员会最终就新政策达成了共识。",
       "id": 209,
-      "status": "pending",
+      "meaning_en": "A general agreement among the members of a group or community.",
+      "meaning_zh": "共识；一致意见；多数人的意见",
+      "part_of_speech": "n.",
+      "phonetic": "/kənˈsensəs/",
+      "phrases": [
+        {
+          "phrase": "reach a consensus",
+          "meaning_zh": "达成共识"
+        },
+        {
+          "phrase": "general consensus",
+          "meaning_zh": "普遍共识"
+        },
+        {
+          "phrase": "consensus decision-making",
+          "meaning_zh": "共识决策"
+        },
+        {
+          "phrase": "build consensus",
+          "meaning_zh": "建立共识"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "consensual",
+          "pos": "adj.",
+          "meaning_zh": "一致同意的；双方同意的"
+        },
+        {
+          "word": "consent",
+          "pos": "v.",
+          "meaning_zh": "同意；准许"
+        },
+        {
+          "word": "consensually",
+          "pos": "adv.",
+          "meaning_zh": "经一致同意地；双方同意地"
+        }
+      ],
+      "status": "ready",
       "term": "consensus"
     }
   ]
