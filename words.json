@@ -8555,8 +8555,54 @@
     },
     {
       "created_at": "2026-10-15T10:07:38Z",
+      "example_en": "Other laboratories were unable to replicate the findings.",
+      "example_zh": "其他实验室未能重现这些发现。",
       "id": 214,
-      "status": "pending",
+      "meaning_en": "To make an exact copy of something, or to repeat a process, experiment, or result so as to reproduce it.",
+      "meaning_zh": "复制；仿制；重复（实验、过程等）；重现（结果）",
+      "part_of_speech": "v.",
+      "phonetic": "/ˈreplɪkeɪt/",
+      "phrases": [
+        {
+          "phrase": "replicate itself",
+          "meaning_zh": "自我复制"
+        },
+        {
+          "phrase": "replicate the results",
+          "meaning_zh": "重现结果"
+        },
+        {
+          "phrase": "replicate an experiment",
+          "meaning_zh": "重复实验"
+        },
+        {
+          "phrase": "replicate a study",
+          "meaning_zh": "复制/重复一项研究"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "replication",
+          "pos": "n.",
+          "meaning_zh": "复制；重复；再现"
+        },
+        {
+          "word": "replicable",
+          "pos": "adj.",
+          "meaning_zh": "可复制的；可重复的"
+        },
+        {
+          "word": "replicative",
+          "pos": "adj.",
+          "meaning_zh": "复制性的；与复制有关的"
+        },
+        {
+          "word": "replicator",
+          "pos": "n.",
+          "meaning_zh": "复制器；复制者"
+        }
+      ],
+      "status": "ready",
       "term": "replicate"
     }
   ]
