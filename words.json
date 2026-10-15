@@ -8810,6 +8810,12 @@
       ],
       "status": "ready",
       "term": "blend"
+    },
+    {
+      "created_at": "2026-10-15T13:21:20Z",
+      "id": 220,
+      "status": "pending",
+      "term": "fusion"
     }
   ]
 }
