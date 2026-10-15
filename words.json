@@ -7946,6 +7946,12 @@
       ],
       "status": "ready",
       "term": "neglect"
+    },
+    {
+      "created_at": "2026-10-15T06:35:32Z",
+      "id": 200,
+      "status": "pending",
+      "term": "curate"
     }
   ]
 }
