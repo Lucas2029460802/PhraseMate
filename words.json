@@ -3136,41 +3136,133 @@
     },
     {
       "created_at": "2026-10-01T17:22:28Z",
-      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
-      "example_en": "The tsunami was a catastrophe that destroyed the entire coastal city.",
-      "example_zh": "那场海啸是一场摧毁整座沿海城市的巨大灾难。",
+      "example_en": "The earthquake was a catastrophe for the small coastal town.",
+      "example_zh": "这场地震对那个沿海小镇来说是一场灾难。",
       "id": 77,
-      "meaning_en": "A sudden event that causes great damage, suffering, or destruction; a terrible disaster. It can also mean a final disastrous outcome or failure.",
-      "meaning_zh": "大灾难；灾祸；浩劫；（戏剧的）悲剧性结局；惨败。",
+      "meaning_en": "An event causing great and often sudden damage, suffering, or failure; a disaster.",
+      "meaning_zh": "灾难；大灾难；浩劫；惨败",
       "part_of_speech": "n.",
       "phonetic": "/kəˈtæstrəfi/",
-      "status": "error",
+      "phrases": [
+        {
+          "phrase": "environmental catastrophe",
+          "meaning_zh": "环境灾难"
+        },
+        {
+          "phrase": "avert a catastrophe",
+          "meaning_zh": "避免一场灾难"
+        },
+        {
+          "phrase": "utter catastrophe",
+          "meaning_zh": "彻底的灾难"
+        },
+        {
+          "phrase": "catastrophe theory",
+          "meaning_zh": "突变论；灾变论"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "catastrophic",
+          "pos": "adj.",
+          "meaning_zh": "灾难性的；毁灭性的"
+        },
+        {
+          "word": "catastrophically",
+          "pos": "adv.",
+          "meaning_zh": "灾难性地；毁灭性地"
+        }
+      ],
+      "status": "ready",
       "term": "catastrophe"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/tunnel-us.mp3",
       "created_at": "2026-10-02T12:17:12Z",
-      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
-      "example_en": "The train went through a long tunnel under the mountain.",
-      "example_zh": "火车穿过山下的长隧道。",
+      "example_en": "The engineers tunneled under the river to build the new subway line.",
+      "example_zh": "工程师们在河底开凿隧道，以修建新的地铁线路。",
       "id": 78,
-      "meaning_en": "A passage dug through or under ground, or a similar enclosed passage. As a verb, to dig such a passage.",
-      "meaning_zh": "隧道；地道；（动物的）洞穴；v. 挖隧道；挖地道",
-      "part_of_speech": "n. / v.",
-      "phonetic": "/ˈtʌnl/",
-      "status": "error",
+      "meaning_en": "An underground or underwater passage; A passage through or under some obstacle",
+      "meaning_zh": "开凿隧道；挖掘隧道；在…下面挖隧道穿过。",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈtʌn(ə)l/",
+      "phrases": [
+        {
+          "phrase": "tunnel through",
+          "meaning_zh": "挖隧道穿过；穿过隧道"
+        },
+        {
+          "phrase": "tunnel under",
+          "meaning_zh": "在…下面挖隧道"
+        },
+        {
+          "phrase": "wind tunnel",
+          "meaning_zh": "风洞"
+        },
+        {
+          "phrase": "tunnel vision",
+          "meaning_zh": "管状视野；狭隘视野"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "tunneler",
+          "pos": "n.",
+          "meaning_zh": "隧道挖掘者；隧道掘进机"
+        },
+        {
+          "word": "tunneling",
+          "pos": "n.",
+          "meaning_zh": "隧道挖掘；隧道工程"
+        },
+        {
+          "word": "tunnel-like",
+          "pos": "adj.",
+          "meaning_zh": "隧道般的；像隧道的"
+        }
+      ],
+      "status": "ready",
       "term": "tunnel"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/spice-us.mp3",
       "created_at": "2026-10-03T13:24:07Z",
-      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
-      "example_en": "Cinnamon, nutmeg and cloves are common spices used in baking.",
-      "example_zh": "肉桂、肉豆蔻和丁香是烘焙中常用的香料。",
       "id": 79,
-      "meaning_en": "A strong-smelling or strong-tasting substance, usually made from a plant, that is used to flavour food. It can also mean something that adds interest or excitement to something.",
-      "meaning_zh": "香料；调味品；（增添趣味的）情趣，刺激",
+      "meaning_en": "Aromatic or pungent plant matter (usually dried) used to season or flavour food; Appeal, interest; an attribute that makes something appealing, interesting, or engaging",
+      "meaning_zh": "用于调味或调味食物的芳香或辛辣植物物质（通常干燥）；吸引力、兴趣；使某事具有吸引力、趣味性或吸引力的属性",
       "part_of_speech": "n.",
       "phonetic": "/spaɪs/",
-      "status": "error",
+      "phrases": [
+        {
+          "phrase": "spice up",
+          "meaning_zh": "给…增添风味；使更有趣"
+        },
+        {
+          "phrase": "variety is the spice of life",
+          "meaning_zh": "变化是生活的调味品"
+        },
+        {
+          "phrase": "spice rack",
+          "meaning_zh": "调料架"
+        },
+        {
+          "phrase": "mixed spice",
+          "meaning_zh": "混合香料"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "spicy",
+          "pos": "adj.",
+          "meaning_zh": "辛辣的；刺激的"
+        },
+        {
+          "word": "spicily",
+          "pos": "adv.",
+          "meaning_zh": "辛辣地；尖刻地"
+        }
+      ],
+      "status": "ready",
       "term": "spice"
     },
     {
@@ -3262,15 +3354,49 @@
     },
     {
       "created_at": "2026-10-08T11:09:38Z",
-      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
-      "example_en": "She has been late for three consecutive days.",
-      "example_zh": "她已经连续三天迟到了。",
+      "example_en": "She has been absent for three consecutive days.",
+      "example_zh": "她已经连续三天缺席了。",
       "id": 84,
-      "meaning_en": "Following one after another in an unbroken sequence; happening or existing in order without interruption.",
-      "meaning_zh": "连续的；接连不断的；连贯的（指事件、数字等一个接一个不间断地发生）",
+      "meaning_en": "Following one after another in an uninterrupted sequence.",
+      "meaning_zh": "连续的；连贯的；接连的。",
       "part_of_speech": "adj.",
       "phonetic": "/kənˈsekjətɪv/",
-      "status": "error",
+      "phrases": [
+        {
+          "phrase": "consecutive days",
+          "meaning_zh": "连续几天"
+        },
+        {
+          "phrase": "consecutive victories",
+          "meaning_zh": "连续胜利；连胜"
+        },
+        {
+          "phrase": "consecutive numbers",
+          "meaning_zh": "连续数字"
+        },
+        {
+          "phrase": "consecutive interpreting",
+          "meaning_zh": "交替传译"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "consecutively",
+          "pos": "adv.",
+          "meaning_zh": "连续地；接连地"
+        },
+        {
+          "word": "consecutiveness",
+          "pos": "n.",
+          "meaning_zh": "连续性；连贯性"
+        },
+        {
+          "word": "consecution",
+          "pos": "n.",
+          "meaning_zh": "连续；序列"
+        }
+      ],
+      "status": "ready",
       "term": "consecutive"
     },
     {
@@ -8996,35 +9122,45 @@
       "term": "metropolis"
     },
     {
-      "created_at": "2026-10-16T08:26:18Z",
-      "example_en": "A troop of monkeys crossed the road.",
-      "example_zh": "一群猴子穿过马路。",
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/pattern-uk.mp3",
+      "created_at": "2026-10-15T16:38:59Z",
       "id": 224,
-      "meaning_en": "A group of people or animals, especially soldiers or scouts, gathered or moving together. As a verb, it means to move together in a group.",
-      "meaning_zh": "部队；军队；一群，一队（人或动物）；（troops）军队；成群结队地走，列队行进",
-      "part_of_speech": "n. / v.",
-      "phonetic": "/truːp/",
+      "meaning_en": "Model, example; A design, motif or decoration, especially formed from regular repeated elements",
+      "meaning_zh": "型号、示例；设计、图案或装饰，特别是由规则的重复元素形成",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈpætəɹn/",
       "phrases": [
         {
-          "phrase": "troop movement",
-          "meaning_zh": "部队调动"
+          "phrase": "pattern recognition",
+          "meaning_zh": "模式识别"
         },
         {
-          "phrase": "troop withdrawal",
-          "meaning_zh": "撤军"
+          "phrase": "behavior pattern",
+          "meaning_zh": "行为模式"
         },
         {
-          "phrase": "a troop of monkeys",
-          "meaning_zh": "一群猴子"
+          "phrase": "follow a pattern",
+          "meaning_zh": "遵循某种模式"
         },
         {
-          "phrase": "troop carrier",
-          "meaning_zh": "运兵车；部队运输机"
+          "phrase": "weather pattern",
+          "meaning_zh": "天气模式"
         }
       ],
-      "related_forms": [],
+      "related_forms": [
+        {
+          "word": "patterned",
+          "pos": "adj.",
+          "meaning_zh": "有图案的；按图案设计的"
+        },
+        {
+          "word": "patternless",
+          "pos": "adj.",
+          "meaning_zh": "无图案的"
+        }
+      ],
       "status": "ready",
-      "term": "troop"
+      "term": "pattern"
     },
     {
       "created_at": "2026-10-16T08:59:52Z",
@@ -9119,6 +9255,37 @@
       ],
       "status": "ready",
       "term": "inextricably"
+    },
+    {
+      "created_at": "2026-10-16T08:26:18Z",
+      "example_en": "A troop of monkeys crossed the road.",
+      "example_zh": "一群猴子穿过马路。",
+      "id": 228,
+      "meaning_en": "A group of people or animals, especially soldiers or scouts, gathered or moving together. As a verb, it means to move together in a group.",
+      "meaning_zh": "部队；军队；一群，一队（人或动物）；（troops）军队；成群结队地走，列队行进",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/truːp/",
+      "phrases": [
+        {
+          "phrase": "troop movement",
+          "meaning_zh": "部队调动"
+        },
+        {
+          "phrase": "troop withdrawal",
+          "meaning_zh": "撤军"
+        },
+        {
+          "phrase": "a troop of monkeys",
+          "meaning_zh": "一群猴子"
+        },
+        {
+          "phrase": "troop carrier",
+          "meaning_zh": "运兵车；部队运输机"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
+      "term": "troop"
     }
   ]
 }
