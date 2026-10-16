@@ -8997,8 +8997,33 @@
     },
     {
       "created_at": "2026-10-16T08:26:18Z",
+      "example_en": "A troop of monkeys crossed the road.",
+      "example_zh": "一群猴子穿过马路。",
       "id": 224,
-      "status": "pending",
+      "meaning_en": "A group of people or animals, especially soldiers or scouts, gathered or moving together. As a verb, it means to move together in a group.",
+      "meaning_zh": "部队；军队；一群，一队（人或动物）；（troops）军队；成群结队地走，列队行进",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/truːp/",
+      "phrases": [
+        {
+          "phrase": "troop movement",
+          "meaning_zh": "部队调动"
+        },
+        {
+          "phrase": "troop withdrawal",
+          "meaning_zh": "撤军"
+        },
+        {
+          "phrase": "a troop of monkeys",
+          "meaning_zh": "一群猴子"
+        },
+        {
+          "phrase": "troop carrier",
+          "meaning_zh": "运兵车；部队运输机"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "troop"
     }
   ]
