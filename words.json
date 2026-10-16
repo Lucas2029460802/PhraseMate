@@ -3279,7 +3279,6 @@
     },
     {
       "created_at": "2026-10-08T11:00:34Z",
-      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": dial tcp: lookup api.deepseek.com: no such host",
       "example_en": "The jury found the defendant not guilty after three hours of discussion.",
       "example_zh": "经过三个小时的讨论，陪审团裁定被告无罪。",
       "id": 81,
@@ -3287,7 +3286,7 @@
       "meaning_zh": "陪审团；（竞赛的）评判委员会、评审团",
       "part_of_speech": "n.",
       "phonetic": "/ˈdʒʊəri/",
-      "status": "error",
+      "status": "pending",
       "term": "jury"
     },
     {
