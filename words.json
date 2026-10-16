@@ -9415,8 +9415,44 @@
     },
     {
       "created_at": "2026-10-16T18:18:21Z",
+      "example_en": "The novelty of working from home soon wore off.",
+      "example_zh": "在家办公的新鲜感很快就消失了。",
       "id": 230,
-      "status": "pending",
+      "meaning_en": "The quality of being new, original, or unusual; also a small, cheap and unusual object people buy for fun.",
+      "meaning_zh": "新奇；新颖；新鲜感；（常作 novelties）新奇的小玩意儿、小商品。",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈnɒvəlti/",
+      "phrases": [
+        {
+          "phrase": "novelty item",
+          "meaning_zh": "新奇小商品；趣味小物件"
+        },
+        {
+          "phrase": "novelty value",
+          "meaning_zh": "新奇价值；新鲜感带来的吸引力"
+        },
+        {
+          "phrase": "novelty shop",
+          "meaning_zh": "新奇商品店；趣味用品店"
+        },
+        {
+          "phrase": "for novelty's sake",
+          "meaning_zh": "为了图个新鲜"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "novel",
+          "pos": "adj.",
+          "meaning_zh": "新颖的；新奇的"
+        },
+        {
+          "word": "novelist",
+          "pos": "n.",
+          "meaning_zh": "小说家"
+        }
+      ],
+      "status": "ready",
       "term": "novelty"
     }
   ]
