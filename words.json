@@ -9075,8 +9075,49 @@
     },
     {
       "created_at": "2026-10-16T09:55:03Z",
+      "example_en": "Economic growth and environmental damage are often inextricably linked.",
+      "example_zh": "经济增长和环境破坏往往密不可分。",
       "id": 227,
-      "status": "pending",
+      "meaning_en": "In a way that is impossible to separate or disentangle.",
+      "meaning_zh": "不可分割地；密不可分地；无法摆脱地",
+      "part_of_speech": "adv.",
+      "phonetic": "/ˌɪnɪkˈstrɪkəbli/",
+      "phrases": [
+        {
+          "phrase": "inextricably linked",
+          "meaning_zh": "密不可分地联系在一起"
+        },
+        {
+          "phrase": "inextricably intertwined",
+          "meaning_zh": "紧密交织在一起；难解难分"
+        },
+        {
+          "phrase": "inextricably bound up with",
+          "meaning_zh": "与……密不可分"
+        },
+        {
+          "phrase": "inextricably connected",
+          "meaning_zh": "不可分割地联系着"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "inextricable",
+          "pos": "adj.",
+          "meaning_zh": "不可分割的；无法摆脱的"
+        },
+        {
+          "word": "inextricability",
+          "pos": "n.",
+          "meaning_zh": "不可分割性；无法摆脱性"
+        },
+        {
+          "word": "extricate",
+          "pos": "v.",
+          "meaning_zh": "使摆脱；解救"
+        }
+      ],
+      "status": "ready",
       "term": "inextricably"
     }
   ]
