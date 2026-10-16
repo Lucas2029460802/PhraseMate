@@ -8994,6 +8994,12 @@
       ],
       "status": "ready",
       "term": "metropolis"
+    },
+    {
+      "created_at": "2026-10-16T08:26:18Z",
+      "id": 224,
+      "status": "pending",
+      "term": "troop"
     }
   ]
 }
