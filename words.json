@@ -3498,7 +3498,6 @@
     },
     {
       "created_at": "2026-10-08T11:10:54Z",
-      "error_msg": "请求 AI 接口失败: Post \"https://api.deepseek.com/v1/chat/completions\": read tcp 192.168.31.224:55329-\u003e61.170.82.99:443: wsarecv: An existing connection was forcibly closed by the remote host.",
       "example_en": "Religion plays an important role in many cultures around the world.",
       "example_zh": "宗教在世界许多文化中都发挥着重要作用。",
       "id": 85,
@@ -3506,7 +3505,7 @@
       "meaning_zh": "宗教；宗教信仰；宗教活动",
       "part_of_speech": "n.",
       "phonetic": "/rɪˈlɪdʒən/",
-      "status": "error",
+      "status": "pending",
       "term": "religion"
     },
     {
