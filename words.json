@@ -3267,14 +3267,49 @@
     },
     {
       "created_at": "2026-10-08T10:51:37Z",
-      "example_en": "The slight perturbation in the planet's orbit was caused by the gravity of a nearby moon.",
-      "example_zh": "这颗行星轨道的轻微摄动是由附近一颗卫星的引力造成的。",
+      "example_en": "The gravitational pull of the moon causes a slight perturbation in Earth's orbit.",
+      "example_zh": "月球的引力使地球轨道产生轻微扰动。",
       "id": 80,
-      "meaning_en": "A disturbance or deviation from a normal or expected state; also the state of being worried or uneasy. In science, a small change in a system caused by an outside influence.",
-      "meaning_zh": "扰乱，扰动，干扰；不安，烦恼，忧虑；（物理学、天文学）微扰，摄动",
+      "meaning_en": "A small change or disturbance that affects a system, or a feeling of worry and unease.",
+      "meaning_zh": "微扰；扰动；小小的变化或干扰；不安，烦恼。",
       "part_of_speech": "n.",
       "phonetic": "/ˌpɜːtəˈbeɪʃn/",
-      "status": "pending",
+      "phrases": [
+        {
+          "phrase": "perturbation theory",
+          "meaning_zh": "微扰理论"
+        },
+        {
+          "phrase": "external perturbation",
+          "meaning_zh": "外部扰动"
+        },
+        {
+          "phrase": "small perturbation",
+          "meaning_zh": "小扰动"
+        },
+        {
+          "phrase": "mental perturbation",
+          "meaning_zh": "精神上的不安"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "perturb",
+          "pos": "v.",
+          "meaning_zh": "扰乱；使不安"
+        },
+        {
+          "word": "perturbative",
+          "pos": "adj.",
+          "meaning_zh": "微扰的；摄动的"
+        },
+        {
+          "word": "perturbational",
+          "pos": "adj.",
+          "meaning_zh": "微扰的；扰动的"
+        }
+      ],
+      "status": "ready",
       "term": "perturbation"
     },
     {
