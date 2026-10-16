@@ -9075,8 +9075,45 @@
     },
     {
       "created_at": "2026-10-16T09:54:23Z",
+      "example_en": "The two issues are extricably linked, so they can be dealt with separately.",
+      "example_zh": "这两个问题可以分开处理，因此它们之间的关联是可分离的。",
       "id": 226,
-      "status": "pending",
+      "meaning_en": "Rare: in a manner that can be extricated, disentangled, or escaped from.",
+      "meaning_zh": "（罕用）可解脱地；可摆脱地；可分离地。",
+      "part_of_speech": "adv.",
+      "phonetic": "/ɪkˈstrɪkəbli/",
+      "phrases": [
+        {
+          "phrase": "extricably linked",
+          "meaning_zh": "可分离地关联（与 inextricably linked 相对）"
+        },
+        {
+          "phrase": "extricably connected",
+          "meaning_zh": "可分开地联系"
+        },
+        {
+          "phrase": "extricably bound",
+          "meaning_zh": "可解脱地束缚"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "extricate",
+          "pos": "v.",
+          "meaning_zh": "使解脱；救出；使摆脱"
+        },
+        {
+          "word": "extricable",
+          "pos": "adj.",
+          "meaning_zh": "可解脱的；可脱离的"
+        },
+        {
+          "word": "extrication",
+          "pos": "n.",
+          "meaning_zh": "解脱；救出；脱身"
+        }
+      ],
+      "status": "ready",
       "term": "extricably"
     }
   ]
