@@ -9415,8 +9415,44 @@
     },
     {
       "created_at": "2026-10-16T17:03:22Z",
+      "example_en": "If it rains tomorrow, we will stay at home.",
+      "example_zh": "如果明天下雨，我们就待在家里。",
       "id": 229,
-      "status": "pending",
+      "meaning_en": "Used to introduce a condition or a possible situation; also used after verbs like ask, wonder, or know to mean \"whether\".",
+      "meaning_zh": "如果；假如；即使；是否",
+      "part_of_speech": "conj.",
+      "phonetic": "/ɪf/",
+      "phrases": [
+        {
+          "phrase": "if only",
+          "meaning_zh": "要是……就好了"
+        },
+        {
+          "phrase": "as if",
+          "meaning_zh": "好像；仿佛"
+        },
+        {
+          "phrase": "even if",
+          "meaning_zh": "即使；纵然"
+        },
+        {
+          "phrase": "if anything",
+          "meaning_zh": "要说有什么区别的话；反而"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "iffy",
+          "pos": "adj.",
+          "meaning_zh": "不确定的；可疑的"
+        },
+        {
+          "word": "iffiness",
+          "pos": "n.",
+          "meaning_zh": "不确定性；可疑"
+        }
+      ],
+      "status": "ready",
       "term": "if"
     }
   ]
