@@ -9535,8 +9535,44 @@
     },
     {
       "created_at": "2026-10-17T15:28:23Z",
+      "example_en": "The anthropologist spent years living with the remote community.",
+      "example_zh": "这位人类学家花了多年时间与这个偏远社区一起生活。",
       "id": 233,
-      "status": "pending",
+      "meaning_en": "A person who studies anthropology, especially human societies, cultures, and biological development.",
+      "meaning_zh": "人类学家",
+      "part_of_speech": "n.",
+      "phonetic": "/ˌænθrəˈpɒlədʒɪst/",
+      "phrases": [
+        {
+          "phrase": "cultural anthropologist",
+          "meaning_zh": "文化人类学家"
+        },
+        {
+          "phrase": "social anthropologist",
+          "meaning_zh": "社会人类学家"
+        },
+        {
+          "phrase": "physical anthropologist",
+          "meaning_zh": "体质人类学家"
+        },
+        {
+          "phrase": "forensic anthropologist",
+          "meaning_zh": "法医人类学家"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "anthropological",
+          "pos": "adj.",
+          "meaning_zh": "人类学的"
+        },
+        {
+          "word": "anthropologically",
+          "pos": "adv.",
+          "meaning_zh": "从人类学角度；人类学上"
+        }
+      ],
+      "status": "ready",
       "term": "anthropologist"
     }
   ]
