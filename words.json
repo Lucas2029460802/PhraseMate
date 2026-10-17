@@ -10197,6 +10197,12 @@
       ],
       "status": "ready",
       "term": "repercussion"
+    },
+    {
+      "created_at": "2026-10-17T18:15:52Z",
+      "id": 249,
+      "status": "pending",
+      "term": "jurisdiction"
     }
   ]
 }
