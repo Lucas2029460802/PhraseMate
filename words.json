@@ -9705,8 +9705,57 @@
     {
       "created_at": "2026-10-17T17:55:04Z",
       "id": 237,
-      "status": "pending",
+      "meaning_en": "To attract and delight, to charm; To cast a spell upon (often one that attracts or charms)",
+      "meaning_zh": "吸引和愉悦，魅力；施加咒语（通常是吸引或迷人的咒语）",
+      "part_of_speech": "v.",
+      "phrases": [
+        {
+          "phrase": "enchanting smile",
+          "meaning_zh": "迷人的微笑"
+        },
+        {
+          "phrase": "enchanting scenery",
+          "meaning_zh": "迷人的风景"
+        },
+        {
+          "phrase": "enchanting melody",
+          "meaning_zh": "迷人的旋律"
+        },
+        {
+          "phrase": "enchanting beauty",
+          "meaning_zh": "迷人之美"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "enchantment",
+          "pos": "n.",
+          "meaning_zh": "魅力；魔法"
+        },
+        {
+          "word": "enchanter",
+          "pos": "n.",
+          "meaning_zh": "施魔法者"
+        },
+        {
+          "word": "enchantress",
+          "pos": "n.",
+          "meaning_zh": "女巫；迷人的女子"
+        },
+        {
+          "word": "enchantingly",
+          "pos": "adv.",
+          "meaning_zh": "迷人地"
+        }
+      ],
+      "status": "ready",
       "term": "enchanting"
+    },
+    {
+      "created_at": "2026-10-17T17:55:43Z",
+      "id": 238,
+      "status": "pending",
+      "term": "sophisticate"
     }
   ]
 }
