@@ -9701,6 +9701,12 @@
       ],
       "status": "ready",
       "term": "absurd"
+    },
+    {
+      "created_at": "2026-10-17T17:55:04Z",
+      "id": 237,
+      "status": "pending",
+      "term": "enchanting"
     }
   ]
 }
