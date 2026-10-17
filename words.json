@@ -9457,8 +9457,33 @@
     },
     {
       "created_at": "2026-10-17T08:30:01Z",
+      "example_en": "There are several restaurants in the vicinity of the hotel.",
+      "example_zh": "酒店附近有几家餐馆。",
       "id": 231,
-      "status": "pending",
+      "meaning_en": "The area near or surrounding a particular place; the state of being close to something.",
+      "meaning_zh": "附近，邻近；周围地区",
+      "part_of_speech": "n.",
+      "phonetic": "/vəˈsɪnəti/",
+      "phrases": [
+        {
+          "phrase": "in the vicinity of",
+          "meaning_zh": "在……附近；大约"
+        },
+        {
+          "phrase": "in the vicinity",
+          "meaning_zh": "在附近"
+        },
+        {
+          "phrase": "immediate vicinity",
+          "meaning_zh": "紧邻地区；附近一带"
+        },
+        {
+          "phrase": "vicinity map",
+          "meaning_zh": "周边地图"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "vicinity"
     }
   ]
