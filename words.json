@@ -9488,9 +9488,56 @@
     },
     {
       "created_at": "2026-10-17T15:28:03Z",
+      "example_en": "The theory of evolution explains how species change over time.",
+      "example_zh": "进化论解释了物种如何随时间而变化。",
       "id": 232,
-      "status": "pending",
+      "meaning_en": "The gradual development or change of something over time, especially the process by which living organisms change and diversify.",
+      "meaning_zh": "进化；演化；逐渐发展，演变",
+      "part_of_speech": "n.",
+      "phonetic": "/ˌiːvəˈluːʃn/",
+      "phrases": [
+        {
+          "phrase": "theory of evolution",
+          "meaning_zh": "进化论"
+        },
+        {
+          "phrase": "biological evolution",
+          "meaning_zh": "生物进化"
+        },
+        {
+          "phrase": "cultural evolution",
+          "meaning_zh": "文化演化"
+        },
+        {
+          "phrase": "evolution of species",
+          "meaning_zh": "物种演化"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "evolve",
+          "pos": "v.",
+          "meaning_zh": "进化；逐渐演变"
+        },
+        {
+          "word": "evolutionary",
+          "pos": "adj.",
+          "meaning_zh": "进化的；演化的"
+        },
+        {
+          "word": "evolutionarily",
+          "pos": "adv.",
+          "meaning_zh": "从进化角度地"
+        }
+      ],
+      "status": "ready",
       "term": "evolution"
+    },
+    {
+      "created_at": "2026-10-17T15:28:23Z",
+      "id": 233,
+      "status": "pending",
+      "term": "anthropologist"
     }
   ]
 }
