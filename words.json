@@ -10110,9 +10110,56 @@
     },
     {
       "created_at": "2026-10-17T18:12:19Z",
+      "example_en": "The patient was given a saline solution to restore fluids.",
+      "example_zh": "给病人使用了盐水溶液来补充体液。",
       "id": 247,
-      "status": "pending",
+      "meaning_en": "Containing salt; relating to or consisting of salt.",
+      "meaning_zh": "含盐的；盐的；咸的",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˈseɪlaɪn/",
+      "phrases": [
+        {
+          "phrase": "saline solution",
+          "meaning_zh": "盐水溶液"
+        },
+        {
+          "phrase": "normal saline",
+          "meaning_zh": "生理盐水"
+        },
+        {
+          "phrase": "saline water",
+          "meaning_zh": "咸水；盐水"
+        },
+        {
+          "phrase": "saline soil",
+          "meaning_zh": "盐渍土"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "salinity",
+          "pos": "n.",
+          "meaning_zh": "盐度；含盐量"
+        },
+        {
+          "word": "salinize",
+          "pos": "v.",
+          "meaning_zh": "使盐化"
+        },
+        {
+          "word": "salinization",
+          "pos": "n.",
+          "meaning_zh": "盐化作用"
+        }
+      ],
+      "status": "ready",
       "term": "saline"
+    },
+    {
+      "created_at": "2026-10-17T18:12:32Z",
+      "id": 248,
+      "status": "pending",
+      "term": "repercussion"
     }
   ]
 }
