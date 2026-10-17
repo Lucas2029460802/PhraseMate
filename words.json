@@ -9485,6 +9485,12 @@
       "related_forms": [],
       "status": "ready",
       "term": "vicinity"
+    },
+    {
+      "created_at": "2026-10-17T15:28:03Z",
+      "id": 232,
+      "status": "pending",
+      "term": "evolution"
     }
   ]
 }
