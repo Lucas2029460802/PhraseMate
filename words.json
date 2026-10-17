@@ -10156,9 +10156,46 @@
       "term": "saline"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/repercussion-au.mp3",
       "created_at": "2026-10-17T18:12:32Z",
+      "example_en": "You realize this little stunt of yours is going to have some pretty serious repercussions.",
+      "example_zh": "你意识到你的这个小噱头会产生一些相当严重的影响。",
       "id": 248,
-      "status": "pending",
+      "meaning_en": "A consequence or ensuing result of some action; The act of driving back, or the state of being driven back; reflection; reverberation",
+      "meaning_zh": "某些行动的后果或随后的结果；驱回的行为，或被驱回的状态；反射；混响",
+      "part_of_speech": "n.",
+      "phonetic": "/ˌɹiː.pəˈkʌʃ.ən/",
+      "phrases": [
+        {
+          "phrase": "have repercussions for/on",
+          "meaning_zh": "对……产生影响"
+        },
+        {
+          "phrase": "serious repercussions",
+          "meaning_zh": "严重后果"
+        },
+        {
+          "phrase": "economic repercussions",
+          "meaning_zh": "经济影响"
+        },
+        {
+          "phrase": "repercussions of an action",
+          "meaning_zh": "行动的后果"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "repercussive",
+          "pos": "adj.",
+          "meaning_zh": "有反响的；反射的"
+        },
+        {
+          "word": "repercuss",
+          "pos": "v.",
+          "meaning_zh": "产生反响；弹回"
+        }
+      ],
+      "status": "ready",
       "term": "repercussion"
     }
   ]
