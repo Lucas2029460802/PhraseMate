@@ -9454,6 +9454,12 @@
       ],
       "status": "ready",
       "term": "novelty"
+    },
+    {
+      "created_at": "2026-10-17T08:30:01Z",
+      "id": 231,
+      "status": "pending",
+      "term": "vicinity"
     }
   ]
 }
