@@ -10408,8 +10408,49 @@
     },
     {
       "created_at": "2026-10-17T18:29:42Z",
+      "example_en": "The government introduced radical reforms to the education system.",
+      "example_zh": "政府对教育体系进行了彻底改革。",
       "id": 254,
-      "status": "pending",
+      "meaning_en": "Relating to or affecting the fundamental nature of something; also, advocating extreme political or social change.",
+      "meaning_zh": "根本的；彻底的；激进的",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˈrædɪkəl/",
+      "phrases": [
+        {
+          "phrase": "radical change",
+          "meaning_zh": "根本性变化"
+        },
+        {
+          "phrase": "radical idea",
+          "meaning_zh": "激进的想法"
+        },
+        {
+          "phrase": "free radical",
+          "meaning_zh": "自由基"
+        },
+        {
+          "phrase": "radical left",
+          "meaning_zh": "激进左翼"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "radically",
+          "pos": "adv.",
+          "meaning_zh": "根本地；彻底地"
+        },
+        {
+          "word": "radicalize",
+          "pos": "v.",
+          "meaning_zh": "使激进"
+        },
+        {
+          "word": "radicalism",
+          "pos": "n.",
+          "meaning_zh": "激进主义"
+        }
+      ],
+      "status": "ready",
       "term": "radical"
     }
   ]
