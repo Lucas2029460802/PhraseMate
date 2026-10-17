@@ -10272,9 +10272,51 @@
       "term": "watershed"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/transcend-us.mp3",
       "created_at": "2026-10-17T18:20:11Z",
+      "example_en": "Great art can transcend cultural boundaries.",
+      "example_zh": "伟大的艺术能够超越文化界限。",
       "id": 251,
-      "status": "pending",
+      "meaning_en": "To go beyond the usual limits of something; to surpass or rise above.",
+      "meaning_zh": "超越；超出（范围、限度等）；胜过",
+      "part_of_speech": "v.",
+      "phonetic": "/trænˈsend/",
+      "phrases": [
+        {
+          "phrase": "transcend boundaries",
+          "meaning_zh": "超越界限"
+        },
+        {
+          "phrase": "transcend differences",
+          "meaning_zh": "超越分歧"
+        },
+        {
+          "phrase": "transcend the limits",
+          "meaning_zh": "超越极限"
+        },
+        {
+          "phrase": "transcend time and space",
+          "meaning_zh": "超越时空"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "transcendent",
+          "pos": "adj.",
+          "meaning_zh": "卓越的；超越的"
+        },
+        {
+          "word": "transcendence",
+          "pos": "n.",
+          "meaning_zh": "超越；超然"
+        },
+        {
+          "word": "transcendental",
+          "pos": "adj.",
+          "meaning_zh": "超验的；先验的"
+        }
+      ],
+      "status": "ready",
       "term": "transcend"
     }
   ]
