@@ -10322,7 +10322,46 @@
     {
       "created_at": "2026-10-17T18:22:12Z",
       "id": 252,
-      "status": "pending",
+      "meaning_en": "The act of coordinating, making different people or things work together for a goal or effect; The resulting state of working together; cooperation; synchronization",
+      "meaning_zh": "协调行为，使不同的人或事物共同努力实现目标或效果；由此产生的合作状态；合作；同步",
+      "part_of_speech": "n.",
+      "phonetic": "/koʊˌɔɹdɪˈneɪʃən/",
+      "phrases": [
+        {
+          "phrase": "in coordination with",
+          "meaning_zh": "与……协调；配合……"
+        },
+        {
+          "phrase": "coordination of efforts",
+          "meaning_zh": "协同努力"
+        },
+        {
+          "phrase": "lack of coordination",
+          "meaning_zh": "缺乏协调"
+        },
+        {
+          "phrase": "coordination among departments",
+          "meaning_zh": "部门间协调"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "coordinate",
+          "pos": "v.",
+          "meaning_zh": "协调；配合"
+        },
+        {
+          "word": "coordinative",
+          "pos": "adj.",
+          "meaning_zh": "协调的"
+        },
+        {
+          "word": "coordinately",
+          "pos": "adv.",
+          "meaning_zh": "协调地"
+        }
+      ],
+      "status": "ready",
       "term": "coordination"
     }
   ]
