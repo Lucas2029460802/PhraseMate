@@ -9949,9 +9949,33 @@
       "term": "infant"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/sling-1-au.mp3",
       "created_at": "2026-10-17T18:00:23Z",
       "id": 243,
-      "status": "pending",
+      "meaning_en": "An instrument for throwing stones or other missiles, consisting of a short strap with two strings fastened to its ends, or with a string fastened to one end and a light stick to the other",
+      "meaning_zh": "一种用于投掷石块或其他导弹的器械，由一根短带组成，两根绳子紧固在其两端，或一根绳子紧固在一端，另一根绳子紧固在另一端",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈslɪŋ/",
+      "phrases": [
+        {
+          "phrase": "sling mud",
+          "meaning_zh": "抹黑；诽谤"
+        },
+        {
+          "phrase": "sling a stone",
+          "meaning_zh": "投掷石块"
+        },
+        {
+          "phrase": "sling drinks",
+          "meaning_zh": "调酒；上饮料"
+        },
+        {
+          "phrase": "sling hash",
+          "meaning_zh": "当服务员；端盘子"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "sling"
     }
   ]
