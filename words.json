@@ -10366,8 +10366,44 @@
     },
     {
       "created_at": "2026-10-17T18:29:25Z",
+      "example_en": "The new policy could trigger a wave of protests.",
+      "example_zh": "新政策可能引发一波抗议。",
       "id": 253,
-      "status": "pending",
+      "meaning_en": "A device that activates a mechanism, or to cause something to happen suddenly.",
+      "meaning_zh": "扳机；触发器；引发；触发",
+      "part_of_speech": "n. / v.",
+      "phonetic": "/ˈtrɪɡər/",
+      "phrases": [
+        {
+          "phrase": "pull the trigger",
+          "meaning_zh": "扣动扳机；触发行动"
+        },
+        {
+          "phrase": "trigger warning",
+          "meaning_zh": "触发警告"
+        },
+        {
+          "phrase": "trigger point",
+          "meaning_zh": "触发点；激痛点"
+        },
+        {
+          "phrase": "trigger off",
+          "meaning_zh": "引发；激起"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "triggerable",
+          "pos": "adj.",
+          "meaning_zh": "可触发的"
+        },
+        {
+          "word": "triggerless",
+          "pos": "adj.",
+          "meaning_zh": "无扳机的"
+        }
+      ],
+      "status": "ready",
       "term": "trigger"
     }
   ]
