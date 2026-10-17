@@ -9831,9 +9831,51 @@
       "term": "nuclear"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/maternal-uk.mp3",
       "created_at": "2026-10-17T18:00:06Z",
+      "example_en": "She felt a strong maternal instinct when she held the baby.",
+      "example_zh": "她抱着婴儿时感受到强烈的母性本能。",
       "id": 240,
-      "status": "pending",
+      "meaning_en": "A mother; A person related through the mother, or her side of the family; a maternal relative",
+      "meaning_zh": "母亲的；母性的；母系的",
+      "part_of_speech": "n.",
+      "phonetic": "/məˈtɜːnəl/",
+      "phrases": [
+        {
+          "phrase": "maternal instinct",
+          "meaning_zh": "母性本能"
+        },
+        {
+          "phrase": "maternal love",
+          "meaning_zh": "母爱"
+        },
+        {
+          "phrase": "maternal grandmother",
+          "meaning_zh": "外祖母；外婆"
+        },
+        {
+          "phrase": "maternal mortality",
+          "meaning_zh": "孕产妇死亡率"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "maternity",
+          "pos": "n.",
+          "meaning_zh": "母性；怀孕；产科"
+        },
+        {
+          "word": "maternally",
+          "pos": "adv.",
+          "meaning_zh": "母亲般地；母性地"
+        },
+        {
+          "word": "maternalism",
+          "pos": "n.",
+          "meaning_zh": "母性主义；母亲式关怀"
+        }
+      ],
+      "status": "ready",
       "term": "maternal"
     },
     {
