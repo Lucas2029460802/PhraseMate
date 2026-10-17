@@ -9883,6 +9883,12 @@
       "id": 241,
       "status": "pending",
       "term": "akin"
+    },
+    {
+      "created_at": "2026-10-17T18:00:18Z",
+      "id": 242,
+      "status": "pending",
+      "term": "infant"
     }
   ]
 }
