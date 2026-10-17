@@ -10021,9 +10021,51 @@
     },
     {
       "created_at": "2026-10-17T18:10:24Z",
+      "example_en": "The two parties formed a coalition after the election.",
+      "example_zh": "选举后，两个政党组成了联盟。",
       "id": 245,
-      "status": "pending",
+      "meaning_en": "A temporary alliance of groups or parties formed for a shared purpose, especially in politics.",
+      "meaning_zh": "联合体；联盟；（政党等为共同目的组成的）联合政府；临时同盟",
+      "part_of_speech": "n.",
+      "phonetic": "/ˌkəʊəˈlɪʃn/",
+      "phrases": [
+        {
+          "phrase": "coalition government",
+          "meaning_zh": "联合政府"
+        },
+        {
+          "phrase": "coalition forces",
+          "meaning_zh": "联军"
+        },
+        {
+          "phrase": "form a coalition",
+          "meaning_zh": "组成联盟"
+        },
+        {
+          "phrase": "coalition partner",
+          "meaning_zh": "联盟伙伴"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "coalitional",
+          "pos": "adj.",
+          "meaning_zh": "联盟的；联合的"
+        },
+        {
+          "word": "coalitionary",
+          "pos": "adj.",
+          "meaning_zh": "联盟的；结盟的"
+        }
+      ],
+      "status": "ready",
       "term": "coalition"
+    },
+    {
+      "created_at": "2026-10-17T18:10:38Z",
+      "id": 246,
+      "status": "pending",
+      "term": "forge"
     }
   ]
 }
