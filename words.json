@@ -10405,6 +10405,12 @@
       ],
       "status": "ready",
       "term": "trigger"
+    },
+    {
+      "created_at": "2026-10-17T18:29:42Z",
+      "id": 254,
+      "status": "pending",
+      "term": "radical"
     }
   ]
 }
