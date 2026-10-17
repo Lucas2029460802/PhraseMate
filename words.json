@@ -10063,8 +10063,49 @@
     },
     {
       "created_at": "2026-10-17T18:10:38Z",
+      "example_en": "The blacksmith forged the iron into a sword.",
+      "example_zh": "铁匠把铁锻造成了一把剑。",
       "id": 246,
-      "status": "pending",
+      "meaning_en": "To shape metal by heating and hammering; to create, develop, or establish something strong; to make an illegal copy of something.",
+      "meaning_zh": "锻造；铸造；建立，缔造；伪造",
+      "part_of_speech": "v.",
+      "phonetic": "/fɔːrdʒ/",
+      "phrases": [
+        {
+          "phrase": "forge ahead",
+          "meaning_zh": "奋勇前进；稳步推进"
+        },
+        {
+          "phrase": "forge a relationship",
+          "meaning_zh": "建立关系"
+        },
+        {
+          "phrase": "forge a signature",
+          "meaning_zh": "伪造签名"
+        },
+        {
+          "phrase": "forge metal",
+          "meaning_zh": "锻造金属"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "forger",
+          "pos": "n.",
+          "meaning_zh": "伪造者；铁匠"
+        },
+        {
+          "word": "forgery",
+          "pos": "n.",
+          "meaning_zh": "伪造；伪造品"
+        },
+        {
+          "word": "forging",
+          "pos": "n.",
+          "meaning_zh": "锻造；锻件"
+        }
+      ],
+      "status": "ready",
       "term": "forge"
     }
   ]
