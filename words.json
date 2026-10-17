@@ -9612,6 +9612,12 @@
       ],
       "status": "ready",
       "term": "nail"
+    },
+    {
+      "created_at": "2026-10-17T17:53:14Z",
+      "id": 235,
+      "status": "pending",
+      "term": "civilisation"
     }
   ]
 }
