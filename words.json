@@ -9574,6 +9574,12 @@
       ],
       "status": "ready",
       "term": "anthropologist"
+    },
+    {
+      "created_at": "2026-10-17T17:51:23Z",
+      "id": 234,
+      "status": "pending",
+      "term": "nail"
     }
   ]
 }
