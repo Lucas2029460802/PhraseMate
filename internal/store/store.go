@@ -18,11 +18,13 @@ import (
 // Store wraps SQLite persistence for the vocabulary notebook.
 // Word rows are the working copy; gitdata publishes them to the data branch.
 type Store struct {
-	db       *sql.DB
-	mu       sync.RWMutex
-	onChange func()
-	syncRef  string
-	syncErr  string
+	db            *sql.DB
+	mu            sync.RWMutex
+	onChange      func()
+	changeRunning bool
+	changeAgain   bool
+	syncRef       string
+	syncErr       string
 }
 
 // Open creates or opens the database at path.
@@ -247,15 +249,40 @@ func (s *Store) SyncState() (string, string) {
 	return s.syncRef, s.syncErr
 }
 
+// changed schedules the vocabulary hook without blocking the caller.
+// Git commit/push can take seconds; the capture UI must not wait on it.
 func (s *Store) changed() {
 	if s == nil {
 		return
 	}
-	s.mu.RLock()
+	s.mu.Lock()
 	fn := s.onChange
-	s.mu.RUnlock()
-	if fn != nil {
+	if fn == nil {
+		s.mu.Unlock()
+		return
+	}
+	if s.changeRunning {
+		s.changeAgain = true
+		s.mu.Unlock()
+		return
+	}
+	s.changeRunning = true
+	s.mu.Unlock()
+	go s.runChange(fn)
+}
+
+func (s *Store) runChange(fn func()) {
+	for {
 		fn()
+		s.mu.Lock()
+		again := s.changeAgain
+		s.changeAgain = false
+		if !again {
+			s.changeRunning = false
+			s.mu.Unlock()
+			return
+		}
+		s.mu.Unlock()
 	}
 }
 
@@ -434,7 +461,7 @@ WHERE status=? AND TRIM(IFNULL(related_forms,''))='' AND TRIM(IFNULL(phrases,'')
 func (s *Store) NextPending() (*models.Word, error) {
 	row := s.db.QueryRow(`
 SELECT `+wordSelectCols+`
-FROM words WHERE status=? ORDER BY datetime(created_at) ASC, id ASC LIMIT 1`, models.StatusPending)
+FROM words WHERE status=? ORDER BY datetime(created_at) DESC, id DESC LIMIT 1`, models.StatusPending)
 	return scanWord(row)
 }
 

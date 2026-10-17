@@ -174,7 +174,9 @@ func (w *Worker) drain(ctx context.Context) {
 		if err != nil || item == nil {
 			return
 		}
-		exp, source, err := w.explain(ctx, item.Term)
+		itemCtx, cancel := context.WithTimeout(ctx, 25*time.Second)
+		exp, source, err := w.explain(itemCtx, item.Term)
+		cancel()
 		if err != nil {
 			log.Printf("释义失败 [%s]: %v", item.Term, err)
 			_ = w.store.MarkError(item.ID, err.Error())

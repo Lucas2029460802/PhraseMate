@@ -436,37 +436,47 @@ func (s *Sync) pushLoop() {
 }
 
 func (s *Sync) pushBranch() error {
-	s.opMu.Lock()
-	defer s.opMu.Unlock()
-	err := s.tryPushLocked()
+	err := s.pushOnce()
 	if err == nil || !isNonFastForward(err) {
 		return err
 	}
+	s.opMu.Lock()
 	ok, ferr := s.fetchRemote()
 	if ferr != nil {
+		s.opMu.Unlock()
 		return fmt.Errorf("%w（重新拉取失败: %v）", err, ferr)
 	}
 	if !ok {
+		s.opMu.Unlock()
 		return err
 	}
 	remoteHash, hasRemote, herr := s.optionalHash(s.remoteRef())
 	if herr != nil {
+		s.opMu.Unlock()
 		return herr
 	}
 	if !hasRemote {
+		s.opMu.Unlock()
 		return err
 	}
 	if rerr := s.commitLocked(s.lastWords, remoteHash); rerr != nil {
+		s.opMu.Unlock()
 		return rerr
 	}
-	return s.tryPushLocked()
+	s.opMu.Unlock()
+	return s.pushOnce()
 }
 
-func (s *Sync) tryPushLocked() error {
+// pushOnce publishes the current local ref. Network IO stays outside opMu so
+// a slow push cannot block the next capture's local commit.
+func (s *Sync) pushOnce() error {
+	s.opMu.Lock()
 	if _, ok, err := s.optionalHash(s.localRef()); err != nil || !ok {
+		s.opMu.Unlock()
 		return err
 	}
 	spec := s.localRef() + ":" + s.localRef()
+	s.opMu.Unlock()
 	_, err := s.gitNet(pushTimeout, "push", s.remote, spec)
 	return err
 }

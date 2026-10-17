@@ -5,6 +5,7 @@
   const btnNotebook = document.getElementById("btnNotebook");
   const dragArea = document.getElementById("dragArea");
   let busy = false;
+  let queued = "";
 
   function toast(msg, ok = true) {
     toastEl.textContent = msg;
@@ -22,32 +23,57 @@
     }, 1200);
   }
 
-  async function capture() {
-    if (busy) return;
-    const value = (term.value || "").trim();
-    if (!value) return;
-    busy = true;
-    term.disabled = true;
+  async function postCapture(value) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 8000);
     try {
       const res = await fetch("/api/capture", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ term: value }),
+        signal: ctrl.signal,
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
         throw new Error(data.error || "收录失败");
       }
+      return data.term || value;
+    } catch (err) {
+      if (err && err.name === "AbortError") {
+        throw new Error("收录超时，请再试一次");
+      }
+      throw err;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  async function capture() {
+    const value = (term.value || "").trim();
+    if (!value) return;
+    if (busy) {
+      queued = value;
       term.value = "";
-      toast("已收录", true);
-      if (typeof window.notifyCaptured === "function") {
-        window.notifyCaptured(data.term || value);
+      return;
+    }
+    busy = true;
+    term.value = "";
+    let current = value;
+    try {
+      while (current) {
+        const saved = await postCapture(current);
+        toast("已收录", true);
+        if (typeof window.notifyCaptured === "function") {
+          window.notifyCaptured(saved);
+        }
+        current = queued;
+        queued = "";
       }
     } catch (err) {
+      if (current && !term.value) term.value = current;
       toast(err.message || "收录失败", false);
     } finally {
       busy = false;
-      term.disabled = false;
       term.focus();
     }
   }
