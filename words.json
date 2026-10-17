@@ -10363,6 +10363,12 @@
       ],
       "status": "ready",
       "term": "coordination"
+    },
+    {
+      "created_at": "2026-10-17T18:29:25Z",
+      "id": 253,
+      "status": "pending",
+      "term": "trigger"
     }
   ]
 }
