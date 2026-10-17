@@ -10200,9 +10200,51 @@
     },
     {
       "created_at": "2026-10-17T18:15:52Z",
+      "example_en": "The court has jurisdiction over cases involving international trade.",
+      "example_zh": "该法院对涉及国际贸易的案件拥有管辖权。",
       "id": 249,
-      "status": "pending",
+      "meaning_en": "The official authority to make legal decisions and judgments, or the area over which this authority applies.",
+      "meaning_zh": "司法权；管辖权；管辖范围",
+      "part_of_speech": "n.",
+      "phonetic": "/ˌdʒʊrɪsˈdɪkʃən/",
+      "phrases": [
+        {
+          "phrase": "have jurisdiction over",
+          "meaning_zh": "对……有管辖权"
+        },
+        {
+          "phrase": "within the jurisdiction of",
+          "meaning_zh": "在……的管辖范围内"
+        },
+        {
+          "phrase": "exclusive jurisdiction",
+          "meaning_zh": "专属管辖权"
+        },
+        {
+          "phrase": "subject matter jurisdiction",
+          "meaning_zh": "事项管辖权；标的物管辖权"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "jurisdictional",
+          "pos": "adj.",
+          "meaning_zh": "管辖权的；司法管辖的"
+        },
+        {
+          "word": "jurisdictionally",
+          "pos": "adv.",
+          "meaning_zh": "在管辖权方面"
+        }
+      ],
+      "status": "ready",
       "term": "jurisdiction"
+    },
+    {
+      "created_at": "2026-10-17T18:15:57Z",
+      "id": 250,
+      "status": "pending",
+      "term": "watersh"
     }
   ]
 }
