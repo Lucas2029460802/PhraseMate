@@ -9662,9 +9662,44 @@
       "term": "civilisation"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/absurd-us.mp3",
       "created_at": "2026-10-17T17:54:13Z",
       "id": 236,
-      "status": "pending",
+      "meaning_en": "An absurdity",
+      "meaning_zh": "荒谬",
+      "part_of_speech": "n.",
+      "phonetic": "/əbˈsɜːd/",
+      "phrases": [
+        {
+          "phrase": "the absurd",
+          "meaning_zh": "荒诞；荒谬（常作哲学概念）"
+        },
+        {
+          "phrase": "absurd idea",
+          "meaning_zh": "荒谬的想法"
+        },
+        {
+          "phrase": "absurd situation",
+          "meaning_zh": "荒唐的局面"
+        },
+        {
+          "phrase": "absurd claim",
+          "meaning_zh": "荒谬的主张"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "absurdly",
+          "pos": "adv.",
+          "meaning_zh": "荒谬地；荒唐地"
+        },
+        {
+          "word": "absurdist",
+          "pos": "adj.",
+          "meaning_zh": "荒诞派的；荒诞主义的"
+        }
+      ],
+      "status": "ready",
       "term": "absurd"
     }
   ]
