@@ -9881,7 +9881,30 @@
     {
       "created_at": "2026-10-17T18:00:10Z",
       "id": 241,
-      "status": "pending",
+      "meaning_en": "(of persons) Of the same kin; related by blood; (often followed by to) Allied by nature; similar; partaking of the same properties; of the same kind",
+      "meaning_zh": "（人）同亲；有血缘关系；（通常后面跟着到）自然盟友；相似；分享相同的属性；相同种类",
+      "part_of_speech": "adj.",
+      "phonetic": "/əˈkɪn/",
+      "phrases": [
+        {
+          "phrase": "akin to",
+          "meaning_zh": "类似于；与……相似"
+        },
+        {
+          "phrase": "be akin to",
+          "meaning_zh": "与……相仿；近似于"
+        },
+        {
+          "phrase": "closely akin",
+          "meaning_zh": "密切相关的；非常相似的"
+        },
+        {
+          "phrase": "something akin to",
+          "meaning_zh": "类似于某事物"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "akin"
     },
     {
@@ -9889,6 +9912,12 @@
       "id": 242,
       "status": "pending",
       "term": "infant"
+    },
+    {
+      "created_at": "2026-10-17T18:00:23Z",
+      "id": 243,
+      "status": "pending",
+      "term": "sling"
     }
   ]
 }
