@@ -9753,8 +9753,40 @@
     },
     {
       "created_at": "2026-10-17T17:55:43Z",
+      "example_en": "The reception was attended by diplomats, artists, and urban sophisticates.",
+      "example_zh": "招待会上有外交官、艺术家和都市雅士。",
       "id": 238,
-      "status": "pending",
+      "meaning_en": "A sophisticated, worldly, or cultured person.",
+      "meaning_zh": "老于世故的人；见多识广的人；高雅的人",
+      "part_of_speech": "n.",
+      "phonetic": "/səˈfɪstɪkət/",
+      "phrases": [
+        {
+          "phrase": "urban sophisticate",
+          "meaning_zh": "都市雅士；都市时髦人士"
+        },
+        {
+          "phrase": "worldly sophisticate",
+          "meaning_zh": "老于世故的人"
+        },
+        {
+          "phrase": "cultured sophisticate",
+          "meaning_zh": "有教养的高雅人士"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "sophisticated",
+          "pos": "adj.",
+          "meaning_zh": "复杂精密的；老练的；精致的"
+        },
+        {
+          "word": "sophisticatedly",
+          "pos": "adv.",
+          "meaning_zh": "老练地；精致地"
+        }
+      ],
+      "status": "ready",
       "term": "sophisticate"
     }
   ]
