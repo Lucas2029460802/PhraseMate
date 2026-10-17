@@ -10018,6 +10018,12 @@
       ],
       "status": "ready",
       "term": "stark"
+    },
+    {
+      "created_at": "2026-10-17T18:10:24Z",
+      "id": 245,
+      "status": "pending",
+      "term": "coalition"
     }
   ]
 }
