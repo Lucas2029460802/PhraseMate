@@ -10242,9 +10242,34 @@
     },
     {
       "created_at": "2026-10-17T18:15:57Z",
+      "example_en": "The invention of the smartphone proved to be a watershed in how people communicate.",
+      "example_zh": "智能手机的发明成为人们沟通方式的一个转折点。",
       "id": 250,
-      "status": "pending",
-      "term": "watersh"
+      "meaning_en": "An area of land where all the water that falls on it drains into a single river, lake, or other body of water. It can also mean a turning point or critical moment that marks a major change.",
+      "meaning_zh": "流域；集水区；分水岭；（重大变化的）转折点",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈwɔːtərʃed/",
+      "phrases": [
+        {
+          "phrase": "watershed moment",
+          "meaning_zh": "转折点；关键时刻"
+        },
+        {
+          "phrase": "watershed management",
+          "meaning_zh": "流域管理"
+        },
+        {
+          "phrase": "watershed area",
+          "meaning_zh": "集水区；流域面积"
+        },
+        {
+          "phrase": "a watershed year",
+          "meaning_zh": "具有转折意义的一年"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
+      "term": "watershed"
     }
   ]
 }
