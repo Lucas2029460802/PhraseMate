@@ -10593,8 +10593,29 @@
     },
     {
       "created_at": "2026-10-18T18:10:59Z",
+      "example_en": "The project was challenging, not least because of the tight deadline.",
+      "example_zh": "这个项目很有挑战性，尤其是因为截止日期很紧。",
       "id": 259,
-      "status": "pending",
+      "meaning_en": "Especially; used to emphasize that something is particularly important or worth mentioning.",
+      "meaning_zh": "尤其；特别是",
+      "part_of_speech": "phrase",
+      "phonetic": "/nɒt liːst/",
+      "phrases": [
+        {
+          "phrase": "not least because",
+          "meaning_zh": "尤其因为"
+        },
+        {
+          "phrase": "last but not least",
+          "meaning_zh": "最后但同样重要的是"
+        },
+        {
+          "phrase": "not least of all",
+          "meaning_zh": "尤其是（用于强调最后提到者）"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "not least"
     }
   ]
