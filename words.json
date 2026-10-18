@@ -10709,6 +10709,12 @@
       ],
       "status": "ready",
       "term": "odor"
+    },
+    {
+      "created_at": "2026-10-18T18:45:13Z",
+      "id": 262,
+      "status": "pending",
+      "term": "patch"
     }
   ]
 }
