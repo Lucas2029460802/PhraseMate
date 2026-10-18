@@ -10539,9 +10539,56 @@
       "term": "preclude"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/compensate-us.mp3",
       "created_at": "2026-10-18T17:26:26Z",
+      "example_en": "It is hard work, but they will compensate you well for it.",
+      "example_zh": "这是一项艰苦的工作，但他们会很好地补偿你。",
       "id": 258,
-      "status": "pending",
+      "meaning_en": "To do (something good) after (something bad) happens; To pay or reward someone in exchange for work done or some other consideration",
+      "meaning_zh": "在（坏事）发生后做（好事）；支付或奖励某人以换取已完成的工作或其他对价",
+      "part_of_speech": "v.",
+      "phonetic": "/ˈkɑm.pənˌseɪt/",
+      "phrases": [
+        {
+          "phrase": "compensate for",
+          "meaning_zh": "补偿；弥补"
+        },
+        {
+          "phrase": "compensate sb for sth",
+          "meaning_zh": "因某事赔偿或补偿某人"
+        },
+        {
+          "phrase": "compensate for losses",
+          "meaning_zh": "赔偿损失"
+        },
+        {
+          "phrase": "financially compensate",
+          "meaning_zh": "给予经济补偿"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "compensation",
+          "pos": "n.",
+          "meaning_zh": "补偿；赔偿"
+        },
+        {
+          "word": "compensatory",
+          "pos": "adj.",
+          "meaning_zh": "补偿性的"
+        },
+        {
+          "word": "compensable",
+          "pos": "adj.",
+          "meaning_zh": "可补偿的"
+        },
+        {
+          "word": "compensator",
+          "pos": "n.",
+          "meaning_zh": "补偿者；补偿器"
+        }
+      ],
+      "status": "ready",
       "term": "compensate"
     }
   ]
