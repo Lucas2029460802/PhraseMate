@@ -10454,9 +10454,35 @@
       "term": "radical"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/beyond-us.mp3",
       "created_at": "2026-10-18T17:25:16Z",
+      "example_en": "The village lies beyond the river.",
+      "example_zh": "村庄在河的另一边。",
       "id": 255,
-      "status": "pending",
+      "meaning_en": "The unknown; The hereafter",
+      "meaning_zh": "在……另一边；超过；超出；此外（作副词时）",
+      "part_of_speech": "n.",
+      "phonetic": "/biˈjɒnd/",
+      "phrases": [
+        {
+          "phrase": "beyond doubt",
+          "meaning_zh": "无疑；确定"
+        },
+        {
+          "phrase": "beyond control",
+          "meaning_zh": "无法控制"
+        },
+        {
+          "phrase": "beyond compare",
+          "meaning_zh": "无与伦比"
+        },
+        {
+          "phrase": "beyond one's reach",
+          "meaning_zh": "够不着；力所不及"
+        }
+      ],
+      "related_forms": [],
+      "status": "ready",
       "term": "beyond"
     }
   ]
