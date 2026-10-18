@@ -10619,9 +10619,51 @@
       "term": "not least"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/volatile-us.mp3",
       "created_at": "2026-10-18T18:12:20Z",
+      "example_en": "The stock market has been unusually volatile this week.",
+      "example_zh": "本周股市一直异常波动。",
       "id": 260,
-      "status": "pending",
+      "meaning_en": "A chemical or compound that changes into a gas easily",
+      "meaning_zh": "易变的；不稳定的；易挥发的；（脾气）暴躁的。",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈvɒl.əˌtaɪ.(ə)l/",
+      "phrases": [
+        {
+          "phrase": "volatile market",
+          "meaning_zh": "波动剧烈的市场"
+        },
+        {
+          "phrase": "volatile substance",
+          "meaning_zh": "挥发性物质"
+        },
+        {
+          "phrase": "volatile situation",
+          "meaning_zh": "动荡局势"
+        },
+        {
+          "phrase": "volatile temper",
+          "meaning_zh": "暴躁的脾气"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "volatility",
+          "pos": "n.",
+          "meaning_zh": "波动性；挥发性"
+        },
+        {
+          "word": "volatilize",
+          "pos": "v.",
+          "meaning_zh": "使挥发；挥发"
+        },
+        {
+          "word": "volatilization",
+          "pos": "n.",
+          "meaning_zh": "挥发；挥发作用"
+        }
+      ],
+      "status": "ready",
       "term": "volatile"
     }
   ]
