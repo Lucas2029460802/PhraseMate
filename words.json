@@ -10497,9 +10497,46 @@
     },
     {
       "created_at": "2026-10-18T17:26:09Z",
+      "example_en": "Bad weather precluded us from going hiking.",
+      "example_zh": "恶劣的天气使我们无法去徒步。",
       "id": 257,
-      "status": "pending",
-      "term": "perclude"
+      "meaning_en": "To prevent something from happening or make it impossible.",
+      "meaning_zh": "阻止；妨碍；使不可能；排除",
+      "part_of_speech": "v.",
+      "phonetic": "/prɪˈkluːd/",
+      "phrases": [
+        {
+          "phrase": "preclude somebody from doing something",
+          "meaning_zh": "阻止某人做某事"
+        },
+        {
+          "phrase": "preclude the possibility of",
+          "meaning_zh": "排除……的可能性"
+        },
+        {
+          "phrase": "be precluded by",
+          "meaning_zh": "被……所妨碍"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "preclusion",
+          "pos": "n.",
+          "meaning_zh": "阻止；排除"
+        },
+        {
+          "word": "preclusive",
+          "pos": "adj.",
+          "meaning_zh": "排除性的；妨碍的"
+        },
+        {
+          "word": "preclusively",
+          "pos": "adv.",
+          "meaning_zh": "以排除的方式"
+        }
+      ],
+      "status": "ready",
+      "term": "preclude"
     }
   ]
 }
