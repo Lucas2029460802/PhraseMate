@@ -10667,9 +10667,47 @@
       "term": "volatile"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/odor-us.mp3",
       "created_at": "2026-10-18T18:41:48Z",
+      "example_en": "A strange odor filled the kitchen.",
+      "example_zh": "厨房里弥漫着一股奇怪的气味。",
       "id": 261,
-      "status": "pending",
+      "meaning_en": "Any smell, whether fragrant or offensive; A strong, pervasive quality",
+      "meaning_zh": "气味；（尤指难闻的）臭味；气息，意味",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈəʊ.də/",
+      "phrases": [
+        {
+          "phrase": "body odor",
+          "meaning_zh": "体味，汗臭"
+        },
+        {
+          "phrase": "unpleasant odor",
+          "meaning_zh": "难闻的气味"
+        },
+        {
+          "phrase": "odor control",
+          "meaning_zh": "气味控制；除臭"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "odorless",
+          "pos": "adj.",
+          "meaning_zh": "无气味的"
+        },
+        {
+          "word": "odorous",
+          "pos": "adj.",
+          "meaning_zh": "有气味的；芳香的"
+        },
+        {
+          "word": "odorize",
+          "pos": "v.",
+          "meaning_zh": "使有气味；加味"
+        }
+      ],
+      "status": "ready",
       "term": "odor"
     }
   ]
