@@ -10537,6 +10537,12 @@
       ],
       "status": "ready",
       "term": "preclude"
+    },
+    {
+      "created_at": "2026-10-18T17:26:26Z",
+      "id": 258,
+      "status": "pending",
+      "term": "compensate"
     }
   ]
 }
