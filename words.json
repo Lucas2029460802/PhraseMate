@@ -10487,8 +10487,44 @@
     },
     {
       "created_at": "2026-10-18T17:25:30Z",
+      "example_en": "The police arrested the agitator who was urging the crowd to riot.",
+      "example_zh": "警方逮捕了那名鼓动人群暴乱的煽动者。",
       "id": 256,
-      "status": "pending",
+      "meaning_en": "A person who tries to persuade others to protest, rebel, or take disruptive action; also a device that stirs or mixes a substance.",
+      "meaning_zh": "煽动者；鼓动者；（机器）搅拌器",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈædʒɪteɪtər/",
+      "phrases": [
+        {
+          "phrase": "political agitator",
+          "meaning_zh": "政治煽动者"
+        },
+        {
+          "phrase": "labor agitator",
+          "meaning_zh": "劳工鼓动者"
+        },
+        {
+          "phrase": "student agitator",
+          "meaning_zh": "学生鼓动者"
+        },
+        {
+          "phrase": "agitator shaft",
+          "meaning_zh": "搅拌器轴"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "agitate",
+          "pos": "v.",
+          "meaning_zh": "煽动；搅动；使不安"
+        },
+        {
+          "word": "agitated",
+          "pos": "adj.",
+          "meaning_zh": "焦虑的；激动的"
+        }
+      ],
+      "status": "ready",
       "term": "agitator"
     }
   ]
