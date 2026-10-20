@@ -1,10 +1,13 @@
 package brandicon
 
 import (
+	"crypto/sha256"
 	"encoding/binary"
+	"encoding/hex"
 	"image"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 // WriteICO writes a 32bpp ICO (with alpha) for the given RGBA image.
@@ -16,7 +19,7 @@ func WriteICO(path string, img *image.RGBA) error {
 	h := img.Bounds().Dy()
 	if w <= 0 || h <= 0 || w > 256 || h > 256 {
 		w, h = 32, 32
-		img = Render(32)
+		img = RenderRounded(32)
 	}
 
 	xorSize := w * h * 4
@@ -55,8 +58,9 @@ func WriteICO(path string, img *image.RGBA) error {
 	binary.LittleEndian.PutUint32(data[20:], uint32(xorSize+andSize))
 
 	pixels := data[40:]
+	andMask := data[40+xorSize:]
 	for y := 0; y < h; y++ {
-		srcY := h - 1 - y // bottom-up
+		srcY := h - 1 - y // ICO XOR bitmap is bottom-up
 		for x := 0; x < w; x++ {
 			r, g, b, a := img.At(x, srcY).RGBA()
 			i := (y*w + x) * 4
@@ -64,24 +68,61 @@ func WriteICO(path string, img *image.RGBA) error {
 			pixels[i+1] = byte(g >> 8)
 			pixels[i+2] = byte(r >> 8)
 			pixels[i+3] = byte(a >> 8)
+			if a>>8 < 16 {
+				byteIndex := y*andRow + x/8
+				andMask[byteIndex] |= 0x80 >> uint(x%8)
+			}
 		}
 	}
-	// AND mask left zeroed (opaque for 32bpp alpha icons)
 
 	return os.WriteFile(path, buf, 0o644)
 }
 
-// EnsureFile writes PhraseMate.ico next to dir if missing/outdated size, returns path.
+// EnsureFile writes a content-hashed PhraseMate-*.ico into dir and returns its path.
+// A new filename is used whenever the artwork changes so Windows icon cache cannot
+// keep serving a stale image from the previous path.
 func EnsureFile(dir string) (string, error) {
-	path := filepath.Join(dir, "PhraseMate.ico")
-	if st, err := os.Stat(path); err == nil && !st.IsDir() && st.Size() > 100 {
-		return path, nil
+	if err := os.MkdirAll(dir, 0o755); err != nil {
+		return "", err
 	}
-	if err := WriteICO(path, Render(256)); err != nil {
-		// Fallback smaller if 256 fails for any reason
-		if err2 := WriteICO(path, Render(32)); err2 != nil {
-			return "", err2
+	img := RenderRounded(256)
+	name := "PhraseMate-" + iconContentID(img) + ".ico"
+	path := filepath.Join(dir, name)
+	if st, err := os.Stat(path); err != nil || st.IsDir() || st.Size() < 100 {
+		if err := WriteICO(path, img); err != nil {
+			fallback := filepath.Join(dir, "PhraseMate-"+iconContentID(RenderRounded(32))+".ico")
+			if err2 := WriteICO(fallback, RenderRounded(32)); err2 != nil {
+				return "", err2
+			}
+			path = fallback
+			name = filepath.Base(path)
 		}
 	}
+	cleanupOldIcons(dir, name)
 	return path, nil
+}
+
+func iconContentID(img *image.RGBA) string {
+	sum := sha256.Sum256(img.Pix)
+	return hex.EncodeToString(sum[:])[:10]
+}
+
+func cleanupOldIcons(dir, keepName string) {
+	entries, err := os.ReadDir(dir)
+	if err != nil {
+		return
+	}
+	for _, e := range entries {
+		if e.IsDir() {
+			continue
+		}
+		n := e.Name()
+		if n == keepName {
+			continue
+		}
+		lower := strings.ToLower(n)
+		if lower == "phrasemate.ico" || (strings.HasPrefix(lower, "phrasemate-") && strings.HasSuffix(lower, ".ico")) {
+			_ = os.Remove(filepath.Join(dir, n))
+		}
+	}
 }

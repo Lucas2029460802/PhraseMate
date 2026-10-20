@@ -53,14 +53,13 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 11px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(145deg, #1f6f78, #2a8f99);
-  font-family: var(--brand);
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  display: block;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: rgba(255, 255, 255, 0.92);
   cursor: grab;
   box-shadow: 0 8px 18px rgba(42, 143, 153, 0.35);
+  -webkit-app-region: drag;
 }
 
 .badge:active {
