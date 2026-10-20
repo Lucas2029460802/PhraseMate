@@ -10759,9 +10759,49 @@
       "term": "patch"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/sword-us.mp3",
       "created_at": "2026-10-20T07:54:48Z",
       "id": 263,
-      "status": "pending",
+      "meaning_en": "A long-bladed weapon with a hilt, and usually a pommel and cross-guard, which is designed to stab, slash, and/or hack; A suit in the minor arcana in tarot",
+      "meaning_zh": "一种带刀柄的长刃武器，通常是鞍形和十字防护装置，旨在刺伤、砍伤和/或破解；塔罗牌小奥秘套装",
+      "part_of_speech": "n.",
+      "phonetic": "/sɔːd/",
+      "phrases": [
+        {
+          "phrase": "double-edged sword",
+          "meaning_zh": "双刃剑；有利有弊的事物"
+        },
+        {
+          "phrase": "cross swords",
+          "meaning_zh": "交锋；争论"
+        },
+        {
+          "phrase": "sword of Damocles",
+          "meaning_zh": "达摩克利斯之剑；迫在眉睫的危险"
+        },
+        {
+          "phrase": "put to the sword",
+          "meaning_zh": "屠杀；处死"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "swordlike",
+          "pos": "adj.",
+          "meaning_zh": "剑状的"
+        },
+        {
+          "word": "swordless",
+          "pos": "adj.",
+          "meaning_zh": "无剑的"
+        },
+        {
+          "word": "sworded",
+          "pos": "adj.",
+          "meaning_zh": "佩剑的"
+        }
+      ],
+      "status": "ready",
       "term": "sword"
     }
   ]
