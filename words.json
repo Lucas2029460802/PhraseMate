@@ -10757,6 +10757,12 @@
       ],
       "status": "ready",
       "term": "patch"
+    },
+    {
+      "created_at": "2026-10-20T07:54:48Z",
+      "id": 263,
+      "status": "pending",
+      "term": "sword"
     }
   ]
 }
