@@ -2,8 +2,6 @@ package config
 
 import (
 	"os"
-	"path/filepath"
-	"runtime"
 	"strconv"
 	"strings"
 )
@@ -69,12 +67,6 @@ func (c *Config) MergePersisted(apiKey, baseURL, model string) {
 }
 
 func defaultDBPath() string {
-	if runtime.GOOS == "darwin" {
-		home, err := os.UserHomeDir()
-		if err == nil && strings.TrimSpace(home) != "" {
-			return filepath.Join(home, "Library", "Application Support", "PhraseMate", "phrasemate.db")
-		}
-	}
 	return "data/phrasemate.db"
 }
 
