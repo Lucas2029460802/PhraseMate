@@ -1,20 +1,19 @@
 # PhraseMate
-感觉市面上当前已经有的单词本很难用，很多短语都无法记录，于是用cursor生成一个简单的单词本小程序，可以接入api，在边看B站网课的时候边听边记录
+便捷的单词本程序，包括记录单词和记录写作两个部分，支持单词测试，需要接入 api key，用 deepseek 大概 250 词 / 2 RMB。
 
-技术栈：**Go** + **原生窗口**（Windows: WebView2 / macOS: WKWebView）+ **SQLite** + **OpenAI 兼容** API。
+技术栈：**Go** + **原生窗口**（Windows WebView2）+ **SQLite** + **OpenAI 兼容** API。
 
 ## 功能
 
 - **桌面窗口启动**：双击 / 命令行启动即打开应用窗口（不再依赖浏览器）
 - **桌面快捷方式**：打包后首次启动自动创建，也可从托盘菜单一键生成
 - **系统置顶速记窗**：独立于主界面，可叠在 B 站等全屏画面角落录入
-- **界面填写 API Key**：设置里保存即可，无需手改 `.env`
+- **界面填写 API Key**：设置里保存
 - **AI 双语释义**：英文释义、中文释义、音标、词性、例句
 - **词典优先**：常见单词先查免费词典，未命中再调用 AI（省额度、更快）
 - **生词本**：自动去重更新，支持筛选与删除
 - **自测**：根据生词本生成四选一选择题并即时判分
 
-## 普通用户（推荐）
 
 ### Windows
 
@@ -23,22 +22,10 @@
 3. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
 4. 保存后即可用速记窗收录单词
 
-> 不需要安装 Go，也不需要创建或编辑 `.env`。API 配置保存在本地 `data/phrasemate.db`。在本仓库里运行时，生词会写入 Git 分支 `data` 的 `words.json`（没有该分支会自动创建并推送）。API Key 不会进入这个分支。直接运行发布包、且当前目录不是本仓库时，生词仍只存在本地数据库。
->
-> Windows / macOS 安装包都由 GitHub Actions 自动构建。推送 `v*` 标签会同时发布两个平台的产物。
+> 不需要安装 Go，也不需要创建或编辑 `.env`。API 配置保存在本地 `data/phrasemate.db`。在本仓库里运行时，生词与写作本会写入 Git 分支 `data` 的 `words.json` / `writings.json`（没有该分支会自动创建并推送；题目截图也会同步，体积可能较大）。API Key 不会进入这个分支。直接运行发布包、且当前目录不是本仓库时，数据仍只存在本地数据库。
+> Windows 安装包由 GitHub Actions 自动构建。推送 `v*` 标签后可从 Releases 下载。
 
 Windows 10/11 一般已自带 [WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。
-
-### macOS
-
-1. 打开 [Releases](https://github.com/Lucas2029460802/PhraseMate/releases) ，下载最新的 **PhraseMate-macos-*.zip**
-2. 解压得到 `PhraseMate.app`，拖到「应用程序」
-3. 首次打开：在 Finder 里 **右键 → 打开**（未公证签名时系统会拦截，选一次即可）
-4. 打开右上角 **设置**，填写 API Key（可选 Base URL / 模型）
-
-> API 配置保存在 `~/Library/Application Support/PhraseMate/phrasemate.db`。在本仓库里运行时，生词写入 Git 的 `data` 分支。
->
-> macOS 安装包是 Apple Silicon + Intel 通用二进制。
 
 ## Docker（网页实例）
 
@@ -110,16 +97,6 @@ go run .
 
 会弹出 **PhraseMate** 应用窗口。关闭窗口即隐藏到托盘；退出请用托盘菜单。
 
-### macOS
-
-```bash
-xcode-select --install   # 若尚未安装
-go mod tidy
-go run .
-```
-
-会弹出 **PhraseMate** 应用窗口。关闭窗口即隐藏到菜单栏；退出请用菜单栏图标。
-
 > `go run` 是临时二进制，不会创建桌面快捷方式。需要快捷方式请先 `go build`。
 >
 > 可选：仍可用 `.env` 预填 Key（适合开发）。界面里保存的配置会写入数据库，并优先于 `.env`。
@@ -128,13 +105,11 @@ go run .
 
 调试页面时：
 
-Windows:
-
 ```powershell
 $env:PHRASEMATE_WEB="1"; go run .
 ```
 
-macOS / Linux:
+Linux / Docker 调试可用：
 
 ```bash
 PHRASEMATE_WEB=1 go run .
@@ -146,54 +121,40 @@ PHRASEMATE_WEB=1 go run .
 
 ### Windows
 
-无黑框控制台的桌面程序：
+代码更新后，在项目根目录重新打包无黑框控制台的桌面程序：
 
 ```powershell
-\
+# 拉取最新代码（若从远程更新）
+git pull
 
+# 同步依赖
+go mod tidy
+
+# 重新编译（覆盖旧的 PhraseMate.exe）
+go build -ldflags="-H windowsgui -s -w" -o PhraseMate.exe .
 ```
 
-把 `PhraseMate.exe` 发给用户即可；用户在界面填写 API Key，无需附带 `.env`。
+若旧进程还在跑（托盘里），先退出再编译，否则可能无法覆盖 exe。
 
-GitHub Actions 的 Windows runner 会自动打出同样的无控制台 exe。
+把新的 `PhraseMate.exe` 发给用户或替换本机旧文件即可；用户在界面填写 API Key，无需附带 `.env`。生词本数据库在 `data/phrasemate.db`，替换 exe 不会丢数据。
 
-### macOS
-
-必须在 Mac 本机构建（依赖 Cocoa / WebKit，不能从 Windows 交叉编译）：
-
-```bash
-CGO_ENABLED=1 go build -ldflags="-s -w" -o PhraseMate .
-./PhraseMate --pack-app dist/PhraseMate.app
-```
-
-日常开发仍可用 `go run .`。发布请用 GitHub Actions：推送 `v1.0.0` 这类标签后，会同时构建：
+GitHub Actions 的 Windows runner 会自动打出同样的无控制台 exe。推送 `v1.0.0` 这类标签后，会同时构建：
 
 - **Windows**：`PhraseMate-windows-*.exe`（amd64，无控制台）
-- **macOS**：`PhraseMate-macos-*.zip`（arm64 + amd64 通用 `.app`）
 - **Docker**：推送到 `ghcr.io/lucas2029460802/phrasemate`，同时附带 `phrasemate-docker.tar.gz`
 
 也可在仓库的 **Actions → Build → Run workflow** 手动跑一次，产物在 Artifacts 里。
-
-> 从 Windows 交叉编译 `GOOS=darwin` **不能** 得到可用的桌面程序（CGO + 系统 WebKit）。
 
 ### 桌面快捷方式
 
 打包后任选其一：
 
-1. **运行一次**：若桌面还没有快捷方式，会自动创建（Windows: `PhraseMate.lnk`；macOS: 桌面别名）
-2. **托盘 / 菜单栏右键** →「创建桌面快捷方式」（可随时重建）
+1. **运行一次**：若桌面还没有快捷方式，会自动创建（`PhraseMate.lnk`）
+2. **托盘右键** →「创建桌面快捷方式」（可随时重建）
 3. **命令行**：
-
-Windows:
 
 ```powershell
 .\PhraseMate.exe --install-shortcut
-```
-
-macOS:
-
-```bash
-./PhraseMate --install-shortcut
 ```
 
 > 用 `go run .` 调试时不会创建快捷方式（临时路径无效）；请先 `go build`。
