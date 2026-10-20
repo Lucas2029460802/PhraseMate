@@ -15,7 +15,7 @@ import (
 	"phrasemate/internal/store"
 )
 
-// Sync publishes the vocabulary snapshot to the repository's data branch.
+// Sync publishes vocabulary and writing notebook snapshots to the repository's data branch.
 // API settings stay in the local database and are never written to git.
 type Sync struct {
 	root   string
@@ -24,8 +24,9 @@ type Sync struct {
 	author string
 	email  string
 
-	opMu      sync.Mutex
-	lastWords []models.Word
+	opMu         sync.Mutex
+	lastWords    []models.Word
+	lastWritings []models.Writing
 
 	bgMu        sync.Mutex
 	bgRunning   bool
@@ -37,9 +38,11 @@ type Sync struct {
 }
 
 type refSnap struct {
-	exists bool
-	hash   string
-	words  []models.Word
+	exists          bool
+	hash            string
+	words           []models.Word
+	writings        []models.Writing
+	hasWritingsFile bool
 }
 
 // Discover opens the git repository that contains the working directory
@@ -95,7 +98,7 @@ func openAt(root, remote, branch string) (*Sync, error) {
 	return s, nil
 }
 
-// Branch is the git branch that stores words.json.
+// Branch is the git branch that stores words.json and writings.json.
 func (s *Sync) Branch() string {
 	if s == nil {
 		return ""
@@ -113,32 +116,35 @@ func (s *Sync) SetStatusHandler(fn func(branch, errMsg string)) {
 	s.bgMu.Unlock()
 }
 
-// Bootstrap loads words.json from the data branch, creates that branch when
-// it is missing, and schedules a push of the merged snapshot.
+// Bootstrap loads words.json / writings.json from the data branch, creates that
+// branch when it is missing, and schedules a push of the merged snapshot.
 func (s *Sync) Bootstrap(st *store.Store) error {
 	if s == nil || st == nil {
 		return errors.New("缺少词库")
 	}
-	words, parent, err := s.mergeFromGit(st)
+	words, writings, parent, err := s.mergeFromGit(st)
 	if err != nil {
 		return err
 	}
 	if err := st.ReplaceAllWords(words); err != nil {
 		return err
 	}
+	if err := st.ReplaceAllWritings(writings); err != nil {
+		return err
+	}
 	s.opMu.Lock()
-	err = s.commitLocked(words, parent)
+	err = s.commitLocked(words, writings, parent)
 	s.opMu.Unlock()
 	if err != nil {
 		return err
 	}
-	log.Printf("生词本已写入本地分支 %s（%d 条）", s.branch, len(words))
+	log.Printf("生词本与写作本已写入本地分支 %s（生词 %d / 作文 %d）", s.branch, len(words), len(writings))
 	s.report(nil)
 	s.schedulePush()
 	return nil
 }
 
-// Save commits the current vocabulary and schedules a push.
+// Save commits the current vocabulary and writings, then schedules a push.
 func (s *Sync) Save(st *store.Store) error {
 	if s == nil || st == nil {
 		return errors.New("缺少词库")
@@ -149,7 +155,12 @@ func (s *Sync) Save(st *store.Store) error {
 		s.opMu.Unlock()
 		return err
 	}
-	err = s.commitLocked(words, "")
+	writings, err := st.ListWritingsFull()
+	if err != nil {
+		s.opMu.Unlock()
+		return err
+	}
+	err = s.commitLocked(words, writings, "")
 	s.opMu.Unlock()
 	if err != nil {
 		return err
@@ -187,10 +198,14 @@ func (s *Sync) Close() {
 	}
 }
 
-func (s *Sync) mergeFromGit(st *store.Store) ([]models.Word, string, error) {
+func (s *Sync) mergeFromGit(st *store.Store) ([]models.Word, []models.Writing, string, error) {
 	localDB, err := st.List()
 	if err != nil {
-		return nil, "", err
+		return nil, nil, "", err
+	}
+	localWritings, err := st.ListWritingsFull()
+	if err != nil {
+		return nil, nil, "", err
 	}
 	hasRemote := false
 	if ok, ferr := s.fetchRemote(); ferr != nil {
@@ -200,19 +215,25 @@ func (s *Sync) mergeFromGit(st *store.Store) ([]models.Word, string, error) {
 	}
 	localSnap, err := s.readSnap(s.localRef())
 	if err != nil {
-		return nil, "", err
+		return nil, nil, "", err
 	}
 	var remoteSnap refSnap
 	if hasRemote {
 		remoteSnap, err = s.readSnap(s.remoteRef())
 		if err != nil {
-			return nil, "", err
+			return nil, nil, "", err
 		}
 	}
 	rel := s.relation(localSnap, remoteSnap)
 	words := selectSnapshot(localDB, localSnap.words, localSnap.exists, remoteSnap.words, remoteSnap.exists, rel)
+	writings := selectWritingsSnapshot(
+		localWritings,
+		localSnap.writings, localSnap.exists, localSnap.hasWritingsFile,
+		remoteSnap.writings, remoteSnap.exists, remoteSnap.hasWritingsFile,
+		rel,
+	)
 	parent := parentFor(localSnap.hash, localSnap.exists, remoteSnap.hash, remoteSnap.exists, rel)
-	return words, parent, nil
+	return words, writings, parent, nil
 }
 
 func (s *Sync) fetchRemote() (bool, error) {
@@ -271,18 +292,33 @@ func (s *Sync) readSnap(ref string) (refSnap, error) {
 	if err != nil || !ok {
 		return refSnap{}, err
 	}
+	snap := refSnap{exists: true, hash: hash}
 	out, err := s.gitLocal("show", ref+":"+wordsFile)
 	if err != nil {
-		if isMissingPath(err) {
-			return refSnap{exists: true, hash: hash}, nil
+		if !isMissingPath(err) {
+			return refSnap{}, err
 		}
-		return refSnap{}, err
+	} else {
+		words, err := unmarshalWords(out)
+		if err != nil {
+			return refSnap{}, fmt.Errorf("解析 %s 失败: %w", wordsFile, err)
+		}
+		snap.words = words
 	}
-	words, err := unmarshalWords(out)
+	wout, err := s.gitLocal("show", ref+":"+writingsFile)
 	if err != nil {
-		return refSnap{}, fmt.Errorf("解析 %s 失败: %w", wordsFile, err)
+		if !isMissingPath(err) {
+			return refSnap{}, err
+		}
+	} else {
+		writings, err := unmarshalWritings(wout)
+		if err != nil {
+			return refSnap{}, fmt.Errorf("解析 %s 失败: %w", writingsFile, err)
+		}
+		snap.writings = writings
+		snap.hasWritingsFile = true
 	}
-	return refSnap{exists: true, hash: hash, words: words}, nil
+	return snap, nil
 }
 
 func (s *Sync) optionalHash(ref string) (string, bool, error) {
@@ -300,19 +336,29 @@ func (s *Sync) optionalHash(ref string) (string, bool, error) {
 	return hash, true, nil
 }
 
-func (s *Sync) commitLocked(words []models.Word, parent string) error {
+func (s *Sync) commitLocked(words []models.Word, writings []models.Writing, parent string) error {
 	words = prepareWords(words)
-	body, err := marshalWords(words)
+	writings = prepareWritings(writings)
+	wordsBody, err := marshalWords(words)
+	if err != nil {
+		return err
+	}
+	writingsBody, err := marshalWritings(writings)
 	if err != nil {
 		return err
 	}
 	s.lastWords = append([]models.Word(nil), words...)
+	s.lastWritings = append([]models.Writing(nil), writings...)
 
-	blob, err := s.hashObject(body)
+	wordsBlob, err := s.hashObject(wordsBody)
 	if err != nil {
 		return err
 	}
-	tree, err := s.mkTree(blob)
+	writingsBlob, err := s.hashObject(writingsBody)
+	if err != nil {
+		return err
+	}
+	tree, err := s.mkTree(wordsBlob, writingsBlob)
 	if err != nil {
 		return err
 	}
@@ -358,8 +404,9 @@ func (s *Sync) hashObject(body []byte) (string, error) {
 	return strings.TrimSpace(string(out)), nil
 }
 
-func (s *Sync) mkTree(blob string) (string, error) {
-	in := fmt.Sprintf("100644 blob %s\t%s\n", blob, wordsFile)
+func (s *Sync) mkTree(wordsBlob, writingsBlob string) (string, error) {
+	// mktree requires entries sorted by path name.
+	in := fmt.Sprintf("100644 blob %s\t%s\n100644 blob %s\t%s\n", wordsBlob, wordsFile, writingsBlob, writingsFile)
 	out, err := s.gitStdin([]byte(in), "mktree")
 	if err != nil {
 		return "", err
@@ -372,7 +419,7 @@ func (s *Sync) commitTree(tree, parent string) (string, error) {
 	if parent != "" {
 		args = append(args, "-p", parent)
 	}
-	args = append(args, "-m", "更新生词本")
+	args = append(args, "-m", "更新生词本与写作本")
 	out, err := s.gitLocal(args...)
 	if err != nil {
 		return "", err
@@ -425,7 +472,7 @@ func (s *Sync) pushLoop() {
 			log.Printf("推送 %s 分支失败: %v", s.branch, err)
 		} else {
 			s.pushedOnce.Do(func() {
-				log.Printf("已推送生词到 %s 分支", s.branch)
+				log.Printf("已推送生词本与写作本到 %s 分支", s.branch)
 			})
 		}
 		s.report(err)
@@ -459,7 +506,7 @@ func (s *Sync) pushBranch() error {
 		s.opMu.Unlock()
 		return err
 	}
-	if rerr := s.commitLocked(s.lastWords, remoteHash); rerr != nil {
+	if rerr := s.commitLocked(s.lastWords, s.lastWritings, remoteHash); rerr != nil {
 		s.opMu.Unlock()
 		return rerr
 	}
@@ -543,7 +590,7 @@ func findRoot() (string, error) {
 			return root, nil
 		}
 	}
-	return "", errors.New("当前不在 Git 仓库中，生词只保存在本地数据库")
+	return "", errors.New("当前不在 Git 仓库中，生词与作文只保存在本地数据库")
 }
 
 func gitTop(dir string) (string, error) {

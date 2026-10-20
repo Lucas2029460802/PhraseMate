@@ -39,6 +39,19 @@ func (s *Store) migrateWritingsSchema() error {
 // ListWritings returns writing entries newest-updated first.
 // Image payloads are omitted; PromptImageCount is set instead.
 func (s *Store) ListWritings() ([]models.Writing, error) {
+	list, err := s.ListWritingsFull()
+	if err != nil {
+		return nil, err
+	}
+	for i := range list {
+		list[i].PromptImageCount = len(list[i].PromptImages)
+		list[i].PromptImages = nil
+	}
+	return list, nil
+}
+
+// ListWritingsFull returns writing entries including prompt image payloads.
+func (s *Store) ListWritingsFull() ([]models.Writing, error) {
 	rows, err := s.db.Query(`
 SELECT ` + writingSelectCols + `
 FROM writings ORDER BY datetime(updated_at) DESC, id DESC`)
@@ -53,11 +66,65 @@ FROM writings ORDER BY datetime(updated_at) DESC, id DESC`)
 		if err != nil {
 			return nil, err
 		}
-		w.PromptImageCount = len(w.PromptImages)
-		w.PromptImages = nil
 		list = append(list, *w)
 	}
 	return list, rows.Err()
+}
+
+// ReplaceAllWritings replaces the writings table with the given snapshot.
+// It does not fire the change hook.
+func (s *Store) ReplaceAllWritings(writings []models.Writing) error {
+	tx, err := s.db.Begin()
+	if err != nil {
+		return err
+	}
+	defer tx.Rollback()
+	if _, err := tx.Exec(`DELETE FROM writings`); err != nil {
+		return err
+	}
+	var maxID int64
+	for _, w := range writings {
+		if w.ID > maxID {
+			maxID = w.ID
+		}
+		imagesJSON, err := encodePromptImages(w.PromptImages)
+		if err != nil {
+			return err
+		}
+		created := w.CreatedAt.UTC().Truncate(time.Second)
+		if w.CreatedAt.IsZero() {
+			created = time.Unix(0, 0).UTC()
+		}
+		updated := w.UpdatedAt.UTC().Truncate(time.Second)
+		if w.UpdatedAt.IsZero() {
+			updated = created
+		}
+		if _, err := tx.Exec(`
+INSERT INTO writings (id, prompt, prompt_images, body, model_text, model_filename, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+			w.ID, strings.TrimSpace(w.Prompt), imagesJSON, w.Body, w.ModelText, strings.TrimSpace(w.ModelFilename),
+			created.Format(time.RFC3339), updated.Format(time.RFC3339),
+		); err != nil {
+			return err
+		}
+	}
+	if maxID > 0 {
+		var seqTable string
+		err := tx.QueryRow(`SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence'`).Scan(&seqTable)
+		if err == nil {
+			res, err := tx.Exec(`UPDATE sqlite_sequence SET seq=? WHERE name='writings'`, maxID)
+			if err != nil {
+				return err
+			}
+			n, _ := res.RowsAffected()
+			if n == 0 {
+				if _, err := tx.Exec(`INSERT INTO sqlite_sequence(name, seq) VALUES ('writings', ?)`, maxID); err != nil {
+					return err
+				}
+			}
+		}
+	}
+	return tx.Commit()
 }
 
 // GetWriting returns one writing by id, or nil when missing.
@@ -88,6 +155,7 @@ VALUES (?, ?, ?, ?, '', ?, ?)`,
 	if err != nil {
 		return nil, err
 	}
+	s.changed()
 	return s.GetWriting(id)
 }
 
@@ -111,6 +179,7 @@ WHERE id=?`,
 	if n == 0 {
 		return nil, fmt.Errorf("未找到该作文")
 	}
+	s.changed()
 	return s.GetWriting(id)
 }
 
@@ -139,6 +208,7 @@ func (s *Store) DeleteWriting(id int64) error {
 	if n == 0 {
 		return fmt.Errorf("未找到该作文")
 	}
+	s.changed()
 	return nil
 }
 
