@@ -99,11 +99,14 @@ func (a *API) handleGetSettings(w http.ResponseWriter, r *http.Request) {
 		baseURL = a.cfg.BaseURL
 	}
 	a.mu.RUnlock()
+	theme, _ := a.store.GetSetting(store.SettingTheme)
+	theme = normalizeTheme(theme)
 	writeJSON(w, http.StatusOK, models.SettingsResponse{
 		HasKey:       strings.TrimSpace(key) != "",
 		APIKeyMasked: maskAPIKey(key),
 		BaseURL:      baseURL,
 		Model:        model,
+		Theme:        theme,
 	})
 }
 
@@ -163,6 +166,20 @@ func (a *API) handlePutSettings(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	theme := ""
+	if cur, err := a.store.GetSetting(store.SettingTheme); err == nil {
+		theme = cur
+	}
+	if strings.TrimSpace(req.Theme) != "" {
+		theme = normalizeTheme(req.Theme)
+		if err := a.store.SetSetting(store.SettingTheme, theme); err != nil {
+			writeErr(w, http.StatusInternalServerError, "保存主题失败")
+			return
+		}
+	} else {
+		theme = normalizeTheme(theme)
+	}
+
 	a.mu.Lock()
 	a.cfg.APIKey = apiKey
 	a.cfg.BaseURL = baseURL
@@ -184,7 +201,17 @@ func (a *API) handlePutSettings(w http.ResponseWriter, r *http.Request) {
 		APIKeyMasked: maskAPIKey(apiKey),
 		BaseURL:      baseURL,
 		Model:        model,
+		Theme:        theme,
 	})
+}
+
+func normalizeTheme(theme string) string {
+	switch strings.ToLower(strings.TrimSpace(theme)) {
+	case "warm", "beige":
+		return "warm"
+	default:
+		return "mist"
+	}
 }
 
 func maskAPIKey(key string) string {

@@ -58,6 +58,7 @@
     settingsApiKey: $("#settingsApiKey"),
     settingsBaseURL: $("#settingsBaseURL"),
     settingsModel: $("#settingsModel"),
+    settingsTheme: $("#settingsTheme"),
     settingsKeyHint: $("#settingsKeyHint"),
     btnClearKey: $("#btnClearKey"),
     btnSaveSettings: $("#btnSaveSettings"),
@@ -1006,6 +1007,38 @@
     },
   };
 
+  function applyTheme(theme) {
+    const t = theme === "warm" || theme === "beige" ? "warm" : "mist";
+    if (t === "mist") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", t);
+    }
+    try {
+      localStorage.setItem("phrasemate-theme", t);
+    } catch (_) {
+      /* ignore */
+    }
+    if (els.settingsTheme) els.settingsTheme.value = t;
+    return t;
+  }
+
+  async function loadTheme() {
+    let cached = "mist";
+    try {
+      cached = localStorage.getItem("phrasemate-theme") || "mist";
+    } catch (_) {
+      /* ignore */
+    }
+    applyTheme(cached);
+    try {
+      const s = await api("/api/settings");
+      if (s && s.theme) applyTheme(s.theme);
+    } catch (_) {
+      /* keep cached */
+    }
+  }
+
   async function openSettings() {
     els.settingsModal.hidden = false;
     els.settingsApiKey.value = "";
@@ -1013,6 +1046,7 @@
       const s = await api("/api/settings");
       els.settingsBaseURL.value = s.base_url || "";
       els.settingsModel.value = s.model || "";
+      applyTheme(s.theme || "mist");
       if (s.has_key) {
         els.settingsApiKey.placeholder = s.api_key_masked || "已保存，留空则不变";
         els.settingsKeyHint.textContent = `当前已保存：${s.api_key_masked || "••••"}（留空则保持不变）`;
@@ -1031,10 +1065,12 @@
   }
 
   async function saveSettings(clearKey = false) {
+    const theme = applyTheme((els.settingsTheme && els.settingsTheme.value) || "mist");
     const body = {
       api_key: (els.settingsApiKey.value || "").trim(),
       base_url: (els.settingsBaseURL.value || "").trim(),
       model: (els.settingsModel.value || "").trim(),
+      theme,
       clear_key: !!clearKey,
     };
     els.btnSaveSettings.disabled = true;
@@ -1653,6 +1689,10 @@
     }
   });
 
+  els.settingsTheme?.addEventListener("change", () => {
+    applyTheme(els.settingsTheme.value || "mist");
+  });
+
   els.settingsForm?.addEventListener("submit", (e) => {
     e.preventDefault();
     saveSettings(false);
@@ -1702,6 +1742,8 @@
     const wordId = Number(block.dataset.wordId || 0);
     reportQuizAnswer(wordId, isCorrect);
   });
+
+  loadTheme().catch(() => {});
 
   if (isAuxReaderWindow) {
     bootStandaloneReader(bootReaderId).catch((err) => toast(err.message));

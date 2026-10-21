@@ -167,6 +167,7 @@ const (
 	SettingAPIKey  = "api_key"
 	SettingBaseURL = "base_url"
 	SettingModel   = "model"
+	SettingTheme   = "theme"
 )
 
 // GetSetting returns a settings value (empty if missing).

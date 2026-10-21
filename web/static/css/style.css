@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #12181f;
   --ink-soft: #3a4654;
   --mist: #e8eef4;
@@ -8,10 +8,41 @@
   --coral: #c45c4a;
   --line: rgba(18, 24, 31, 0.1);
   --shadow: 0 18px 48px rgba(18, 28, 40, 0.14);
+  --accent-rgb: 31, 111, 120;
+  --accent-bright-rgb: 42, 143, 153;
+  --panel: rgba(255, 255, 255, 0.78);
+  --panel-strong: rgba(255, 255, 255, 0.92);
+  --panel-soft: rgba(255, 255, 255, 0.55);
+  --panel-faint: rgba(255, 255, 255, 0.45);
+  --ambient-a: rgba(42, 143, 153, 0.22);
+  --ambient-b: rgba(90, 120, 160, 0.18);
+  --ambient-grad: linear-gradient(160deg, #eef3f8 0%, #e2ebf2 42%, #d9e6e8 100%);
   --radius: 18px;
   --font-display: "Fraunces", "Times New Roman", serif;
   --font-brand: "Syne", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
+}
+
+/* Warm beige: sand base + walnut accent */
+[data-theme="warm"] {
+  --ink: #2a221a;
+  --ink-soft: #6b5a4a;
+  --mist: #f3ebe0;
+  --mist-2: #e6d8c6;
+  --sea: #8a6a3d;
+  --sea-bright: #a8844a;
+  --coral: #b45a48;
+  --line: rgba(42, 34, 26, 0.12);
+  --shadow: 0 18px 48px rgba(70, 48, 28, 0.12);
+  --accent-rgb: 138, 106, 61;
+  --accent-bright-rgb: 168, 132, 74;
+  --panel: rgba(255, 250, 243, 0.86);
+  --panel-strong: rgba(255, 252, 247, 0.96);
+  --panel-soft: rgba(255, 248, 238, 0.72);
+  --panel-faint: rgba(255, 247, 236, 0.58);
+  --ambient-a: rgba(196, 152, 88, 0.22);
+  --ambient-b: rgba(170, 120, 72, 0.14);
+  --ambient-grad: linear-gradient(160deg, #f7f0e6 0%, #efe4d4 42%, #e7d7c2 100%);
 }
 
 *,
@@ -52,9 +83,9 @@ body.app-shell {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(880px 480px at 8% -8%, rgba(42, 143, 153, 0.22), transparent 58%),
-    radial-gradient(720px 420px at 92% 0%, rgba(90, 120, 160, 0.18), transparent 55%),
-    linear-gradient(160deg, #eef3f8 0%, #e2ebf2 42%, #d9e6e8 100%);
+    radial-gradient(880px 480px at 8% -8%, var(--ambient-a), transparent 58%),
+    radial-gradient(720px 420px at 92% 0%, var(--ambient-b), transparent 55%),
+    var(--ambient-grad);
 }
 
 .ambient::after {
@@ -90,7 +121,7 @@ body.app-shell {
   object-fit: contain;
   image-rendering: pixelated;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--panel-strong);
   box-shadow: 0 10px 24px rgba(18, 24, 31, 0.22);
 }
 
@@ -114,7 +145,7 @@ body.app-shell {
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--panel-soft);
   font: inherit;
   font-size: 0.82rem;
   color: var(--ink-soft);
@@ -124,7 +155,7 @@ body.app-shell {
 }
 
 .status-pill:hover {
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--panel-strong);
 }
 
 .topbar-actions {
@@ -143,7 +174,7 @@ body.app-shell {
 }
 
 .status-pill.ok {
-  border-color: rgba(31, 111, 120, 0.35);
+  border-color: rgba(var(--accent-rgb), 0.35);
   color: var(--sea);
 }
 
@@ -216,9 +247,9 @@ body.app-shell {
   flex-shrink: 0;
   margin: 0 0 0.85rem;
   padding: 0.9rem 1rem;
-  border: 1px solid rgba(31, 111, 120, 0.18);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--panel-soft);
   animation: rise 0.35s ease both;
 }
 
@@ -237,7 +268,7 @@ body.app-shell {
 .translate-dir select {
   appearance: none;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--panel-strong);
   border-radius: 999px;
   padding: 0.4rem 0.9rem;
   font: inherit;
@@ -248,8 +279,8 @@ body.app-shell {
 }
 
 .translate-dir select:focus {
-  border-color: rgba(31, 111, 120, 0.55);
-  box-shadow: 0 0 0 3px rgba(31, 111, 120, 0.14);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.14);
 }
 
 .translate-grid {
@@ -290,7 +321,7 @@ body.app-shell {
   width: 100%;
   min-height: 6.5rem;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--panel);
   border-radius: 12px;
   padding: 0.75rem 0.85rem;
   font: inherit;
@@ -301,8 +332,8 @@ body.app-shell {
 }
 
 .translate-box textarea:focus {
-  border-color: rgba(31, 111, 120, 0.55);
-  box-shadow: 0 0 0 3px rgba(31, 111, 120, 0.14);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.14);
 }
 
 .translate-output {
@@ -351,7 +382,7 @@ body.app-shell {
 }
 
 .panel {
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.15rem 1.2rem 1.3rem;
@@ -399,7 +430,7 @@ body.app-shell {
 .search-row input {
   width: 100%;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--panel-soft);
   border-radius: 12px;
   padding: 0.7rem 0.9rem;
   font: inherit;
@@ -409,8 +440,8 @@ body.app-shell {
 }
 
 .search-row input:focus {
-  border-color: rgba(31, 111, 120, 0.55);
-  box-shadow: 0 0 0 3px rgba(31, 111, 120, 0.14);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.14);
 }
 
 .word-list {
@@ -451,7 +482,7 @@ body.app-shell {
   padding: 0.65rem 0.75rem;
   border: 1px solid transparent;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--panel-faint);
   cursor: pointer;
   text-align: left;
   font: inherit;
@@ -460,13 +491,13 @@ body.app-shell {
 }
 
 .word-row:hover {
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--panel-soft);
   border-color: var(--line);
 }
 
 .word-row.active {
-  background: rgba(42, 143, 153, 0.12);
-  border-color: rgba(31, 111, 120, 0.35);
+  background: rgba(var(--accent-bright-rgb), 0.12);
+  border-color: rgba(var(--accent-rgb), 0.35);
 }
 
 .word-row-main {
@@ -502,7 +533,7 @@ body.app-shell {
 
 .word-status.pending {
   color: var(--sea);
-  background: rgba(31, 111, 120, 0.12);
+  background: rgba(var(--accent-rgb), 0.12);
 }
 
 .word-status.error {
@@ -513,7 +544,7 @@ body.app-shell {
 .word-detail {
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--panel-soft);
   padding: 1rem 1.05rem;
   min-height: 0;
   height: 100%;
@@ -532,7 +563,7 @@ body.app-shell {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--panel-strong);
   backdrop-filter: blur(6px);
 }
 
@@ -551,8 +582,8 @@ body.app-shell {
 
 .btn-speak {
   appearance: none;
-  border: 1px solid rgba(31, 111, 120, 0.35);
-  background: rgba(42, 143, 153, 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
+  background: rgba(var(--accent-bright-rgb), 0.12);
   color: var(--sea);
   width: 2rem;
   height: 2rem;
@@ -565,7 +596,7 @@ body.app-shell {
 }
 
 .btn-speak:hover {
-  background: rgba(42, 143, 153, 0.22);
+  background: rgba(var(--accent-bright-rgb), 0.22);
 }
 
 .btn-speak:active {
@@ -651,7 +682,7 @@ body.app-shell {
 .example {
   margin: 0.55rem 0 0;
   padding-left: 0.75rem;
-  border-left: 2px solid rgba(31, 111, 120, 0.45);
+  border-left: 2px solid rgba(var(--accent-rgb), 0.45);
   font-size: 0.88rem;
   color: var(--ink-soft);
 }
@@ -689,7 +720,7 @@ body.app-shell {
   flex-shrink: 0;
   padding: 0.05rem 0.4rem;
   border-radius: 999px;
-  background: rgba(31, 111, 120, 0.12);
+  background: rgba(var(--accent-rgb), 0.12);
   color: var(--sea);
   font-size: 0.72rem;
   font-weight: 600;
@@ -737,16 +768,16 @@ body.app-shell {
 .btn.ghost {
   background: transparent;
   color: var(--sea);
-  border: 1px solid rgba(31, 111, 120, 0.35);
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
 }
 
 .btn.ghost:hover {
-  background: rgba(31, 111, 120, 0.08);
+  background: rgba(var(--accent-rgb), 0.08);
 }
 
 .btn.ghost.active {
-  background: rgba(31, 111, 120, 0.12);
-  border-color: rgba(31, 111, 120, 0.5);
+  background: rgba(var(--accent-rgb), 0.12);
+  border-color: rgba(var(--accent-rgb), 0.5);
 }
 
 .btn.danger {
@@ -786,7 +817,7 @@ body.app-shell {
   margin-right: 0.45rem;
   padding: 0.12rem 0.5rem;
   border-radius: 999px;
-  background: rgba(31, 111, 120, 0.12);
+  background: rgba(var(--accent-rgb), 0.12);
   color: var(--sea);
   font-size: 0.72rem;
   font-weight: 600;
@@ -802,7 +833,7 @@ body.app-shell {
 .opt {
   text-align: left;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--panel-soft);
   border-radius: 12px;
   padding: 0.65rem 0.8rem;
   font: inherit;
@@ -811,12 +842,12 @@ body.app-shell {
 }
 
 .opt:hover:not(:disabled) {
-  border-color: rgba(31, 111, 120, 0.45);
+  border-color: rgba(var(--accent-rgb), 0.45);
 }
 
 .opt.correct {
-  border-color: rgba(31, 111, 120, 0.7);
-  background: rgba(42, 143, 153, 0.16);
+  border-color: rgba(var(--accent-rgb), 0.7);
+  background: rgba(var(--accent-bright-rgb), 0.16);
 }
 
 .opt.wrong {
@@ -834,7 +865,7 @@ body.app-shell {
   margin-bottom: 1rem;
   padding: 0.75rem 0.9rem;
   border-radius: 12px;
-  background: rgba(31, 111, 120, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
   font-weight: 600;
 }
 
@@ -859,7 +890,7 @@ body.app-shell {
   justify-content: space-between;
   padding: 0.65rem 0.8rem;
   cursor: grab;
-  background: linear-gradient(90deg, rgba(42, 143, 153, 0.4), transparent 70%);
+  background: linear-gradient(90deg, rgba(var(--accent-bright-rgb), 0.4), transparent 70%);
 }
 
 .float-chrome:active {
@@ -909,8 +940,8 @@ body.app-shell {
 }
 
 #termInput:focus {
-  border-color: rgba(42, 143, 153, 0.8);
-  box-shadow: 0 0 0 3px rgba(42, 143, 153, 0.25);
+  border-color: rgba(var(--accent-bright-rgb), 0.8);
+  box-shadow: 0 0 0 3px rgba(var(--accent-bright-rgb), 0.25);
 }
 
 .float-hint {
@@ -988,7 +1019,7 @@ body.app-shell {
   overflow: auto;
   border-radius: 18px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.96);
+  background: var(--panel-strong);
   box-shadow: 0 24px 60px rgba(12, 20, 28, 0.28);
   padding: 1.15rem 1.2rem 1.25rem;
   animation: rise 0.28s ease both;
@@ -1034,10 +1065,11 @@ body.app-shell {
   color: var(--ink-soft);
 }
 
-.field input {
+.field input,
+.field select {
   width: 100%;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--panel-strong);
   border-radius: 12px;
   padding: 0.7rem 0.85rem;
   font: inherit;
@@ -1047,9 +1079,21 @@ body.app-shell {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.field input:focus {
-  border-color: rgba(31, 111, 120, 0.55);
-  box-shadow: 0 0 0 3px rgba(31, 111, 120, 0.14);
+.field select {
+  cursor: pointer;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-soft) 50%),
+    linear-gradient(135deg, var(--ink-soft) 50%, transparent 50%);
+  background-position: calc(100% - 1.1rem) 55%, calc(100% - 0.75rem) 55%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: rgba(var(--accent-rgb), 0.55);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.14);
 }
 
 .field-hint {
@@ -1186,7 +1230,7 @@ body.app-shell {
   padding: 0.6rem 0.7rem;
   border: 1px solid transparent;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--panel-faint);
   cursor: pointer;
   text-align: left;
   font: inherit;
@@ -1195,13 +1239,13 @@ body.app-shell {
 }
 
 .writing-row:hover {
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--panel-soft);
   border-color: var(--line);
 }
 
 .writing-row.active {
-  background: rgba(42, 143, 153, 0.12);
-  border-color: rgba(31, 111, 120, 0.35);
+  background: rgba(var(--accent-bright-rgb), 0.12);
+  border-color: rgba(var(--accent-rgb), 0.35);
 }
 
 .writing-row .term {
@@ -1269,7 +1313,7 @@ body.app-shell {
   padding: 0.65rem 0.8rem;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.78);
+  background: var(--panel);
   font-family: "Literata", var(--font-display), serif;
   font-size: 1.05rem;
   font-weight: 500;
@@ -1278,7 +1322,7 @@ body.app-shell {
 }
 
 .writing-prompt-field textarea:focus {
-  outline: 2px solid rgba(31, 111, 120, 0.35);
+  outline: 2px solid rgba(var(--accent-rgb), 0.35);
   outline-offset: 1px;
 }
 
@@ -1304,7 +1348,7 @@ body.app-shell {
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--panel-soft);
   aspect-ratio: 4 / 3;
 }
 
@@ -1438,7 +1482,7 @@ body.app-shell {
   border: 1px solid var(--line);
   border-radius: 14px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 251, 252, 0.88));
+    linear-gradient(180deg, var(--panel-strong), rgba(248, 251, 252, 0.88));
   text-align: left;
   font: inherit;
   color: inherit;
@@ -1450,7 +1494,7 @@ body.app-shell {
 }
 
 .writing-model-preview:hover {
-  border-color: rgba(31, 111, 120, 0.35);
+  border-color: rgba(var(--accent-rgb), 0.35);
   box-shadow: 0 10px 28px rgba(18, 28, 40, 0.08);
 }
 
@@ -1469,7 +1513,7 @@ body.app-shell {
   padding: 0.85rem 1rem;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--panel-strong);
   font-family: "IBM Plex Sans", var(--font-body), sans-serif;
   font-size: 0.92rem;
   line-height: 1.55;
@@ -1477,7 +1521,7 @@ body.app-shell {
 }
 
 .writing-model-source:focus {
-  outline: 2px solid rgba(31, 111, 120, 0.35);
+  outline: 2px solid rgba(var(--accent-rgb), 0.35);
   outline-offset: 1px;
 }
 
@@ -1544,7 +1588,7 @@ body.app-shell {
 .md-prose blockquote {
   margin: 0 0 1em;
   padding: 0.15em 0 0.15em 1em;
-  border-left: 3px solid rgba(31, 111, 120, 0.45);
+  border-left: 3px solid rgba(var(--accent-rgb), 0.45);
   color: var(--ink-soft);
 }
 
@@ -1637,7 +1681,7 @@ body.aux-reader .topbar {
   flex-shrink: 0;
   padding: 0.95rem 1.25rem;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--panel-soft);
 }
 
 .writing-reader-head-actions {

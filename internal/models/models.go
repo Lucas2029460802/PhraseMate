@@ -112,6 +112,7 @@ type SettingsResponse struct {
 	APIKeyMasked string `json:"api_key_masked"`
 	BaseURL      string `json:"base_url"`
 	Model        string `json:"model"`
+	Theme        string `json:"theme"`
 }
 
 // SettingsUpdateRequest is the payload for PUT /api/settings.
@@ -119,6 +120,7 @@ type SettingsUpdateRequest struct {
 	APIKey   string `json:"api_key"`
 	BaseURL  string `json:"base_url"`
 	Model    string `json:"model"`
+	Theme    string `json:"theme"`
 	ClearKey bool   `json:"clear_key"`
 }
 
