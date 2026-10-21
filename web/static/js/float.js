@@ -6,6 +6,32 @@
   const dragArea = document.getElementById("dragArea");
   let busy = false;
   let queued = "";
+  let appliedTheme = "";
+
+  function applyTheme(theme) {
+    const t = theme === "warm" || theme === "beige" ? "warm" : "mist";
+    if (t === appliedTheme) return;
+    appliedTheme = t;
+    if (t === "mist") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", "warm");
+  }
+
+  async function syncTheme() {
+    try {
+      const res = await fetch("/api/settings");
+      if (!res.ok) return;
+      const data = await res.json();
+      applyTheme(data.theme);
+    } catch (_) {
+      /* keep current */
+    }
+  }
+
+  syncTheme();
+  setInterval(syncTheme, 2000);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) syncTheme();
+  });
 
   function toast(msg, ok = true) {
     toastEl.textContent = msg;

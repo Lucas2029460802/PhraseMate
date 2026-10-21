@@ -5,10 +5,44 @@
   --text: #eef3f6;
   --muted: rgba(238, 243, 246, 0.45);
   --sea: #2a8f99;
+  --sea-rgb: 42, 143, 153;
   --ok: #3db88a;
   --bad: #d4685a;
+  --ok-rgb: 61, 184, 138;
+  --bad-rgb: 212, 104, 90;
+  --glow: rgba(42, 143, 153, 0.3);
+  --input: rgba(255, 255, 255, 0.06);
+  --input-focus: rgba(255, 255, 255, 0.09);
+  --icon-bg: rgba(255, 255, 255, 0.04);
+  --badge-bg: rgba(255, 255, 255, 0.92);
+  --badge-shadow: rgba(42, 143, 153, 0.35);
+  --shell-shadow: rgba(0, 0, 0, 0.35);
+  --toast-bg: rgba(16, 23, 30, 0.92);
   --font: "IBM Plex Sans", "Segoe UI", sans-serif;
   --brand: "Syne", sans-serif;
+}
+
+/* Warm beige, matching the main window */
+[data-theme="warm"] {
+  --bg: #f6efe4;
+  --bg-2: #ead9c2;
+  --line: rgba(42, 34, 26, 0.14);
+  --text: #2a221a;
+  --muted: rgba(42, 34, 26, 0.42);
+  --sea: #8a6a3d;
+  --sea-rgb: 138, 106, 61;
+  --ok: #2f7a52;
+  --bad: #b45a48;
+  --ok-rgb: 47, 122, 82;
+  --bad-rgb: 180, 90, 72;
+  --glow: rgba(168, 132, 74, 0.32);
+  --input: rgba(255, 252, 247, 0.72);
+  --input-focus: rgba(255, 252, 247, 0.96);
+  --icon-bg: rgba(255, 252, 247, 0.55);
+  --badge-bg: rgba(255, 252, 247, 0.96);
+  --badge-shadow: rgba(138, 106, 61, 0.28);
+  --shell-shadow: rgba(70, 48, 28, 0.2);
+  --toast-bg: rgba(255, 250, 243, 0.96);
 }
 
 * {
@@ -43,9 +77,9 @@ body {
   border-radius: 16px;
   border: 1px solid var(--line);
   background:
-    radial-gradient(120% 140% at 0% 0%, rgba(42, 143, 153, 0.3), transparent 55%),
+    radial-gradient(120% 140% at 0% 0%, var(--glow), transparent 55%),
     linear-gradient(135deg, var(--bg), var(--bg-2));
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 36px var(--shell-shadow);
   -webkit-app-region: drag;
 }
 
@@ -56,9 +90,9 @@ body {
   display: block;
   object-fit: contain;
   image-rendering: pixelated;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--badge-bg);
   cursor: grab;
-  box-shadow: 0 8px 18px rgba(42, 143, 153, 0.35);
+  box-shadow: 0 8px 18px var(--badge-shadow);
   -webkit-app-region: drag;
 }
 
@@ -71,7 +105,7 @@ body {
   height: 36px;
   border: 1px solid transparent;
   border-radius: 11px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--input);
   color: var(--text);
   font: 500 13px/1.2 var(--font);
   padding: 0 10px;
@@ -86,9 +120,9 @@ body {
 }
 
 #term:focus {
-  border-color: rgba(42, 143, 153, 0.7);
-  background: rgba(255, 255, 255, 0.09);
-  box-shadow: 0 0 0 3px rgba(42, 143, 153, 0.18);
+  border-color: rgba(var(--sea-rgb), 0.7);
+  background: var(--input-focus);
+  box-shadow: 0 0 0 3px rgba(var(--sea-rgb), 0.18);
 }
 
 .icon {
@@ -96,7 +130,7 @@ body {
   height: 32px;
   border-radius: 10px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--icon-bg);
   color: var(--text);
   font: 600 13px/1 var(--brand);
   cursor: pointer;
@@ -105,7 +139,7 @@ body {
 }
 
 .icon:hover {
-  background: rgba(42, 143, 153, 0.22);
+  background: rgba(var(--sea-rgb), 0.22);
 }
 
 .icon:active {
@@ -119,8 +153,9 @@ body {
   transform: translateX(-50%) translateY(8px);
   padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(16, 23, 30, 0.92);
+  background: var(--toast-bg);
   border: 1px solid var(--line);
+  color: var(--text);
   font-size: 12px;
   opacity: 0;
   pointer-events: none;
@@ -142,9 +177,9 @@ body {
 }
 
 .shell.ok-flash {
-  border-color: rgba(61, 184, 138, 0.55);
+  border-color: rgba(var(--ok-rgb), 0.55);
 }
 
 .shell.bad-flash {
-  border-color: rgba(212, 104, 90, 0.55);
+  border-color: rgba(var(--bad-rgb), 0.55);
 }
