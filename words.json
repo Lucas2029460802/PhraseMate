@@ -10790,8 +10790,54 @@
     },
     {
       "created_at": "2026-10-22T12:16:21Z",
+      "example_en": "There is ample time to finish the project.",
+      "example_zh": "有充足的时间完成这个项目。",
       "id": 265,
-      "status": "pending",
+      "meaning_en": "Enough or more than enough; plentiful. It can also describe something large in size or extent.",
+      "meaning_zh": "充足的；丰富的；宽敞的",
+      "part_of_speech": "adj.",
+      "phonetic": "/ˈæmpəl/",
+      "phrases": [
+        {
+          "phrase": "ample evidence",
+          "meaning_zh": "充足的证据"
+        },
+        {
+          "phrase": "ample opportunity",
+          "meaning_zh": "充分的机会"
+        },
+        {
+          "phrase": "ample space",
+          "meaning_zh": "宽敞的空间"
+        },
+        {
+          "phrase": "ample time",
+          "meaning_zh": "充足的时间"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "amply",
+          "pos": "adv.",
+          "meaning_zh": "充足地；充分地"
+        },
+        {
+          "word": "ampleness",
+          "pos": "n.",
+          "meaning_zh": "充足；丰富"
+        },
+        {
+          "word": "amplify",
+          "pos": "v.",
+          "meaning_zh": "放大；增强"
+        },
+        {
+          "word": "amplitude",
+          "pos": "n.",
+          "meaning_zh": "幅度；丰富"
+        }
+      ],
+      "status": "ready",
       "term": "ample"
     }
   ]
