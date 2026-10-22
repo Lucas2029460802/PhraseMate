@@ -10768,20 +10768,20 @@
       "phonetic": "/ˈkʌm.pəs/",
       "phrases": [
         {
-          "phrase": "magnetic compass",
-          "meaning_zh": "磁罗盘"
+          "phrase": "compass needle",
+          "meaning_zh": "指南针指针"
         },
         {
-          "phrase": "compass needle",
-          "meaning_zh": "罗盘针"
+          "phrase": "compass rose",
+          "meaning_zh": "罗盘方位图"
         },
         {
           "phrase": "pair of compasses",
           "meaning_zh": "圆规"
         },
         {
-          "phrase": "compass rose",
-          "meaning_zh": "罗盘方位图"
+          "phrase": "compass bearing",
+          "meaning_zh": "罗盘方位"
         }
       ],
       "related_forms": [],
