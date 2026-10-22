@@ -10757,36 +10757,6 @@
       ],
       "status": "ready",
       "term": "patch"
-    },
-    {
-      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/compass-us.mp3",
-      "created_at": "2026-10-22T11:31:01Z",
-      "id": 263,
-      "meaning_en": "A magnetic or electronic device used to determine the cardinal directions (usually magnetic or true north); A pair of compasses (a device used to draw an arc or circle)",
-      "meaning_zh": "用于确定基本方向的磁性或电子设备（通常为磁性或真北）；一对罗盘（用于绘制弧或圆的设备）",
-      "part_of_speech": "n.",
-      "phonetic": "/ˈkʌm.pəs/",
-      "phrases": [
-        {
-          "phrase": "magnetic compass",
-          "meaning_zh": "磁罗盘"
-        },
-        {
-          "phrase": "compass needle",
-          "meaning_zh": "指南针指针"
-        },
-        {
-          "phrase": "compass rose",
-          "meaning_zh": "罗盘方位图"
-        },
-        {
-          "phrase": "pair of compasses",
-          "meaning_zh": "圆规"
-        }
-      ],
-      "related_forms": [],
-      "status": "ready",
-      "term": "compass"
     }
   ]
 }
