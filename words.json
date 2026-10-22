@@ -10976,8 +10976,40 @@
     },
     {
       "created_at": "2026-10-22T12:37:28Z",
+      "example_en": "The actors rehearsed the final scene until midnight.",
+      "example_zh": "演员们排练最后一场戏直到午夜。",
       "id": 269,
-      "status": "pending",
+      "meaning_en": "To practise a play, concert, or other performance before presenting it in public; to prepare and repeat something.",
+      "meaning_zh": "排练，排演；练习，演习",
+      "part_of_speech": "v.",
+      "phonetic": "/rɪˈhɜːs/",
+      "phrases": [
+        {
+          "phrase": "rehearse a play",
+          "meaning_zh": "排练戏剧"
+        },
+        {
+          "phrase": "rehearse for a concert",
+          "meaning_zh": "为音乐会排练"
+        },
+        {
+          "phrase": "rehearse one's lines",
+          "meaning_zh": "练台词"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "rehearsal",
+          "pos": "n.",
+          "meaning_zh": "排练；排演"
+        },
+        {
+          "word": "rehearsed",
+          "pos": "adj.",
+          "meaning_zh": "经过排练的；预先准备好的"
+        }
+      ],
+      "status": "ready",
       "term": "rehearse"
     }
   ]
