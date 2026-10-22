@@ -10881,25 +10881,25 @@
       "example_zh": "他的房子采用螺旋楼梯设计。",
       "id": 267,
       "meaning_en": "To include (something) as a part; To mix (something in) as an ingredient; to blend",
-      "meaning_zh": "包含；纳入；合并；组建公司",
+      "meaning_zh": "包括（某物）作为一部分；混合（某种东西）作为成分；混合",
       "part_of_speech": "v.",
       "phonetic": "/ɪŋˈkɔː(ɹ).pəɹ.eɪt/",
       "phrases": [
         {
           "phrase": "incorporate into",
-          "meaning_zh": "把……纳入；合并到……中"
+          "meaning_zh": "纳入；并入"
         },
         {
           "phrase": "incorporate with",
-          "meaning_zh": "与……合并"
+          "meaning_zh": "与……合并；与……混合"
         },
         {
-          "phrase": "incorporate as",
-          "meaning_zh": "注册为；作为……成立"
+          "phrase": "incorporate in",
+          "meaning_zh": "包含在……中"
         },
         {
-          "phrase": "be incorporated in",
-          "meaning_zh": "包含在……中；并入……"
+          "phrase": "be incorporated as",
+          "meaning_zh": "注册为；合并为"
         }
       ],
       "related_forms": [
@@ -10911,12 +10911,17 @@
         {
           "word": "incorporated",
           "pos": "adj.",
-          "meaning_zh": "合并的；组成公司的"
+          "meaning_zh": "合并的；股份有限的"
         },
         {
           "word": "incorporative",
           "pos": "adj.",
-          "meaning_zh": "合并的；有结合倾向的"
+          "meaning_zh": "有合并倾向的"
+        },
+        {
+          "word": "incorporator",
+          "pos": "n.",
+          "meaning_zh": "合并者；公司创办人"
         }
       ],
       "status": "ready",
