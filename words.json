@@ -10759,9 +10759,46 @@
       "term": "patch"
     },
     {
+      "audio_url": "https://api.dictionaryapi.dev/media/pronunciations/en/compass-us.mp3",
       "created_at": "2026-10-22T11:31:01Z",
+      "example_en": "Without a compass, it is easy to lose your way in the forest.",
+      "example_zh": "没有指南针，在森林里很容易迷路。",
       "id": 263,
-      "status": "pending",
+      "meaning_en": "A magnetic or electronic device used to determine the cardinal directions (usually magnetic or true north); A pair of compasses (a device used to draw an arc or circle)",
+      "meaning_zh": "指南针，罗盘；圆规；范围，界限",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈkʌm.pəs/",
+      "phrases": [
+        {
+          "phrase": "a pair of compasses",
+          "meaning_zh": "一副圆规"
+        },
+        {
+          "phrase": "magnetic compass",
+          "meaning_zh": "磁罗盘"
+        },
+        {
+          "phrase": "moral compass",
+          "meaning_zh": "道德准则，是非观"
+        },
+        {
+          "phrase": "beyond one's compass",
+          "meaning_zh": "超出某人的能力范围"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "compasses",
+          "pos": "n.",
+          "meaning_zh": "圆规（复数形式，作“圆规”讲时常用复数）"
+        },
+        {
+          "word": "compassable",
+          "pos": "adj.",
+          "meaning_zh": "可达到的；可围绕的"
+        }
+      ],
+      "status": "ready",
       "term": "compass"
     }
   ]
