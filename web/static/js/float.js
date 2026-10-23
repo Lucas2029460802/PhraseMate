@@ -8,12 +8,19 @@
   let queued = "";
   let appliedTheme = "";
 
+  function canonicalTheme(theme) {
+    if (theme === "warm" || theme === "beige") return "warm";
+    if (theme === "pixel" || theme === "cute" || theme === "kawaii") return "pixel";
+    if (theme === "tech" || theme === "neon" || theme === "cyber" || theme === "future") return "tech";
+    return "mist";
+  }
+
   function applyTheme(theme) {
-    const t = theme === "warm" || theme === "beige" ? "warm" : "mist";
+    const t = canonicalTheme(theme);
     if (t === appliedTheme) return;
     appliedTheme = t;
     if (t === "mist") document.documentElement.removeAttribute("data-theme");
-    else document.documentElement.setAttribute("data-theme", "warm");
+    else document.documentElement.setAttribute("data-theme", t);
   }
 
   async function syncTheme() {

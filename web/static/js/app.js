@@ -786,12 +786,13 @@
     return escapeHtml(pos);
   }
 
-  function renderListRow(w) {
+  function renderListRow(w, index) {
     const meta = renderMeta(w);
     const status = statusLabel(w);
     const active = selectedWordId === w.id ? " active" : "";
+    const rowI = Math.min(index || 0, 16);
     return `
-      <button type="button" class="word-row${active}" data-id="${w.id}">
+      <button type="button" class="word-row${active}" data-id="${w.id}" style="--row-i:${rowI}">
         <span class="word-row-main">
           <span class="term">${escapeHtml(w.term)}</span>
           ${meta ? `<span class="meta">${meta}</span>` : ""}
@@ -912,16 +913,42 @@
     );
   }
 
-  function renderDetail() {
-    const w = words.find((x) => x.id === selectedWordId);
-    if (!w) {
-      els.wordDetail.innerHTML = `<p class="empty">点击左侧单词查看释义</p>`;
-      return;
-    }
-    els.wordDetail.innerHTML = renderDetailHTML(w);
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") || "mist";
   }
 
-  function renderList() {
+  function isTechTheme() {
+    return currentTheme() === "tech";
+  }
+
+  function isMotionTheme() {
+    const t = currentTheme();
+    return t === "tech" || t === "pixel";
+  }
+
+  function kickTechReveal() {
+    const el = els.wordDetail;
+    if (!el) return;
+    el.classList.remove("tech-reveal");
+    if (!isMotionTheme()) return;
+    void el.offsetWidth;
+    el.classList.add("tech-reveal");
+  }
+
+  function renderDetail({ animate = false } = {}) {
+    const w = words.find((x) => x.id === selectedWordId);
+    const nextId = w ? String(w.id) : "";
+    const changed = (els.wordDetail.dataset.wordId || "") !== nextId;
+    if (!w) {
+      els.wordDetail.innerHTML = `<p class="empty">点击左侧单词查看释义</p>`;
+    } else {
+      els.wordDetail.innerHTML = renderDetailHTML(w);
+    }
+    els.wordDetail.dataset.wordId = nextId;
+    if (animate || changed) kickTechReveal();
+  }
+
+  function renderList({ animateRows = false, animateDetail = false } = {}) {
     const list = filteredWords();
     els.wordCount.textContent = String(words.length);
 
@@ -929,13 +956,24 @@
       selectedWordId = null;
     }
 
+    const paintRows = (html) => {
+      els.wordList.classList.remove("is-rendering");
+      els.wordList.innerHTML = html;
+      if (animateRows && isMotionTheme()) {
+        void els.wordList.offsetWidth;
+        els.wordList.classList.add("is-rendering");
+      }
+    };
+
     if (!list.length) {
-      els.wordList.innerHTML = `<p class="empty">${
-        words.length
-          ? "没有匹配的生词。"
-          : "还没有生词。用右下角置顶速记条输入，回车即可立刻收录。"
-      }</p>`;
-      renderDetail();
+      paintRows(
+        `<p class="empty">${
+          words.length
+            ? "没有匹配的生词。"
+            : "还没有生词。用右下角置顶速记条输入，回车即可立刻收录。"
+        }</p>`
+      );
+      renderDetail({ animate: animateDetail });
       return;
     }
 
@@ -943,8 +981,8 @@
       selectedWordId = list[0].id;
     }
 
-    els.wordList.innerHTML = list.map(renderListRow).join("");
-    renderDetail();
+    paintRows(list.map((w, i) => renderListRow(w, i)).join(""));
+    renderDetail({ animate: animateDetail });
   }
 
   function selectWord(id) {
@@ -1007,8 +1045,19 @@
     },
   };
 
+  let appliedTheme = "";
+
+  function canonicalTheme(theme) {
+    if (theme === "warm" || theme === "beige") return "warm";
+    if (theme === "pixel" || theme === "cute" || theme === "kawaii") return "pixel";
+    if (theme === "tech" || theme === "neon" || theme === "cyber" || theme === "future") return "tech";
+    return "mist";
+  }
+
   function applyTheme(theme) {
-    const t = theme === "warm" || theme === "beige" ? "warm" : "mist";
+    const t = canonicalTheme(theme);
+    const prev = appliedTheme;
+    appliedTheme = t;
     if (t === "mist") {
       document.documentElement.removeAttribute("data-theme");
     } else {
@@ -1020,6 +1069,9 @@
       /* ignore */
     }
     if (els.settingsTheme) els.settingsTheme.value = t;
+    if (prev && prev !== t && (t === "tech" || t === "pixel") && words.length) {
+      renderList({ animateRows: true, animateDetail: true });
+    }
     return t;
   }
 
@@ -1099,7 +1151,7 @@
     }
     listFingerprint = next;
     words = list;
-    renderList();
+    renderList({ animateRows: !silent });
     schedulePendingPoll();
   }
 
@@ -1319,7 +1371,7 @@
         : `进度：${done} / ${quizScore.total} · 正确 ${quizScore.correct}`;
   }
 
-  els.filterInput.addEventListener("input", renderList);
+  els.filterInput.addEventListener("input", () => renderList());
 
   els.wordList.addEventListener("click", (e) => {
     const row = e.target.closest(".word-row");

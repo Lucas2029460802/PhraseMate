@@ -209,6 +209,10 @@ func normalizeTheme(theme string) string {
 	switch strings.ToLower(strings.TrimSpace(theme)) {
 	case "warm", "beige":
 		return "warm"
+	case "pixel", "cute", "kawaii":
+		return "pixel"
+	case "tech", "neon", "cyber", "future":
+		return "tech"
 	default:
 		return "mist"
 	}

@@ -7,8 +7,16 @@
   <link rel="icon" type="image/png" href="/static/img/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=DotGothic16&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/static/css/float.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("phrasemate-theme");
+      if (t === "warm" || t === "beige") document.documentElement.setAttribute("data-theme", "warm");
+      else if (t === "pixel" || t === "cute" || t === "kawaii") document.documentElement.setAttribute("data-theme", "pixel");
+      else if (t === "tech" || t === "neon" || t === "cyber" || t === "future") document.documentElement.setAttribute("data-theme", "tech");
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <div class="shell" id="dragArea">
