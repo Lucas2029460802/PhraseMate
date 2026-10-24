@@ -11062,8 +11062,49 @@
     },
     {
       "created_at": "2026-10-24T09:43:47Z",
+      "example_en": "The merchant exported spices from Asia to Europe.",
+      "example_zh": "这位商人把香料从亚洲出口到欧洲。",
       "id": 271,
-      "status": "pending",
+      "meaning_en": "A person or company that buys and sells goods in large quantities, especially in international trade.",
+      "meaning_zh": "商人；批发商；（尤指）外贸商人",
+      "part_of_speech": "n.",
+      "phonetic": "/ˈmɜːtʃənt/",
+      "phrases": [
+        {
+          "phrase": "merchant ship",
+          "meaning_zh": "商船"
+        },
+        {
+          "phrase": "merchant bank",
+          "meaning_zh": "商业银行"
+        },
+        {
+          "phrase": "wine merchant",
+          "meaning_zh": "酒商"
+        },
+        {
+          "phrase": "merchant marine",
+          "meaning_zh": "商船队"
+        }
+      ],
+      "related_forms": [
+        {
+          "word": "mercantile",
+          "pos": "adj.",
+          "meaning_zh": "商业的；贸易的"
+        },
+        {
+          "word": "merchantable",
+          "pos": "adj.",
+          "meaning_zh": "适销的；可销售的"
+        },
+        {
+          "word": "merchandise",
+          "pos": "v.",
+          "meaning_zh": "推销；买卖"
+        }
+      ],
+      "status": "ready",
       "term": "merchant"
     }
   ]
