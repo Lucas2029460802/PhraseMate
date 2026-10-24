@@ -11059,6 +11059,12 @@
       ],
       "status": "ready",
       "term": "spiral"
+    },
+    {
+      "created_at": "2026-10-24T09:43:47Z",
+      "id": 271,
+      "status": "pending",
+      "term": "merchant"
     }
   ]
 }
